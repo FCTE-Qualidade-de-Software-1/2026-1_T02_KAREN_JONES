@@ -11,7 +11,7 @@ O objetivo central é avaliar aspectos de qualidade do Ollama, propondo melhoria
 <div class="section-cards">
   <a class="section-card" href="02-karenJones/">
     <h3>1 · Quem é Karen Jones?</h3>
-    <p>Apresentação da ferramenta Ollama, seus objetivos, características e análise competitiva no contexto de IA.</p>
+    <p>Panorama sobre a trajetória de Karen Spärck Jones, destacando suas principais contribuições para recuperação da informação e processamento de linguagem natural.</p>
   </a>
   <a class="section-card" href="03-fase1/">
     <h3>2 · Fase 1 - Goal</h3>

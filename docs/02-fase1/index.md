@@ -1,6 +1,6 @@
 # 2 · Fase 1
 
-Esta seção reúne os principais documentos que fundamentam a Fase 1 da avaliação de qualidade do...
+Esta seção reúne os principais documentos que fundamentam a Fase 1 da avaliação de qualidade do software **Ollama**. O conteúdo está organizado para apresentar, de forma estruturada, o propósito da avaliação, os requisitantes e partes interessadas, a descrição do produto, as justificativas para o recorte analisado, o modelo de qualidade adotado com base na ISO/IEC 25010 e a tabela de contribuição dos integrantes.
 
 <div class="section-cards">
   <a class="section-card" href="proposito/">

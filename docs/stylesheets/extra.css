@@ -661,8 +661,8 @@ body, .md-typeset {
 }
 
 .md-typeset blockquote {
-  border-left: 4px solid var(--nativo-sage);
-  background-color: rgba(246, 233, 217, 0.45);
+  border-left: 4px solid var(--nativo-evergreen);
+  background-color: rgba(96, 96, 96, 0.16);
   border-radius: 0 8px 8px 0;
   padding: 0.8rem 1.2rem;
   color: rgba(23, 25, 24, 0.8);
@@ -671,7 +671,8 @@ body, .md-typeset {
 }
 
 [data-md-color-scheme="slate"] .md-typeset blockquote {
-  background-color: rgba(4, 50, 34, 0.3);
+  border-left-color: var(--nativo-evergreen);
+  background-color: rgba(96, 96, 96, 0.35);
   color: rgba(246, 233, 217, 0.8);
 }
 
