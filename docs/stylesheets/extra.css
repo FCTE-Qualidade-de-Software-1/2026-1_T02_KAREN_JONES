@@ -66,10 +66,10 @@ body, .md-typeset {
   --md-primary-fg-color--dark:    var(--nativo-evergreen);
   --md-primary-bg-color:          var(--nativo-evergreen);
   --md-accent-fg-color:           var(--nativo-cinnamon);
-  --md-accent-fg-color--transparent: rgba(182, 113, 80, 0.15);
+  --md-accent-fg-color--transparent: rgba(20, 20, 20, 0.15);
   --md-typeset-color:             #e8ddd0;
   --md-typeset-a-color:           var(--nativo-cinnamon);
-  --md-default-bg-color:          #0e1c16;
+  --md-default-bg-color:          #171918;
   --md-default-fg-color:          var(--nativo-cream);
   --md-code-bg-color:             #171918;
   --md-code-fg-color:             var(--nativo-cream);
@@ -87,7 +87,7 @@ body, .md-typeset {
    ===================================================== */
 .md-header {
   background-color: var(--nativo-evergreen) !important;
-  box-shadow: 0 2px 12px rgba(4, 50, 34, 0.35);
+  box-shadow: 0 2px 12px rgba(20, 20, 20, 0.08);
 }
 
 .md-header__title {
@@ -106,7 +106,7 @@ body, .md-typeset {
 
 .md-tabs {
   background-color: var(--nativo-evergreen) !important;
-  border-top: 1px solid rgba(246, 233, 217, 0.12);
+  border-top: 1px solid rgba(20, 20, 20, 0.08);
   min-height: 2.5rem;
   overflow-y: visible;
 }
@@ -184,14 +184,14 @@ body, .md-typeset {
     height: 8px;
   }
   .md-tabs__list::-webkit-scrollbar-thumb {
-    background: rgba(246,233,217,0.08);
+    background: rgba(20, 20, 20, 0.08);
     border-radius: 8px;
   }
   .md-tabs__list::-webkit-scrollbar-track {
     background: transparent;
   }
   @supports (scrollbar-width: thin) {
-    .md-tabs__list { scrollbar-width: thin; scrollbar-color: rgba(246,233,217,0.08) transparent; }
+    .md-tabs__list { scrollbar-width: thin; scrollbar-color: rgba(20, 20, 20, 0.08) transparent; }
   }
 }
 
@@ -269,20 +269,20 @@ body, .md-typeset {
 
 .md-nav__link:hover {
   color: var(--nativo-cinnamon) !important;
-  background-color: rgba(182, 113, 80, 0.08);
+  background-color: rgba(20, 20, 20, 0.08);
 }
 
 .md-nav__item--active > .md-nav__link,
 .md-nav__link--active {
   font-weight: 600;
   color: var(--nativo-evergreen) !important;
-  background-color: rgba(4, 50, 34, 0.07);
+  background-color: rgba(20, 20, 20, 0.08);
 }
 
 [data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link,
 [data-md-color-scheme="slate"] .md-nav__link--active {
   color: var(--nativo-cream) !important;
-  background-color: rgba(246, 233, 217, 0.08);
+  background-color: rgba(20, 20, 20, 0.08);
 }
 
 /* =====================================================
@@ -350,8 +350,8 @@ body, .md-typeset {
 .md-typeset table:not([class]) {
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid rgba(23, 25, 24, 0.35);
-  box-shadow: 0 2px 12px rgba(4, 50, 34, 0.07);
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  box-shadow: 0 2px 12px rgba(20, 20, 20, 0.08);
   font-size: 0.84rem;
   width: 100%;
 }
@@ -370,7 +370,7 @@ body, .md-typeset {
 
 .md-typeset table:not([class]) td {
   padding: 0.65rem 1rem;
-  border-bottom: 1px solid rgba(23, 25, 24, 0.2);
+  border-bottom: 1px solid rgba(20, 20, 20, 0.08);
   vertical-align: top;
 }
 
@@ -383,11 +383,11 @@ body, .md-typeset {
 }
 
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) td {
-  background-color: rgba(246, 233, 217, 0.04);
+  background-color: rgba(20, 20, 20, 0.08);
 }
 
 .md-typeset table:not([class]) tr:hover td {
-  background-color: rgba(182, 113, 80, 0.08) !important;
+  background-color: rgba(20, 20, 20, 0.08) !important;
   transition: background-color 0.15s ease;
 }
 
