@@ -1,0 +1,86 @@
+site_name: Avaliação de Qualidade do Ollama - Karen Jones
+site_description: Documentação de Visão de Produto e Projeto
+site_author: Equipe Karen Jones
+
+theme:
+  name: material
+  language: pt-BR
+  logo: img/ollamaIcon2White.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  favicon: img/iconNav.png
+  icon:
+    repo: material/github
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+
+  features:
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - toc.follow
+    - navigation.logo
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - tables
+  - md_in_html
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+
+# ==========================================
+# ESTRUTURA DO MENU (NAVBAR) E DAS PÁGINAS
+# ==========================================
+nav:
+
+  - Início: index.md
+
+  - 1. Quem é Karen Jones?: 01-karenJones/index.md
+
+  - 2. Fase 1:
+    - Visão Geral: 02-fase1/index.md
+    - Propósito da Avaliação: 02-fase1/proposito.md
+    - Requisitantes e Partes Interessadas: 02-fase1/requisitantes.md
+    - Descrição do Produto: 02-fase1/produto.md
+    - Justificativas: 02-fase1/justificativas.md
+    - Modelo de Qualidade e Escopo: 02-fase1/modelo.md
+    - Tabela de Contribuição: 02-fase1/contribuicao.md
+
+  - 3. Fase 2:
+    - Visão Geral: 03-fase2/index.md
+
+  - 4. Fase 3:
+    - Visão Geral: 04-fase3/index.md
