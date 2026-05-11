@@ -1,4 +1,4 @@
-# REQ-2026.1-T02-Ollama
+# 2026-1_T02_KAREN_JONES-Ollama
 Repositório de projeto da disciplina de Qualidade de Software, 2026.1.
 
 Este trabalho avalia o software **Ollama**, com foco em análise de qualidade, documentação e definição de métricas e critérios de avaliação.
