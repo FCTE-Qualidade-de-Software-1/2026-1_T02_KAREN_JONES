@@ -1,97 +1,72 @@
 # 2.4 Justificativas
 
-A escolha do conjunto tecnológico formado pelo **Ollama** e o modelo **Qwen 2.5 7B** é estrategicamente orientada para permitir a medição precisa dos atributos de qualidade do nosso software, especificamente focando nas características de **Eficiência** e **Portabilidade**, conforme delineado pelas normas de qualidade.
+ # 2.4.1 Por que o Qwen 2.5:3B?
+
+## Tamanho e Viabilidade Local
+A versão de **3 bilhões de parâmetros** do Qwen 2.5 caracteriza-se como um modelo robusto, mas otimizado o suficiente para ser executado com fluidez em hardware de consumo.  
+
+Além disso, o modelo suporta **quantização**, tornando-se um candidato ideal para testes de estresse e avaliação dos limites do hardware local sem exigir infraestrutura de alto custo.
+
+## Janela de Contexto e *Time Behaviour*
+O modelo é capaz de lidar com janelas de contexto extremamente longas, de até **128K tokens**.  
+
+Essa característica é central para os testes de **Eficiência de Desempenho**, pois permite submeter o sistema a diferentes volumes e cargas textuais no prompt, possibilitando medir com precisão o:
+
+- **Time to First Token (TTFT)** — tempo necessário para a chegada do primeiro token gerado.
+
+Essa medição fornecerá uma métrica precisa do atributo **Comportamento no Tempo (Time Behaviour)** sob diferentes condições de estresse computacional.
 
 ---
 
-## 2.4.1 Por que o Qwen 2.5 7B?
+# 2.4.2 Por que o Ollama?
 
-### Tamanho e Viabilidade Local
+## Isolamento de Ambiente (Offline)
+O **Ollama** permite executar modelos de linguagem de forma local e totalmente offline.  
 
-O **Qwen 2.5 7B-Instruct** possui aproximadamente [**7,61 bilhões de parâmetros**](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct), caracterizando-se como um modelo de linguagem grande (LLM) robusto, porém otimizado o suficiente para execução em hardware d
-e consumo.  
-
-Além disso, o modelo suporta **quantização**, processo que reduz significativamente o tamanho e o consumo de recursos computacionais, tornando-o ideal para testes de estresse e avaliação dos limites do hardware.
-
-### Capacidade Multilíngue e de Contexto
-O modelo oferece suporte avançado para mais de **29 idiomas**, incluindo o Português, além de suportar janelas de contexto extensas de até **131.072 tokens**.  
-
-Essa capacidade permite submeter o sistema a cargas variáveis de processamento textual, possibilitando medir diretamente o impacto dessas cargas no desempenho do software.
-
----
-
-## 2.4.2 Por que o Ollama?
-
-### Isolamento de Ambiente (Offline)
-O **Ollama** possibilita a execução local e totalmente offline de modelos de linguagem. Isso é essencial para testes de **Eficiência**, pois elimina variáveis externas imprevisíveis, como:
+Essa característica é essencial para os testes de **Eficiência de Desempenho**, pois elimina variáveis externas imprevisíveis, tais como:
 
 - Latência de rede;
-- Gargalos de servidores em nuvem;
-- Instabilidades de conexão.
+- Instabilidades de conexão;
+- Gargalos de servidores em nuvem.
 
-Dessa forma, os resultados obtidos refletem exclusivamente o desempenho do hardware local e da aplicação.
+Com isso, o tempo de resposta medido reflete diretamente o desempenho do hardware local e da aplicação.
 
-### Agilidade na Implantação
-O Ollama foi desenvolvido para simplificar a execução de modelos abertos localmente, oferecendo:
+## Verificação da Promessa de Agilidade (Portabilidade)
+O Ollama é promovido como uma das formas mais simples de implementar e executar modelos abertos localmente.  
 
-- Compatibilidade multiplataforma;
-- Suporte à conteinerização via Docker;
-- Facilidade de configuração.
+O objetivo deste trabalho é validar essa proposta na prática, avaliando e metrificando:
 
-Essas características tornam a ferramenta ideal para avaliar e metrificar atributos relacionados à **Portabilidade**.
+- O esforço de instalação;
+- A complexidade de configuração;
+- A capacidade de adaptação em diferentes sistemas operacionais;
+- A compatibilidade com ambientes conteinerizados via Docker.
+
+Esses testes permitirão validar os parâmetros relacionados à característica de **Portabilidade**.
 
 ---
 
-## 2.4.3 Estruturação da Medição (Abordagem GQM)
+# 2.4.3 Estruturação da Medição (Abordagem GQM e ISO)
 
-Para garantir que a coleta de dados esteja alinhada aos objetivos da pesquisa, utiliza-se o framework **GQM (Goal-Question-Metric)**.
+Para garantir que a coleta de dados esteja alinhada aos objetivos do projeto, será utilizado o framework **GQM (Goal-Question-Metric)**.
 
 A definição do propósito analítico estrutura-se da seguinte forma:
 
-- **Objeto de análise:** o modelo Qwen 2.5 7B executado sob o motor do Ollama;
+- **Objeto de análise:** o modelo Qwen 2.5:3B executado sob o motor do Ollama;
 - **Propósito:** compreender e metrificar o comportamento do sistema;
 - **Foco:** atributos de qualidade relacionados à Eficiência e Portabilidade;
 - **Ponto de vista:** equipe de desenvolvimento e testes;
 - **Contexto:** ambiente operacional do software.
 
----
+As medições realizadas estarão fundamentadas nos elementos de medida definidos pelo relatório técnico **ISO/IEC TR 25021**.[ISO/IEC TR 25021 (SQuaRE – Quality Measure Elements)](https://www.iso.org/standard/35736.html?), entenda mis sobre o modelo na aba [modelo](02-fase1/modelo.md).
 
-## 2.4.4 Mapeamento das Métricas (ISO/IEC TR 25021)
+O detalhamento individual das métricas coletadas — como:
 
-Com base no relatório técnico **ISO/IEC TR 25021**, que define elementos de medida de qualidade, a justificativa dessa arquitetura se fundamenta nas seguintes métricas associadas às características escolhidas.
+- tempo de resposta;
+- utilização de recursos;
+- adaptabilidade;
+- instalabilidade;
 
----
-
-### 1. Eficiência (Efficiency)
-
-#### Comportamento no Tempo (Time Behaviour)
-Com a execução local do Qwen, serão avaliadas métricas como:
-
-- **Mean Response Time:** tempo médio entre a requisição e a geração da resposta;
-- **Throughput:** rendimento medido em tokens processados por segundo.
-
-#### Utilização de Recursos (Resource Utilization)
-Durante a geração textual do Qwen 2.5, serão utilizadas ferramentas de monitoramento para aferir métricas como:
-
-- **Maximum Memory Utilization:** utilização máxima de memória RAM/VRAM;
-- **I/O Loading Limits:** limites de carga de entrada e saída do sistema.
-
----
-
-### 2. Portabilidade (Portability)
-
-#### Adaptabilidade (Adaptability)
-A combinação entre Ollama e Docker possibilita avaliar métricas relacionadas a:
-
-- **Hardware Environmental Adaptability:** capacidade de execução em diferentes configurações de hardware;
-- **System Software Environmental Adaptability:** adaptação a diferentes sistemas operacionais e ambientes Docker.
-
-#### Instalabilidade (Installability)
-O esforço necessário para preparar o ambiente local será medido utilizando métricas voltadas para:
-
-- **Ease of Installation:** facilidade de instalação e configuração do ambiente;
-- Tempo necessário para implantação;
-- Taxa de sucesso na execução em diferentes ambientes.
+bem como as justificativas para suas escolhas, serão apresentados nos tópicos específicos subsequentes.
 
 # Referências Bibliográficas
 
@@ -99,7 +74,7 @@ O esforço necessário para preparar o ambiente local será medido utilizando m�
 
 > 2. RAMOS, Cristiane Soares. *Medição baseada em objetivos: “Determinando o que medir”*. Material da disciplina FGA0278 - Qualidade de Software 1. Faculdade do Gama (FGA), Universidade de Brasília (UnB), 2024.
 
-> 3. QWEN. *Qwen/Qwen2.5-7B-Instruct*. Repositório de modelos Hugging Face, 2024. Disponível em: <https://huggingface.co/Qwen/Qwen2.5-7B-Instruct>. Acesso em: 13 maio 2026.
+> 3. QWEN. *Qwen/Qwen2.5-3B-Instruct*. Repositório de modelos Hugging Face, 2024. Disponível em: <https://ollama.com/library/qwen2.5:3b>. Acesso em: 13 maio 2026.
 
 > 4. QWEN TEAM. *Qwen2 Technical Report*. 2024. Disponível em: <https://arxiv.org/abs/2407.10671>. Acesso em: 13 maio 2026.
 
