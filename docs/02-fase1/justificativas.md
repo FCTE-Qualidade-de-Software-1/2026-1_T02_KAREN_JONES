@@ -68,7 +68,7 @@ O detalhamento individual das métricas coletadas — como:
 
 bem como as justificativas para suas escolhas, serão apresentados nos tópicos específicos subsequentes.
 
-# Referências Bibliográficas
+# Bibliografia
 
 > 1. ISO/IEC. *ISO/IEC TR 25021:2007: Software engineering — Software product Quality Requirements and Evaluation (SQuaRE) — Quality measure elements*. 1. ed. Genebra: International Organization for Standardization / International Electrotechnical Commission, 2007.
 
@@ -79,3 +79,11 @@ bem como as justificativas para suas escolhas, serão apresentados nos tópicos 
 > 4. QWEN TEAM. *Qwen2 Technical Report*. 2024. Disponível em: <https://arxiv.org/abs/2407.10671>. Acesso em: 13 maio 2026.
 
 > 5. OLLAMA INC. *Ollama: The easiest way to build with open models*. Portal oficial de documentação, 2026. Disponível em: <https://ollama.com>. Acesso em: 13 maio 2026.
+
+---
+
+## Histórico de Versão
+ 
+| Versão | Data | Descrição | Autor | Revisor |
+|---|---|---|---|---|
+| 1.0 | 13/05/2026 | Adição do histórico de versão e revisão do conteúdo | [Renata Quadros](https://github.com/RenataKurzawa) | [Gabriel Alves](https://github.com/GdevAlves) |

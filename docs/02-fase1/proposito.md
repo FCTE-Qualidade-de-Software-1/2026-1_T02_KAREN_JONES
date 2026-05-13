@@ -1,12 +1,12 @@
 # 2.1 Propósito da Avaliação
 
-# Propósito da avaliação e uso pretendido
+## 2.1.1 Propósito da avaliação e uso pretendido
 
 O objetivo desta seção é descrever as razões para a realização da avaliação de qualidade, identificando os interessados e como os dados obtidos influenciarão as decisões sobre a stack tecnológica escolhida. Será dividido em: Por que avaliar?  ; Para quem avaliar? ; Como os resultados serão utilizados ?
 
 Toda a avaliação será feita sob as especificações da norma **ISO/IEC 25010 (SQuaRE)**, focando nas características de **portabilidade** e **eficiência de desempenho**.
 
-## Por que avaliar ?
+## 2.1.2 Por que avaliar ?
 
 Atualmente o acesso à Inteligencia Artificial se esbarra em dois principais obstáculos: a exigência de hardware de alto custo e a dependência de conectividade estável. 
 
@@ -14,7 +14,7 @@ Tendo em vista os estudantes, pesquisadores e quaisquer pessoas que utilizam a i
 
 O Ollama (executando o modelo Qwen 2.5 3B, versão v0.9.0) tem uma solução para esse cenário. Porém, é fundamental validar de essa promessa de "agilidade" e "execução local" se sustenta em hardware modesto, como um com 8GB de RAM e sem GPU dedicada. A avaliação desse trabalho busca medir se o sistema é realmente viável e consistente em diferentes sistemas operacionais, focando na portabilidade e também medir a eficiência e desempenho.
 
-## Para quem avaliar ?
+## 2.1.3 Para quem avaliar ?
 
 A avaliação e resultados se destinam principalmente a:
 
@@ -25,7 +25,7 @@ A avaliação e resultados se destinam principalmente a:
 **Decisores Técnicos**: Os dados servirão de base para recomendar (ou não) a adoção deste software como padrão para inclusão digital em áreas remotas.
 
 
-### Como os resultados serão utilizados?
+## 2.1.4 Como os resultados serão utilizados?
 
 Os resultados serão utilizados para tomar as seguintes decisões:
 
@@ -37,7 +37,7 @@ Os resultados serão utilizados para tomar as seguintes decisões:
 
 **Agilidade de Deploy**: Validar se o método de instalação atual do Ollama é simples o suficiente para ser recomendado a todos os tipos de usuários.
 
-### Cenário de Avaliação
+## 2.2 Cenário de Avaliação
 
 Foi definido o seguinte cénario para avaliação:
 
@@ -45,11 +45,11 @@ Foi definido o seguinte cénario para avaliação:
 >Um colega utiliza a mesma ferramenta no Linux (Ubuntu). Eles buscam uma solução gratuita, privada e offline. O foco da nossa avaliação é verificar se o Qwen 2.5 3B via Ollama entrega um tempo de resposta aceitável nesse hardware e se a experiência de instalação e adaptação é equivalente entre os dois sistemas operacionais."
 
 
-## Escopo da Avaliação (ISO/IEC 25021)
+## 2.3 Escopo da Avaliação (ISO/IEC 25021)
 
-As características centrais da norma aplicada a este trabalho é dtalhada abaixo. O foco será exclusivamente em Eficiência de desempenho (especificamente o comportamento temporal) e Portabilidade. Especificamos mais na aba de [Modelo de Qualidade e Escopo](https://fcte-qualidade-de-software-1.github.io/2026-1_T02_KAREN_JONES/02-fase1/modelo/).
+As características centrais da norma aplicada a este trabalho é detalhada abaixo. O foco será exclusivamente em Eficiência de desempenho (especificamente o comportamento temporal) e Portabilidade. Especificamos mais na aba de [Modelo de Qualidade e Escopo](https://fcte-qualidade-de-software-1.github.io/2026-1_T02_KAREN_JONES/02-fase1/modelo/).
 
-### Eficiência de desempenho
+### 2.3.1 Eficiência de desempenho
 Não avaliaremos a "Eficiência" genérica (qualidade em uso), mas sim a capacidade técnica do modelo em gerenciar recursos e tempo:
 
 **Comportamento Temporal** : Focaremos no Time to First Token (TTFT). Em modelos locais, o tempo que o sistema leva para começar a responder é o principal indicador de usabilidade em máquinas sem GPU.
@@ -58,7 +58,7 @@ Não avaliaremos a "Eficiência" genérica (qualidade em uso), mas sim a capacid
 
 **Capacidade** : Avaliaremos como o contexto de tokens impacta a velocidade de processamento, ignorando a capacidade multilíngue por não ser o foco da estabilidade local.
 
-### Portabilidade
+### 2.3.2 Portabilidade
 Vamos verificar se a "agilidade" prometida pelo Ollama se traduz na prática:
 
 **Adaptabilidade**: O sistema mantém o desempenho ao alternar entre o Windows (via PowerShell) e o Linux?
@@ -66,7 +66,7 @@ Vamos verificar se a "agilidade" prometida pelo Ollama se traduz na prática:
 **Instalabilidade**: O comando ```install.ps1 | iex``` realmente facilita o acesso para um usuário leigo ou apresenta barreiras em hardware limitado?
 
 
-# Bibliográfia
+# Bibliografia
 
 > 1. ISO/IEC. *ISO/IEC TR 25021:2007: Software engineering — Software product Quality Requirements and Evaluation (SQuaRE) — Quality measure elements*. 1. ed. Genebra: International Organization for Standardization / International Electrotechnical Commission, 2007.
 
@@ -78,4 +78,4 @@ Vamos verificar se a "agilidade" prometida pelo Ollama se traduz na prática:
  
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
-| 1.0 | 13/05/2026 | Criação do próposito da avaliação | [Renata Quadros](https://github.com/RenataKurzawa) | — |
+| 1.0 | 13/05/2026 | Criação do próposito da avaliação | [Renata Quadros](https://github.com/RenataKurzawa) | [Gabriel Alves](https://github.com/GdevAlves) |

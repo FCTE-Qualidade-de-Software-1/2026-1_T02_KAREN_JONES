@@ -99,7 +99,7 @@ A filosofia *local-first* do Ollama contribui para reduzir a desigualdade no ace
  
 ---
  
-## Referências
+## Bibliografia
  
 > 1. OLLAMA. *Ollama — The easiest way to build with open models*. Disponível em: <https://ollama.com>. Acesso em: 11 maio 2026.
  
