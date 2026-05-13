@@ -26,7 +26,7 @@
 
 body, .md-typeset {
   font-family: var(--nativo-font-body) !important;
-  font-size: 0.92rem;
+  font-size: 0.82rem;
   line-height: 1.75;
 }
 
@@ -352,7 +352,7 @@ body, .md-typeset {
   overflow: hidden;
   border: 1px solid rgba(20, 20, 20, 0.08);
   box-shadow: 0 2px 12px rgba(20, 20, 20, 0.08);
-  font-size: 0.84rem;
+  font-size: 0.75rem;
   width: 100%;
 }
 
@@ -363,7 +363,7 @@ body, .md-typeset {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.70rem;
   padding: 0.8rem 1rem;
   text-align: center;
 }
