@@ -61,4 +61,10 @@ tabela com as subcaracterísticas relevantes para portabilidade:
 |--------|------|-----------|-------|---------|
 | 1.0 | 12/05/2026 | Criação da página de escopo e modelos (Eficiência de desempenho e Portabilidade) | [Gabriel Alves](https://github.com/GdevAlves) | [Matheus Pinheiro](https://github.com/matheus-06) |
 |1.1|13/05/2026|Adição do histórico de versão e referências|[Matheus Pinheiro](https://github.com/matheus-06)|[Gabriel Alves](https://github.com/GdevAlves)|
-| 1.2|13/05/2026|Adição de justificativas para a relevância das subcaracterísticas|[Gabriel Alves](https://github.com/GdevAlves)|[Matheus Pinheiro](https://github.com/matheus-06)|
+| 1.2|13/05/2026|Adição de justificativas para a relevância das subcaracterísticas|[Gabriel Alves](https://github.com/GdevAlves)|[Matheus Pinheiro](https://github.com/matheus-06) e [Renata Quadros](https://github.com/RenataKurzawa)|
+
+## Histórico de Versão
+ 
+| Versão | Data | Descrição | Autor | Revisor |
+|---|---|---|---|---|
+| 1.0 | 13/05/2026 | Adição do histórico de versão e revisão do conteúdo | [Renata Quadros](https://github.com/RenataKurzawa) | — |

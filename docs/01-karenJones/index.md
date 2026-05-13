@@ -126,4 +126,4 @@ Em sua homenagem, a **Sociedade Britânica de Computação (BCS)** criou o **Kar
  
 | Versão | Data | Descrição | Autor | Revisor |
 | --- | --- | --- | --- | --- |
-| 1.0 | 11/05/2026 | Apresentação da Karen Jones | [Johnnatan Salles](https://github.com/jsalless) | |
+| 1.0 | 11/05/2026 | Apresentação da Karen Jones | [Johnnatan Salles](https://github.com/jsalless) | [Renata Quadros](https://github.com/RenataKurzawa) |
