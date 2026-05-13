@@ -37,7 +37,27 @@ tabela com as subcaracterísticas relevantes para eficiência de desempenho:
 tabela com as subcaracterísticas relevantes para portabilidade:
 
 | Subcaracterística | Descrição (SQuaRE) | Relevância para o projeto (1-5) | Justificativa para a relevância |
-|-------------------|--------------------|---------------------------------|  |  
+|-------------------|--------------------|---------------------------------|-------------------|  
 | Adaptabilidade | grau em que um produto ou sistema pode ser adaptado de forma eficaz e eficiente para diferentes ou evoluindo hardware, software ou outros ambientes operacionais ou de uso. |  |  |
 | Instabilidade | grau de eficácia e eficiência com que um produto ou sistema pode ser instalado e ou desinstalado com sucesso em um ambiente especificado. |  |  |
 | Substituibilidade | grau em que um produto pode substituir outro produto de software especificado para o mesmo propósito no mesmo ambiente. |  |  |
+
+---
+ 
+## Referências
+ 
+> 1. ISO/IEC 25010 *Software engineering – Software product Quality Requirements and Evaluation
+(SQuaRE) – Quality model.* 
+https://www.iso.org/standard/35733.html
+> 2. ISO/IEC 25021 *Software engineering - Software product Quality Requirements and Evaluation
+(SQuaRE) – Quality measure elements.* 
+https://www.iso.org/standard/35745.html
+
+---
+ 
+## Histórico de Versão
+ 
+| Versão | Data | Descrição | Autor | Revisor |
+|---|---|---|---|---|
+| 1.0 | 12/05/2026 | Criação da página de escopo e modelos (Eficiência e desempenho e Portabilidade) | [Gabriel Alves](https://github.com/GdevAlves) | [Matheus Pinheiro](https://github.com/matheus-06) |
+|1.1|13/05/2026|Adição do histórico de versão e referências|[Matheus Pinheiro](https://github.com/)|[](https://github.com/)|
