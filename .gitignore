@@ -1,3 +1,4 @@
 # Ignorar a pasta do ambiente virtual
 venv/*
+.venv/
 site/
