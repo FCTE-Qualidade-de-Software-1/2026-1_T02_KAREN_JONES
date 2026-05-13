@@ -90,7 +90,7 @@ Em sua homenagem, a **Sociedade Britânica de Computação (BCS)** criou o **Kar
  
 ---
  
-## Referências Bibliográficas
+## Bibliografia
  
 > 1. JONES, K. S. A statistical interpretation of term specificity and its application in retrieval. **Journal of Documentation**, v. 28, n. 1, p. 11–21, 1972. Disponível em: <https://doi.org/10.1108/eb026526>. Acesso em: 27 set. 2025.
  
