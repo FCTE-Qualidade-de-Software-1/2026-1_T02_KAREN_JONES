@@ -28,3 +28,5 @@ jobs:
     - name: Build documentation
       run: |
         mkdocs build
+    - name: Deploy
+      run: mkdocs gh-deploy --force
