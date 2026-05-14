@@ -1,13 +1,13 @@
 # 2.2 Requisitantes e Partes Interessadas
 ## 1. Introdução
 
-A família de modelos **Llama (Large Language Model Meta AI)** representa uma das arquiteturas mais avançadas no campo da inteligência artificial generativa, seguindo o modelo de desenvolvimento de código aberto. Diferente de outras tecnologias, o ecossistema do Llama permite o estudo aprofundado de suas capacidades e limitações pela comunidade acadêmica. 
+O **Ollama** é um software que tem como principal objetivo o gerenciamento e execução local de Modelos de Linguagem de Grande Escala (LLMs) permitindo que os usuários hospedem os agentes de inteligência artificial de sua escolha em suas próprias máquinas, assim promovendo sua privacidade e controle.
 
 ## 2. Metodologia
 
 A análise de stakeholders utiliza a norma **ISO/IEC 25010** como base. Para este projeto, priorizamos as características de **Portabilidade** e **Eficiência de Desempenho**. 
 
-O objetivo é garantir que o **Llama** possa ser facilmente transferido entre diferentes infraestruturas (Portabilidade) e que utilize os recursos computacionais de forma otimizada para processar grandes volumes de dados (Eficiência).
+O objetivo é garantir que o **Ollama** possa ser instalado, desinstalado e executado em diferentes sistemas operacionais (Portabilidade) além de utilizar os recursos computacionais de forma otimizada para processar grandes volumes de dados (Eficiência).
 
 ## 3. Papéis, Necessidades e Influência na Avaliação
 
@@ -26,9 +26,11 @@ O objetivo é garantir que o **Llama** possa ser facilmente transferido entre di
 
 > 2. QWEN. *Qwen/Qwen2.5-3B-Instruct*. Repositório de modelos Hugging Face, 2024. Disponível em: <https://ollama.com/library/qwen2.5:3b>. Acesso em: 13 maio 2026.
 
+> 3. OLLAMA. *Ollama — The easiest way to build with open models*. Disponível em: <https://ollama.com>. Acesso em: 11 maio 2026.
 
 ## Histórico de Versão
  
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
-| 1.0 | 13/05/2026 | Criação dos Requisitantes e Partes Interessadas | [Giovana Barbosa](https://github.com/RenataKurzawa) | [Renata Quadros](https://github.com/GdevAlves) |
+| 1.0 | 13/05/2026 | Criação dos Requisitantes e Partes Interessadas | [Giovana Barbosa](https://github.com/gio221) | [Renata Quadros](https://github.com/RenataKurzawa) |
+| 1.1 | 13/05/2026 | Correção no histórico de versões, substituição da introdução e metodologia do Llama pelas do Ollama e adição do ollama na bibliografia | [Matheus Pinheiro](https://github.com/matheus-06) | [](https://github.com/) |
