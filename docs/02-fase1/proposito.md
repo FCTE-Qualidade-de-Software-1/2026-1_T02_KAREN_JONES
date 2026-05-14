@@ -65,6 +65,37 @@ Vamos verificar se a "agilidade" prometida pelo Ollama se traduz na prática:
 
 **Instalabilidade**: O comando ```install.ps1 | iex``` realmente facilita o acesso para um usuário leigo ou apresenta barreiras em hardware limitado?
 
+## Decisões a Serem Apoiadas
+
+Os dados coletados e as conclusões da avaliação servirão para fundamentar as seguintes decisões e são mostrados na tabela 1:
+
+<h3 align="center">Tabela 1: Decisões a Serem Apoiadas</h3>
+
+| **Característica** | **Análise a ser feita** | **Decisão Apoiada** | **Quem Decide?** |
+| :--- | :--- | :--- | :--- |
+| **Eficiência de Desempenho** | Medição do **Time to First Token (TTFT)** e monitoramento do uso de RAM (8GB) em hardware sem GPU durante o processamento de prompts. | Definir se o modelo Qwen 2.5 3B é viável para o uso acadêmico diário em máquinas modestas ou se apresenta latência excessiva. | Equipe de Avaliação |
+| **Portabilidade** | Validar a instalabilidade via script e a adaptabilidade funcional do Ollama comparando os sistemas Windows 11 e Linux (Ubuntu). | Confirmar se a ferramenta mantém a paridade de recursos em diferentes SOs para garantir uma recomendação universal aos estudantes. | Equipe de Avaliação |
+
+<p align="center"><b>Autor:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a>, 2026.</p>
+
+## Priorização das Características de Qualidade 
+
+Para garantir que a solução proposta seja efetiva no cenário de hardware limitado e ausência de conectividade, realizou-se a priorização das características de qualidade da norma ISO/IEC 25010. A tabela 2 detalha as especificações: 
+
+<h3 align="center">Tabela 2: Priorização das Características de Qualidade (ISO/IEC 25010)</h3>
+
+| Característica de Qualidade (SQuaRE) | Ênfase (1 a 5) | Justificativa Breve |
+| :--- | :---: | :--- |
+| **Eficiência de Desempenho** | 5 – grande interesse | **Foco principal.** A velocidade de resposta (TTFT) e o uso de RAM são críticos para a viabilidade do uso em hardware modesto (8GB). |
+| **Portabilidade** | 5 – grande interesse | **Foco principal.** É fundamental que a experiência de instalação e uso seja consistente entre Windows e Linux para atender aos estudantes. |
+| **Adequação Funcional** | 3 – médio interesse | Assume-se que as funções do modelo Qwen operam; o interesse reside na estabilidade dessas funções em execução local. |
+| **Confiabilidade** | 3 – médio interesse | Importante para garantir que o modelo não interrompa o auxílio aos estudos por falhas de carregamento ou falta de internet. |
+| **Segurança** | 2 – baixo interesse | Por ser uma ferramenta executada localmente (offline), os riscos de exposição de dados são reduzidos por padrão. |
+| **Compatibilidade** | 2 – baixo interesse | O foco é a execução do assistente de forma isolada, não havendo prioridade imediata na troca de dados com outros softwares. |
+| **Manutenibilidade** | 1 – nenhum interesse | A análise da estrutura interna do código do Ollama ou do modelo Qwen está fora do escopo desta avaliação. |
+| **Usabilidade** | 1 – nenhum interesse | Característica excluída dos critérios de avaliação pela disciplina. |
+
+<p align="center"><b>Autor:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a>, 2026.</p>
 
 # Bibliografia
 
