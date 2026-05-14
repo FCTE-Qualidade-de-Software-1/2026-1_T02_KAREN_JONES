@@ -47,7 +47,7 @@ Foi definido o seguinte cénario para avaliação:
 
 ## 2.3 Escopo da Avaliação (ISO/IEC 25021)
 
-As características centrais da norma aplicada a este trabalho é detalhada abaixo. O foco será exclusivamente em Eficiência de desempenho (especificamente o comportamento temporal) e Portabilidade. Especificamos mais na aba de [Modelo de Qualidade e Escopo](https://fcte-qualidade-de-software-1.github.io/2026-1_T02_KAREN_JONES/02-fase1/modelo/).
+As características centrais da norma aplicada a este trabalho é detalhada abaixo. O foco será exclusivamente em Eficiência de desempenho e Portabilidade. Especificamos mais na aba de [Modelo de Qualidade e Escopo](https://fcte-qualidade-de-software-1.github.io/2026-1_T02_KAREN_JONES/02-fase1/modelo/).
 
 ### 2.3.1 Eficiência de desempenho
 Não avaliaremos a "Eficiência" genérica (qualidade em uso), mas sim a capacidade técnica do modelo em gerenciar recursos e tempo:
@@ -105,8 +105,11 @@ Para garantir que a solução proposta seja efetiva no cenário de hardware limi
 
 > 3. QWEN. *Qwen/Qwen2.5-3B-Instruct*. Repositório de modelos Hugging Face, 2024. Disponível em: <https://ollama.com/library/qwen2.5:3b>. Acesso em: 13 maio 2026.
 
+> 4. OLLAMA. *Ollama — The easiest way to build with open models*. Disponível em: <https://ollama.com>. Acesso em: 11 maio 2026.
+
 ## Histórico de Versão
  
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
 | 1.0 | 13/05/2026 | Criação do próposito da avaliação | [Renata Quadros](https://github.com/RenataKurzawa) | [Gabriel Alves](https://github.com/GdevAlves) |
+| 1.1 | 13/05/2026 | Pequena correção no texto do escopo e adição do OLLAMA na bibliografia | [Matheus Pinheiro](https://github.com/matheus-06) | [](https://github.com/) |

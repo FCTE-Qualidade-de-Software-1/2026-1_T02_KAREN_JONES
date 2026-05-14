@@ -9,7 +9,7 @@ O objetivo desta página é fornecer uma visão geral do software em avaliação
 ## Informações Básicas
  
 - **Nome do produto**: Ollama
-- **Versão do produto**: v0.9.0 (versão mais recente estável, maio de 2026)
+- **Versão do produto**: v0.23.4 (versão mais recente estável, maio de 2026)
 - **Aplicação do produto**: Servidor de inferência local para Modelos de Linguagem de Grande Escala (LLMs)
 - **Repositório do Código Principal**: [GitHub — ollama/ollama](https://github.com/ollama/ollama)
 - **Licença do Produto**: MIT License
@@ -134,3 +134,4 @@ A filosofia *local-first* do Ollama contribui para reduzir a desigualdade no ace
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
 | 1.0 | 11/05/2026 | Criação da descrição do produto Ollama | [Johnnatan Salles](https://github.com/jsalless) | [Renata Quadros](https://github.com/RenataKurzawa) |
+| 1.1 | 13/05/2026 | Correção na versão atual do Ollama | [Matheus Pinheiro](https://github.com/matheus-06) | [](https://github.com/) |
