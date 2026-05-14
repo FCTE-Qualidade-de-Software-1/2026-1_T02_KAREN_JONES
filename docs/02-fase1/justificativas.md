@@ -85,5 +85,5 @@ bem como as justificativas para suas escolhas, serão apresentados nos tópicos 
  
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
-| 1.0 | 13/05/2026 | Criação da página de justificativas | [Renata Quadros](https://github.com/RenataKurzawa) | [Gabriel Alves](https://github.com/GdevAlves) |
+| 1.0 | 13/05/2026 | Criação da página de justificativas | [Luiza](https://github.com/Luizaxx) |  |
 | 1.1 | 13/05/2026 | Correção no histórico de versão, remoção de objetivo fora do escopo e correção no link da ISO 25021 de 2007 | [Matheus Pinheiro](https://github.com/matheus-06) | [](https://github.com/) |
