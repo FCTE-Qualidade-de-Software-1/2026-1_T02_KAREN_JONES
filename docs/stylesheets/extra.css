@@ -245,6 +245,27 @@ body, .md-typeset {
   color: var(--nativo-cream) !important;
 }
 
+/* destacar link do repositório no header */
+.md-header .md-source {
+  color: var(--nativo-cream) !important;
+}
+
+.md-header .md-source__repository {
+  color: var(--nativo-cream) !important;
+}
+
+.md-header .md-source__facts {
+  color: rgba(246, 233, 217, 0.8) !important;
+}
+
+.md-header .md-source__icon svg {
+  fill: var(--nativo-cream) !important;
+}
+
+.md-header .md-source:hover {
+  opacity: 0.9;
+}
+
 /* =====================================================
    SIDEBAR / NAVEGAÇÃO LATERAL
    ===================================================== */

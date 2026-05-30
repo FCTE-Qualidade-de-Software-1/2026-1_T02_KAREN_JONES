@@ -9,19 +9,19 @@ O objetivo central é avaliar aspectos de qualidade do Ollama, propondo melhoria
 ## Navegue pelo Documento
 
 <div class="section-cards">
-  <a class="section-card" href="02-karenJones/">
+  <a class="section-card" href="01-karenJones/">
     <h3>1 · Quem é Karen Jones?</h3>
     <p>Panorama sobre a trajetória de Karen Spärck Jones, destacando suas principais contribuições para recuperação da informação e processamento de linguagem natural.</p>
   </a>
-  <a class="section-card" href="03-fase1/">
+  <a class="section-card" href="02-fase1/">
     <h3>2 · Fase 1 - Goal</h3>
     <p>Definição dos objetivos e metas de qualidade a serem alcançados no projeto usando a metodologia GQM.</p>
   </a>
-  <a class="section-card" href="04-fase2/">
+  <a class="section-card" href="03-fase2/">
     <h3>3 · Fase 2 - Question</h3>
     <p>Formulação das questões críticas que orientarão a análise de qualidade do software Ollama.</p>
   </a>
-  <a class="section-card" href="05-fase3/">
+  <a class="section-card" href="04-fase3/">
     <h3>4 · Fase 3 - Metric</h3>
     <p>Definição das métricas, testes e técnicas de avaliação para mensurar a qualidade do software.</p>
   </a>
