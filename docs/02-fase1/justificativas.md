@@ -37,7 +37,6 @@ O objetivo deste trabalho é validar essa proposta na prática, avaliando e metr
 - O esforço de instalação;
 - A complexidade de configuração;
 - A capacidade de adaptação em diferentes sistemas operacionais;
-- A compatibilidade com ambientes conteinerizados via Docker.
 
 Esses testes permitirão validar os parâmetros relacionados à característica de **Portabilidade**.
 
@@ -52,7 +51,7 @@ A definição do propósito analítico estrutura-se da seguinte forma:
 - **Ponto de vista:** equipe de desenvolvimento e testes;
 - **Contexto:** ambiente operacional do software.
 
-As medições realizadas estarão fundamentadas nos elementos de medida definidos pelo relatório técnico **ISO/IEC TR 25021**.[ISO/IEC TR 25021 (SQuaRE – Quality Measure Elements)](https://www.iso.org/standard/35736.html?), entenda mis sobre o modelo na aba [modelo](./modelo.md).
+As medições realizadas estarão fundamentadas nos elementos de medida definidos pelo relatório técnico **ISO/IEC TR 25021**.[ISO/IEC TR 25021 (SQuaRE – Quality Measure Elements)](https://www.iso.org/standard/35745.html#lifecycle) de 2007, entenda mis sobre o modelo na aba [modelo](./modelo.md).
 
 O detalhamento individual das métricas coletadas — como:
 
@@ -82,4 +81,6 @@ bem como as justificativas para suas escolhas, serão apresentados nos tópicos 
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
 | 1.0 | 13/05/2026 | Adição do histórico de versão e revisão do conteúdo | [Renata Quadros](https://github.com/RenataKurzawa) | [Gabriel Alves](https://github.com/GdevAlves) |
-| 1.1 | 29/05/2026 | Correções de links e Títulos | [Gabriel Alves](https://github.com/GdevAlves) | [Gabriel Alves](https://github.com/GdevAlves) |
+| 1.1 | 13/05/2026 | Criação da página de justificativas | [Luiza](https://github.com/Luizaxx) |  |
+| 1.2 | 13/05/2026 | Correção no histórico de versão, remoção de objetivo fora do escopo e correção no link da ISO 25021 de 2007 | [Matheus Pinheiro](https://github.com/matheus-06) | [](https://github.com/) |
+| 1.3 | 29/05/2026 | Correções de links e Títulos | [Gabriel Alves](https://github.com/GdevAlves) | [Gabriel Alves](https://github.com/GdevAlves) |
