@@ -1,20 +1,20 @@
 # 2.5 Modelo de Qualidade e Escopo
 
-O objetivo desta página é representar o modelo de qualidade (ISO/IEC 25010) com foco em definir o escopo e a profundidade de análise para cada das características com maior prioridade:  
+O objetivo desta página é representar o modelo de qualidade (ISO/IEC 25010) com foco em definir o escopo e a profundidade de análise para cada das características com maior prioridade que na norma se desdobram em subcaracterísticas como mostrado na figura 1, que são:  
 
 - Eficiência de Desempenho
 - Portabilidade
 
-## visão geral
+<font size="3"><p style="text-align: center">Figura 1: Imagem Ilustrativa da Estrutura das características Portabilidade e Eficiência de Desempenho</p></font>
 
 ![diagrama da norma square com as duas características](../img/diagrama-square.png)
 
 ## 2.5.1 Escopo e adaptação do modelo
 
 O escopo se limitará na análise das duas características de qualidade mais relevantes para o projeto, que são: eficiência de desempenho e portabilidade.
-O modelo de qualidade ISO/IEC 25010 será adaptado para incluir apenas as subcaracterísticas relevantes para essas duas características segundo o cenário de uso definido anteriormente em [Cenário de Uso](./proposito.md#cenario-de-uso), garantindo uma análise mais focada e eficiente.
+O modelo de qualidade ISO/IEC 25010 será adaptado para incluir apenas as subcaracterísticas relevantes para essas duas características segundo o cenário de uso definido anteriormente em [Cenário de Avaliação](./proposito.md#22-cenario-de-avaliacao), garantindo uma análise mais focada e eficiente.
 
-### 2.5.2 Eficiência de Desempenho
+## 2.5.2 Eficiência de Desempenho
 
 > **definição segundo a norma:** desempenho relativo à quantidade de recursos usados sob condições declaradas.
 >> NOTA : Recursos podem incluir outros produtos de software, a configuração de software e hardware do sistema, e materiais (ex. papel para impressão, mídia de armazenamento).
@@ -27,7 +27,7 @@ tabela com as subcaracterísticas relevantes para eficiência de desempenho:
 | Utilização de recursos | grau em que as quantidades e tipos de recursos usados por um produto ou sistema, ao executar suas funções, atendem aos requisitos. | 5 | Os recursos utilizados devem ser otimizados para garantir o desempenho adequado, segundo o cenário de uso. |
 | Capacidade | grau em que os limites máximos de um parâmetro de produto ou sistema atendem aos requisitos. | 5 | Impacta diretamente na capacidade do sistema de atender às necessidades dos stakeholders. |
 
-### 2.5.3 Portabilidade
+## 2.5.3 Portabilidade
 
 > **definição segundo a norma:** grau de eficácia e eficiência com que um sistema, produto ou componente pode ser transferido de um ambiente operacional ou de uso para outro.
 >> NOTA 1 Adaptado de ISO/IEC/IEEE 24765.
@@ -61,4 +61,5 @@ tabela com as subcaracterísticas relevantes para portabilidade:
 |--------|------|-----------|-------|---------|
 | 1.0 | 12/05/2026 | Criação da página de escopo e modelos (Eficiência de desempenho e Portabilidade) | [Gabriel Alves](https://github.com/GdevAlves) | [Matheus Pinheiro](https://github.com/matheus-06) |
 |1.1|13/05/2026|Adição do histórico de versão e referências|[Matheus Pinheiro](https://github.com/matheus-06)|[Gabriel Alves](https://github.com/GdevAlves)|
-| 1.2|13/05/2026|Adição de justificativas para a relevância das subcaracterísticas|[Gabriel Alves](https://github.com/GdevAlves)|[Matheus Pinheiro](https://github.com/matheus-06) e [Renata Quadros](https://github.com/RenataKurzawa)|
+| 1.2 |13/05/2026|Adição de justificativas para a relevância das subcaracterísticas|[Gabriel Alves](https://github.com/GdevAlves)|[Matheus Pinheiro](https://github.com/matheus-06) e [Renata Quadros](https://github.com/RenataKurzawa)|
+| 1.3 |29/05/2026|Correção de links e títulos e adição de referências|[Gabriel Alves](https://github.com/GdevAlves)|[Matheus Pinheiro](https://github.com/matheus-06) e [Renata Quadros](https://github.com/RenataKurzawa)|

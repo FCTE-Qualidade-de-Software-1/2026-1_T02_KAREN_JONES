@@ -1,6 +1,7 @@
 site_name: Avaliação de Qualidade do Ollama - Karen Jones
 site_description: Documentação de Visão de Produto e Projeto
 site_author: Equipe Karen Jones
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES
 
 theme:
   name: material
@@ -81,6 +82,8 @@ nav:
 
   - 3. Fase 2:
     - Visão Geral: 03-fase2/index.md
-
+    - Eficiência de Desempenho: 03-fase2/eficiencia.md
+    - Portabilidade: 03-fase2/portabilidade.md
+    - Tabela de Contribuição: 03-fase2/contribuicao.md
   - 4. Fase 3:
     - Visão Geral: 04-fase3/index.md
