@@ -256,21 +256,28 @@ OBS: Modelos de Linguagem de Grande Escala (LLMs) foram utilizados como apoio ao
 
 Para a elaboração deste documento, a Inteligência Artificial foi utilizada como ferramenta de apoio. O uso concentrou-se principalmente em auxiliar a compreensão e o esclarecimento de termos técnicos presentes nas normas ISO/IEC 25010 e ISO/IEC 25021, bem como em fontes de documentação técnica do Ollama e da biblioteca psutil. Adicionalmente, a IA foi empregada para estruturar e organizar as ideias na aplicação da metodologia GQM, garantindo coerência entre questões, métricas e o objetivo de análise definido.
 
+[Notebook LM](https://notebooklm.google.com/notebook/e9f64a2d-93cc-4f05-9c28-4d5f14c3af3e)
+
 # Referências Bibliográficas
 
 <a id="ref-1"></a>[1] INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. ISO/IEC 25010:2011 – Systems and software engineering – Software product Quality Requirements and Evaluation (SQuaRE) – Quality model. Geneva: ISO, 2011.
 
 <a id="ref-3"></a>[3] OLLAMA. REST API Documentation. Disponível em: https://github.com/ollama/ollama/blob/main/docs/api.md.
+Acesso em: 03 jun. 2026.
 
 <a id="ref-4"></a>[4] FENTON, Norman; BIEMAN, James. Software Metrics: A Rigorous and Practical Approach. 3. ed. Boca Raton: CRC Press, 2015.
+Acesso em: 03 jun. 2026.
 
 <a id="ref-5"></a>[5] NVIDIA Corporation. GPU Memory Management Best Practices.
+Acesso em: 03 jun. 2026.
 
-<a id="ref-6"></a>[6] PSUTIL. Cross-platform lib for process and system monitoring in Python. Disponível em: https://psutil.readthedocs.io/.
+<a id="ref-6"></a>[6] PSUTIL. Cross-platform lib for process and system monitoring in Python. Disponível em: https://psutil.readthedocs.io/. Acesso em: 03 jun. 2026.
 
 <a id="ref-7"></a>[7] TSENART, T. vegeta: HTTP load testing tool. Disponível em: https://github.com/tsenart/vegeta.
+Acesso em: 03 jun. 2026.
 
 <a id="ref-8"></a>[8] ALIBABA CLOUD. Qwen 2.5 Technical Report. Disponível em: https://huggingface.co/Qwen/Qwen2.5-3B-Instruct.
+Acesso em: 03 jun. 2026.
 
 ## Histórico de Versão
 
