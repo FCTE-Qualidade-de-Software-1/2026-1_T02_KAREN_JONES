@@ -73,4 +73,4 @@ Os dados coletados fundamentarão as seguintes decisões:
 
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
-| 1.0 | 04/06/2026 | Criação do documento | [Renata Quadros](https://github.com/RenataKurzawa) | |
+| 1.0 | 04/06/2026 | Criação do documento | [Renata Quadros](https://github.com/RenataKurzawa) |[Giovana Barbosa](https://github.com/gio221) |
