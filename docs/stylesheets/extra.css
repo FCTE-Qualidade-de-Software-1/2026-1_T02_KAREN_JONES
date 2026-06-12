@@ -120,16 +120,16 @@ body, .md-typeset {
 @media screen and (min-width: 76.25em) {
   /* header sizing: keep near theme defaults to avoid layout shift */
   :root {
-    --md-header-height: 4rem;
+    --md-header-height: 3.5rem;
   }
 
   .md-header {
-    min-height: 6.2rem;
+    min-height: 3.5rem;
   }
 
   .md-tabs {
-    min-height: 4.6rem;
-    padding: 0.35rem 0 0.4rem;
+    min-height: 2.4rem;
+    padding: 0.2rem 0;
     overflow-y: hidden;
   }
 
