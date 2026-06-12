@@ -40,7 +40,7 @@ O foco está em duas subcaracterísticas conforme ISO/IEC 25010:
 | Ambiente | Sistema Operacional | Método |
 |----------|---------------------|--------|
 | Ambiente A | Windows 11 (64 bits) | Instalação nativa |
-| Ambiente B | Ubuntu 22.04 LTS | Instalação nativa ou via WSL2 |
+| Ambiente B | Zorin OS 18.1 Core | Instalação nativa ou via WSL2 |
 
 ### 3.3 Ferramentas
 
@@ -116,7 +116,7 @@ Executar uma bateria de testes funcionais idêntica em ambos os ambientes:
 ## Passo 1: Preparação
 
 * Preparar máquina de teste com Windows 11 limpo (ou máquina virtual);
-* Preparar máquina de teste com Ubuntu 22.04 limpo (ou VM/WSL2);
+* Preparar máquina de teste com Zorin OS 18.1 Core limpo (ou VM/WSL2);
 * Documentar o estado inicial do sistema (espaço em disco, processos em execução);
 * Preparar checklist de verificação pós-instalação.
 

@@ -7,7 +7,7 @@ Retomada do objetivo GQM e das métricas definidas na Fase 2, contextualizando o
 ## 5.1.2 Resultados Coletados
 Apresentação dos dados brutos obtidos pelos scripts Python/psutil, em tabelas e/ou gráficos, organizados por:
 
-Ambiente (Windows 11 / Ubuntu 22.04)
+Ambiente (Windows 11 / Zorin OS 18.1 Core)
 Tamanho de contexto (512, 1024, 2048, 4096 tokens)
 
 Métricas a apresentar: TTFT, TPS, Uso de RAM (pico e médio), Uso de CPU, Estabilidade do sistema.
@@ -27,7 +27,7 @@ Comparação direta Windows x Linux para cada métrica, calculando o desvio rela
 
 ## 5.1.5 Interpretação e Discussão
 
-Resposta às perguntas centrais: o Qwen 2.5 3B via Ollama é viável em 8 GB sem GPU? Há diferença significativa entre sistemas operacionais?
+Resposta às perguntas centrais: o Qwen 2.5 3B via Ollama é viável em 16 GB sem GPU? Há diferença significativa entre sistemas operacionais?
 
 ## Bibliografia
 

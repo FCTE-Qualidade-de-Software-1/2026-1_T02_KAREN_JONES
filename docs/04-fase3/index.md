@@ -12,7 +12,7 @@ O plano detalha:
 
 Conforme estabelecido no cenário de avaliação da Fase 1:
 
-> "Uma estudante universitária com acesso instável à internet e um notebook básico (Windows 11, 8GB RAM, sem GPU) precisa de um assistente para estudos. Um colega utiliza a mesma ferramenta no Linux (Ubuntu). Eles buscam uma solução gratuita, privada e offline."
+> "Uma estudante universitária com acesso instável à internet e um notebook com configurações modestas (Windows 11, 16GB RAM, sem GPU dedicada) precisa de uma ferramenta que rode um modelo de linguagem para estudos. Um colega utiliza a mesma ferramenta no Linux (Zorin OS 18.1 Core). Eles buscam uma solução gratuita, privada e offline."
 
 A avaliação visa verificar se o Qwen 2.5 3B via Ollama entrega um tempo de resposta aceitável nesse hardware e se a experiência de instalação e adaptação é equivalente entre os dois sistemas operacionais.
 
@@ -37,7 +37,7 @@ Os dados coletados fundamentarão as seguintes decisões:
 
 | Decisão | Característica Relacionada |
 |---------|---------------------------|
-| Definir se 8GB de RAM são suficientes para execução estável | Eficiência de Desempenho |
+| Definir se 16GB de RAM são suficientes para execução estável | Eficiência de Desempenho |
 | Determinar se há paridade de desempenho entre Windows e Linux | Eficiência de Desempenho / Portabilidade |
 | Validar se o método de instalação é acessível para usuários leigos | Portabilidade |
 | Decidir se o limite de contexto de tokens precisa ser ajustado | Eficiência de Desempenho |

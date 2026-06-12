@@ -12,7 +12,7 @@ Atualmente o acesso à Inteligencia Artificial se esbarra em dois principais obs
 
 Tendo em vista os estudantes, pesquisadores e quaisquer pessoas que utilizam a inteligencia artificial que se localizam em regiões com a infraestrutura limitada precisam de ferramentas que garantam a funcionalidade offline e privacidade.
 
-O Ollama (executando o modelo Qwen 2.5 3B, versão v0.9.0) tem uma solução para esse cenário. Porém, é fundamental validar de essa promessa de "agilidade" e "execução local" se sustenta em hardware modesto, como um com 8GB de RAM e sem GPU dedicada. A avaliação desse trabalho busca medir se o sistema é realmente viável e consistente em diferentes sistemas operacionais, focando na portabilidade e também medir a eficiência e desempenho.
+O Ollama (executando o modelo Qwen 2.5 3B, versão v0.9.0) tem uma solução para esse cenário. Porém, é fundamental validar se essa promessa de "agilidade" e "execução local" se sustenta em um hardware com 16GB de RAM e sem GPU dedicada. A avaliação desse trabalho busca medir se o sistema é realmente viável e consistente em diferentes sistemas operacionais, focando na portabilidade e também medir a eficiência e desempenho.
 
 ## 2.1.3 Para quem avaliar ?
 
@@ -29,7 +29,7 @@ A avaliação e resultados se destinam principalmente a:
 
 Os resultados serão utilizados para tomar as seguintes decisões:
 
-**Validação de Hardware**: Decidir se 8GB de RAM são suficientes para rodar o Qwen 2.5 3B sem comprometer a estabilidade do sistema operacional.
+**Validação de Hardware**: Decidir se 16GB de RAM sem o auxílio de GPU dedicada são suficientes para rodar o Qwen 2.5 3B sem comprometer a estabilidade do sistema operacional.
 
 **Adoção de Sistemas Operacionais**: Determinar se há paridade de desempenho entre Windows e Linux.
 
@@ -41,7 +41,7 @@ Os resultados serão utilizados para tomar as seguintes decisões:
 
 Foi definido o seguinte cénario para avaliação:
 
->"Uma estudante universitária com acesso instável à internet e um notebook básico (Windows 11, 8GB RAM, sem GPU) precisa de um assistente para estudos. 
+>"Uma estudante universitária com acesso instável à internet e um notebook básico (Windows 11, 16GB RAM, sem GPU dedicada) precisa de um assistente para estudos. 
 >Um colega utiliza a mesma ferramenta no Linux (Ubuntu). Eles buscam uma solução gratuita, privada e offline. O foco da nossa avaliação é verificar se o Qwen 2.5 3B via Ollama entrega um tempo de resposta aceitável nesse hardware e se a experiência de instalação e adaptação é equivalente entre os dois sistemas operacionais."
 
 
@@ -54,7 +54,7 @@ Não avaliaremos a "Eficiência" genérica (qualidade em uso), mas sim a capacid
 
 **Comportamento Temporal** : Focaremos no Time to First Token (TTFT). Em modelos locais, o tempo que o sistema leva para começar a responder é o principal indicador de usabilidade em máquinas sem GPU.
 
-**Utilização de recursos** : Focaremos em medir se os recursos (RAM/CPU) são otimizados para garantir o desempenho adequado no cenário de 8GB de RAM.
+**Utilização de recursos** : Focaremos em medir se os recursos (RAM/CPU) são otimizados para garantir o desempenho adequado no cenário de 16GB de RAM.
 
 **Capacidade** : Avaliaremos como o contexto de tokens impacta a velocidade de processamento, ignorando a capacidade multilíngue por não ser o foco da estabilidade local.
 
@@ -73,7 +73,7 @@ Os dados coletados e as conclusões da avaliação servirão para fundamentar as
 
 | **Característica** | **Análise a ser feita** | **Decisão Apoiada** | **Quem Decide?** |
 | :--- | :--- | :--- | :--- |
-| **Eficiência de Desempenho** | Medição do **Time to First Token (TTFT)** e monitoramento do uso de RAM (8GB) em hardware sem GPU durante o processamento de prompts. | Definir se o modelo Qwen 2.5 3B é viável para o uso acadêmico diário em máquinas modestas ou se apresenta latência excessiva. | Equipe de Avaliação |
+| **Eficiência de Desempenho** | Medição do **Time to First Token (TTFT)** e monitoramento do uso de RAM (16GB) em hardware sem GPU dedicada durante o processamento de prompts. | Definir se o modelo Qwen 2.5 3B é viável para o uso acadêmico diário em máquinas modestas ou se apresenta latência excessiva. | Equipe de Avaliação |
 | **Portabilidade** | Validar a instalabilidade via script e a adaptabilidade funcional do Ollama comparando os sistemas Windows 11 e Linux (Ubuntu). | Confirmar se a ferramenta mantém a paridade de recursos em diferentes SOs para garantir uma recomendação universal aos estudantes. | Equipe de Avaliação |
 
 <p align="center"><b>Autor:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a>, 2026.</p>
@@ -86,7 +86,7 @@ Para garantir que a solução proposta seja efetiva no cenário de hardware limi
 
 | Característica de Qualidade (SQuaRE) | Ênfase (1 a 5) | Justificativa Breve |
 | :--- | :---: | :--- |
-| **Eficiência de Desempenho** | 5 – grande interesse | **Foco principal.** A velocidade de resposta (TTFT) e o uso de RAM são críticos para a viabilidade do uso em hardware modesto (8GB). |
+| **Eficiência de Desempenho** | 5 – grande interesse | **Foco principal.** A velocidade de resposta (TTFT) e o uso de RAM são críticos para a viabilidade do uso em hardware modesto (16GB). |
 | **Portabilidade** | 5 – grande interesse | **Foco principal.** É fundamental que a experiência de instalação e uso seja consistente entre Windows e Linux para atender aos estudantes. |
 | **Adequação Funcional** | 3 – médio interesse | Assume-se que as funções do modelo Qwen operam; o interesse reside na estabilidade dessas funções em execução local. |
 | **Confiabilidade** | 3 – médio interesse | Importante para garantir que o modelo não interrompa o auxílio aos estudos por falhas de carregamento ou falta de internet. |

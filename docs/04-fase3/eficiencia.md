@@ -41,7 +41,7 @@ O foco está em três subcaracterísticas conforme ISO/IEC 25010:
 | Ambiente | Sistema Operacional |
 |----------|---------------------|
 | Ambiente A | Windows 11 (64 bits) |
-| Ambiente B | Ubuntu 22.04 LTS ou superior |
+| Ambiente B | Zorin OS 18.1 Core |
 
 ### 3.3 Software
 

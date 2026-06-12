@@ -163,7 +163,7 @@ A hipótese é que o processo de instalação seja consistente entre ambientes d
 >   
 >Taxa(ambiente X) = Instalações bem-sucedidas em X / Total de tentativas em X
 >
->Ambientes: Ubuntu 22.04, Ubuntu 24.04, macOS 13 (Intel), macOS 14 (Apple Silicon), Windows 11.
+>Ambientes: Zorin OS 18.1 Core, Ubuntu 24.04, macOS 13 (Intel), macOS 14 (Apple Silicon), Windows 11.
 
 ***Referência:***
 [[6]](#ref-6), [[7]](#ref-7)
