@@ -15,3 +15,21 @@ Recomendação final: o Ollama com Qwen 2.5 3B é viável para o cenário descri
 ## 5.3.4 Ameaças à Validade
 
 Fatores que podem ter afetado os resultados: variação de hardware, número limitado de repetições, ausência de GPU, versão específica do Ollama, etc.
+
+## Bibliografia
+
+> 1. 
+
+> 2. 
+
+> 3. 
+
+> 4. 
+
+> 5. 
+
+## Histórico de Versão
+ 
+| Versão | Data | Descrição | Autor | Revisor |
+|---|---|---|---|---|
+| 1.0 | 12/06/2026 | Criação do documento |[Gabriel](https://github.com/GDevAlves) |  | 

@@ -15,3 +15,21 @@ Para cada questão (Q1 a Q4 da Fase 2), confirmação ou refutação das hipóte
 ## 5.2.5 Interpretação e Discussão
 
 A instalação é realmente simples para um usuário leigo? O comportamento é equivalente entre os dois sistemas operacionais?
+
+## Bibliografia
+
+> 1. 
+
+> 2. 
+
+> 3. 
+
+> 4. 
+
+> 5. 
+
+## Histórico de Versão
+ 
+| Versão | Data | Descrição | Autor | Revisor |
+|---|---|---|---|---|
+| 1.0 | 12/06/2026 | Criação do documento |[Gabriel](https://github.com/GDevAlves) |  | 

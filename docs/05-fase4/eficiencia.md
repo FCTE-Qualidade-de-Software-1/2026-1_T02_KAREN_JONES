@@ -29,7 +29,7 @@ Comparação direta Windows x Linux para cada métrica, calculando o desvio rela
 
 Resposta às perguntas centrais: o Qwen 2.5 3B via Ollama é viável em 8 GB sem GPU? Há diferença significativa entre sistemas operacionais?
 
-# Bibliografia
+## Bibliografia
 
 > 1. 
 
