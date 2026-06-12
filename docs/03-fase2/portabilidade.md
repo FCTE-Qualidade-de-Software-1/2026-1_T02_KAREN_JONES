@@ -14,11 +14,11 @@ A metodologia adotada neste artefato baseia-se no método GQM (Goal-Question-Met
 
 1. Definição do objetivo de análise: neste caso, avaliar a portabilidade do Ollama executando o modelo Qwen 2.5 3B.
 
-2. Formulação de questões: que permitem investigar aspectos específicos do critério, como comportamento em diferentes sistemas operacionais, facilidade de instalação e substituibilidade de dependências.
+2. Formulação de questões: que permitem investigar aspectos específicos do critério, como comportamento em diferentes sistemas operacionais, facilidade de instalação.
 
 3. Estabelecimento de métricas: que quantifiquem os resultados observados, possibilitando avaliação objetiva e comparável.
 
-A portabilidade, segundo a ISO/IEC 25010, é composta pelas subcaracterísticas **Adaptabilidade**, **Instalabilidade** e **Substituibilidade**, todas contempladas pelas questões e métricas definidas neste documento.
+A portabilidade, segundo a ISO/IEC 25010, é composta pelas subcaracterísticas **Adaptabilidade**, **Instalabilidade** e **Substituibilidade** e suas respectivas métricas.
 
 # Descrição do Objetivo de Medição de Portabilidade
 
@@ -215,80 +215,16 @@ Taxa de falhas específicas = Ocorrências de erro tipo T em ambiente X / Total 
 
 >Categorias de erro a monitorar: dependência ausente, permissão negada, incompatibilidade de arquitetura, timeout de download.
 
-### Q4. Quanto à Substituibilidade, é possível substituir o Qwen 2.5 3B por outro modelo de LLM no Ollama sem impacto nos fluxos de uso?
-
-### Hipótese
-
-A arquitetura do Ollama é agnóstica ao modelo, utilizando uma API REST padronizada para inferência. A hipótese é que a substituição do Qwen 2.5 3B por outro modelo compatível (ex.: Mistral, Llama 3.2) exija apenas a troca do identificador de modelo nas chamadas de API, sem modificações na integração ou nos scripts de uso.
-
-### Métrica 4.1: Taxa de Compatibilidade da API com Modelos Alternativos
-
-> Fórmula:
->
->Taxa = Modelos alternativos testados com API 100% compatível / Total de modelos testados
->
-> Modelos de referência: Qwen 2.5 3B (baseline), Llama 3.2 3B, Mistral 7B, Phi-3 Mini.
-
-***Referência:***
-
-[[3]](#ref-3), [[8]](#ref-8)
-
-
-> Interpretação:
->
-> Alta compatibilidade (Hipótese Confirmada): ≥ 90% dos modelos testados são compatíveis sem modificação na integração.
-
-> Baixa compatibilidade (Hipótese Refutada): < 90%, indicando dependência de comportamentos específicos do Qwen 2.5 3B.
-
-> Avaliar especialmente campos de resposta, tratamento de tokens especiais e parâmetros de geração.
-
-### Métrica 4.2: Esforço de Substituição de Modelo
-
-> Fórmula:
->
-> Linhas modificadas = Número de linhas alteradas no código de integração para trocar o modelo
-Tempo de adaptação = Tempo médio (minutos) para substituir o modelo em um projeto de referência
-
-***Referência:***
-
-[[1]](#ref-1), [[8]](#ref-8)
-
->Interpretação:
->
->Baixo esforço (Hipótese Confirmada): ≤ 3 linhas modificadas e ≤ 15 minutos de adaptação por projeto.
->
->Alto esforço (Hipótese Refutada): > 3 linhas ou > 15 minutos, indicando acoplamento excessivo ao modelo específico.
->
->Inclui o tempo de download do modelo alternativo via `ollama pull`.
-
-### Métrica 4.3: Taxa de Sucesso em Testes após Substituição de Modelo
-
-> Fórmula:
-
-> Taxa = Testes bem-sucedidos após substituição / Total de testes existentes
-
-Usando suite de testes definida para o fluxo principal de inferência com Qwen 2.5 3B como baseline.
-
-***Referência:***
-[[8]](#ref-8)
-    
-> Interpretação:
->
->Alta confiabilidade (Hipótese Confirmada): ≥ 90% dos testes passam com o modelo alternativo.
->
->Baixa confiabilidade (Hipótese Refutada): < 90%, indicando dependência comportamental do Qwen 2.5 3B.
->
->Falhas esperadas por diferença de capacidade do modelo devem ser classificadas separadamente de falhas de integração.
-
 # Conclusões
 
-Com a aplicação do método GQM, foi possível estruturar de forma clara e mensurável a análise de portabilidade do Ollama em conjunto com a LLM Qwen 2.5 3B. As quatro questões formuladas cobrem as três subcaracterísticas de portabilidade previstas na ISO/IEC 25010: Adaptabilidade (Q1), Instalabilidade (Q2 e Q3) e Substituibilidade (Q4).
+Com a aplicação do método GQM, foi possível estruturar de forma clara e mensurável a análise de portabilidade do Ollama em conjunto com a LLM Qwen 2.5 3B. As questões formuladas cobrem as subcaracterísticas de portabilidade previstas na ISO/IEC 25010: Adaptabilidade (Q1), Instalabilidade (Q2 e Q3).
 
-As métricas definidas permitem avaliar objetivamente: como o sistema se comporta funcionalmente e em termos de desempenho em diferentes sistemas operacionais; a confiabilidade e consistência do processo de instalação e desinstalação; e a facilidade de substituição do modelo Qwen 2.5 3B por alternativas compatíveis dentro da mesma infraestrutura Ollama.
+As métricas definidas permitem avaliar objetivamente: como o sistema se comporta funcionalmente e em termos de desempenho em diferentes sistemas operacionais; a confiabilidade e consistência do processo de instalação e desinstalação.
 
-Esta análise, ao estabelecer hipóteses verificáveis e critérios de aceitação quantitativos, fornece a base metodológica necessária para a Fase 3 (coleta de dados) e a Fase 4 (análise e conclusões finais) do projeto de avaliação de qualidade de software.
+Esta análise fornece a base metodológica necessária para a Fase 3 (coleta de dados) e a Fase 4 (análise e conclusões finais) do projeto de avaliação de qualidade de software.
 
-OBS: Modelos de Linguagem de Grande Escala (LLMs) foram utilizados como apoio ao brainstorm de perguntas e métricas, bem como para auxílio na estruturação e escrita do documento em formato acadêmico.
+OBS: Substituibilidade, não foi avaliada pois o projeto não tem necessidade, essa necessidade foi descartada na [fase 1 do projeto](./../02-fase1/modelo.md#253-portabilidade).
+
 
 # Sobre o Uso de IA
 
@@ -325,3 +261,4 @@ Para a elaboração deste documento, a Inteligência Artificial foi utilizada co
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
 | 1.0 | 03/06/2026 | Adição de conteúdo | [Luiza](https://github.com/Luizaxx) | [Gabriel Alves](https://github.com/GdevAlves) |
+| 1.1 | 12/06/2026 | Ajuste ao escopo do trabalho | [Gabriel Alves](https://https://github.com/GdevAlves) | [Luiza](https://github.com/Luizaxx) |
