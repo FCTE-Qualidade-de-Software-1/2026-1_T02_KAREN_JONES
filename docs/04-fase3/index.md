@@ -1,6 +1,7 @@
 # 3. Fase 3 — Planejar a Avaliação
 
-Esta Fase 3 marca a transição da especificação teórica para a preparação prática da avaliação de qualidade do Ollama executando o modelo Qwen 2.5 3B. Com base nas metas, questões e métricas GQM definidas nas fases anteriores para os atributos de **Eficiência de Desempenho** e **Portabilidade**, o objetivo deste artefato é formalizar o **Plano de Avaliação**.
+Esta Fase 3 marca a transição da especificação teórica para a preparação prática da avaliação de qualidade do Ollama executando o modelo Qwen 2.5 3B. Com base nas metas, questões e métricas GQM definidas nas fases anteriores para os atributos de **Eficiência de Desempenho** e **Portabilidade**, o objetivo deste artefato é formalizar o **Plano de Avaliação**. 
+Toda esta fase foi elaborada com auxílio de ferramenta de Inteligência Artificial Generativa.
 
 O plano detalha:
 
@@ -76,4 +77,4 @@ Os dados coletados fundamentarão as seguintes decisões:
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
 | 1.0 | 04/06/2026 | Criação do documento | [Renata Quadros](https://github.com/RenataKurzawa) |[Giovana Barbosa](https://github.com/gio221) |
-| 1.1 | 12/06/2026 | Atualização dos hiperlinks dos artefatos. | [Gabriel Alves](https://github.com/GDveAlves) |  |
+| 1.1 | 12/06/2026 | Atualização dos hiperlinks dos artefatos. | [Gabriel Alves](https://github.com/GDveAlves) | [Renata Quadros](https://github.com/RenataKurzawa) |
