@@ -112,4 +112,4 @@ Para garantir que a solução proposta seja efetiva no cenário de hardware limi
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
 | 1.0 | 13/05/2026 | Criação do próposito da avaliação | [Renata Quadros](https://github.com/RenataKurzawa) | [Gabriel Alves](https://github.com/GdevAlves) |
-| 1.1 | 13/05/2026 | Pequena correção no texto do escopo e adição do OLLAMA na bibliografia | [Matheus Pinheiro](https://github.com/matheus-06) | [](https://github.com/) |
+| 1.1 | 13/05/2026 | Pequena correção no texto do escopo e adição do OLLAMA na bibliografia | [Matheus Pinheiro](https://github.com/matheus-06) | [Johnnatan Salles](https://github.com/jsalless) |

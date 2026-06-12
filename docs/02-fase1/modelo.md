@@ -9,12 +9,29 @@ O objetivo desta página é representar o modelo de qualidade (ISO/IEC 25010) co
 
 ![diagrama da norma square com as duas características](../img/diagrama-square.png)
 
-## 2.5.1 Escopo e adaptação do modelo
+## 2.5.1 Declaração Formal de Escopo e Profundidade
 
-O escopo se limitará na análise das duas características de qualidade mais relevantes para o projeto, que são: eficiência de desempenho e portabilidade.
-O modelo de qualidade ISO/IEC 25010 será adaptado para incluir apenas as subcaracterísticas relevantes para essas duas características segundo o cenário de uso definido anteriormente em [Cenário de Avaliação](./proposito.md#22-cenario-de-avaliacao), garantindo uma análise mais focada e eficiente.
+Para atender aos objetivos do projeto e às diretrizes de avaliação, declaramos formalmente os seguintes parâmetros para esta análise:
 
-## 2.5.2 Eficiência de Desempenho
+### Abrangência (Escopo)
+O escopo desta avaliação limita-se à análise técnica do software **Ollama** operando como servidor de inferência local (uso *local-first*). A avaliação está restrita às duas características de qualidade da norma ISO/IEC 25010 consideradas mais críticas para este contexto de uso: **Eficiência de Desempenho** e **Portabilidade**. Aspectos secundários, como a infraestrutura em nuvem oferecida recentemente pela ferramenta ou características da norma como segurança e usabilidade, estão **fora do escopo** desta etapa.
+
+### Profundidade
+A profundidade da análise engloba as subcaracterísticas definidas como de alta relevância no cenário de uso definido em [Cenário de Avaliação](./proposito.md#22-cenario-de-avaliacao): Comportamento Temporal, Utilização de Recursos e Capacidade (para Eficiência de Desempenho); Adaptabilidade e Instalabilidade (para Portabilidade). A subcaracterística de Substituibilidade possui profundidade de análise reduzida devido à menor intenção de troca do produto pelos *stakeholders*. A avaliação empregará métricas baseadas na norma ISO/IEC 25021, validadas através de execuções reais de Modelos de Linguagem de Pequeno Porte (SLMs).
+
+### Relação com Avaliações Futuras
+As métricas e os resultados levantados nesta avaliação atuarão como *baseline* (linha de base) para as Fases 2, 3 e 4 do projeto. Avaliações futuras utilizarão esses dados fundamentais para realizar medições aprofundadas, planejar o monitoramento contínuo das subcaracterísticas, e expandir a análise para a comparação entre diferentes versões do software, arquiteturas de hardware e evolução natural do ecossistema de LLMs locais.
+
+## 2.5.2 Relação entre Características Priorizadas e o Propósito
+
+Para atender às diretrizes da avaliação, estabelecemos abaixo o vínculo direto entre as características de qualidade priorizadas e o propósito do projeto (detalhado em [Propósito da Avaliação](./proposito.md)):
+
+| Característica Priorizada | Vínculo Explícito com o Propósito Declarado |
+| :--- | :--- |
+| **Eficiência de Desempenho** | Responde diretamente à necessidade de validar se o Ollama possui "**tempo de resposta aceitável em hardware básico**". Garante que estudantes sem acesso à nuvem possam processar IA localmente sem inviabilizar o uso do computador (Utilização de Recursos e Comportamento Temporal). |
+| **Portabilidade** | Responde diretamente à exigência de que "**a experiência de instalação e adaptação seja equivalente entre sistemas operacionais**". Garante que a ferramenta seja universalmente acessível tanto para usuários de Windows quanto de Linux (Instalabilidade e Adaptabilidade). |
+
+## 2.5.3 Eficiência de Desempenho
 
 > **definição segundo a norma:** desempenho relativo à quantidade de recursos usados sob condições declaradas.
 >> NOTA : Recursos podem incluir outros produtos de software, a configuração de software e hardware do sistema, e materiais (ex. papel para impressão, mídia de armazenamento).
@@ -27,7 +44,7 @@ tabela com as subcaracterísticas relevantes para eficiência de desempenho:
 | Utilização de recursos | grau em que as quantidades e tipos de recursos usados por um produto ou sistema, ao executar suas funções, atendem aos requisitos. | 5 | Os recursos utilizados devem ser otimizados para garantir o desempenho adequado, segundo o cenário de uso. |
 | Capacidade | grau em que os limites máximos de um parâmetro de produto ou sistema atendem aos requisitos. | 5 | Impacta diretamente na capacidade do sistema de atender às necessidades dos stakeholders. |
 
-## 2.5.3 Portabilidade
+## 2.5.4 Portabilidade
 
 > **definição segundo a norma:** grau de eficácia e eficiência com que um sistema, produto ou componente pode ser transferido de um ambiente operacional ou de uso para outro.
 >> NOTA 1 Adaptado de ISO/IEC/IEEE 24765.
