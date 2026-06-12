@@ -5,7 +5,7 @@
 Retomada do objetivo GQM de portabilidade e das métricas definidas na Fase 2.
 ## 5.2.2 Resultados — Instalabilidade
 
-Tabelas com os 10 registros por ambiente de: tempo de instalação, status (sucesso/falha), status de desinstalação, arquivos residuais. Cálculo das taxas de sucesso (PO-1.1, PO-1.3) e tempo médio (PO-1.2).
+Tabelas com os 5 registros por ambiente de: tempo de instalação, status (sucesso/falha), status de desinstalação, arquivos residuais. Cálculo das taxas de sucesso (PO-1.1, PO-1.3) e tempo médio (PO-1.2).
 ## 5.2.3 Resultados — Adaptabilidade
 
 Comparativo funcional entre Windows e Linux: paridade funcional (PO-2.1), desvio de desempenho de inferência (PO-2.2), taxa de falhas por ambiente (PO-2.3).

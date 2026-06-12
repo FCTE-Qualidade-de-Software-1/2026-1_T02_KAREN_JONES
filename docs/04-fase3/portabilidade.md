@@ -117,7 +117,7 @@ Executar uma bateria de testes funcionais idêntica em ambos os ambientes:
 
 ## Passo 2: Testes de Instalabilidade
 
-Para cada ambiente, repetir o procedimento **10 vezes**:
+Para cada ambiente, repetir o procedimento **5 vezes**:
 
 1. Garantir que o Ollama não está instalado;
 2. Iniciar o cronômetro;
