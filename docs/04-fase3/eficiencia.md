@@ -18,10 +18,13 @@ O foco está em três subcaracterísticas conforme ISO/IEC 25010:
 |----|---------|-------------------|-----------|
 | ED-1.1 | Time to First Token (TTFT) | Comportamento Temporal | Tempo entre o envio do prompt e a chegada do primeiro token de resposta |
 | ED-1.2 | Tokens por Segundo (TPS) | Comportamento Temporal | Taxa de geração de tokens após o primeiro token |
-| ED-2.1 | Uso Médio de RAM | Utilização de Recursos | Memória RAM consumida durante a execução |
+| ED-1.3 | Latência de Carregamento do Modelo (MLT) | Comportamento Temporal | Diferença entre tempo de carregamento do modelo e tempo de início da inferência |
+| ED-2.1 | Consumo de RAM | Utilização de Recursos | Máximo de memória RAM consumida durante a execução |
 | ED-2.2 | Uso Médio de CPU | Utilização de Recursos | Percentual de utilização da CPU durante a execução |
-| ED-3.1 | TTFT sob Carga de Contexto | Capacidade | TTFT com diferentes tamanhos de contexto (512, 1024, 2048, 4096 tokens) |
-| ED-3.2 | Estabilidade do Sistema | Capacidade | Verificação se o sistema operacional permanece responsivo durante a execução |
+| ED-2.3 | Índice de Eficiência de Recursos (REI) | Utilização de Recursos | Relação entre a taxa de geração de tokens e o consumo de recursos (CPU * RAM) |
+| ED-3.1 | Fator de Escalonamento de Contexto (CSF) | Capacidade | TTFT com diferentes tamanhos de contexto (512, 1024, 2048, 4096 tokens) comparado com 256 tokens |
+| ED-3.2 | Taxa de Crescimento do KV Cache (KVCGR) | Capacidade | Aumento da memória utilizada pelo cache de chaves e valores conforme o tamanho do contexto |
+
 
 ---
 
@@ -31,9 +34,9 @@ O foco está em três subcaracterísticas conforme ISO/IEC 25010:
 
 | Componente | Especificação |
 |------------|---------------|
-| Processador | Intel Core i5 (4 núcleos) ou equivalente AMD |
-| Memória RAM | 8 GB DDR4 |
-| Armazenamento | SSD 256 GB |
+| Processador | Intel Core i5 (8 núcleos) |
+| Memória RAM | 16 GB DDR5 |
+| Armazenamento | SSD 512 GB |
 | GPU | Nenhuma (CPU-only) |
 
 ### 3.2 Sistemas Operacionais
@@ -51,7 +54,6 @@ O foco está em três subcaracterísticas conforme ISO/IEC 25010:
 | Qwen 2.5 3B | — | Modelo de linguagem avaliado |
 | Python | 3.10+ | Scripts de automação e medição |
 | psutil (Python) | 5.9+ | Monitoramento de recursos |
-| PowerShell / Bash | — | Execução de scripts |
 
 ---
 
@@ -83,9 +85,9 @@ Método: Variação do tamanho do prompt de entrada:
 
 | Carga    | Tamanho Aproximado |
 |----------|--------------------|
-| Leve     | 512 tokens         |
+| Leve     | 512  tokens  |
 | Moderada | 1024 tokens        |
-| Alta     | 2048 tokens        |
+| Alta     |  2048 tokens        |
 | Extrema  | 4096 tokens        |
 
 ## 5. Procedimento de Coleta
@@ -127,8 +129,7 @@ Após cada sessão de testes:
 
 | Artefato            | Caminho                         | Descrição                     |
 |---------------------|---------------------------------|-------------------------------|
-| Scripts de medição  | `/tests/scripts/`              | Scripts Python e shell        |
-| Prompts de teste    | `/tests/prompts/`              | Arquivos JSON com prompts     |
+| Scripts de medição  | `/tests/scripts/`              | Scripts Python        |
 | Resultados brutos   | `/tests/resultados/eficiencia/` | Arquivos CSV                  |
 | Logs de execução    | `/tests/logs/`                 | Saída do terminal e erros     |
 
@@ -149,3 +150,4 @@ Após cada sessão de testes:
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
 | 1.0 | 04/06/2026 | Criação do documento |[Giovana Barbosa](https://github.com/gio221) | [Renata Quadros](https://github.com/RenataKurzawa) | 
+| 1.1 | 12/06/2026 | Alinhamento de métricas da fase 2 | [Gabriel Alves](https://github.com/GDveAlves) | [Matheus Pinheiro](https://github.com/Matheus-06)|

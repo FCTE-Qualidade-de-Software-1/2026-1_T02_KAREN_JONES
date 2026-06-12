@@ -44,7 +44,7 @@ Tabela 1: Objetivo de Medição de Qualidade – Eficiência de Desempenho
 
 O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apresentar latência de inferência compatível com uso interativo em hardware de consumo comum (CPU moderna ou GPU de entrada), com tempo de resposta percebível como aceitável pelo usuário. A hipótese é que o sistema consiga gerar os primeiros tokens em menos de 5 segundos e manter uma taxa de geração suficiente para leitura em tempo real em hardware convencional.
 
-### Métrica 1.1: Tempo até o Primeiro Token (Time to First Token – TTFT)
+### Métrica 1.1: Média do tempo de resposta - Tempo até o Primeiro Token (Time to First Token – TTFT)
 
 > Fórmula:
 >
@@ -62,7 +62,7 @@ O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apre
 >
 > Latência elevada (Hipótese Refutada): TTFT mediana > 5 segundos em CPU ou > 2 segundos com GPU.
 
-### Métrica 1.2: Taxa de Geração de Tokens (Tokens Per Second – TPS)
+### Métrica 1.2: Média da Taxa de evasão - Taxa de Geração de Tokens (Tokens Per Second – TPS)
 
 > Fórmula:
 >
@@ -188,63 +188,9 @@ A complexidade quadrática do mecanismo de atenção dos Transformers deve causa
 >
 > Crescimento excessivo: > 1,0 MB/token.
 
-## Q4. Quanto à Capacidade, o Ollama com Qwen 2.5 3B consegue processar múltiplas requisições simultâneas mantendo desempenho aceitável?
-
-### Hipótese
-
-O Ollama processa requisições de forma predominantemente sequencial. A hipótese é que requisições concorrentes aumentem a latência de maneira previsível sem comprometer a estabilidade do sistema.
-
-### Métrica 4.1: Throughput sob Carga Concorrente (CT)
-
-> Fórmula:
->
-> CT(n) = Total de tokens gerados / Tempo total do lote
-
-***Referência:***
-
-[[3]](#ref-3), [[7]](#ref-7)
-
-> Interpretação:
->
-> Comportamento esperado: CT(n) ≈ CT(1).
->
-> Overhead excessivo: CT(n) < CT(1) × 0,8.
-
-### Métrica 4.2: Degradação de Latência sob Carga (LDUL)
-
-> Fórmula:
->
-> LDUL(n) = TTFT_mediana(n) / TTFT_mediana(1)
-
-***Referência:***
-
-[[4]](#ref-4), [[7]](#ref-7)
-
-> Interpretação:
->
-> Degradação aceitável: ≤ 4,5 para 4 requisições simultâneas.
->
-> Degradação severa: > 6,0.
-
-### Métrica 4.3: Taxa de Erros sob Carga Máxima (ERUL)
-
-> Fórmula:
->
-> ERUL = Requisições com erro / Total de requisições
-
-***Referência:***
-
-[[1]](#ref-1), [[4]](#ref-4)
-
-> Interpretação:
->
-> Sistema estável: ≤ 1% de erros para até 8 requisições simultâneas.
->
-> Instabilidade detectada: > 5%.
-
 # Conclusões
 
-Com a aplicação do método GQM, foi possível estruturar de forma mensurável e reproduzível a análise de eficiência de desempenho do Ollama em conjunto com a LLM Qwen 2.5 3B. As quatro questões formuladas cobrem as três subcaracterísticas de eficiência de desempenho previstas na ISO/IEC 25010: Comportamento em Relação ao Tempo (Q1 e Q3), Utilização de Recursos (Q2 e Q3) e Capacidade (Q4).
+Com a aplicação do método GQM, foi possível estruturar de forma mensurável e reproduzível a análise de eficiência de desempenho do Ollama em conjunto com a LLM Qwen 2.5 3B. As quatro questões formuladas cobrem as três subcaracterísticas de eficiência de desempenho previstas na ISO/IEC 25010: Comportamento em Relação ao Tempo (Q1 e Q3), Utilização de Recursos (Q2 e Q3).
 
 As métricas definidas permitem avaliar objetivamente a latência de inferência, a taxa de geração de tokens, o consumo de recursos computacionais, o impacto do aumento do contexto e o comportamento do sistema sob carga concorrente.
 

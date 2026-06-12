@@ -9,20 +9,18 @@ O foco está em duas subcaracterísticas conforme ISO/IEC 25010:
 - **Adaptabilidade**: capacidade de operar em diferentes sistemas operacionais
 - **Instalabilidade**: facilidade de instalação e desinstalação
 
----
 
 ## 2. Métricas a Serem Implementadas
 
 | ID | Métrica | Subcaracterística | Descrição |
 |----|---------|-------------------|-----------|
-| PO-1.1 | Taxa de Sucesso na Instalação | Instalabilidade | Proporção de instalações bem-sucedidas em 10 tentativas |
-| PO-1.2 | Tempo Médio de Instalação | Instalabilidade | Tempo decorrido do início ao fim do processo de instalação |
-| PO-1.3 | Taxa de Sucesso na Desinstalação | Instalabilidade | Proporção de desinstalações que removem completamente o software |
-| PO-2.1 | Paridade Funcional entre SOs | Adaptabilidade | Proporção de funcionalidades que operam igualmente em Windows e Linux |
-| PO-2.2 | Desvio de Desempenho entre SOs | Adaptabilidade | Diferença percentual no TTFT entre Windows e Linux |
-| PO-2.3 | Taxa de Falhas por Ambiente | Adaptabilidade | Proporção de falhas durante execução em cada SO |
-
----
+| PO-1.1 | Taxa de Execuções Sem Falha entre Plataformas | Adaptabilidade | Proporção de execuções bem-sucedidas em todas as plataformas |
+| PO-1.2 | Desvio de Desempenho de Inferência entre Plataformas | Adaptabilidade | Variação do tempo médio de inferência entre plataformas |
+| PO-2.1 | Taxa de Sucesso na Instalação | Instalabilidade | Proporção de instalações (runtime + modelo) bem-sucedidas |
+| PO-2.2 | Taxa de Sucesso na Desinstalação | Instalabilidade | Proporção de desinstalações que removem o software e o modelo completamente |
+| PO-3.1 | Taxa de Sucesso de Instalação por Ambiente | Instalabilidade | Proporção de instalações bem-sucedidas em cada ambiente específico |
+| PO-3.2 | Desvio Relativo de Sucesso entre Ambientes | Instalabilidade | Consistência da taxa de sucesso de instalação entre os ambientes testados |
+| PO-3.3 | Tempo de Instalação e Tipos de Falha por Ambiente | Instalabilidade | Variação do tempo de instalação e taxa de falhas específicas por ambiente |
 
 ## 3. Ambiente de Teste
 
@@ -30,17 +28,17 @@ O foco está em duas subcaracterísticas conforme ISO/IEC 25010:
 
 | Componente | Especificação |
 |------------|---------------|
-| Processador | Intel Core i5 (4 núcleos) ou equivalente |
-| Memória RAM | 8 GB DDR4 |
-| Armazenamento | SSD 256 GB |
-| GPU | Nenhuma |
+| Processador | Intel Core i5 (8 núcleos) |
+| Memória RAM | 16 GB DDR5 |
+| Armazenamento | SSD 512 GB |
+| GPU | Nenhuma (CPU-only) |
 
 ### 3.2 Sistemas Operacionais
 
 | Ambiente | Sistema Operacional | Método |
 |----------|---------------------|--------|
 | Ambiente A | Windows 11 (64 bits) | Instalação nativa |
-| Ambiente B | Zorin OS 18.1 Core | Instalação nativa ou via WSL2 |
+| Ambiente B | Zorin OS 18.1 Core | Instalação nativa |
 
 ### 3.3 Ferramentas
 
@@ -51,7 +49,6 @@ O foco está em duas subcaracterísticas conforme ISO/IEC 25010:
 | Cronômetro digital | Medição manual de tempo de instalação |
 | Gravação de tela | Evidência do processo de instalação |
 
----
 
 ## 4. Instrumentos de Medição
 
@@ -60,7 +57,7 @@ O foco está em duas subcaracterísticas conforme ISO/IEC 25010:
 **Método de Instalação - Windows**:
 ```powershell
 # Comando oficial do Ollama para Windows
-irm get.ollama.ai | iex
+irm https://ollama.com/install.ps1 | iex
 ```
 
 ### Método de Instalação - Linux
@@ -81,7 +78,6 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama --version
 ```
 
----
 
 ## 4.2 Medição de Desinstalação
 
@@ -95,7 +91,6 @@ ollama --version
 * Executar script de desinstalação ou remoção manual;
 * Confirmar exclusão de arquivos em `~/.ollama`.
 
----
 
 ## 4.3 Medição de Adaptabilidade
 
@@ -105,22 +100,20 @@ Executar uma bateria de testes funcionais idêntica em ambos os ambientes:
 
 1. Iniciar o servidor Ollama;
 2. Baixar o modelo Qwen 2.5 3B;
-3. Enviar 5 prompts de teste padronizados;
-4. Verificar as respostas geradas;
-5. Registrar o TTFT (*Time To First Token*) e eventuais erros.
+3. Executar scripts python da fase de eficiência para inferência;
+4. Capturar o tempo médio de inferência;
+5. Registrar falhas funcionais durante as execuções.
 
----
 
 # 5. Procedimento de Coleta
 
 ## Passo 1: Preparação
 
-* Preparar máquina de teste com Windows 11 limpo (ou máquina virtual);
-* Preparar máquina de teste com Zorin OS 18.1 Core limpo (ou VM/WSL2);
+* Preparar máquina de teste com Windows 11;
+* Preparar máquina de teste com Zorin OS 18.1 Core;
 * Documentar o estado inicial do sistema (espaço em disco, processos em execução);
 * Preparar checklist de verificação pós-instalação.
 
----
 
 ## Passo 2: Testes de Instalabilidade
 
@@ -146,7 +139,6 @@ ollama --version
 ambiente,tentativa,tempo_instalacao_s,status_instalacao,tempo_desinstalacao_s,status_desinstalacao,arquivos_residuais
 ```
 
----
 
 ## Passo 3: Testes de Adaptabilidade
 
@@ -160,7 +152,6 @@ ollama pull qwen2.5:3b
 3. Executar o script de testes funcionais padronizado;
 4. Registrar resultados comparativos.
 
----
 
 ## Passo 4: Consolidação
 
@@ -168,18 +159,20 @@ ollama pull qwen2.5:3b
 * Comparar tempos médios entre ambientes;
 * Identificar diferenças funcionais ou de desempenho.
 
----
 
 # 6. Critérios de Aceitação
 
-| Métrica                        | Critério de Aceitação                               |
-| ------------------------------ | --------------------------------------------------- |
-| Taxa de Sucesso na Instalação  | ≥ 90% em ambos os SOs                               |
-| Tempo de Instalação            | ≤ 5 minutos                                         |
-| Paridade Funcional             | 100% das funcionalidades testadas operam igualmente |
-| Desvio de Desempenho entre SOs | ≤ 20%                                               |
+Conforme as hipóteses definidas na Fase 2:
 
----
+| Métrica | Critério de Aceitação | Referência Fase 2 |
+| --- | --- | --- |
+| PO-1.1 Taxa de Execuções Sem Falha | ≥ 99,0% de execuções bem-sucedidas em todas as plataformas | Métrica 1.1 |
+| PO-1.2 Desvio de Desempenho de Inferência | ≤ 20% de variação entre plataformas | Métrica 1.2 |
+| PO-2.1 Taxa de Sucesso na Instalação | ≥ 95% das tentativas bem-sucedidas por plataforma | Métrica 2.1 |
+| PO-2.2 Taxa de Sucesso na Desinstalação | ≥ 90% das tentativas resultam em remoção completa do sistema | Métrica 2.2 |
+| PO-3.1 Taxa de Sucesso de Instalação por Ambiente | ≥ 95% de sucesso em cada ambiente testado | Métrica 3.1 |
+| PO-3.2 Desvio Relativo de Sucesso entre Ambientes | ≤ 5% de variação entre quaisquer dois ambientes | Métrica 3.2 |
+| PO-3.3 Tempo de Instalação e Tipos de Falha | Variação de tempo ≤ 15% e nenhuma falha com taxa > 2% | Métrica 3.3 |
 
 # 7. Localização dos Dados
 
@@ -212,3 +205,4 @@ ollama pull qwen2.5:3b
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
 | 1.0 | 04/06/2026 | Criação do documento | [Renata Quadros](https://github.com/RenataKurzawa) |[Giovana Barbosa](https://github.com/gio221) |
+| 1.1 | 12/06/2026 | Alinhamento de métricas da fase 2 | [Gabriel Alves](https://github.com/GDveAlves) | [Matheus Pinheiro](https://github.com/Matheus-06)|

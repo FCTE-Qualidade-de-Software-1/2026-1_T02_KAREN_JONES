@@ -71,7 +71,7 @@ O Ollama foi projetado com suporte explícito a múltiplas plataformas (Linux, m
 
 > Desvio = |Tempo médio inferência em A - Tempo médio inferência em B| / Tempo médio geral
 
-> Medido para inferência com prompt padronizado (100 tokens de entrada, 200 tokens de saída esperados).
+> Medido para inferência com prompt padronizado (100 tokens de entrada).
 
 ***Referência:***
 
@@ -83,26 +83,7 @@ O Ollama foi projetado com suporte explícito a múltiplas plataformas (Linux, m
 
 > Desvio elevado (Hipótese Refutada): > 20% de variação, sugerindo dependências de otimização específicas da plataforma.
 
-> Diferenças entre CPU-only e GPU-acelerado são esperadas e devem ser documentadas separadamente.
 
-### Métrica 1.3: Paridade de Saída do Modelo entre Plataformas
-
-> Fórmula:
-
-> Para um mesmo prompt e temperatura = 0 (modo determinístico):
-> Paridade = 1 se as saídas são semanticamente equivalentes entre plataformas; 0 caso contrário.
-
-***Referência:***
-
- [[4]](#ref-4), [[5]](#ref-5)
-
-> **Interpretação:**
-
-> Paridade total (Hipótese Confirmada): saídas semanticamente equivalentes em todas as plataformas.
-
-> Divergência detectada (Hipótese Refutada): saídas com divergências factuais ou estruturais relevantes entre plataformas.
-
-> Esta métrica garante que a portabilidade não afete a qualidade das respostas do modelo.
 
 ### Q2. Quanto à Instalabilidade, é possível instalar e desinstalar o Ollama com o modelo Qwen 2.5 3B de forma independente e sem resíduos?
 
@@ -128,7 +109,7 @@ O Ollama oferece instaladores nativos para cada plataforma suportada. A hipótes
 
 >Baixa taxa de sucesso (Hipótese Refutada): < 95% em alguma plataforma testada.
 
->Erros de instalação mais comuns esperados: dependências ausentes de drivers de GPU e bloqueios de antivírus no Windows.
+>Erros de instalação mais comuns esperados: bloqueios de antivírus no Windows e problemas de permissão.
 
 ### Métrica 2.2: Taxa de Sucesso na Desinstalação (Uninstallation Success Rate)
 
@@ -174,8 +155,6 @@ A hipótese é que o processo de instalação seja consistente entre ambientes d
 
 > Hipótese Refutada: < 95% em algum ambiente específico.
 
-> Ambientes com GPU (CUDA/Metal/ROCm) devem ser testados como subconjuntos separados.
-
 ### Métrica 3.2: Desvio Relativo de Sucesso entre Ambientes
 
 > Fórmula:
@@ -193,8 +172,6 @@ A hipótese é que o processo de instalação seja consistente entre ambientes d
 > Consistência alta (Hipótese Confirmada): Desvio Relativo ≤ 5% entre quaisquer dois ambientes.
 >
 >Inconsistência significativa (Hipótese Refutada): Desvio > 5% indicando dependência de ambiente específico.
->
->Diferenças na disponibilidade de drivers de GPU são esperadas e devem ser documentadas como variáveis controladas.
 >
 ### Métrica 3.3: Tempo de Instalação e Tipos de Falha por Ambiente
 
