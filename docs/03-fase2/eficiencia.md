@@ -44,7 +44,7 @@ Tabela 1: Objetivo de Medição de Qualidade – Eficiência de Desempenho
 
 O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apresentar latência de inferência compatível com uso interativo em hardware de consumo comum (CPU moderna ou GPU de entrada), com tempo de resposta percebível como aceitável pelo usuário. A hipótese é que o sistema consiga gerar os primeiros tokens em menos de 5 segundos e manter uma taxa de geração suficiente para leitura em tempo real em hardware convencional.
 
-### Métrica 1.1: Tempo até o Primeiro Token (Time to First Token – TTFT)
+### Métrica 1.1: Média do tempo de resposta - Tempo até o Primeiro Token (Time to First Token – TTFT)
 
 > Fórmula:
 >
@@ -62,7 +62,7 @@ O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apre
 >
 > Latência elevada (Hipótese Refutada): TTFT mediana > 5 segundos em CPU ou > 2 segundos com GPU.
 
-### Métrica 1.2: Taxa de Geração de Tokens (Tokens Per Second – TPS)
+### Métrica 1.2: Média da Taxa de evasão - Taxa de Geração de Tokens (Tokens Per Second – TPS)
 
 > Fórmula:
 >
