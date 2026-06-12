@@ -5,9 +5,13 @@ O objetivo desta página é representar o modelo de qualidade (ISO/IEC 25010) co
 - Eficiência de Desempenho
 - Portabilidade
 
-<font size="3"><p style="text-align: center">Figura 1: Imagem Ilustrativa da Estrutura das características Portabilidade e Eficiência de Desempenho</p></font>
+<div align="center" markdown="1">
 
-![diagrama da norma square com as duas características](../img/diagrama-square.png)
+![Estrutura das características Portabilidade e Eficiência de Desempenho](../img/diagrama-square.png)
+
+<p><em>Figura 1: Características de Qualidade Priorizadas e suas Subcaracterísticas (baseado na norma ISO/IEC 25010)</em></p>
+
+</div>
 
 ## 2.5.1 Declaração Formal de Escopo e Profundidade
 

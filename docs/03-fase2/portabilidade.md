@@ -1,6 +1,6 @@
 # 3.2 Portabilidade
 
-# Introdução
+## Introdução
 
 Este artefato aplica o método GQM (Goal-Question-Metric) para analisar o Ollama em conjunto com a LLM Qwen 2.5 3B sob o critério de Portabilidade, conforme definido na norma ISO/IEC 25010. A proposta é definir metas, perguntas e métricas que permitam examinar a capacidade do sistema de ser instalado, executado e adaptado em diferentes ambientes operacionais, identificando limitações e oportunidades de melhoria.
 
@@ -8,7 +8,7 @@ O Ollama é uma ferramenta de código aberto projetada para facilitar a execuç�
 
 Este documento integra a Fase 2 do projeto de avaliação de qualidade, fornecendo a base para coleta e análise de dados que apoiarão a tomada de decisões voltadas à qualidade e à manutenção do sistema.
 
-# Metodologia
+## Metodologia
 
 A metodologia adotada neste artefato baseia-se no método GQM (Goal-Question-Metric), que orienta a avaliação da qualidade de software de forma estruturada e orientada a objetivos. O processo segue três etapas:
 
@@ -20,7 +20,7 @@ A metodologia adotada neste artefato baseia-se no método GQM (Goal-Question-Met
 
 A portabilidade, segundo a ISO/IEC 25010, é composta pelas subcaracterísticas **Adaptabilidade**, **Instalabilidade** e **Substituibilidade** e suas respectivas métricas.
 
-# Descrição do Objetivo de Medição de Portabilidade
+## Descrição do Objetivo de Medição de Portabilidade
 
 A tabela a seguir apresenta o objetivo de medição estruturado segundo o paradigma GQM:
 
@@ -37,15 +37,15 @@ Tabela 1: Objetivo de Medição de Qualidade – Portabilidade
 
 <p align="center"><b>Autor:</b> <a href="https://github.com/Luizaxx"> Luiza Pugas </a>, 2026.</p>  
 
-# Questões e Métricas
+## Questões e Métricas
 
 ### Q1. Quanto à Adaptabilidade, o Ollama com Qwen 2.5 3B se comporta de formas diferentes em diferentes sistemas operacionais?
 
-### Hipótese
+#### Hipótese
 
 O Ollama foi projetado com suporte explícito a múltiplas plataformas (Linux, macOS e Windows). A hipótese é que o sistema se comporte de forma funcionalmente equivalente em qualquer sistema operacional, com diferenças limitadas a variações de desempenho decorrentes das arquiteturas de hardware subjacentes.
 
-### Métrica 1.1: Taxa de Execuções Sem Falha entre Plataformas
+#### Métrica 1.1: Taxa de Execuções Sem Falha entre Plataformas
 
 > Fórmula:
 
@@ -65,7 +65,7 @@ O Ollama foi projetado com suporte explícito a múltiplas plataformas (Linux, m
 
 > Esta métrica avalia a estabilidade funcional do sistema entre plataformas. Falhas funcionais indicam lacunas na portabilidade de execução.
 
-### Métrica 1.2: Desvio de Desempenho de Inferência entre Plataformas
+#### Métrica 1.2: Desvio de Desempenho de Inferência entre Plataformas
 
 > Fórmula:
 
@@ -87,11 +87,11 @@ O Ollama foi projetado com suporte explícito a múltiplas plataformas (Linux, m
 
 ### Q2. Quanto à Instalabilidade, é possível instalar e desinstalar o Ollama com o modelo Qwen 2.5 3B de forma independente e sem resíduos?
 
-### Hipótese
+#### Hipótese
 
 O Ollama oferece instaladores nativos para cada plataforma suportada. A hipótese é que a instalação e desinstalação completas (incluindo o modelo Qwen 2.5 3B) sejam possíveis sem necessidade de intervenção manual avançada, e que a desinstalação não deixe resíduos no sistema.
 
-### Métrica 2.1: Taxa de Sucesso na Instalação (Installation Success Rate)
+#### Métrica 2.1: Taxa de Sucesso na Instalação (Installation Success Rate)
 
 > Fórmula:
 
@@ -111,7 +111,7 @@ O Ollama oferece instaladores nativos para cada plataforma suportada. A hipótes
 
 >Erros de instalação mais comuns esperados: bloqueios de antivírus no Windows e problemas de permissão.
 
-### Métrica 2.2: Taxa de Sucesso na Desinstalação (Uninstallation Success Rate)
+#### Métrica 2.2: Taxa de Sucesso na Desinstalação (Uninstallation Success Rate)
 
 > Fórmula:
 
@@ -134,11 +134,11 @@ O Ollama oferece instaladores nativos para cada plataforma suportada. A hipótes
 
 ### Q3. Quanto à Instalabilidade, o processo de instalação do Ollama com Qwen 2.5 3B apresenta erros ou inconsistências em diferentes ambientes?
 
-### Hipótese
+#### Hipótese
 
 A hipótese é que o processo de instalação seja consistente entre ambientes distintos (distribuições Linux, versões de macOS, versões de Windows, arquiteturas x86_64 e arm64), apresentando apenas variações de tempo de download sem falhas específicas por ambiente.
 
-### Métrica 3.1: Taxa de Sucesso de Instalação por Ambiente
+#### Métrica 3.1: Taxa de Sucesso de Instalação por Ambiente
 
 >Fórmula:
 >   
@@ -155,7 +155,7 @@ A hipótese é que o processo de instalação seja consistente entre ambientes d
 
 > Hipótese Refutada: < 95% em algum ambiente específico.
 
-### Métrica 3.2: Desvio Relativo de Sucesso entre Ambientes
+#### Métrica 3.2: Desvio Relativo de Sucesso entre Ambientes
 
 > Fórmula:
 >
@@ -173,7 +173,7 @@ A hipótese é que o processo de instalação seja consistente entre ambientes d
 >
 >Inconsistência significativa (Hipótese Refutada): Desvio > 5% indicando dependência de ambiente específico.
 >
-### Métrica 3.3: Tempo de Instalação e Tipos de Falha por Ambiente
+#### Métrica 3.3: Tempo de Instalação e Tipos de Falha por Ambiente
 
 >Fórmula:
 >
@@ -192,7 +192,7 @@ Taxa de falhas específicas = Ocorrências de erro tipo T em ambiente X / Total 
 
 >Categorias de erro a monitorar: dependência ausente, permissão negada, incompatibilidade de arquitetura, timeout de download.
 
-# Conclusões
+## Conclusões
 
 Com a aplicação do método GQM, foi possível estruturar de forma clara e mensurável a análise de portabilidade do Ollama em conjunto com a LLM Qwen 2.5 3B. As questões formuladas cobrem as subcaracterísticas de portabilidade previstas na ISO/IEC 25010: Adaptabilidade (Q1), Instalabilidade (Q2 e Q3).
 
@@ -203,13 +203,13 @@ Esta análise fornece a base metodológica necessária para a Fase 3 (coleta de 
 OBS: Substituibilidade, não foi avaliada pois o projeto não tem necessidade, essa necessidade foi descartada na [fase 1 do projeto](./../02-fase1/modelo.md#253-portabilidade).
 
 
-# Sobre o Uso de IA
+## Sobre o Uso de IA
 
 Para a elaboração deste documento, a Inteligência Artificial foi utilizada como ferramenta de apoio. O uso concentrou-se principalmente em auxiliar a compreensão e o esclarecimento de termos técnicos presentes na norma ISO/IEC 25010 e em fontes corporativas e acadêmicas consultadas. Adicionalmente, a IA foi empregada para estruturar e organizar as ideias na aplicação da metodologia GQM, garantindo coerência entre as questões, métricas e o objetivo de análise.
 
 [Notebook LM](https://notebooklm.google.com/notebook/e9f64a2d-93cc-4f05-9c28-4d5f14c3af3e)
 
-# Referências Bibliográficas
+## Referências Bibliográficas
 
 <a id="ref-1"></a>[1] FENTON, Norman; BIEMAN, James. Software Metrics: A Rigorous and Practical Approach. 3. ed. Boca Raton: CRC Press, 2015.
 
