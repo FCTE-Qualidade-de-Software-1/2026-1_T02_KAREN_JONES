@@ -1,6 +1,6 @@
 # 3.1 Eficiência de Desempenho
 
-# Introdução
+## Introdução
 
 Este artefato aplica o método GQM (Goal-Question-Metric) para analisar o Ollama em conjunto com a LLM Qwen 2.5 3B sob o critério de Eficiência de Desempenho, conforme definido pela norma ISO/IEC 25010:2011. A proposta é definir metas, perguntas e métricas que permitam examinar a capacidade do sistema de executar suas funções dentro de limites adequados de tempo, recursos e capacidade, considerando diferentes condições de carga e configuração de hardware.
 
@@ -10,7 +10,7 @@ O Ollama é uma ferramenta de código aberto projetada para facilitar a execuç�
 
 Este documento integra a Fase 2 do projeto de avaliação de qualidade e serve como base para a coleta e análise de dados nas fases subsequentes.
 
-# Metodologia
+## Metodologia
 
 A metodologia baseia-se no método GQM (Goal-Question-Metric), que orienta a avaliação da qualidade de software de forma estruturada e orientada a objetivos. O processo segue três etapas:
 
@@ -22,7 +22,7 @@ A metodologia baseia-se no método GQM (Goal-Question-Metric), que orienta a ava
 
 As métricas são fundamentadas nas normas ISO/IEC 25010 (modelo de qualidade) e ISO/IEC 25021 (elementos de medida de qualidade), que fornecem definições formais para medidas de desempenho de software. A coleta de dados será realizada por meio da API REST do Ollama (`/api/generate` e `/api/ps`), combinada com ferramentas de monitoramento de sistema como `psutil`, `nvidia-smi` e utilitários nativos do sistema operacional.
 
-# Descrição do Objetivo de Medição de Eficiência de Desempenho
+## Descrição do Objetivo de Medição de Eficiência de Desempenho
 
 Tabela 1: Objetivo de Medição de Qualidade – Eficiência de Desempenho
 
@@ -36,15 +36,15 @@ Tabela 1: Objetivo de Medição de Qualidade – Eficiência de Desempenho
 
 <p align="center"><b>Autor:</b> <a href="https://github.com/Luizaxx">Luiza Pugas</a>, 2026.</p>
 
-# Questões e Métricas
+## Questões e Métricas
 
-## Q1. Quanto ao Comportamento em Relação ao Tempo, a latência de inferência do Ollama com Qwen 2.5 3B é adequada para uso interativo?
+### Q1. Quanto ao Comportamento em Relação ao Tempo, a latência de inferência do Ollama com Qwen 2.5 3B é adequada para uso interativo?
 
-### Hipótese
+#### Hipótese
 
 O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apresentar latência de inferência compatível com uso interativo em hardware de consumo comum (CPU moderna ou GPU de entrada), com tempo de resposta percebível como aceitável pelo usuário. A hipótese é que o sistema consiga gerar os primeiros tokens em menos de 5 segundos e manter uma taxa de geração suficiente para leitura em tempo real em hardware convencional.
 
-### Métrica 1.1: Média do tempo de resposta - Tempo até o Primeiro Token (Time to First Token – TTFT)
+#### Métrica 1.1: Média do tempo de resposta - Tempo até o Primeiro Token (Time to First Token – TTFT)
 
 > Fórmula:
 >
@@ -62,7 +62,7 @@ O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apre
 >
 > Latência elevada (Hipótese Refutada): TTFT mediana > 5 segundos em CPU ou > 2 segundos com GPU.
 
-### Métrica 1.2: Média da Taxa de evasão - Taxa de Geração de Tokens (Tokens Per Second – TPS)
+#### Métrica 1.2: Média da Taxa de evasão - Taxa de Geração de Tokens (Tokens Per Second – TPS)
 
 > Fórmula:
 >
@@ -80,7 +80,7 @@ O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apre
 >
 > Abaixo do limiar aceitável (Hipótese Refutada): < 5 tokens/s.
 
-### Métrica 1.3: Latência de Carregamento do Modelo (Model Load Time – MLT)
+#### Métrica 1.3: Latência de Carregamento do Modelo (Model Load Time – MLT)
 
 > Fórmula:
 >
@@ -96,13 +96,13 @@ O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apre
 >
 > Carregamento lento (Hipótese Refutada): > 30 segundos.
 
-## Q2. Quanto à Utilização de Recursos, o consumo de memória e CPU do Ollama com Qwen 2.5 3B é proporcional ao tamanho do modelo e adequado ao hardware alvo?
+### Q2. Quanto à Utilização de Recursos, o consumo de memória e CPU do Ollama com Qwen 2.5 3B é proporcional ao tamanho do modelo e adequado ao hardware alvo?
 
-### Hipótese
+#### Hipótese
 
 O Qwen 2.5 3B na quantização Q4_K_M deve ocupar aproximadamente 2 GB para os pesos do modelo, mantendo consumo total inferior a 6 GB de RAM em modo CPU-only, permitindo execução em sistemas com 8 GB de memória.
 
-### Métrica 2.1: Consumo de Memória RAM durante Inferência
+#### Métrica 2.1: Consumo de Memória RAM durante Inferência
 
 > Fórmula:
 >
@@ -118,7 +118,7 @@ O Qwen 2.5 3B na quantização Q4_K_M deve ocupar aproximadamente 2 GB para os p
 >
 > Consumo excessivo (Hipótese Refutada): > 6 GB.
 
-### Métrica 2.2: Utilização de CPU durante Inferência
+#### Métrica 2.2: Utilização de CPU durante Inferência
 
 > Fórmula:
 >
@@ -134,7 +134,7 @@ O Qwen 2.5 3B na quantização Q4_K_M deve ocupar aproximadamente 2 GB para os p
 >
 > Gargalo de CPU (Hipótese Refutada): 100% dos núcleos por mais de 80% do tempo.
 
-### Métrica 2.3: Índice de Eficiência de Recursos (REI)
+#### Métrica 2.3: Índice de Eficiência de Recursos (REI)
 
 > Fórmula:
 >
@@ -150,13 +150,13 @@ O Qwen 2.5 3B na quantização Q4_K_M deve ocupar aproximadamente 2 GB para os p
 >
 > Baixa eficiência: REI < 0,5.
 
-## Q3. Quanto ao Comportamento em Relação ao Tempo e Utilização de Recursos, como o desempenho do sistema escala com o aumento do tamanho do contexto?
+### Q3. Quanto ao Comportamento em Relação ao Tempo e Utilização de Recursos, como o desempenho do sistema escala com o aumento do tamanho do contexto?
 
-### Hipótese
+#### Hipótese
 
 A complexidade quadrática do mecanismo de atenção dos Transformers deve causar crescimento não linear de latência e memória conforme aumenta o tamanho do contexto. Ainda assim, o sistema deve permanecer operacional dentro do limite de contexto suportado pelo modelo.
 
-### Métrica 3.1: Fator de Escalonamento de Contexto (CSF)
+#### Métrica 3.1: Fator de Escalonamento de Contexto (CSF)
 
 > Fórmula:
 >
@@ -172,7 +172,7 @@ A complexidade quadrática do mecanismo de atenção dos Transformers deve causa
 >
 > Degradação severa: > 8,0.
 
-### Métrica 3.2: Taxa de Crescimento do KV Cache (KVCGR)
+#### Métrica 3.2: Taxa de Crescimento do KV Cache (KVCGR)
 
 > Fórmula:
 >
@@ -188,7 +188,7 @@ A complexidade quadrática do mecanismo de atenção dos Transformers deve causa
 >
 > Crescimento excessivo: > 1,0 MB/token.
 
-# Conclusões
+## Conclusões
 
 Com a aplicação do método GQM, foi possível estruturar de forma mensurável e reproduzível a análise de eficiência de desempenho do Ollama em conjunto com a LLM Qwen 2.5 3B. As quatro questões formuladas cobrem as três subcaracterísticas de eficiência de desempenho previstas na ISO/IEC 25010: Comportamento em Relação ao Tempo (Q1 e Q3), Utilização de Recursos (Q2 e Q3).
 
@@ -198,13 +198,13 @@ Esta análise fornece a base metodológica necessária para a Fase 3 (coleta de 
 
 OBS: Modelos de Linguagem de Grande Escala (LLMs) foram utilizados como apoio ao brainstorm de perguntas e métricas, bem como para auxílio na estruturação e escrita do documento em formato acadêmico.
 
-# Sobre o Uso de IA
+## Sobre o Uso de IA
 
 Para a elaboração deste documento, a Inteligência Artificial foi utilizada como ferramenta de apoio. O uso concentrou-se principalmente em auxiliar a compreensão e o esclarecimento de termos técnicos presentes nas normas ISO/IEC 25010 e ISO/IEC 25021, bem como em fontes de documentação técnica do Ollama e da biblioteca psutil. Adicionalmente, a IA foi empregada para estruturar e organizar as ideias na aplicação da metodologia GQM, garantindo coerência entre questões, métricas e o objetivo de análise definido.
 
 [Notebook LM](https://notebooklm.google.com/notebook/e9f64a2d-93cc-4f05-9c28-4d5f14c3af3e)
 
-# Referências Bibliográficas
+## Referências Bibliográficas
 
 <a id="ref-1"></a>[1] INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. ISO/IEC 25010:2011 – Systems and software engineering – Software product Quality Requirements and Evaluation (SQuaRE) – Quality model. Geneva: ISO, 2011.
 
