@@ -27,4 +27,8 @@ Esta seção reúne os principais documentos que fundamentam a Fase 1 da avalia�
     <h3>2.6 Tabela de Contribuição</h3>
     <p></p>
   </a>
+  <a class="section-card" href="uso-ia/">
+    <h3>2.7 Declaração de Uso de IA</h3>
+    <p></p>
+  </a>
 </div>
