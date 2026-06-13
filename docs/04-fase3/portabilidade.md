@@ -119,139 +119,75 @@ Qualquer membro da equipe pode executar o procedimento, independentemente de exp
 
 | Ferramenta | Sistema | Finalidade | Configuração |
 |------------|---------|------------|--------------|
-| OBS Studio 30.0+ | Windows/Linux | Gravação de tela | Resolução 1920×1080, 30fps, codec H.264 |
-| Cronômetro do smartphone | — | Medição de tempo | Modo lap/split para registrar marcos |
-| Terminal nativo | Windows: PowerShell 7+ / Linux: Bash | Execução de comandos | Fonte legível para captura em vídeo |
+| Script Python | Windows: PowerShell 7+ / Linux: Bash | Execução de comandos | Fonte legível para captura em prints |
 
 ### 5.3. Definições Operacionais
 
 | Termo | Definição Exata |
 |-------|-----------------|
-| **Início da instalação** | Momento em que a tecla Enter é pressionada após digitar/colar o comando de instalação |
-| **Fim da instalação** | Momento em que o terminal exibe o prompt de comando novamente (cursor piscando, pronto para novo comando) E o comando `ollama --version` retorna uma versão válida |
+| **Início da instalação** | Definido em Script python |
+| **Fim da instalação** | Definido em Script python |
 | **Instalação bem-sucedida** | `ollama --version` retorna string no formato `ollama version X.Y.Z` sem mensagem de erro |
 | **Desinstalação completa** | O comando `ollama --version` retorna "comando não encontrado" ou equivalente E o diretório `~/.ollama` (Linux) ou `%USERPROFILE%\.ollama` (Windows) não existe ou está vazio |
 | **Arquivo residual** | Qualquer arquivo ou pasta remanescente nos diretórios mencionados após desinstalação |
 
 ### 5.4. Protocolo Passo a Passo
 
-#### Passo 0: Preparação (executar uma vez por sessão)
+# 5. Procedimento de Coleta
 
-1. Reiniciar o sistema operacional
-2. Fechar todos os aplicativos exceto terminal e OBS Studio
-3. Verificar espaço em disco disponível (mínimo 10 GB livres)
-4. Abrir OBS Studio e configurar captura de tela cheia
-5. Preparar cronômetro do smartphone em modo lap
-6. Criar pasta para armazenar evidências do dia: `~/evidencias-portabilidade/YYYY-MM-DD/`
+## Passo 1: Preparação
 
-#### Passo 1: Pré-verificação (a cada tentativa)
+* Preparar máquina de teste com Windows 11;
+* Preparar máquina de teste com Zorin OS 18.1 Core;
+* Preparar máquina de teste com Windows 11;
+* Preparar máquina de teste com Zorin OS 18.1 Core;
+* Documentar o estado inicial do sistema (espaço em disco, processos em execução);
+* Preparar checklist de verificação pós-instalação.
 
-1. Confirmar que Ollama **não** está instalado:
 
-```bash
-   # Linux
-   ollama --version
-   # Esperado: "command not found" ou equivalente
-   # Windows (PowerShell)
-   ollama --version
-   # Esperado: erro de comando não reconhecido
-```
+## Passo 2: Testes de Instalabilidade
 
-2. Confirmar que diretório de dados não existe: 
+Para cada ambiente, repetir o procedimento **10 vezes**:
 
-```bash
- # Linux
-ls -la ~/.ollama
-# Esperado: "No such file or directory"
-# Windows (PowerShell)
-Test-Path "$env:USERPROFILE\.ollama"
-# Esperado: False
-```
-
-### Passo 2: Instalação
-
-1. Iniciar gravação no OBS Studio (Ctrl+Shift+R ou botão)
-2. No terminal, digitar (não colar ainda) o comando de instalação
-3. Zerar cronômetro e posicionar dedo sobre Enter
-4. Pressionar Enter e iniciar cronômetro simultaneamente
-5. Aguardar conclusão sem interagir com o sistema
-6. Quando o prompt reaparecer, pressionar lap no cronômetro
-7. Executar verificação:
-   
-```bash
-   ollama --version
-```
-
-8. Parar cronômetro após resultado da verificação
-9.  Parar gravação no OBS Studio
-10. Registrar na planilha:
-- Tempo de instalação (lap 1)
-- Status (sucesso/falha)
-- Mensagem de erro (se houver, copiar texto completo)
-- Versão retornada (se sucesso)
-
-### Passo 3: Desinstalação
-1. Iniciar nova gravação
-2. Zerar e iniciar cronômetro
-3. Executar desinstalação: Linux: 
-```bash
-sudo rm -rf /usr/local/bin/ollama
-sudo rm -rf /usr/local/lib/ollama
-rm -rf ~/.ollama
-sudo systemctl stop ollama 2>/dev/null
-sudo systemctl disable ollama 2>/dev/null
-sudo rm /etc/systemd/system/ollama.service 2>/dev/null
-```
-
-Windows (PowerShell como Administrador):
-
-```bash
-# Parar processo se estiver rodando
-Stop-Process -Name "ollama" -Force -ErrorAction SilentlyContinue
-# Remover via winget (se instalado assim) ou manualmente
-winget uninstall Ollama.Ollama --silent
-# Remover diretório de dados
-Remove-Item -Recurse -Force "$env:USERPROFILE\.ollama" -ErrorAction SilentlyContinue
-# Remover do PATH se necessário (verificar manualmente)
-```
-4. Pressionar lap quando comandos terminarem
-5. Verificar remoção:
+1. Garantir que o Ollama não está instalado;
+2. Iniciar o cronômetro;
+3. Executar o comando de instalação;
+4. Registrar conclusão ou erro;
+5. Parar o cronômetro;
+6. Verificar instalação:
 
 ```bash
 ollama --version
-# Esperado: comando não encontrado
 ```
 
-6. Verificar diretórios:
+7. Proceder à desinstalação completa;
+8. Verificar remoção de arquivos residuais.
+
+### Planilha de Registro
+
+```csv
+ambiente,tentativa,tempo_instalacao_s,status_instalacao,tempo_desinstalacao_s,status_desinstalacao,arquivos_residuais
+```
+
+## Passo 3: Testes de Adaptabilidade
+
+1. Instalar o Ollama em ambos os ambientes;
+2. Baixar o modelo:
 
 ```bash
-# Linux
-ls -la ~/.ollama
-# Windows
-Test-Path "$env:USERPROFILE\.ollama"
+ollama pull qwen2.5:3b
 ```
 
-7. Parar cronômetro e gravação
-Registrar na planilha:
-- Tempo de desinstalação
-- Status (completa/parcial/falha)
-- Arquivos residuais encontrados (listar)
+3. Executar o script de testes funcionais padronizado;
+4. Registrar resultados comparativos.
 
-### Passo 4: Repetir
-Repetir Passos 1–3 por 10 vezes em cada ambiente, totalizando 20 execuções.
 
-### 5.5. Planilha de Registro
-Criar arquivo CSV com o seguinte cabeçalho:
+## Passo 4: Consolidação
 
-```bash
-ambiente,tentativa,data_hora,tempo_instalacao_s,status_instalacao,versao_instalada,erro_instalacao,tempo_desinstalacao_s,status_desinstalacao,arquivos_residuais,observacoes,video_arquivo
-```
+* Calcular taxas de sucesso;
+* Comparar tempos médios entre ambientes;
+* Identificar diferenças funcionais ou de desempenho.
 
-Exemplo de linha preenchida:
-
-```bash
-Windows 11,1,2026-06-17T10:15:00,45.3,sucesso,0.9.0,,38.1,completa,nenhum,,evidencias-portabilidade/2026-06-17/win11_tentativa01.mp4
-```
 
 # 6. Critérios de Aceitação
 

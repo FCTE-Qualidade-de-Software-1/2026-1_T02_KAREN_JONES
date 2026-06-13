@@ -54,8 +54,28 @@ Os dados coletados fundamentarão as seguintes decisões:
   </a>
 </div>
 
+## Cronograma das Fases 3 e 4
 
----
+| Data | Fase | Atividade |
+|--------|--------|------------|
+| 04/06/2026 | Fase 3 – Planejamento da Avaliação | Elaboração inicial do Plano de Avaliação e definição dos ambientes de teste |
+| 05/06/2026 | Fase 3 – Planejamento da Avaliação | Definição dos instrumentos de medição para Eficiência de Desempenho |
+| 06/06/2026 | Fase 3 – Planejamento da Avaliação | Definição dos instrumentos de medição para Portabilidade |
+| 07/06/2026 | Fase 3 – Planejamento da Avaliação | Estruturação dos procedimentos de coleta de dados |
+| 08/06/2026 | Fase 3 – Planejamento da Avaliação | Definição dos critérios de aceitação das métricas |
+| 09/06/2026 | Fase 3 – Planejamento da Avaliação | Organização dos ambientes de teste e preparação dos scripts |
+| 10/06/2026 | Fase 3 – Planejamento da Avaliação | Revisão e validação dos procedimentos experimentais |
+| 11/06/2026 | Fase 3 – Planejamento da Avaliação | Ajustes finais dos artefatos e preparação para execução |
+| 12/06/2026 | Fase 3 – Planejamento da Avaliação | Consolidação e aprovação do Plano de Avaliação |
+| 12/06/2026 | Fase 4 – Execução da Avaliação | Preparação dos ambientes de teste (Windows 11 e Zorin OS 18.1 Core) |
+| 12/06/2026 | Fase 4 – Execução da Avaliação | Instalação do Ollama e download do modelo Qwen 2.5 3B |
+| 12/06/2026 | Fase 4 – Execução da Avaliação | Configuração dos scripts de medição e ferramentas de monitoramento |
+| 12/06/2026 | Fase 4 – Execução da Avaliação | Execução dos testes de Eficiência de Desempenho (TTFT, TPS, MLT, RAM e CPU) |
+| 12/06/2026 | Fase 4 – Execução da Avaliação | Execução dos testes de Capacidade (512, 1024, 2048 e 4096 tokens) |
+| 12/06/2026 | Fase 4 – Execução da Avaliação | Execução dos testes de Adaptabilidade entre Windows e Linux |
+| 12/06/2026 | Fase 4 – Execução da Avaliação | Execução dos testes de Instalabilidade e Desinstalação |
+| 12/06/2026 | Fase 4 – Execução da Avaliação | Coleta e organização dos dados experimentais |
+| 12/06/2026 | Fase 4 – Execução da Avaliação | Consolidação dos resultados e elaboração das análises |
 
 # Bibliografia
 

@@ -122,7 +122,7 @@ Após cada sessão de testes:
 |--------------------|-----------------------------------------|
 | TTFT (512 tokens)  | ≤ 5 segundos                            |
 | TTFT (2048 tokens) | ≤ 15 segundos                           |
-| Uso de RAM         | ≤ 6 GB (75% dos 8 GB disponíveis)       |
+| Uso de RAM         | ≤ 12 GB (75% dos 16 GB disponíveis)       |
 | Estabilidade       | Sistema responsivo durante 100% dos testes |
 
 ## 7. Localização dos Dados
