@@ -1,0 +1,8 @@
+ambiente,metrica,valor,criterio,passou
+Windows 11,PO-1.1,1.0,>= 0.99,True
+Windows 11,PO-1.2_tempo_medio_s,9.75,base p/ desvio entre SOs,N/A (cruzar com outro SO)
+Windows 11,PO-2.1,1.0,>= 0.95,True
+Windows 11,PO-2.2,1.0,>= 0.90,True
+Windows 11,PO-3.1,1.0,>= 0.95,True
+Windows 11,PO-3.2,ver nota,<= 0.05 (cruzar ambientes),N/A (cruzar com outro SO)
+Windows 11,PO-3.3_taxa_erro_tipo,0.0,<= 0.02,True
