@@ -7,7 +7,7 @@ import statistics
 from datetime import datetime  # Pra juntar com os dados de monitor.py
 
 URL = "http://127.0.0.1:11434/api/generate"  # se trocar pra localhost tava aumentando 2000ms no TTFT
-N_RUNS = 3
+N_RUNS = 5
 KEEP_ALIVE = "5m"  # já é o padrão mas so pra garantir
 
 TELEMETRIA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "telemetria")
