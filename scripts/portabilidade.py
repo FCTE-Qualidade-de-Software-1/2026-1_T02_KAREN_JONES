@@ -95,9 +95,15 @@ log = Logger(LOG_FILE)
 
 # ── Utilitários de sistema ───────────────────────────────────────────────────
 
-def run(cmd: list[str], timeout: int = 300) -> tuple[int, str, str]:
+def run(cmd: list[str], timeout: int = 900) -> tuple[int, str, str]:
     """Executa um comando e retorna (returncode, stdout, stderr)."""
     try:
+        # Se for um comando de instalação ou download, evita o capture_output
+        # para não congelar o script com buffers interativos ou interfaces gráficas
+        if any(x in str(cmd) for x in ["install.ps1", "pull", "Uninstall-Package"]):
+            result = subprocess.run(cmd, timeout=timeout)
+            return result.returncode, "Executado diretamente", ""
+        
         result = subprocess.run(
             cmd, capture_output=True, text=True, timeout=timeout
         )
