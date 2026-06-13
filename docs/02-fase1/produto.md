@@ -5,12 +5,14 @@ O objetivo desta página é fornecer uma visão geral do software em avaliação
 ---
 
 ![](../img/ollamaImage.png)
+<p align="center"><em>Logo do Ollama</em></p>
  
 ## Informações Básicas
  
 - **Nome do produto**: Ollama
 - **Versão do produto**: v0.23.4 (versão mais recente estável, maio de 2026)
 - **Aplicação do produto**: Servidor de inferência local para Modelos de Linguagem de Grande Escala (LLMs)
+- **Classificação do Produto**: Software de Sistema / Middleware (atua como infraestrutura e camada de abstração para execução de IA) e Ferramenta de Desenvolvimento.
 - **Repositório do Código Principal**: [GitHub — ollama/ollama](https://github.com/ollama/ollama)
 - **Licença do Produto**: MIT License
 - **Linguagem de implementação**: Go (Golang)
@@ -88,24 +90,38 @@ O Ollama possui um ecossistema amplo de integrações com ferramentas populares 
 ---
  
 ## Como as ODS se relacionam com o Ollama
- 
+
 **ODS 4 – Educação de Qualidade**
- 
-O Ollama é uma ferramenta gratuita e de código aberto que democratiza o acesso a tecnologias de inteligência artificial avançadas. Ao eliminar a necessidade de chaves de API pagas e de conexão constante com a internet, ele viabiliza que estudantes, professores e pesquisadores — inclusive em contextos de menor infraestrutura — possam estudar, experimentar e desenvolver com LLMs de ponta. Isso contribui diretamente para a redução das barreiras de acesso à educação tecnológica e para a formação de profissionais qualificados em IA, alinhando-se ao ODS 4, que busca assegurar educação inclusiva, equitativa e de qualidade para todos.
- 
+
+O Ollama é uma ferramenta gratuita e de código aberto que democratiza o acesso a tecnologias de inteligência artificial avançadas, viabilizando que estudantes, professores e pesquisadores possam estudar e desenvolver com LLMs de ponta sem custos.
+*   **Meta 4.4:** Até 2030, aumentar substancialmente o número de jovens e adultos que tenham habilidades relevantes, inclusive competências técnicas e profissionais, para emprego, trabalho decente e empreendedorismo.
+*   **Indicador 4.4.1:** Proporção de jovens e adultos com competências em tecnologias de informação e comunicação (TIC).
+*   **Justificativa:** O Ollama reduz significativamente as barreiras de acesso à educação tecnológica e experimentação. Ao facilitar o desenvolvimento de competências em Inteligência Artificial (uma habilidade TIC altamente valorizada), ele contribui para a formação de profissionais qualificados e preparados para as demandas atuais do mercado de trabalho.
+
 **ODS 9 – Indústria, Inovação e Infraestrutura**
- 
-O Ollama representa um avanço significativo na democratização da infraestrutura de IA. Ao permitir que organizações de qualquer porte executem modelos sofisticados em hardware comum, sem custos de API ou dependência de grandes provedores de nuvem, o software fomenta a inovação descentralizada. Pequenas empresas, startups e times independentes passam a ter acesso à mesma capacidade técnica anteriormente restrita a grandes corporações, alinhando-se ao ODS 9, que busca construir infraestruturas resilientes, promover a industrialização inclusiva e fomentar a inovação.
- 
+
+O Ollama representa um avanço na democratização da infraestrutura de IA, permitindo a execução de modelos sofisticados em hardware comum, livre da dependência de grandes provedores de nuvem.
+*   **Meta 9.5:** Fortalecer a pesquisa científica, melhorar as capacidades tecnológicas de setores industriais em todos os países, particularmente nos países em desenvolvimento, inclusive, até 2030, incentivando a inovação.
+*   **Indicador 9.5.2:** Número de pesquisadores (em equivalente em tempo integral) por milhão de habitantes.
+*   **Justificativa:** Pequenas empresas, startups e pesquisadores independentes ganham acesso a ferramentas de ponta que antes exigiam hardware proibitivo ou altos custos de API. O Ollama atua como uma infraestrutura facilitadora, alavancando a pesquisa e desenvolvimento (P&D) descentralizados e o fomento da inovação tecnológica inclusiva.
+
 **ODS 10 – Redução das Desigualdades**
- 
-A filosofia *local-first* do Ollama contribui para reduzir a desigualdade no acesso à IA. Modelos de linguagem poderosos, antes acessíveis apenas mediante pagamento por uso a empresas como OpenAI e Anthropic, tornam-se disponíveis gratuitamente a qualquer pessoa com um computador convencional. Isso é especialmente relevante em países em desenvolvimento, onde os custos de acesso a APIs externas podem ser proibitivos. O Ollama, portanto, alinha-se ao ODS 10 ao ampliar o acesso equitativo a tecnologias transformadoras.
+
+A filosofia *local-first* do Ollama contribui para mitigar a disparidade global no acesso a tecnologias disruptivas.
+*   **Meta 10.3:** Garantir a igualdade de oportunidades e reduzir as desigualdades de resultados, inclusive por meio da promoção de políticas e ações adequadas a esse respeito.
+*   **Indicador 10.3.1:** Proporção da população que relata ter se sentido discriminada ou assediada por motivos proibidos pelas leis internacionais de direitos humanos (indicador oficial adaptado aqui para o contexto de exclusão socioeconômica).
+*   **Justificativa:** Modelos de linguagem, antes acessíveis apenas mediante pagamento por uso, tornam-se disponíveis gratuitamente a qualquer pessoa com um computador convencional. Essa descentralização garante igualdade de oportunidades no campo tecnológico, sendo especialmente relevante para indivíduos e organizações em países em desenvolvimento, onde o poder de compra e o custo em dólar das APIs representam uma grande desigualdade de oportunidades.
  
 ---
 # Qwen 2.5 3B
 
+<div align="center" markdown="1">
 
 ![](../img/qwen2.5-logo.png)
+
+<p><em>Logo do Qwen 2.5</em></p>
+
+</div>
  
 # Informações Gerais do Produto
 
@@ -132,11 +148,11 @@ A filosofia *local-first* do Ollama contribui para reduzir a desigualdade no ace
 
 ## O que é o Qwen 2.5 3B
 
-O **Qwen 2.5 3B** é um modelo de linguagem de pequeno porte (**SLM - Small Language Model**) desenvolvido pela equipe **Qwen**, da Alibaba Cloud. Ele faz parte da mais recente geração de modelos fundacionais da família **Qwen2.5**, pré-treinados em um conjunto massivo de dados contendo até **18 trilhões de tokens**.
+O **Qwen 2.5 3B** é um modelo de linguagem focado em eficiência (conhecido como **SLM - Small Language Model**) desenvolvido pela **Alibaba Cloud**. Ele faz parte da linha **Qwen2.5** e foi treinado em uma base de dados de **18 trilhões de tokens**.
 
-Apesar do seu tamanho compacto, com aproximadamente **3 bilhões de parâmetros**, ele possui uma alta densidade de conhecimento, entregando um desempenho altamente competitivo que rivaliza com modelos maiores e alcançando uma pontuação superior a **65 no benchmark MMLU**.
+O grande destaque desse modelo é a sua relação entre tamanho e desempenho. Com cerca de **3 bilhões de parâmetros**, ele consegue resultados muito próximos aos de modelos bem maiores, superando os **65 pontos no benchmark MMLU**. Na prática, isso significa que ele é capaz de rodar bem em computadores mais simples sem perder muita qualidade na geração de texto.
 
-> **Observação sobre licenciamento:** Enquanto a maior parte da linha Qwen2.5 utiliza a licença **Apache 2.0**, as variantes **3B** e **72B** foram lançadas sob a **Qwen Research License**.
+> **Observação sobre licenciamento:** A maioria dos modelos da família Qwen2.5 é distribuída com licença **Apache 2.0**. No entanto, as versões **3B** e **72B** utilizam uma licença própria, a **Qwen Research License**.
 
 ---
 
@@ -355,4 +371,5 @@ O modelo é compatível com diversos frameworks de treinamento e otimização.
 | 1.1 | 13/05/2026 | Correção na versão atual do Ollama | [Matheus Pinheiro](https://github.com/matheus-06) | [](https://github.com/) |
 | 2.0 | 13/05/2026 | Inserção de informações sobre o Qwen2.5-3B | [Luiza](https://github.com/Luizaxx) | [Johnnatan Salles](https://github.com/jsalless) |
 | 2.1 | 13/05/2026 | Inserção de diagrama de arquitetura Ollamac| [Luiza](https://github.com/Luizaxx) | [Johnnatan Salles](https://github.com/jsalless) |
+| 1.2 | 12/06/2026 | Legenda na logo do ollama | [Johnnatan Salles](https://github.com/jsalless) | [](https://github.com/) |
 
