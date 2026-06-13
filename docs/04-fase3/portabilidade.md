@@ -147,7 +147,7 @@ Qualquer membro da equipe pode executar o procedimento, independentemente de exp
 
 ## Passo 2: Testes de Instalabilidade
 
-Para cada ambiente, repetir o procedimento **10 vezes**:
+Para cada ambiente, repetir o procedimento **5 vezes**:
 
 1. Garantir que o Ollama não está instalado;
 2. Iniciar o cronômetro;
@@ -207,14 +207,16 @@ Conforme as hipóteses definidas na Fase 2:
 
 | Artefato                   | Caminho                                              | Descrição                        |
 | -------------------------- | ---------------------------------------------------- | -------------------------------- |
-| Planilha de instalação     | link | Registro de tempos e status      |
-| Planilha de adaptabilidade | link | Comparativo entre SOs            |
-| Gravações de tela          | link                          | Vídeos do processo de instalação |
-| Logs de erro               | link`                         | Mensagens de erro capturadas     |
-| Checklist de verificação   | link`                                 | Verificações pós-instalação      |
+| Planilha de instalação     | [link](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES/tree/main/tests/resultados/portabilidade) | Registro de tempos e status      |
+| Planilha de adaptabilidade | [link](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES/tree/main/tests/resultados/portabilidade) | Comparativo entre SOs            |
+| Gravações de tela          | [link](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES/tree/main/tests/resultados/portabilidade)                          | Vídeos do processo de instalação |
+| Logs de erro               | [link](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES/tree/main/tests/resultados/portabilidade)`                         | Mensagens de erro capturadas     |
+| Checklist de verificação   | [link](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES/tree/main/tests/resultados/portabilidade)`                                 | Verificações pós-instalação      |
 
----
 
+## 8. Sobre o Uso de IA
+
+Para a elaboração deste documento, a Inteligência Artificial foi utilizada como ferramenta de apoio. O uso concentrou-se principalmente em auxiliar a idealizaçção para o planejamento dos testes. Adicionalmente, a IA foi empregada para estruturar e organizar as ideias de desenvolvimento de teste e revisão ortográfica, garantindo coerência entre as questões, métricas e o objetivo de análise.
 
 # Bibliografia
 
