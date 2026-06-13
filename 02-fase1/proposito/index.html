@@ -1,0 +1,1828 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Visão de Produto e Projeto">
+      
+      
+        <meta name="author" content="Equipe Karen Jones">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../requisitantes/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/iconNav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Propósito da Avaliação - Avaliação de Qualidade do Ollama - Karen Jones</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#21-proposito-da-avaliacao" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-header__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Avaliação de Qualidade do Ollama - Karen Jones
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Propósito da Avaliação
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01-karenJones/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Quem é Karen Jones?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  2. Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03-fase2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3. Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-fase3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  4. Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05-fase4/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-nav__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    Avaliação de Qualidade do Ollama - Karen Jones
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-karenJones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quem é Karen Jones?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#211-proposito-da-avaliacao-e-uso-pretendido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 Propósito da avaliação e uso pretendido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-por-que-avaliar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 Por que avaliar ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213-para-quem-avaliar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3 Para quem avaliar ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#214-como-os-resultados-serao-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.4 Como os resultados serão utilizados?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-cenario-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Cenário de Avaliação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-escopo-da-avaliacao-isoiec-25021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Escopo da Avaliação (ISO/IEC 25021)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Escopo da Avaliação (ISO/IEC 25021)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-eficiencia-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 Eficiência de desempenho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-portabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2 Portabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisoes-a-serem-apoiadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisões a Serem Apoiadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priorizacao-das-caracteristicas-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priorização das Características de Qualidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitantes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitantes e Partes Interessadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../justificativas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justificativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade e Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Declaração de Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../03-fase2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-fase2/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-fase2/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-fase2/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../04-fase3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Fase 3
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. Fase 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-fase4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/sintese-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Síntese Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#211-proposito-da-avaliacao-e-uso-pretendido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 Propósito da avaliação e uso pretendido
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-por-que-avaliar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 Por que avaliar ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213-para-quem-avaliar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3 Para quem avaliar ?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#214-como-os-resultados-serao-utilizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.4 Como os resultados serão utilizados?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-cenario-de-avaliacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Cenário de Avaliação
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-escopo-da-avaliacao-isoiec-25021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Escopo da Avaliação (ISO/IEC 25021)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Escopo da Avaliação (ISO/IEC 25021)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-eficiencia-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 Eficiência de desempenho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-portabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.2 Portabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decisoes-a-serem-apoiadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Decisões a Serem Apoiadas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#priorizacao-das-caracteristicas-de-qualidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Priorização das Características de Qualidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="21-proposito-da-avaliacao">2.1 Propósito da Avaliação<a class="headerlink" href="#21-proposito-da-avaliacao" title="Permanent link">&para;</a></h1>
+<h2 id="211-proposito-da-avaliacao-e-uso-pretendido">2.1.1 Propósito da avaliação e uso pretendido<a class="headerlink" href="#211-proposito-da-avaliacao-e-uso-pretendido" title="Permanent link">&para;</a></h2>
+<p>O objetivo desta seção é descrever as razões para a realização da avaliação de qualidade, identificando os interessados e como os dados obtidos influenciarão as decisões sobre a stack tecnológica escolhida. Será dividido em: Por que avaliar?  ; Para quem avaliar? ; Como os resultados serão utilizados ?</p>
+<p>Toda a avaliação será feita sob as especificações da norma <strong>ISO/IEC 25010 (SQuaRE)</strong>, focando nas características de <strong>portabilidade</strong> e <strong>eficiência de desempenho</strong>.</p>
+<h2 id="212-por-que-avaliar">2.1.2 Por que avaliar ?<a class="headerlink" href="#212-por-que-avaliar" title="Permanent link">&para;</a></h2>
+<p>Atualmente o acesso à Inteligencia Artificial se esbarra em dois principais obstáculos: a exigência de hardware de alto custo e a dependência de conectividade estável. </p>
+<p>Tendo em vista os estudantes, pesquisadores e quaisquer pessoas que utilizam a inteligencia artificial que se localizam em regiões com a infraestrutura limitada precisam de ferramentas que garantam a funcionalidade offline e privacidade.</p>
+<p>O Ollama (executando o modelo Qwen 2.5 3B, versão v0.9.0) tem uma solução para esse cenário. Porém, é fundamental validar se essa promessa de "agilidade" e "execução local" se sustenta em um hardware com 16GB de RAM e sem GPU dedicada. A avaliação desse trabalho busca medir se o sistema é realmente viável e consistente em diferentes sistemas operacionais, focando na portabilidade e também medir a eficiência e desempenho.</p>
+<h2 id="213-para-quem-avaliar">2.1.3 Para quem avaliar ?<a class="headerlink" href="#213-para-quem-avaliar" title="Permanent link">&para;</a></h2>
+<p>A avaliação e resultados se destinam principalmente a:</p>
+<p><strong>Estudantes e Pesquisadores</strong>: Para decidir se o Ollama é uma alternativa viável em máquinas básicas.</p>
+<p><strong>Comunidade de Software Acadêmico</strong>: Para validar o Qwen 2.5 3B como um modelo eficiente para tarefas de resumo e escrita local.</p>
+<p><strong>Decisores Técnicos</strong>: Os dados servirão de base para recomendar (ou não) a adoção deste software como padrão para inclusão digital em áreas remotas.</p>
+<h2 id="214-como-os-resultados-serao-utilizados">2.1.4 Como os resultados serão utilizados?<a class="headerlink" href="#214-como-os-resultados-serao-utilizados" title="Permanent link">&para;</a></h2>
+<p>Os resultados serão utilizados para tomar as seguintes decisões:</p>
+<p><strong>Validação de Hardware</strong>: Decidir se 16GB de RAM sem o auxílio de GPU dedicada são suficientes para rodar o Qwen 2.5 3B sem comprometer a estabilidade do sistema operacional.</p>
+<p><strong>Adoção de Sistemas Operacionais</strong>: Determinar se há paridade de desempenho entre Windows e Linux.</p>
+<p><strong>Configuração de Modelo</strong>: Decidir se o limite de contexto de tokens precisa ser ajustado para garantir que o tempo de chegada do primeiro token (TTFT) não ultrapasse um limite aceitável para o usuário.</p>
+<p><strong>Agilidade de Deploy</strong>: Validar se o método de instalação atual do Ollama é simples o suficiente para ser recomendado a todos os tipos de usuários.</p>
+<h2 id="22-cenario-de-avaliacao">2.2 Cenário de Avaliação<a class="headerlink" href="#22-cenario-de-avaliacao" title="Permanent link">&para;</a></h2>
+<p>Foi definido o seguinte cénario para avaliação:</p>
+<blockquote>
+<p>"Uma estudante universitária com acesso instável à internet e um notebook básico (Windows 11, 16GB RAM, sem GPU dedicada) precisa de um assistente para estudos. 
+Um colega utiliza a mesma ferramenta no Linux (Ubuntu). Eles buscam uma solução gratuita, privada e offline. O foco da nossa avaliação é verificar se o Qwen 2.5 3B via Ollama entrega um tempo de resposta aceitável nesse hardware e se a experiência de instalação e adaptação é equivalente entre os dois sistemas operacionais."</p>
+</blockquote>
+<h2 id="23-escopo-da-avaliacao-isoiec-25021">2.3 Escopo da Avaliação (ISO/IEC 25021)<a class="headerlink" href="#23-escopo-da-avaliacao-isoiec-25021" title="Permanent link">&para;</a></h2>
+<p>As características centrais da norma aplicada a este trabalho é detalhada abaixo. O foco será exclusivamente em Eficiência de desempenho e Portabilidade. Especificamos mais na aba de <a href="https://fcte-qualidade-de-software-1.github.io/2026-1_T02_KAREN_JONES/02-fase1/modelo/">Modelo de Qualidade e Escopo</a>.</p>
+<h3 id="231-eficiencia-de-desempenho">2.3.1 Eficiência de desempenho<a class="headerlink" href="#231-eficiencia-de-desempenho" title="Permanent link">&para;</a></h3>
+<p>Não avaliaremos a "Eficiência" genérica (qualidade em uso), mas sim a capacidade técnica do modelo em gerenciar recursos e tempo:</p>
+<p><strong>Comportamento Temporal</strong> : Focaremos no Time to First Token (TTFT). Em modelos locais, o tempo que o sistema leva para começar a responder é o principal indicador de usabilidade em máquinas sem GPU.</p>
+<p><strong>Utilização de recursos</strong> : Focaremos em medir se os recursos (RAM/CPU) são otimizados para garantir o desempenho adequado no cenário de 16GB de RAM.</p>
+<p><strong>Capacidade</strong> : Avaliaremos como o contexto de tokens impacta a velocidade de processamento, ignorando a capacidade multilíngue por não ser o foco da estabilidade local.</p>
+<h3 id="232-portabilidade">2.3.2 Portabilidade<a class="headerlink" href="#232-portabilidade" title="Permanent link">&para;</a></h3>
+<p>Vamos verificar se a "agilidade" prometida pelo Ollama se traduz na prática:</p>
+<p><strong>Adaptabilidade</strong>: O sistema mantém o desempenho ao alternar entre o Windows (via PowerShell) e o Linux?</p>
+<p><strong>Instalabilidade</strong>: O comando <code>install.ps1 | iex</code> realmente facilita o acesso para um usuário leigo ou apresenta barreiras em hardware limitado?</p>
+<h2 id="decisoes-a-serem-apoiadas">Decisões a Serem Apoiadas<a class="headerlink" href="#decisoes-a-serem-apoiadas" title="Permanent link">&para;</a></h2>
+<p>Os dados coletados e as conclusões da avaliação servirão para fundamentar as seguintes decisões e são mostrados na tabela 1:</p>
+<h3 align="center">Tabela 1: Decisões a Serem Apoiadas</h3>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Característica</strong></th>
+<th style="text-align: left;"><strong>Análise a ser feita</strong></th>
+<th style="text-align: left;"><strong>Decisão Apoiada</strong></th>
+<th style="text-align: left;"><strong>Quem Decide?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Eficiência de Desempenho</strong></td>
+<td style="text-align: left;">Medição do <strong>Time to First Token (TTFT)</strong> e monitoramento do uso de RAM (16GB) em hardware sem GPU dedicada durante o processamento de prompts.</td>
+<td style="text-align: left;">Definir se o modelo Qwen 2.5 3B é viável para o uso acadêmico diário em máquinas modestas ou se apresenta latência excessiva.</td>
+<td style="text-align: left;">Equipe de Avaliação</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Portabilidade</strong></td>
+<td style="text-align: left;">Validar a instalabilidade via script e a adaptabilidade funcional do Ollama comparando os sistemas Windows 11 e Linux (Ubuntu).</td>
+<td style="text-align: left;">Confirmar se a ferramenta mantém a paridade de recursos em diferentes SOs para garantir uma recomendação universal aos estudantes.</td>
+<td style="text-align: left;">Equipe de Avaliação</td>
+</tr>
+</tbody>
+</table>
+<p align="center"><b>Autor:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a>, 2026.</p>
+
+<h2 id="priorizacao-das-caracteristicas-de-qualidade">Priorização das Características de Qualidade<a class="headerlink" href="#priorizacao-das-caracteristicas-de-qualidade" title="Permanent link">&para;</a></h2>
+<p>Para garantir que a solução proposta seja efetiva no cenário de hardware limitado e ausência de conectividade, realizou-se a priorização das características de qualidade da norma ISO/IEC 25010. A tabela 2 detalha as especificações: </p>
+<h3 align="center">Tabela 2: Priorização das Características de Qualidade (ISO/IEC 25010)</h3>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Característica de Qualidade (SQuaRE)</th>
+<th style="text-align: center;">Ênfase (1 a 5)</th>
+<th style="text-align: left;">Justificativa Breve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Eficiência de Desempenho</strong></td>
+<td style="text-align: center;">5 – grande interesse</td>
+<td style="text-align: left;"><strong>Foco principal.</strong> A velocidade de resposta (TTFT) e o uso de RAM são críticos para a viabilidade do uso em hardware modesto (16GB).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Portabilidade</strong></td>
+<td style="text-align: center;">5 – grande interesse</td>
+<td style="text-align: left;"><strong>Foco principal.</strong> É fundamental que a experiência de instalação e uso seja consistente entre Windows e Linux para atender aos estudantes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Adequação Funcional</strong></td>
+<td style="text-align: center;">3 – médio interesse</td>
+<td style="text-align: left;">Assume-se que as funções do modelo Qwen operam; o interesse reside na estabilidade dessas funções em execução local.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Confiabilidade</strong></td>
+<td style="text-align: center;">3 – médio interesse</td>
+<td style="text-align: left;">Importante para garantir que o modelo não interrompa o auxílio aos estudos por falhas de carregamento ou falta de internet.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Segurança</strong></td>
+<td style="text-align: center;">2 – baixo interesse</td>
+<td style="text-align: left;">Por ser uma ferramenta executada localmente (offline), os riscos de exposição de dados são reduzidos por padrão.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Compatibilidade</strong></td>
+<td style="text-align: center;">2 – baixo interesse</td>
+<td style="text-align: left;">O foco é a execução do assistente de forma isolada, não havendo prioridade imediata na troca de dados com outros softwares.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Manutenibilidade</strong></td>
+<td style="text-align: center;">1 – nenhum interesse</td>
+<td style="text-align: left;">A análise da estrutura interna do código do Ollama ou do modelo Qwen está fora do escopo desta avaliação.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usabilidade</strong></td>
+<td style="text-align: center;">1 – nenhum interesse</td>
+<td style="text-align: left;">Característica excluída dos critérios de avaliação pela disciplina.</td>
+</tr>
+</tbody>
+</table>
+<p align="center"><b>Autor:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a>, 2026.</p>
+
+<h1 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h1>
+<blockquote>
+<ol>
+<li>
+<p>ISO/IEC. <em>ISO/IEC TR 25021:2007: Software engineering — Software product Quality Requirements and Evaluation (SQuaRE) — Quality measure elements</em>. 1. ed. Genebra: International Organization for Standardization / International Electrotechnical Commission, 2007.</p>
+</li>
+<li>
+<p>RAMOS, Cristiane Soares. <em>Medição baseada em objetivos: “Determinando o que medir”</em>. Material da disciplina FGA0278 - Qualidade de Software 1. Faculdade do Gama (FGA), Universidade de Brasília (UnB), 2024.</p>
+</li>
+<li>
+<p>QWEN. <em>Qwen/Qwen2.5-3B-Instruct</em>. Repositório de modelos Hugging Face, 2024. Disponível em: <a href="https://ollama.com/library/qwen2.5:3b">https://ollama.com/library/qwen2.5:3b</a>. Acesso em: 13 maio 2026.</p>
+</li>
+<li>
+<p>OLLAMA. <em>Ollama — The easiest way to build with open models</em>. Disponível em: <a href="https://ollama.com">https://ollama.com</a>. Acesso em: 11 maio 2026.</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>13/05/2026</td>
+<td>Criação do próposito da avaliação</td>
+<td><a href="https://github.com/RenataKurzawa">Renata Quadros</a></td>
+<td><a href="https://github.com/GdevAlves">Gabriel Alves</a></td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>13/05/2026</td>
+<td>Pequena correção no texto do escopo e adição do OLLAMA na bibliografia</td>
+<td><a href="https://github.com/matheus-06">Matheus Pinheiro</a></td>
+<td><a href="https://github.com/jsalless">Johnnatan Salles</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "toc.follow", "navigation.logo"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

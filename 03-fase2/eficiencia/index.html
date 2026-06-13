@@ -1,0 +1,2172 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Visão de Produto e Projeto">
+      
+      
+        <meta name="author" content="Equipe Karen Jones">
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../portabilidade/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/iconNav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Eficiência de Desempenho - Avaliação de Qualidade do Ollama - Karen Jones</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#31-eficiencia-de-desempenho" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-header__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Avaliação de Qualidade do Ollama - Karen Jones
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Eficiência de Desempenho
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01-karenJones/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Quem é Karen Jones?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02-fase1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  2. Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3. Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-fase3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  4. Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05-fase4/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-nav__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    Avaliação de Qualidade do Ollama - Karen Jones
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-karenJones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quem é Karen Jones?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../02-fase1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/proposito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/requisitantes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitantes e Partes Interessadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/justificativas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justificativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade e Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/uso-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Declaração de Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodologia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-do-objetivo-de-medicao-de-eficiencia-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrição do Objetivo de Medição de Eficiência de Desempenho
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoes-e-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questões e Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Questões e Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-quanto-ao-comportamento-em-relacao-ao-tempo-a-latencia-de-inferencia-do-ollama-com-qwen-25-3b-e-adequada-para-uso-interativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. Quanto ao Comportamento em Relação ao Tempo, a latência de inferência do Ollama com Qwen 2.5 3B é adequada para uso interativo?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1. Quanto ao Comportamento em Relação ao Tempo, a latência de inferência do Ollama com Qwen 2.5 3B é adequada para uso interativo?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-11-media-do-tempo-de-resposta-tempo-ate-o-primeiro-token-time-to-first-token-ttft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.1: Média do tempo de resposta - Tempo até o Primeiro Token (Time to First Token – TTFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-12-media-da-taxa-de-evasao-taxa-de-geracao-de-tokens-tokens-per-second-tps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.2: Média da Taxa de evasão - Taxa de Geração de Tokens (Tokens Per Second – TPS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-13-latencia-de-carregamento-do-modelo-model-load-time-mlt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.3: Latência de Carregamento do Modelo (Model Load Time – MLT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-quanto-a-utilizacao-de-recursos-o-consumo-de-memoria-e-cpu-do-ollama-com-qwen-25-3b-e-proporcional-ao-tamanho-do-modelo-e-adequado-ao-hardware-alvo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. Quanto à Utilização de Recursos, o consumo de memória e CPU do Ollama com Qwen 2.5 3B é proporcional ao tamanho do modelo e adequado ao hardware alvo?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2. Quanto à Utilização de Recursos, o consumo de memória e CPU do Ollama com Qwen 2.5 3B é proporcional ao tamanho do modelo e adequado ao hardware alvo?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-21-consumo-de-memoria-ram-durante-inferencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.1: Consumo de Memória RAM durante Inferência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-22-utilizacao-de-cpu-durante-inferencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.2: Utilização de CPU durante Inferência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-23-indice-de-eficiencia-de-recursos-rei" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.3: Índice de Eficiência de Recursos (REI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-quanto-ao-comportamento-em-relacao-ao-tempo-e-utilizacao-de-recursos-como-o-desempenho-do-sistema-escala-com-o-aumento-do-tamanho-do-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. Quanto ao Comportamento em Relação ao Tempo e Utilização de Recursos, como o desempenho do sistema escala com o aumento do tamanho do contexto?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3. Quanto ao Comportamento em Relação ao Tempo e Utilização de Recursos, como o desempenho do sistema escala com o aumento do tamanho do contexto?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-31-fator-de-escalonamento-de-contexto-csf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.1: Fator de Escalonamento de Contexto (CSF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-32-taxa-de-crescimento-do-kv-cache-kvcgr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.2: Taxa de Crescimento do KV Cache (KVCGR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusões
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências Bibliográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../04-fase3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Fase 3
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. Fase 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-fase4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/sintese-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Síntese Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodologia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-do-objetivo-de-medicao-de-eficiencia-de-desempenho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrição do Objetivo de Medição de Eficiência de Desempenho
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoes-e-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questões e Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Questões e Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-quanto-ao-comportamento-em-relacao-ao-tempo-a-latencia-de-inferencia-do-ollama-com-qwen-25-3b-e-adequada-para-uso-interativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. Quanto ao Comportamento em Relação ao Tempo, a latência de inferência do Ollama com Qwen 2.5 3B é adequada para uso interativo?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1. Quanto ao Comportamento em Relação ao Tempo, a latência de inferência do Ollama com Qwen 2.5 3B é adequada para uso interativo?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-11-media-do-tempo-de-resposta-tempo-ate-o-primeiro-token-time-to-first-token-ttft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.1: Média do tempo de resposta - Tempo até o Primeiro Token (Time to First Token – TTFT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-12-media-da-taxa-de-evasao-taxa-de-geracao-de-tokens-tokens-per-second-tps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.2: Média da Taxa de evasão - Taxa de Geração de Tokens (Tokens Per Second – TPS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-13-latencia-de-carregamento-do-modelo-model-load-time-mlt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.3: Latência de Carregamento do Modelo (Model Load Time – MLT)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-quanto-a-utilizacao-de-recursos-o-consumo-de-memoria-e-cpu-do-ollama-com-qwen-25-3b-e-proporcional-ao-tamanho-do-modelo-e-adequado-ao-hardware-alvo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. Quanto à Utilização de Recursos, o consumo de memória e CPU do Ollama com Qwen 2.5 3B é proporcional ao tamanho do modelo e adequado ao hardware alvo?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2. Quanto à Utilização de Recursos, o consumo de memória e CPU do Ollama com Qwen 2.5 3B é proporcional ao tamanho do modelo e adequado ao hardware alvo?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-21-consumo-de-memoria-ram-durante-inferencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.1: Consumo de Memória RAM durante Inferência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-22-utilizacao-de-cpu-durante-inferencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.2: Utilização de CPU durante Inferência
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-23-indice-de-eficiencia-de-recursos-rei" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.3: Índice de Eficiência de Recursos (REI)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-quanto-ao-comportamento-em-relacao-ao-tempo-e-utilizacao-de-recursos-como-o-desempenho-do-sistema-escala-com-o-aumento-do-tamanho-do-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. Quanto ao Comportamento em Relação ao Tempo e Utilização de Recursos, como o desempenho do sistema escala com o aumento do tamanho do contexto?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3. Quanto ao Comportamento em Relação ao Tempo e Utilização de Recursos, como o desempenho do sistema escala com o aumento do tamanho do contexto?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-31-fator-de-escalonamento-de-contexto-csf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.1: Fator de Escalonamento de Contexto (CSF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-32-taxa-de-crescimento-do-kv-cache-kvcgr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.2: Taxa de Crescimento do KV Cache (KVCGR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusões
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências Bibliográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="31-eficiencia-de-desempenho">3.1 Eficiência de Desempenho<a class="headerlink" href="#31-eficiencia-de-desempenho" title="Permanent link">&para;</a></h1>
+<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
+<p>Este artefato aplica o método GQM (Goal-Question-Metric) para analisar o Ollama em conjunto com a LLM Qwen 2.5 3B sob o critério de Eficiência de Desempenho, conforme definido pela norma ISO/IEC 25010:2011. A proposta é definir metas, perguntas e métricas que permitam examinar a capacidade do sistema de executar suas funções dentro de limites adequados de tempo, recursos e capacidade, considerando diferentes condições de carga e configuração de hardware.</p>
+<p>A Eficiência de Desempenho na ISO/IEC 25010 é composta por três subcaracterísticas: <strong>Comportamento em Relação ao Tempo (Time Behaviour)</strong>, que avalia latência e throughput; <strong>Utilização de Recursos (Resource Utilization)</strong>, que mede o consumo de CPU, memória RAM e VRAM; e <strong>Capacidade (Capacity)</strong>, que verifica os limites operacionais do sistema sob diferentes condições de carga e tamanho de contexto.</p>
+<p>O Ollama é uma ferramenta de código aberto projetada para facilitar a execução local de Modelos de Linguagem de Grande Escala (LLMs). O Qwen 2.5 3B — modelo compacto da família Qwen 2.5 com 3 bilhões de parâmetros — representa um caso de uso relevante para avaliação de eficiência em ambientes com recursos computacionais limitados, como laptops de desenvolvimento e servidores de baixo custo.</p>
+<p>Este documento integra a Fase 2 do projeto de avaliação de qualidade e serve como base para a coleta e análise de dados nas fases subsequentes.</p>
+<h2 id="metodologia">Metodologia<a class="headerlink" href="#metodologia" title="Permanent link">&para;</a></h2>
+<p>A metodologia baseia-se no método GQM (Goal-Question-Metric), que orienta a avaliação da qualidade de software de forma estruturada e orientada a objetivos. O processo segue três etapas:</p>
+<ol>
+<li>
+<p>Definição do objetivo de análise: avaliar a eficiência de desempenho do Ollama executando o modelo Qwen 2.5 3B em diferentes condições de carga e configuração de hardware.</p>
+</li>
+<li>
+<p>Formulação de questões: investigando aspectos específicos de latência de inferência, throughput, consumo de recursos computacionais e comportamento sob limites de capacidade.</p>
+</li>
+<li>
+<p>Estabelecimento de métricas: quantificando os resultados observados com fórmulas mensuráveis, possibilitando avaliação objetiva e reproduzível.</p>
+</li>
+</ol>
+<p>As métricas são fundamentadas nas normas ISO/IEC 25010 (modelo de qualidade) e ISO/IEC 25021 (elementos de medida de qualidade), que fornecem definições formais para medidas de desempenho de software. A coleta de dados será realizada por meio da API REST do Ollama (<code>/api/generate</code> e <code>/api/ps</code>), combinada com ferramentas de monitoramento de sistema como <code>psutil</code>, <code>nvidia-smi</code> e utilitários nativos do sistema operacional.</p>
+<h2 id="descricao-do-objetivo-de-medicao-de-eficiencia-de-desempenho">Descrição do Objetivo de Medição de Eficiência de Desempenho<a class="headerlink" href="#descricao-do-objetivo-de-medicao-de-eficiencia-de-desempenho" title="Permanent link">&para;</a></h2>
+<p>Tabela 1: Objetivo de Medição de Qualidade – Eficiência de Desempenho</p>
+<table>
+<thead>
+<tr>
+<th>Dimensão</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analisar</td>
+<td>Ollama com LLM Qwen 2.5 3B</td>
+</tr>
+<tr>
+<td>Para o propósito de</td>
+<td>Entender</td>
+</tr>
+<tr>
+<td>Com respeito a</td>
+<td>Eficiência de Desempenho</td>
+</tr>
+<tr>
+<td>Da perspectiva do</td>
+<td>Pesquisador / Desenvolvedor de Software</td>
+</tr>
+<tr>
+<td>No contexto de</td>
+<td>Disciplina de Qualidade de Software – UnB/FCTE</td>
+</tr>
+</tbody>
+</table>
+<p align="center"><b>Autor:</b> <a href="https://github.com/Luizaxx">Luiza Pugas</a>, 2026.</p>
+
+<h2 id="questoes-e-metricas">Questões e Métricas<a class="headerlink" href="#questoes-e-metricas" title="Permanent link">&para;</a></h2>
+<h3 id="q1-quanto-ao-comportamento-em-relacao-ao-tempo-a-latencia-de-inferencia-do-ollama-com-qwen-25-3b-e-adequada-para-uso-interativo">Q1. Quanto ao Comportamento em Relação ao Tempo, a latência de inferência do Ollama com Qwen 2.5 3B é adequada para uso interativo?<a class="headerlink" href="#q1-quanto-ao-comportamento-em-relacao-ao-tempo-a-latencia-de-inferencia-do-ollama-com-qwen-25-3b-e-adequada-para-uso-interativo" title="Permanent link">&para;</a></h3>
+<h4 id="hipotese">Hipótese<a class="headerlink" href="#hipotese" title="Permanent link">&para;</a></h4>
+<p>O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apresentar latência de inferência compatível com uso interativo em hardware de consumo comum (CPU moderna ou GPU de entrada), com tempo de resposta percebível como aceitável pelo usuário. A hipótese é que o sistema consiga gerar os primeiros tokens em menos de 5 segundos e manter uma taxa de geração suficiente para leitura em tempo real em hardware convencional.</p>
+<h4 id="metrica-11-media-do-tempo-de-resposta-tempo-ate-o-primeiro-token-time-to-first-token-ttft">Métrica 1.1: Média do tempo de resposta - Tempo até o Primeiro Token (Time to First Token – TTFT)<a class="headerlink" href="#metrica-11-media-do-tempo-de-resposta-tempo-ate-o-primeiro-token-time-to-first-token-ttft" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>TTFT = t_primeiro_token − t_envio_requisição</p>
+<p>Medido via timestamps da API REST do Ollama para prompts de referência com 50 tokens de entrada.</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-3">[3]</a>, <a href="#ref-4">[4]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Aceitável para uso interativo (Hipótese Confirmada): TTFT mediana ≤ 3 segundos em CPU; ≤ 1 segundo com GPU.</p>
+<p>Latência elevada (Hipótese Refutada): TTFT mediana &gt; 5 segundos em CPU ou &gt; 2 segundos com GPU.</p>
+</blockquote>
+<h4 id="metrica-12-media-da-taxa-de-evasao-taxa-de-geracao-de-tokens-tokens-per-second-tps">Métrica 1.2: Média da Taxa de evasão - Taxa de Geração de Tokens (Tokens Per Second – TPS)<a class="headerlink" href="#metrica-12-media-da-taxa-de-evasao-taxa-de-geracao-de-tokens-tokens-per-second-tps" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>TPS = Total de tokens gerados / Tempo total de geração</p>
+<p>TPS = eval_count / (eval_duration / 1e9)</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-3">[3]</a>, <a href="#ref-4">[4]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Legível em tempo real (Hipótese Confirmada): ≥ 10 tokens/s em CPU; ≥ 30 tokens/s com GPU.</p>
+<p>Abaixo do limiar aceitável (Hipótese Refutada): &lt; 5 tokens/s.</p>
+</blockquote>
+<h4 id="metrica-13-latencia-de-carregamento-do-modelo-model-load-time-mlt">Métrica 1.3: Latência de Carregamento do Modelo (Model Load Time – MLT)<a class="headerlink" href="#metrica-13-latencia-de-carregamento-do-modelo-model-load-time-mlt" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>MLT = t_modelo_pronto − t_início_comando</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-3">[3]</a>, <a href="#ref-5">[5]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Carregamento rápido (Hipótese Confirmada): ≤ 10 segundos em CPU; ≤ 5 segundos com GPU.</p>
+<p>Carregamento lento (Hipótese Refutada): &gt; 30 segundos.</p>
+</blockquote>
+<h3 id="q2-quanto-a-utilizacao-de-recursos-o-consumo-de-memoria-e-cpu-do-ollama-com-qwen-25-3b-e-proporcional-ao-tamanho-do-modelo-e-adequado-ao-hardware-alvo">Q2. Quanto à Utilização de Recursos, o consumo de memória e CPU do Ollama com Qwen 2.5 3B é proporcional ao tamanho do modelo e adequado ao hardware alvo?<a class="headerlink" href="#q2-quanto-a-utilizacao-de-recursos-o-consumo-de-memoria-e-cpu-do-ollama-com-qwen-25-3b-e-proporcional-ao-tamanho-do-modelo-e-adequado-ao-hardware-alvo" title="Permanent link">&para;</a></h3>
+<h4 id="hipotese_1">Hipótese<a class="headerlink" href="#hipotese_1" title="Permanent link">&para;</a></h4>
+<p>O Qwen 2.5 3B na quantização Q4_K_M deve ocupar aproximadamente 2 GB para os pesos do modelo, mantendo consumo total inferior a 6 GB de RAM em modo CPU-only, permitindo execução em sistemas com 16 GB de memória.</p>
+<h4 id="metrica-21-consumo-de-memoria-ram-durante-inferencia">Métrica 2.1: Consumo de Memória RAM durante Inferência<a class="headerlink" href="#metrica-21-consumo-de-memoria-ram-durante-inferencia" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>RAM_inferência = RAM_pico − RAM_baseline</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-6">[6]</a>, <a href="#ref-4">[4]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Consumo adequado (Hipótese Confirmada): ≤ 4 GB.</p>
+<p>Consumo excessivo (Hipótese Refutada): &gt; 6 GB.</p>
+</blockquote>
+<h4 id="metrica-22-utilizacao-de-cpu-durante-inferencia">Métrica 2.2: Utilização de CPU durante Inferência<a class="headerlink" href="#metrica-22-utilizacao-de-cpu-durante-inferencia" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>CPU_uso = Média de utilização de CPU (%) durante a geração</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-6">[6]</a>, <a href="#ref-4">[4]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Uso aceitável (Hipótese Confirmada): ≤ 90%.</p>
+<p>Gargalo de CPU (Hipótese Refutada): 100% dos núcleos por mais de 80% do tempo.</p>
+</blockquote>
+<h4 id="metrica-23-indice-de-eficiencia-de-recursos-rei">Métrica 2.3: Índice de Eficiência de Recursos (REI)<a class="headerlink" href="#metrica-23-indice-de-eficiencia-de-recursos-rei" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>REI = TPS / (RAM_utilizada_GB × CPU_média_%)</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-1">[1]</a>, <a href="#ref-4">[4]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Alta eficiência: REI ≥ 1,0 — comportamento ótimo; não requer ação imediata.
+Eficiência moderada: 0,5 ≤ REI &lt; 1,0 — aceitável, requer monitoramento e possíveis otimizações.
+Baixa eficiência: REI &lt; 0,5 — insatisfatório; exige investigação e ações corretivas.</p>
+</blockquote>
+<h3 id="q3-quanto-ao-comportamento-em-relacao-ao-tempo-e-utilizacao-de-recursos-como-o-desempenho-do-sistema-escala-com-o-aumento-do-tamanho-do-contexto">Q3. Quanto ao Comportamento em Relação ao Tempo e Utilização de Recursos, como o desempenho do sistema escala com o aumento do tamanho do contexto?<a class="headerlink" href="#q3-quanto-ao-comportamento-em-relacao-ao-tempo-e-utilizacao-de-recursos-como-o-desempenho-do-sistema-escala-com-o-aumento-do-tamanho-do-contexto" title="Permanent link">&para;</a></h3>
+<h4 id="hipotese_2">Hipótese<a class="headerlink" href="#hipotese_2" title="Permanent link">&para;</a></h4>
+<p>A complexidade quadrática do mecanismo de atenção dos Transformers deve causar crescimento não linear de latência e memória conforme aumenta o tamanho do contexto. Ainda assim, o sistema deve permanecer operacional dentro do limite de contexto suportado pelo modelo.</p>
+<h4 id="metrica-31-fator-de-escalonamento-de-contexto-csf">Métrica 3.1: Fator de Escalonamento de Contexto (CSF)<a class="headerlink" href="#metrica-31-fator-de-escalonamento-de-contexto-csf" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>CSF = TTFT(n_tokens) / TTFT(256_tokens)</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-3">[3]</a>, <a href="#ref-4">[4]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Escalonamento aceitável: ≤ 4,0 para 4096 tokens.</p>
+<p>Degradação severa: &gt; 8,0.</p>
+</blockquote>
+<h4 id="metrica-32-taxa-de-crescimento-do-kv-cache-kvcgr">Métrica 3.2: Taxa de Crescimento do KV Cache (KVCGR)<a class="headerlink" href="#metrica-32-taxa-de-crescimento-do-kv-cache-kvcgr" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>KVCGR = (RAM_pico(n) − RAM_pico(256)) / (n − 256)</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-5">[5]</a>, <a href="#ref-6">[6]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Crescimento previsível: ≤ 0,5 MB/token.</p>
+<p>Crescimento excessivo: &gt; 1,0 MB/token.</p>
+</blockquote>
+<h2 id="conclusoes">Conclusões<a class="headerlink" href="#conclusoes" title="Permanent link">&para;</a></h2>
+<p>Com a aplicação do método GQM, foi possível estruturar de forma mensurável e reproduzível a análise de eficiência de desempenho do Ollama em conjunto com a LLM Qwen 2.5 3B. As quatro questões formuladas cobrem as três subcaracterísticas de eficiência de desempenho previstas na ISO/IEC 25010: Comportamento em Relação ao Tempo (Q1 e Q3), Utilização de Recursos (Q2 e Q3).</p>
+<p>As métricas definidas permitem avaliar objetivamente a latência de inferência, a taxa de geração de tokens, o consumo de recursos computacionais, o impacto do aumento do contexto e o comportamento do sistema sob carga concorrente.</p>
+<p>Esta análise fornece a base metodológica necessária para a Fase 3 (coleta de dados) e para a Fase 4 (análise dos resultados e conclusões finais) do projeto de avaliação de qualidade de software.</p>
+<p>OBS: Modelos de Linguagem de Grande Escala (LLMs) foram utilizados como apoio ao brainstorm de perguntas e métricas, bem como para auxílio na estruturação e escrita do documento em formato acadêmico.</p>
+<h2 id="sobre-o-uso-de-ia">Sobre o Uso de IA<a class="headerlink" href="#sobre-o-uso-de-ia" title="Permanent link">&para;</a></h2>
+<p>Para a elaboração deste documento, a Inteligência Artificial foi utilizada como ferramenta de apoio. O uso concentrou-se principalmente em auxiliar a compreensão e o esclarecimento de termos técnicos presentes nas normas ISO/IEC 25010 e ISO/IEC 25021, bem como em fontes de documentação técnica do Ollama e da biblioteca psutil. Adicionalmente, a IA foi empregada para estruturar e organizar as ideias na aplicação da metodologia GQM, garantindo coerência entre questões, métricas e o objetivo de análise definido.</p>
+<p><a href="https://notebooklm.google.com/notebook/e9f64a2d-93cc-4f05-9c28-4d5f14c3af3e">Notebook LM</a></p>
+<h2 id="referencias-bibliograficas">Referências Bibliográficas<a class="headerlink" href="#referencias-bibliograficas" title="Permanent link">&para;</a></h2>
+<p><a id="ref-1"></a>[1] INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. ISO/IEC 25010:2011 – Systems and software engineering – Software product Quality Requirements and Evaluation (SQuaRE) – Quality model. Geneva: ISO, 2011.</p>
+<p><a id="ref-3"></a>[3] OLLAMA. REST API Documentation. Disponível em: https://github.com/ollama/ollama/blob/main/docs/api.md.
+Acesso em: 03 jun. 2026.</p>
+<p><a id="ref-4"></a>[4] FENTON, Norman; BIEMAN, James. Software Metrics: A Rigorous and Practical Approach. 3. ed. Boca Raton: CRC Press, 2015.
+Acesso em: 03 jun. 2026.</p>
+<p><a id="ref-5"></a>[5] NVIDIA Corporation. GPU Memory Management Best Practices.
+Acesso em: 03 jun. 2026.</p>
+<p><a id="ref-6"></a>[6] PSUTIL. Cross-platform lib for process and system monitoring in Python. Disponível em: https://psutil.readthedocs.io/. Acesso em: 03 jun. 2026.</p>
+<p><a id="ref-7"></a>[7] TSENART, T. vegeta: HTTP load testing tool. Disponível em: https://github.com/tsenart/vegeta.
+Acesso em: 03 jun. 2026.</p>
+<p><a id="ref-8"></a>[8] ALIBABA CLOUD. Qwen 2.5 Technical Report. Disponível em: https://huggingface.co/Qwen/Qwen2.5-3B-Instruct.
+Acesso em: 03 jun. 2026.</p>
+<h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>03/06/2026</td>
+<td>Adição de conteúdo</td>
+<td><a href="https://github.com/Luizaxx">Luiza</a></td>
+<td><a href="https://github.com/GdevAlves">Gabriel Alves</a></td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>12/06/2026</td>
+<td>Revisão de métricas</td>
+<td><a href="https://github.com/Luizaxx">Luiza</a></td>
+<td><a href="https://github.com/GdevAlves">Gabriel Alves</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "toc.follow", "navigation.logo"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
