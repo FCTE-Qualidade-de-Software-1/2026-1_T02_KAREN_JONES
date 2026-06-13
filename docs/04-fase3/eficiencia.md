@@ -96,7 +96,6 @@ Passo 1: Preparação
 1. Instalar o Ollama conforme documentação oficial
 2. Baixar o modelo Qwen 2.5 3B: ollama pull qwen2.5:3b
 3. Verificar disponibilidade da API
-4. Preparar prompts de teste em arquivo prompts.json
 5. Configurar scripts de medição
 
 Passo 2: Execução dos Testes
