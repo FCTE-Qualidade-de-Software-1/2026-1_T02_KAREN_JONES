@@ -100,7 +100,7 @@ O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apre
 
 ### Hipótese
 
-O Qwen 2.5 3B na quantização Q4_K_M deve ocupar aproximadamente 2 GB para os pesos do modelo, mantendo consumo total inferior a 6 GB de RAM em modo CPU-only, permitindo execução em sistemas com 8 GB de memória.
+O Qwen 2.5 3B na quantização Q4_K_M deve ocupar aproximadamente 2 GB para os pesos do modelo, mantendo consumo total inferior a 6 GB de RAM em modo CPU-only, permitindo execução em sistemas com 16 GB de memória.
 
 ### Métrica 2.1: Consumo de Memória RAM durante Inferência
 

@@ -1,0 +1,8 @@
+ambiente,metrica,valor,criterio,passou
+Zorin OS 18.1 Core,PO-1.1,1.0,>= 0.99,True
+Zorin OS 18.1 Core,PO-1.2_tempo_medio_s,9.25,base p/ desvio entre SOs,N/A (cruzar com outro SO)
+Zorin OS 18.1 Core,PO-2.1,1.0,>= 0.95,True
+Zorin OS 18.1 Core,PO-2.2,1.0,>= 0.90,True
+Zorin OS 18.1 Core,PO-3.1,1.0,>= 0.95,True
+Zorin OS 18.1 Core,PO-3.2,ver nota,<= 0.05 (cruzar ambientes),N/A (cruzar com outro SO)
+Zorin OS 18.1 Core,PO-3.3_taxa_erro_tipo,0.0,<= 0.02,True
