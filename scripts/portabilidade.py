@@ -170,11 +170,11 @@ def instalar_ollama() -> tuple[bool, float, str]:
         # Download do instalador e execução via PowerShell
         ps_cmd = ["powershell", "-Command",
                   "irm https://ollama.com/install.ps1 | iex"]
-        code, _, err = run(ps_cmd, timeout=300)
+        code, _, err = run(ps_cmd, timeout=900)
     else:
         bash_cmd = ["bash", "-c",
                     "curl -fsSL https://ollama.com/install.sh | sh"]
-        code, _, err = run(bash_cmd, timeout=300)
+        code, _, err = run(bash_cmd, timeout=900)
     tempo = round(time.time() - inicio, 2)
     sucesso = code == 0 and ollama_instalado()
     return sucesso, tempo, err if not sucesso else ""
@@ -189,7 +189,7 @@ def desinstalar_ollama() -> tuple[bool, float, str]:
         code, _, err = run(
             ["powershell", "-Command",
              "Get-Package Ollama | Uninstall-Package -Force"],
-            timeout=120
+            timeout=600
         )
         # Fallback: remoção manual
         if code != 0:
