@@ -146,9 +146,10 @@ O Qwen 2.5 3B na quantização Q4_K_M deve ocupar aproximadamente 2 GB para os p
 
 > Interpretação:
 >
-> Alta eficiência: REI ≥ 1,0.
->
-> Baixa eficiência: REI < 0,5.
+> Alta eficiência: REI ≥ 1,0 — comportamento ótimo; não requer ação imediata.
+>Eficiência moderada: 0,5 ≤ REI < 1,0 — aceitável, requer monitoramento e possíveis otimizações.
+>Baixa eficiência: REI < 0,5 — insatisfatório; exige investigação e ações corretivas.
+
 
 ### Q3. Quanto ao Comportamento em Relação ao Tempo e Utilização de Recursos, como o desempenho do sistema escala com o aumento do tamanho do contexto?
 
@@ -230,3 +231,4 @@ Acesso em: 03 jun. 2026.
 | Versão | Data | Descrição | Autor | Revisor |
 |---------|---------|---------|---------|---------|
 | 1.0 | 03/06/2026 | Adição de conteúdo | [Luiza](https://github.com/Luizaxx) | [Gabriel Alves](https://github.com/GdevAlves) |
+| 1.1 | 12/06/2026 | Revisão de métricas | [Luiza](https://github.com/Luizaxx) | [Gabriel Alves](https://github.com/GdevAlves) |
