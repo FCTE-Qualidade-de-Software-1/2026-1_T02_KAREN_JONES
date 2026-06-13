@@ -1,115 +1,120 @@
 ======================================================================
   AVALIAÇÃO DE PORTABILIDADE — FASE 3
   Projeto  : KAREN JONES — Qualidade de Software / UnB FCTE
-  Ambiente : Windows 11
-  Início   : 2026-06-12T19:44:34.823891
+  Ambiente : Windows 11 (Windows)
+  Início   : 2026-06-13T12:51:43.930948
 ======================================================================
 
 
 ======================================================================
   PASSO 1 — Preparação do Ambiente
 ======================================================================
-[19:44:34] [STEP   ] Verificando sistema operacional
+[12:51:43] [STEP   ] Verificando sistema operacional
 ----------------------------------------------------------------------
-[19:44:34] [INFO   ] SO detectado  : Windows 11 (SMP PREEMPT_DYNAMIC Tue May 26 19:30:42 UTC 2)
-[19:44:34] [INFO   ] Arquitetura   : x86_64
-[19:44:34] [INFO   ] Python        : 3.14.5
-[19:44:34] [STEP   ] Verificando espaço em disco
+[12:51:43] [INFO   ] SO detectado  : Windows 11 (10.0.26200)
+[12:51:43] [INFO   ] Arquitetura   : AMD64
+[12:51:43] [INFO   ] Python        : 3.14.6
+[12:51:43] [STEP   ] Verificando espaço em disco
 ----------------------------------------------------------------------
-[19:44:34] [INFO   ] Espaço livre  : 334.69 GB
-[19:44:34] [STEP   ] Verificando processos em execução do Ollama
+[12:51:43] [INFO   ] Espaço livre  : 166.88 GB
+[12:51:43] [STEP   ] Verificando processos em execução do Ollama
 ----------------------------------------------------------------------
-[19:44:34] [INFO   ] Processos Ollama ativos: 1
-[19:44:34] [STEP   ] Verificando residuais de instalações anteriores
+[12:51:44] [INFO   ] Processos Ollama ativos: 1
+[12:51:44] [STEP   ] Verificando residuais de instalações anteriores
 ----------------------------------------------------------------------
-[19:44:34] [WARN   ] Residuais encontrados: ['/home/gabriel/.ollama', '/usr/local/bin/ollama']
-[19:44:34] [OK     ] Passo 1 concluído.
+[12:51:44] [WARN   ] Residuais encontrados: ['C:\\Users\\galve\\AppData\\Local\\Ollama']
+[12:51:44] [OK     ] Passo 1 concluído.
 
 ======================================================================
   PASSO 2 — Testes de Instalabilidade
 ======================================================================
-[19:44:34] [INFO   ] Número de repetições: 5
-[19:44:34] [INFO   ] Ambiente: Windows 11
-[19:44:34] [STEP   ] Tentativa 1/5
+[12:51:44] [INFO   ] Número de repetições: 5
+[12:51:44] [INFO   ] Ambiente: Windows 11
+[12:51:44] [STEP   ] Tentativa 1/5
 ----------------------------------------------------------------------
-[19:44:34] [INFO   ] Ollama encontrado — desinstalando antes de iniciar...
-[19:44:41] [INFO   ] Iniciando instalação do Ollama...
-[19:45:24] [INFO   ] Instalação: sucesso em 40.69s
-[19:45:24] [INFO   ] Versão verificada: ollama version is 0.30.8
-[19:45:24] [INFO   ] Iniciando desinstalação...
-[19:45:26] [INFO   ] Desinstalação: sucesso em 2.02s
-[19:45:26] [STEP   ] Tentativa 2/5
+[12:51:44] [INFO   ] Ollama encontrado — desinstalando antes de iniciar...
+[12:52:14] [INFO   ] Iniciando instalação do Ollama...
+[12:54:01] [INFO   ] Instalação: sucesso em 107.86s
+[12:54:02] [INFO   ] Versão verificada: Warning: could not connect to a running Ollama instance
+Warning: client version is 0.30.8
+[12:54:02] [INFO   ] Iniciando desinstalação...
+[12:54:15] [INFO   ] Desinstalação: sucesso em 13.84s
+[12:54:15] [STEP   ] Tentativa 2/5
 ----------------------------------------------------------------------
-[19:45:26] [INFO   ] Iniciando instalação do Ollama...
-[19:45:55] [INFO   ] Instalação: sucesso em 26.58s
-[19:45:55] [INFO   ] Versão verificada: ollama version is 0.30.8
-[19:45:55] [INFO   ] Iniciando desinstalação...
-[19:45:57] [INFO   ] Desinstalação: sucesso em 2.03s
-[19:45:57] [STEP   ] Tentativa 3/5
+[12:54:15] [INFO   ] Iniciando instalação do Ollama...
+[12:55:54] [INFO   ] Instalação: sucesso em 98.29s
+[12:55:54] [INFO   ] Versão verificada: Warning: could not connect to a running Ollama instance
+Warning: client version is 0.30.8
+[12:55:54] [INFO   ] Iniciando desinstalação...
+[12:56:08] [INFO   ] Desinstalação: sucesso em 13.82s
+[12:56:08] [STEP   ] Tentativa 3/5
 ----------------------------------------------------------------------
-[19:45:57] [INFO   ] Iniciando instalação do Ollama...
-[19:46:26] [INFO   ] Instalação: sucesso em 27.49s
-[19:46:26] [INFO   ] Versão verificada: ollama version is 0.30.8
-[19:46:26] [INFO   ] Iniciando desinstalação...
-[19:46:28] [INFO   ] Desinstalação: sucesso em 2.04s
-[19:46:28] [STEP   ] Tentativa 4/5
+[12:56:08] [INFO   ] Iniciando instalação do Ollama...
+[12:58:03] [INFO   ] Instalação: sucesso em 115.45s
+[12:58:03] [INFO   ] Versão verificada: Warning: could not connect to a running Ollama instance
+Warning: client version is 0.30.8
+[12:58:03] [INFO   ] Iniciando desinstalação...
+[12:58:17] [INFO   ] Desinstalação: sucesso em 13.4s
+[12:58:17] [STEP   ] Tentativa 4/5
 ----------------------------------------------------------------------
-[19:46:28] [INFO   ] Iniciando instalação do Ollama...
-[19:46:57] [INFO   ] Instalação: sucesso em 26.71s
-[19:46:57] [INFO   ] Versão verificada: ollama version is 0.30.8
-[19:46:57] [INFO   ] Iniciando desinstalação...
-[19:46:59] [INFO   ] Desinstalação: sucesso em 2.03s
-[19:46:59] [STEP   ] Tentativa 5/5
+[12:58:17] [INFO   ] Iniciando instalação do Ollama...
+[12:59:45] [INFO   ] Instalação: sucesso em 88.75s
+[12:59:45] [INFO   ] Versão verificada: Warning: could not connect to a running Ollama instance
+Warning: client version is 0.30.8
+[12:59:45] [INFO   ] Iniciando desinstalação...
+[12:59:58] [INFO   ] Desinstalação: sucesso em 12.9s
+[12:59:58] [STEP   ] Tentativa 5/5
 ----------------------------------------------------------------------
-[19:46:59] [INFO   ] Iniciando instalação do Ollama...
-[19:47:29] [INFO   ] Instalação: sucesso em 27.48s
-[19:47:29] [INFO   ] Versão verificada: ollama version is 0.30.8
-[19:47:29] [INFO   ] Iniciando desinstalação...
-[19:47:31] [INFO   ] Desinstalação: sucesso em 2.04s
-[19:47:31] [OK     ] Passo 2 concluído. CSV salvo: tests/resultados/portabilidade/instalabilidade_20260612_194434.csv
+[12:59:58] [INFO   ] Iniciando instalação do Ollama...
+[13:01:28] [INFO   ] Instalação: sucesso em 90.01s
+[13:01:28] [INFO   ] Versão verificada: Warning: could not connect to a running Ollama instance
+Warning: client version is 0.30.8
+[13:01:28] [INFO   ] Iniciando desinstalação...
+[13:01:41] [INFO   ] Desinstalação: sucesso em 12.94s
+[13:01:41] [OK     ] Passo 2 concluído. CSV salvo: tests\resultados\portabilidade\instalabilidade_20260613_125143.csv
 
 ======================================================================
   PASSO 3 — Testes de Adaptabilidade
 ======================================================================
-[19:47:31] [INFO   ] Ollama não instalado. Instalando para testes de adaptabilidade...
-[19:48:00] [INFO   ] Iniciando servidor Ollama...
-[19:48:03] [STEP   ] Baixando modelo Qwen 2.5 3B
+[13:01:41] [INFO   ] Ollama não instalado. Instalando para testes de adaptabilidade...
+[13:03:14] [INFO   ] Iniciando servidor Ollama...
+[13:03:22] [STEP   ] Baixando modelo Qwen 2.5 3B
 ----------------------------------------------------------------------
-[19:48:04] [OK     ] Modelo 'qwen2.5:3b' disponível.
-[19:48:04] [STEP   ] Executando 5 inferências para medir desempenho
+[13:04:06] [OK     ] Modelo 'qwen2.5:3b' disponível.
+[13:04:06] [STEP   ] Executando 5 inferências para medir desempenho
 ----------------------------------------------------------------------
-[19:48:04] [INFO   ] Inferência 1/5
-[19:48:46] [INFO   ]   Tempo: 42.22s — sucesso
-[19:48:46] [INFO   ] Inferência 2/5
-[19:48:47] [INFO   ]   Tempo: 1.05s — sucesso
-[19:48:47] [INFO   ] Inferência 3/5
-[19:48:49] [INFO   ]   Tempo: 1.36s — sucesso
-[19:48:49] [INFO   ] Inferência 4/5
-[19:48:50] [INFO   ]   Tempo: 0.88s — sucesso
-[19:48:50] [INFO   ] Inferência 5/5
-[19:48:50] [INFO   ]   Tempo: 0.72s — sucesso
-[19:48:50] [OK     ] Passo 3 concluído. CSV salvo: tests/resultados/portabilidade/adaptabilidade_20260612_194434.csv
+[13:04:06] [INFO   ] Inferência 1/5
+[13:04:15] [INFO   ]   Tempo: 9.12s — sucesso
+[13:04:15] [INFO   ] Inferência 2/5
+[13:04:21] [INFO   ]   Tempo: 5.43s — sucesso
+[13:04:21] [INFO   ] Inferência 3/5
+[13:04:28] [INFO   ]   Tempo: 6.7s — sucesso
+[13:04:28] [INFO   ] Inferência 4/5
+[13:04:34] [INFO   ]   Tempo: 6.26s — sucesso
+[13:04:34] [INFO   ] Inferência 5/5
+[13:04:38] [INFO   ]   Tempo: 4.69s — sucesso
+[13:04:38] [OK     ] Passo 3 concluído. CSV salvo: tests\resultados\portabilidade\adaptabilidade_20260613_125143.csv
 
 ======================================================================
   PASSO 4 — Consolidação e Cálculo de Métricas
 ======================================================================
-[19:48:50] [MÉTRICA] [PO-2.1] Valor=100.0% | Critério=>= 95% | ✓ PASSOU
-[19:48:50] [MÉTRICA] [PO-2.2] Valor=100.0% | Critério=>= 90% | ✓ PASSOU
-[19:48:50] [MÉTRICA] [PO-3.1] Valor=100.0% no Windows 11 | Critério=>= 95% | ✓ PASSOU
-[19:48:50] [MÉTRICA] [PO-3.3] Valor=taxa_erro_max=0.0%, t_inst_medio=29.79s | Critério=taxa_erro_max <= 2% | ✓ PASSOU
-[19:48:50] [MÉTRICA] [PO-1.1] Valor=100.0% | Critério=>= 99% | ✓ PASSOU
-[19:48:50] [INFO   ] [PO-1.2] Tempo médio inferência (Windows 11): 9.25s — combine com outro SO para calcular desvio.
-[19:48:50] [INFO   ] [PO-3.2] Desvio relativo entre ambientes = |Taxa(A) - Taxa(B)| / Taxa_média. Calcule combinando CSVs de ambos os ambientes.
-[19:48:50] [OK     ] CSV de consolidação salvo: tests/resultados/portabilidade/consolidacao_20260612_194434.csv
+[13:04:38] [MÉTRICA] [PO-2.1] Valor=100.0% | Critério=>= 95% | ✓ PASSOU
+[13:04:38] [MÉTRICA] [PO-2.2] Valor=100.0% | Critério=>= 90% | ✓ PASSOU
+[13:04:38] [MÉTRICA] [PO-3.1] Valor=100.0% no Windows 11 | Critério=>= 95% | ✓ PASSOU
+[13:04:38] [MÉTRICA] [PO-3.3] Valor=taxa_erro_max=0.0%, t_inst_medio=100.07s | Critério=taxa_erro_max <= 2% | ✓ PASSOU
+[13:04:38] [MÉTRICA] [PO-1.1] Valor=100.0% | Critério=>= 99% | ✓ PASSOU
+[13:04:38] [INFO   ] [PO-1.2] Tempo médio inferência (Windows 11): 6.44s — combine com outro SO para calcular desvio.
+[13:04:38] [INFO   ] [PO-3.2] Desvio relativo entre ambientes = |Taxa(A) - Taxa(B)| / Taxa_média. Calcule combinando CSVs de ambos os ambientes.
+[13:04:38] [OK     ] CSV de consolidação salvo: tests\resultados\portabilidade\consolidacao_20260613_125143.csv
 
 ======================================================================
   RESUMO FINAL
 ======================================================================
-[19:48:50] [INFO   ] Métricas com resultado: 5
-[19:48:50] [INFO   ]   ✓ Aprovadas : 5
-[19:48:50] [INFO   ]   ✗ Reprovadas: 0
-[19:48:50] [INFO   ] Arquivos gerados:
-[19:48:50] [INFO   ]   LOG  : tests/resultados/portabilidade/log_portabilidade_20260612_194434.txt
-[19:48:50] [INFO   ]   CSVs : tests/resultados/portabilidade/instalabilidade_20260612_194434.csv
-[19:48:50] [INFO   ]          tests/resultados/portabilidade/adaptabilidade_20260612_194434.csv
-[19:48:50] [INFO   ]          tests/resultados/portabilidade/consolidacao_20260612_194434.csv
+[13:04:38] [INFO   ] Métricas com resultado: 5
+[13:04:38] [INFO   ]   ✓ Aprovadas : 5
+[13:04:38] [INFO   ]   ✗ Reprovadas: 0
+[13:04:38] [INFO   ] Arquivos gerados:
+[13:04:38] [INFO   ]   LOG  : tests\resultados\portabilidade\log_portabilidade_20260613_125143.txt
+[13:04:38] [INFO   ]   CSVs : tests\resultados\portabilidade\instalabilidade_20260613_125143.csv
+[13:04:38] [INFO   ]          tests\resultados\portabilidade\adaptabilidade_20260613_125143.csv
+[13:04:38] [INFO   ]          tests\resultados\portabilidade\consolidacao_20260613_125143.csv

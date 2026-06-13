@@ -1,6 +1,6 @@
-ambiente,tentativa,prompt,tempo_inferencia_s,status,erro
-Windows 11,1,Explique o que é inteligência artificial em uma frase.,92.22,sucesso,
-Windows 11,2,Explique o que é inteligência artificial em uma frase.,25.05,sucesso,
-Windows 11,3,Explique o que é inteligência artificial em uma frase.,25.36,sucesso,
-Windows 11,4,Explique o que é inteligência artificial em uma frase.,13.88,sucesso,
-Windows 11,5,Explique o que é inteligência artificial em uma frase.,6.72,sucesso,
+ambiente,tentativa,tempo_instalacao_s,status_instalacao,erro_instalacao,tempo_desinstalacao_s,status_desinstalacao,arquivos_residuais
+Windows 11,1,107.86,sucesso,,13.84,sucesso,nenhum
+Windows 11,2,98.29,sucesso,,13.82,sucesso,nenhum
+Windows 11,3,115.45,sucesso,,13.4,sucesso,nenhum
+Windows 11,4,88.75,sucesso,,12.9,sucesso,nenhum
+Windows 11,5,90.01,sucesso,,12.94,sucesso,nenhum

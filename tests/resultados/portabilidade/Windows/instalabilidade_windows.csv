@@ -1,6 +1,6 @@
 ambiente,tentativa,tempo_instalacao_s,status_instalacao,erro_instalacao,tempo_desinstalacao_s,status_desinstalacao,arquivos_residuais
-Windows 11,1,40.69,sucesso,,2.02,sucesso,nenhum
-Windows 11,2,26.58,sucesso,,2.03,sucesso,nenhum
-Windows 11,3,27.49,sucesso,,2.04,sucesso,nenhum
-Windows 11,4,26.71,sucesso,,2.03,sucesso,nenhum
-Windows 11,5,27.48,sucesso,,2.04,sucesso,nenhum
+Windows 11,1,107.86,sucesso,,13.84,sucesso,nenhum
+Windows 11,2,98.29,sucesso,,13.82,sucesso,nenhum
+Windows 11,3,115.45,sucesso,,13.4,sucesso,nenhum
+Windows 11,4,88.75,sucesso,,12.9,sucesso,nenhum
+Windows 11,5,90.01,sucesso,,12.94,sucesso,nenhum
