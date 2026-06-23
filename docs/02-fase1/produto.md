@@ -58,7 +58,9 @@ Os modelos são armazenados localmente em `$HOME/.ollama/models` e gerenciados p
 ### Modelos disponíveis
  
 A biblioteca oficial do Ollama conta com mais de **100 modelos prontos para uso**, organizados nas seguintes categorias:
- 
+
+**Tabela 1: Modelos**
+
 | Categoria | Exemplos de modelos |
 |---|---|
 | Uso geral / chat | Llama 3.3, Mistral, Gemma 3, Qwen 3 |
@@ -66,6 +68,8 @@ A biblioteca oficial do Ollama conta com mais de **100 modelos prontos para uso*
 | Raciocínio | DeepSeek-R1, QwQ |
 | Multimodal (texto + imagem) | LLaVA, Llama 3.2 Vision, Qwen-VL |
 | Embeddings | nomic-embed-text, mxbai-embed-large |
+
+<p align="center"><b>Autor:</b> <a href="https://github.com/jsalless">Johnnatan Salles</a>, 2026.</p>
  
 ### Integrações e ecossistema
  
@@ -76,8 +80,11 @@ O Ollama possui um ecossistema amplo de integrações com ferramentas populares 
 - **Frameworks de IA**: LangChain, LlamaIndex
 - **Agentes de codificação**: Claude Code, GitHub Copilot CLI, OpenCode
 - **SDKs oficiais**: Python (`ollama-python`) e JavaScript/TypeScript (`ollama-js`)
+
 ### Planos e preços
  
+**Tabela 2: Planos e custos**
+
 | Modalidade | Custo | Características |
 |---|---|---|
 | **Local (padrão)** | Gratuito, sem limite | Execução offline, sem conta necessária, privacidade total |
@@ -85,6 +92,8 @@ O Ollama possui um ecossistema amplo de integrações com ferramentas populares 
 | **Cloud Pro** | US$ 20/mês | 3 modelos simultâneos em nuvem, maior volume de uso |
 | **Cloud Max** | US$ 100/mês | 10 modelos simultâneos, uso intensivo |
  
+<p align="center"><b>Autor:</b> <a href="https://github.com/jsalless">Johnnatan Salles</a>, 2026.</p>
+
 > **Importante**: a funcionalidade local é **completamente gratuita e sem restrições**. A camada de nuvem é opcional e foi introduzida em setembro de 2025.
  
 ---
