@@ -9,22 +9,43 @@ O foco está em duas subcaracterísticas conforme ISO/IEC 25010:
 - **Adaptabilidade**: capacidade de operar em diferentes sistemas operacionais
 - **Instalabilidade**: facilidade de instalação e desinstalação
 
+### Tabela de Mapeamento e Rastreabilidade de Métricas (Critério F3-C8)
 
-## 2. Métricas a Serem Implementadas
+Para garantir a rastreabilidade entre o planejamento teórico e a execução prática, a tabela abaixo mapeia os identificadores do método GQM utilizados na Fase 2 para as métricas operacionais implementadas nas Fases 3 e 4.
+
+**Tabela 1: Mapeamento e Rastreabilidade de Métricas**
+
+| ID GQM (Fase 2) | ID Implementação (Fase 3/4) | Nome da Métrica | Subcaracterística (ISO 25010) |
+| :--- | :--- | :--- | :--- |
+| [Métrica 1.1](../03-fase2/portabilidade.md#metrica-11-taxa-de-execucoes-sem-falha-entre-plataformas) | **PO-1.1** | Taxa de Execuções Sem Falha entre Plataformas | Adaptabilidade |
+| [Métrica 1.2](../03-fase2/portabilidade.md#metrica-12-desvio-de-desempenho-de-inferencia-entre-plataformas) | **PO-1.2** | Desvio de Desempenho de Inferência entre Plataformas | Adaptabilidade |
+| [Métrica 2.1](../03-fase2/portabilidade.md#metrica-21-taxa-de-sucesso-na-instalacao-installation-success-rate) | **PO-2.1** | Taxa de Sucesso na Instalação | Instalabilidade |
+| [Métrica 2.2](../03-fase2/portabilidade.md#metrica-22-taxa-de-sucesso-na-desinstalacao-uninstallation-success-rate) | **PO-2.2** | Taxa de Sucesso na Desinstalação | Instalabilidade |
+| [Métrica 3.1](../03-fase2/portabilidade.md#metrica-31-taxa-de-sucesso-de-instalacao-por-ambiente) | **PO-3.1** | Taxa de Sucesso de Instalação por Ambiente | Instalabilidade (Consistência) |
+| [Métrica 3.2](../03-fase2/portabilidade.md#metrica-32-desvio-relativo-de-sucesso-entre-ambientes) | **PO-3.2** | Desvio Relativo de Sucesso entre Ambientes | Instalabilidade (Consistência) |
+| [Métrica 3.3](../03-fase2/portabilidade.md#metrica-33-tempo-de-instalacao-e-tipos-de-falha-por-ambiente) | **PO-3.3** | Tempo de Instalação e Tipos de Falha por Ambiente | Instalabilidade (Consistência) |
+
+<p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
+
+**Tabela 2: Resumo de Diretrizes e Descrição das Métricas Operacionais**
 
 | ID | Métrica | Subcaracterística | Descrição |
 |----|---------|-------------------|-----------|
-| PO-1.1 | Taxa de Execuções Sem Falha entre Plataformas | Adaptabilidade | Proporção de execuções bem-sucedidas em todas as plataformas |
-| PO-1.2 | Desvio de Desempenho de Inferência entre Plataformas | Adaptabilidade | Variação do tempo médio de inferência entre plataformas |
-| PO-2.1 | Taxa de Sucesso na Instalação | Instalabilidade | Proporção de instalações (runtime + modelo) bem-sucedidas |
-| PO-2.2 | Taxa de Sucesso na Desinstalação | Instalabilidade | Proporção de desinstalações que removem o software e o modelo completamente |
-| PO-3.1 | Taxa de Sucesso de Instalação por Ambiente | Instalabilidade | Proporção de instalações bem-sucedidas em cada ambiente específico |
-| PO-3.2 | Desvio Relativo de Sucesso entre Ambientes | Instalabilidade | Consistência da taxa de sucesso de instalação entre os ambientes testados |
-| PO-3.3 | Tempo de Instalação e Tipos de Falha por Ambiente | Instalabilidade | Variação do tempo de instalação e taxa de falhas específicas por ambiente |
+| [PO-1.1](#43-medição-de-adaptabilidade) | Taxa de Execuções Sem Falha entre Plataformas | Adaptabilidade | Proporção de execuções bem-sucedidas em todas as plataformas |
+| [PO-1.2](#43-medição-de-adaptabilidade) | Desvio de Desempenho de Inferência entre Plataformas | Adaptabilidade | Variação do tempo médio de inferência entre plataformas |
+| [PO-2.1](#41-medição-de-instalabilidade) | Taxa de Sucesso na Instalação | Instalabilidade | Proporção de instalações (runtime + modelo) bem-sucedidas |
+| [PO-2.2](#42-medição-de-desinstalação) | Taxa de Sucesso na Desinstalação | Instalabilidade | Proporção de desinstalações que removem o software e o modelo completamente |
+| [PO-3.1](#passo-2-testes-de-instalabilidade) | Taxa de Sucesso de Instalação por Ambiente | Instalabilidade | Proporção de instalações bem-sucedidas em cada ambiente específico |
+| [PO-3.2](#passo-2-testes-de-instalabilidade) | Desvio Relativo de Sucesso entre Ambientes | Instalabilidade | Consistência da taxa de sucesso de instalação entre os ambientes testados |
+| [PO-3.3](#passo-2-testes-de-instalabilidade) | Tempo de Instalação e Tipos de Falha por Ambiente | Instalabilidade | Variação do tempo de instalação e taxa de falhas específicas por ambiente |
+
+<p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
 
 ## 3. Ambiente de Teste
 
 ### 3.1 Hardware
+
+**Tabela 3: Especificação de Hardware da Máquina de Testes**
 
 | Componente | Especificação |
 |------------|---------------|
@@ -33,14 +54,22 @@ O foco está em duas subcaracterísticas conforme ISO/IEC 25010:
 | Armazenamento | SSD 512 GB |
 | GPU | Nenhuma (CPU-only) |
 
+<p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
+
 ### 3.2 Sistemas Operacionais
+
+**Tabela 4: Mapeamento de Ambientes por Sistema Operacional**
 
 | Ambiente | Sistema Operacional | Método |
 |----------|---------------------|--------|
 | Ambiente A | Windows 11 (64 bits) | Instalação nativa |
 | Ambiente B | Zorin OS 18.1 Core | Instalação nativa |
 
+<p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
+
 ### 3.3 Ferramentas
+
+**Tabela 5: Ferramentas Utilizadas e Suas Finalidades**
 
 | Ferramenta | Finalidade |
 |------------|------------|
@@ -48,6 +77,8 @@ O foco está em duas subcaracterísticas conforme ISO/IEC 25010:
 | Bash | Execução de scripts no Linux |
 | Cronômetro digital | Medição manual de tempo de instalação |
 | Gravação de tela | Evidência do processo de instalação |
+
+<p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
 
 
 ## 4. Instrumentos de Medição
@@ -117,11 +148,17 @@ Qualquer membro da equipe pode executar o procedimento, independentemente de exp
 
 ### 5.2. Ferramentas de Apoio
 
+**Tabela 6: Configurações de Script e Exibição de Suporte**
+
 | Ferramenta | Sistema | Finalidade | Configuração |
 |------------|---------|------------|--------------|
 | Script Python | Windows: PowerShell 7+ / Linux: Bash | Execução de comandos | Fonte legível para captura em prints |
 
+<p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
+
 ### 5.3. Definições Operacionais
+
+**Tabela 7: Termos Técnicos e Suas Respectivas Definições Exatas**
 
 | Termo | Definição Exata |
 |-------|-----------------|
@@ -131,14 +168,14 @@ Qualquer membro da equipe pode executar o procedimento, independentemente de exp
 | **Desinstalação completa** | O comando `ollama --version` retorna "comando não encontrado" ou equivalente E o diretório `~/.ollama` (Linux) ou `%USERPROFILE%\.ollama` (Windows) não existe ou está vazio |
 | **Arquivo residual** | Qualquer arquivo ou pasta remanescente nos diretórios mencionados após desinstalação |
 
+<p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
+
 ### 5.4. Protocolo Passo a Passo
 
 # 5. Procedimento de Coleta
 
 ## Passo 1: Preparação
 
-* Preparar máquina de teste com Windows 11;
-* Preparar máquina de teste com Zorin OS 18.1 Core;
 * Preparar máquina de teste com Windows 11;
 * Preparar máquina de teste com Zorin OS 18.1 Core;
 * Documentar o estado inicial do sistema (espaço em disco, processos em execução);
@@ -193,17 +230,23 @@ ollama pull qwen2.5:3b
 
 Conforme as hipóteses definidas na Fase 2:
 
+**Tabela 8: Limiares Básicos e Critérios de Aceitação para as Métricas**
+
 | Métrica | Critério de Aceitação | Referência Fase 2 |
 | --- | --- | --- |
-| PO-1.1 Taxa de Execuções Sem Falha | ≥ 99,0% de execuções bem-sucedidas em todas as plataformas | Métrica 1.1 |
-| PO-1.2 Desvio de Desempenho de Inferência | ≤ 20% de variação entre plataformas | Métrica 1.2 |
-| PO-2.1 Taxa de Sucesso na Instalação | ≥ 95% das tentativas bem-sucedidas por plataforma | Métrica 2.1 |
-| PO-2.2 Taxa de Sucesso na Desinstalação | ≥ 90% das tentativas resultam em remoção completa do sistema | Métrica 2.2 |
-| PO-3.1 Taxa de Sucesso de Instalação por Ambiente | ≥ 95% de sucesso em cada ambiente testado | Métrica 3.1 |
-| PO-3.2 Desvio Relativo de Sucesso entre Ambientes | ≤ 5% de variação entre quaisquer dois ambientes | Métrica 3.2 |
-| PO-3.3 Tempo de Instalação e Tipos de Falha | Variação de tempo ≤ 15% e nenhuma falha com taxa > 2% | Métrica 3.3 |
+| PO-1.1 Taxa de Execuções Sem Falha | ≥ 99,0% de execuções bem-sucedidas em todas as plataformas | [Métrica 1.1](../03-fase2/portabilidade.md#metrica-11-taxa-de-execucoes-sem-falha-entre-plataformas) |
+| PO-1.2 Desvio de Desempenho de Inferência | ≤ 20% de variação entre plataformas | [Métrica 1.2](../03-fase2/portabilidade.md#metrica-12-desvio-de-desempenho-de-inferencia-entre-plataformas) |
+| PO-2.1 Taxa de Sucesso na Instalação | ≥ 95% das tentativas bem-sucedidas por plataforma | [Métrica 2.1](../03-fase2/portabilidade.md#metrica-21-taxa-de-sucesso-na-instalacao-installation-success-rate) |
+| PO-2.2 Taxa de Sucesso na Desinstalação | ≥ 90% das tentativas resultam em serviço de remoção completa | [Métrica 2.2](../03-fase2/portabilidade.md#metrica-22-taxa-de-sucesso-na-desinstalacao-uninstallation-success-rate) |
+| PO-3.1 Taxa de Sucesso de Instalação por Ambiente | ≥ 95% de sucesso em cada ambiente testado | [Métrica 3.1](../03-fase2/portabilidade.md#metrica-31-taxa-de-sucesso-de-instalacao-por-ambiente) |
+| PO-3.2 Desvio Relativo de Sucesso entre Ambientes | ≤ 5% de variação entre quaisquer dois ambientes | [Métrica 3.2](../03-fase2/portabilidade.md#metrica-32-desvio-relativo-de-sucesso-entre-ambientes) |
+| PO-3.3 Tempo de Instalação e Tipos de Falha | Variação de tempo ≤ 15% e nenhuma falha com taxa > 2% | [Métrica 3.3](../03-fase2/portabilidade.md#metrica-33-tempo-de-instalacao-e-tipos-de-falha-por-ambiente) |
+
+<p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
 
 # 7. Localização dos Dados
+
+**Tabela 9: Mapeamento de Rastreabilidade dos Artefatos de Dados Coletados**
 
 | Artefato                   | Caminho                                              | Descrição                        |
 | -------------------------- | ---------------------------------------------------- | -------------------------------- |
@@ -212,6 +255,8 @@ Conforme as hipóteses definidas na Fase 2:
 | Gravações de tela          | [link](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES/tree/main/tests/resultados/portabilidade)                          | Vídeos do processo de instalação |
 | Logs de erro               | [link](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES/tree/main/tests/resultados/portabilidade)`                         | Mensagens de erro capturadas     |
 | Checklist de verificação   | [link](https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES/tree/main/tests/resultados/portabilidade)`                                 | Verificações pós-instalação      |
+
+<p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
 
 
 ## 8. Sobre o Uso de IA
@@ -238,4 +283,5 @@ Para a elaboração deste documento, a Inteligência Artificial foi utilizada co
 | 1.0 | 04/06/2026 | Criação do documento | [Renata Quadros](https://github.com/RenataKurzawa) |[Giovana Barbosa](https://github.com/gio221) |
 | 1.1 | 12/06/2026 | Alinhamento de métricas da fase 2 | [Gabriel Alves](https://github.com/GDveAlves) | [Matheus Pinheiro](https://github.com/Matheus-06)|
 | 1.2 | 12/06/2026 | Atualização | [Renata Quadros](https://github.com/RenataKurzawa) |[Giovana Barbosa](https://github.com/gio221) |
-| 1.3 | 23/06/2026 | Ajuste no número de repetições para 5 ciclos | [Antigravity](https://github.com) | [Equipe](https://github.com) |
+| 1.3 | 23/06/2026 | Padronização de títulos, inclusão de autoria nas tabelas e mapeamento por hiperlinks (F3-C8) | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
+| 1.4 | 23/06/2026 | Ajuste no número de repetições para 5 ciclos | [Johnnatan Salles](https://github.com/jsalless) | [Equipe](https://github.com/GDveAlves) |

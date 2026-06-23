@@ -57,7 +57,8 @@ Para garantir a rastreabilidade e a consistência em relação ao modelo conceit
 
 <p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
 
-> **Nota de Escopo:** A métrica de **Estabilidade do Sistema** (avaliada nos Critérios de Aceitação) foi adicionada nesta etapa com o objetivo de verificar a responsividade do Sistema Operacional sob estresse de inferência longa, complementando as métricas originalmente derivadas do método GQM na Fase 2.
+**Nota de Escopo:** A métrica de **Estabilidade do Sistema** (avaliada nos Critérios de Aceitação) foi adicionada nesta etapa com o objetivo de verificar a responsividade do Sistema Operacional sob estresse de inferência longa, complementando as métricas originalmente derivadas do método GQM na Fase 2.
+
 ---
 
 ## 3. Ambiente de Teste
