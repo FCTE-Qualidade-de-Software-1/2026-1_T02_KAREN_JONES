@@ -8,11 +8,11 @@ Toda a avaliação será feita sob as especificações da norma **ISO/IEC 25010 
 
 ## 2.1.2 Por que avaliar ?
 
-Atualmente o acesso à Inteligencia Artificial se esbarra em dois principais obstáculos: a exigência de hardware de alto custo e a dependência de conectividade estável. 
+Atualmente o acesso à Inteligência Artificial se esbarra em dois principais obstáculos: a exigência de hardware de alto custo e a dependência de conectividade estável. 
 
 Tendo em vista os estudantes, pesquisadores e quaisquer pessoas que utilizam a inteligencia artificial que se localizam em regiões com a infraestrutura limitada precisam de ferramentas que garantam a funcionalidade offline e privacidade.
 
-O Ollama (executando o modelo Qwen 2.5 3B, versão v0.9.0) tem uma solução para esse cenário. Porém, é fundamental validar se essa promessa de "agilidade" e "execução local" se sustenta em um hardware com 16GB de RAM e sem GPU dedicada. A avaliação desse trabalho busca medir se o sistema é realmente viável e consistente em diferentes sistemas operacionais, focando na portabilidade e também medir a eficiência e desempenho.
+O Ollama (executando o modelo Qwen 2.5 3B, versão v0.30.10) tem uma solução para esse cenário. Porém, é fundamental validar se essa promessa de "agilidade" e "execução local" se sustenta em um hardware com 16GB de RAM e sem GPU dedicada. A avaliação desse trabalho busca medir se o sistema é realmente viável e consistente em diferentes sistemas operacionais, focando na portabilidade e também medir a eficiência e desempenho.
 
 ## 2.1.3 Para quem avaliar ?
 
@@ -74,7 +74,7 @@ Os dados coletados e as conclusões da avaliação servirão para fundamentar as
 | **Característica** | **Análise a ser feita** | **Decisão Apoiada** | **Quem Decide?** |
 | :--- | :--- | :--- | :--- |
 | **Eficiência de Desempenho** | Medição do **Time to First Token (TTFT)** e monitoramento do uso de RAM (16GB) em hardware sem GPU dedicada durante o processamento de prompts. | Definir se o modelo Qwen 2.5 3B é viável para o uso acadêmico diário em máquinas modestas ou se apresenta latência excessiva. | Equipe de Avaliação |
-| **Portabilidade** | Validar a instalabilidade via script e a adaptabilidade funcional do Ollama comparando os sistemas Windows 11 e Linux (Ubuntu). | Confirmar se a ferramenta mantém a paridade de recursos em diferentes SOs para garantir uma recomendação universal aos estudantes. | Equipe de Avaliação |
+| **Portabilidade** | Validar a instalabilidade via script e a adaptabilidade funcional do Ollama comparando os sistemas Windows 11 e Linux (Zorin OS 18.1 Core). | Confirmar se a ferramenta mantém a paridade de recursos em diferentes SOs para garantir uma recomendação universal aos estudantes. | Equipe de Avaliação |
 
 <p align="center"><b>Autor:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a>, 2026.</p>
 

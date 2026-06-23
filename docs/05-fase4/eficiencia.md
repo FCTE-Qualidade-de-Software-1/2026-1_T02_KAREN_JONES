@@ -18,12 +18,12 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-1.1 | TTFT (512 tok) | ≤ 5 s | 2,78 s | Aprovado |
-| Eficiência | ED-1.2 | TPS (512 tok) | ≤ 5 tokens | 53,2 t | Aprovado |
-| Eficiência | ED-1.3 | Load time (512 tok) | ≤ 30 s | 2,31 s | Aprovado |
-| Eficiência | ED-2.1 | Consumo de RAM | ≤ 6 GB | 336,16 MB | Aprovado |
-| Eficiência | ED-2.2 | Uso de CPU | ≤ 90 % | 0,23 % | Aprovado |
-| Eficiência | ED-2.3 | Eficiência de recurso | ≥ 0,5 | 704,54 | Aprovado |
+| Eficiência | **[ED-1.1](../04-fase3/eficiencia.md#ref-ed11)**| TTFT (512 tok) | ≤ 5 s | 278,68 ms | Aprovado |
+| Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)** | TPS (512 tok) | ≤ 5 tokens | 53,2 t | Aprovado |
+| Eficiência | **[ED-1.3](../04-fase3/eficiencia.md#ref-ed13)**| Load time (512 tok) | ≤ 30 s | 2,31 s | Aprovado |
+| Eficiência | **[ED-2.1](../04-fase3/eficiencia.md#ref-ed21)** | Consumo de RAM | ≤ 6 GB | 336,16 MB | Aprovado |
+| Eficiência | **[ED-2.2](../04-fase3/eficiencia.md#ref-ed22)**| Uso de CPU | ≤ 90 % | 0,23 % | Aprovado |
+| Eficiência | **[ED-2.3](../04-fase3/eficiencia.md#ref-ed23)** | Eficiência de recurso | ≥ 0,5 | 704,54 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -33,14 +33,10 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-3.1 | Escalonamento de contexto 512 t | ≤ 4,0 | 1,015 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 1024 t | ≤ 4,0 | 1,01 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 2048 t | ≤ 4,0 | 1,051 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 4096 t | ≤ 4,0 | 1,058 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 512 t | ≤ 1 MB/t | -0,0172 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 1024 t | ≤ 1 MB/t | -0,0062 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 2048 t | ≤ 1 MB/t | -0,0031 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 4096 t | ≤ 1 MB/t | -0,0021 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 512 t | ≤ 4,0 | 1,015 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 1024 t | ≤ 4,0 | 1,01 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 2048 t | ≤ 4,0 | 1,051 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 4096 t | ≤ 4,0 | 1,058 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -50,12 +46,12 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-1.1 | TTFT (512 tok) | ≤ 5 s | 2,37 s | Aprovado |
-| Eficiência | ED-1.2 | TPS (512 tok) | ≤ 5 tokens | 53,43 t | Aprovado |
-| Eficiência | ED-1.3 | Load time (512 tok) | ≤ 30 s | 1,82 s | Aprovado |
-| Eficiência | ED-2.1 | Consumo de RAM | ≤ 6 GB | 57,02 MB | Aprovado |
-| Eficiência | ED-2.2 | Uso de CPU | ≤ 90 % | 0,18 % | Aprovado |
-| Eficiência | ED-2.3 | Eficiência de recurso | ≥ 0,5 | 5421,42 | Aprovado |
+| Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)** | TTFT (512 tok) | ≤ 5 s | 237,31 ms | Aprovado |
+| Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)**| TPS (512 tok) | ≤ 5 tokens | 53,43 t | Aprovado |
+| Eficiência | **[ED-1.3](../04-fase3/eficiencia.md#ref-ed13)** | Load time (512 tok) | ≤ 30 s | 1,82 s | Aprovado |
+| Eficiência | **[ED-2.1](../04-fase3/eficiencia.md#ref-ed21)** | Consumo de RAM | ≤ 6 GB | 57,02 MB | Aprovado |
+| Eficiência | **[ED-2.2](../04-fase3/eficiencia.md#ref-ed22)**| Uso de CPU | ≤ 90 % | 0,18 % | Aprovado |
+| Eficiência | **[ED-2.3](../04-fase3/eficiencia.md#ref-ed23)**| Eficiência de recurso | ≥ 0,5 | 5421,42 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -65,14 +61,10 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-3.1 | Escalonamento de contexto 512 t | ≤ 4,0 | 0,993 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 1024 t | ≤ 4,0 | 1,029 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 2048 t | ≤ 4,0 | 1,089 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 4096 t | ≤ 4,0 | 1,118 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 512 t | ≤ 1 MB/t | 0,0002 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 1024 t | ≤ 1 MB/t | 0,0001 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 2048 t | ≤ 1 MB/t | 0,0004 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 4096 t | ≤ 1 MB/t | 0,0003 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 512 t | ≤ 4,0 | 0,993 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 1024 t | ≤ 4,0 | 1,029 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 2048 t | ≤ 4,0 | 1,089 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 4096 t | ≤ 4,0 | 1,118 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -80,22 +72,38 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 Os resultados de TTFT, TPS e Load Time mostram que o modelo atende aos critérios de tempo definidos na Fase 3 em ambos os ambientes. O consumo de recursos também se manteve bem abaixo dos limites previstos para RAM e CPU, especialmente em Linux.
 
-Os testes de capacidade ED-3.1 foram aprovados em todos os tamanhos de contexto analisados, indicando escalonamento aceitável para os limites definidos. Assim como os dados de ED-3.2 que mostraram que o crescimento do contexto (de 256 a 4096) não interfere significativamente no consumo de memória RAM por token.
+Os testes de capacidade ED-3.1 foram aprovados em todos os tamanhos de contexto analisados, indicando escalonamento aceitável para os limites definidos. 
+
+No entanto, a métrica **ED-3.2 (Taxa de Crescimento do KV Cache - KVCGR)** foi considerada **Inconclusiva / Inválida** e removida das tabelas de conformidade. A medição retornou valores negativos sob Windows 11 (ex: `-0,0172` MB/t, indicando redução de consumo com o aumento do contexto), o que é tecnicamente incompatível com o funcionamento do KV Cache. Isso ocorreu porque o baixíssimo consumo de memória RAM do modelo Qwen 2.5 3B gerou variações tão ínfimas que foram ofuscadas por ruído estatístico do sistema operacional, inviabilizando uma medição precisa da taxa de crescimento por token.
+
+**Tabela 4.5: Análise por Questão GQM (Q1–Q4)**
+
+| Questão | Métrica Principal | Critério | Status |
+| :--- | :--- | :--- | :--- |
+| Q1 — Latência interativa | TTFT mediana | ≤ 3s (CPU) | Aprovada |
+| Q1 — Geração em tempo real | TPS | ≥ 10 tok/s | Aprovada |
+| Q2 — Consumo de RAM | RAM_inferência | ≤ 4 GB | Aprovada |
+| Q2 — Consumo de CPU | CPU_uso | ≤ 90% | Aprovada |
+| Q3 — Escalonamento de contexto | CSF | ≤ 4,0 para 4096 tok | Aprovado |
+
+<p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
 ## 5.1.4 Análise Comparativa entre Ambientes
 
-Comparando os sistemas operacionais observa-se que o Zorin teve:
+Comparação direta por métrica, calculando o desvio relativo de desempenho entre os dois ambientes. Responde à questão central: há diferença significativa entre os sistemas operacionais?
 
-- Redução de 14,84% no TTFT
-- Aumento de 0,43% no TPS
-- Redução de 20,97% na latência de carregamento do modelo
-- Redução de 83,04% no consumo de RAM
-- Redução de 21,74% no consumo de CPU
-- Aumento de 669,50% no REI
-- Redução de 24,65%
+**Tabela 5: Análise Comparativa Windows × Linux**
 
+| Métrica | Windows 11 | Linux (Zorin OS) | Desvio (%) | Critério |
+| :--- | :---: | :---: | :---: | :---: |
+| TTFT (512 tok) | 278,68 ms | 237,32 ms | 29,25% | ≤ 20% |
+| TPS | 53,2 t | 53,43 t | 0,163% | Desvio ≤ 20% |
+| RAM pico | 336,16 MB | 57,02 MB | 197,38% | ≤ 6 GB |
+| CPU médio (%) | 0,23% | 0,18% | 0,0354% | ≤ 90% |
 
-- Apesar do desempenho do Zorin apresentar melhora considerável quando comparado ao Windows11, ambos ainda passam em todas as métricas de desempenho.
+<p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
+
+- Apesar do desempenho do Zorin apresentar melhora considerável quando comparado ao Windows 11, ambos ainda passam em todas as métricas de desempenho.
 
 ## 5.1.5 Interpretação e Discussão
 
@@ -112,3 +120,4 @@ A diferença entre sistemas operacionais é perceptível, com Linux entregando m
 | 1.0 | 12/06/2026 | Criação do documento |[Gabriel](https://github.com/GDevAlves) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.1 | 13/06/2026 | Adição de dados de desempenho |[Matheus Pinheiro](https://github.com/matheus-06) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.2 | 23/06/2026 | Ajuste do critério do CSF, inversão do sinal do REI e padronização visual das tabelas | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
+| 1.3 | 23/06/2026 | Correção do TTFT (s para ms) e classificação da métrica ED-3.2 (KVCGR) como Inconclusiva/Inválida | [Johnnatan Salles](https://github.com/jsalless) | [Renata Quadros](https://github.com/RenataKurzawa) |

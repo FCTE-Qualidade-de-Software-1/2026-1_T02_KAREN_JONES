@@ -71,7 +71,7 @@ O Ollama foi projetado com suporte explícito a múltiplas plataformas (Linux, m
 
 > Desvio = |Tempo médio inferência em A - Tempo médio inferência em B| / Tempo médio geral
 
-> Medido para inferência com prompt padronizado (100 tokens de entrada).
+> Medido para inferência com prompt padronizado.
 
 ***Referência:***
 
@@ -144,7 +144,7 @@ A hipótese é que o processo de instalação seja consistente entre ambientes d
 >   
 >Taxa(ambiente X) = Instalações bem-sucedidas em X / Total de tentativas em X
 >
->Ambientes: Zorin OS 18.1 Core, Ubuntu 24.04, macOS 13 (Intel), macOS 14 (Apple Silicon), Windows 11.
+>Ambientes: Zorin OS 18.1 Core, Windows 11.
 
 ***Referência:***
 [[6]](#ref-6), [[7]](#ref-7)

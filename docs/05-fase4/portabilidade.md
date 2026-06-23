@@ -38,11 +38,11 @@ Tabela 2: Registros de instalabilidade — Windows 11
 <!--TODO: Adicionar dados que estão no csv atual estes estão errados -->
 | Tentativa | Tempo de instalação (s) | Status instalação | Tempo de desinstalação (s) | Status desinstalação | Arquivos residuais |
 |-----------|------------------------|-------------------|---------------------------|---------------------|--------------------|
-| 1         | 40,69                  | sucesso           | 2,02                      | sucesso             | nenhum             |
-| 2         | 26,58                  | sucesso           | 2,03                      | sucesso             | nenhum             |
-| 3         | 27,49                  | sucesso           | 2,04                      | sucesso             | nenhum             |
-| 4         | 26,71                  | sucesso           | 2,03                      | sucesso             | nenhum             |
-| 5         | 27,48                  | sucesso           | 2,04                      | sucesso             | nenhum             |
+| 1         | 107,86                 | sucesso           | 2,02                      | sucesso             | nenhum             |
+| 2         | 98,29                  | sucesso           | 2,03                      | sucesso             | nenhum             |
+| 3         | 115,45                  | sucesso           | 2,04                      | sucesso             | nenhum             |
+| 4         | 88,75                  | sucesso           | 2,03                      | sucesso             | nenhum             |
+| 5         | 90,01                 | sucesso           | 2,04                      | sucesso             | nenhum             |
 
 **Fonte:** arquivo `instalabilidade_windows.csv`, gerado automaticamente pelo script de portabilidade.
 
@@ -52,13 +52,13 @@ Tabela 3: Síntese das métricas de instalabilidade por ambiente
 
 | Métrica | Zorin OS 18.1 Core | Windows 11 | Critério (Fase 3) | Resultado |
 |---|---|---|---|---|
-| **PO-1.1** Taxa de sucesso na instalação | 100,0% (5/5) | 100,0% (5/5) | ≥ 90% | ✓ Aprovado |
-| **PO-1.2** Tempo médio de instalação | 29,79 s | 29,79 s | ≤ 300 s (5 min) | ✓ Aprovado |
-| **PO-1.2** Tempo mínimo de instalação | 26,58 s | 26,58 s | — | — |
-| **PO-1.2** Tempo máximo de instalação | 40,69 s | 40,69 s | — | — |
-| **PO-1.3** Taxa de sucesso na desinstalação | 100,0% (5/5) | 100,0% (5/5) | ≥ 90% | ✓ Aprovado |
-| **PO-1.3** Tempo médio de desinstalação | 2,03 s | 2,03 s | — | — |
-| **PO-1.3** Arquivos residuais detectados | nenhum | nenhum | ausência | ✓ Aprovado |
+| **PO-2.1** Taxa de sucesso na instalação | 100,0% (5/5) | 100,0% (5/5) | ≥ 90% | ✓ Aprovado |
+| **PO-3.3** Tempo médio de instalação | 29,79 s | 29,79 s | ≤ 300 s (5 min) | ✓ Aprovado |
+| **PO-3.3** Tempo mínimo de instalação | 26,58 s | 26,58 s | — | — |
+| **PO-3.3** Tempo máximo de instalação | 40,69 s | 40,69 s | — | — |
+| **PO-2.2** Taxa de sucesso na desinstalação | 100,0% (5/5) | 100,0% (5/5) | ≥ 90% | ✓ Aprovado |
+| **PO-2.2** Tempo médio de desinstalação | 2,03 s | 2,03 s | — | — |
+| **PO-2.2** Arquivos residuais detectados | nenhum | nenhum | ausência | ✓ Aprovado |
 
 > **Nota sobre a tentativa 1:** Em ambos os ambientes, a primeira tentativa de instalação registrou 40,69 s, valor superior às demais. Este comportamento é esperado e decorrente do aquecimento de cache de rede e do processo de inicialização do runtime, que é mais custoso na primeira execução. As tentativas subsequentes estabilizaram entre 26,58 s e 27,49 s.
 
@@ -88,11 +88,11 @@ Tabela 5: Registros de adaptabilidade — Windows 11
 
 | Inferência | Tempo de resposta (s) | Status  |
 |------------|----------------------|---------|
-| 1          | 92,22                | sucesso |
-| 2          | 25,05                | sucesso |
-| 3          | 25,36                | sucesso |
-| 4          | 13,88                | sucesso |
-| 5          | 6,72                 | sucesso |
+| 1          | 9,12                 | sucesso |
+| 2          | 5,43                 | sucesso |
+| 3          | 6,70                 | sucesso |
+| 4          | 6,26                 | sucesso |
+| 5          | 4,69                 | sucesso |
 
 **Fonte:** arquivo `adaptabilidade_windows.csv`.
 
@@ -122,10 +122,10 @@ Tabela 6: Síntese das métricas de adaptabilidade por ambiente
 
 | Métrica | Zorin OS 18.1 Core | Windows 11 | Critério (Fase 3) | Resultado |
 |---|---|---|---|---|
-| **PO-2.1** Paridade funcional | 100,0% (5/5) | 100,0% (5/5) | 100% | ✓ Aprovado |
-| **PO-2.2** Desvio de desempenho (com warm-up) | — | — | ≤ 20% | ✗ Reprovado — 111,7% |
-| **PO-2.2** Desvio de desempenho (sem warm-up) | — | — | ≤ 20% | ✗ Reprovado — 178,6% |
-| **PO-2.3** Taxa de falhas por ambiente | 0,0% (0/5) | 0,0% (0/5) | ≤ 2% | ✓ Aprovado |
+| **[PO-1.1](../04-fase3/portabilidade.md#ref-po11)**| 100,0% (5/5) Taxa de Execuções Sem Falha | 100,0% (5/5) | 100% | ✓ Aprovado |
+| **[PO-1.2](../04-fase3/portabilidade.md#ref-po12)** Desvio de desempenho (com warm-up) | — | — | ≤ 20% | ✗ Reprovado — 111,7% |
+| **[PO-1.2](../04-fase3/portabilidade.md#ref-po12)** Desvio de desempenho (sem warm-up) | — | — | ≤ 20% | ✗ Reprovado — 178,6% |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** Taxa de falhas por ambiente | 0,0% (0/5) | 0,0% (0/5) | ≤ 2% | ✓ Aprovado |
 
 ### Métricas Cruzadas entre Ambientes (PO-3.1, PO-3.2, PO-3.3)
 
@@ -133,12 +133,12 @@ Tabela 7: Métricas de consistência entre ambientes
 
 | Métrica | Valor calculado | Critério (Fase 2) | Resultado |
 |---|---|---|---|
-| **PO-3.1** Taxa de sucesso por ambiente (Linux) | 100,0% | ≥ 95% | ✓ Aprovado |
-| **PO-3.1** Taxa de sucesso por ambiente (Windows) | 100,0% | ≥ 95% | ✓ Aprovado |
-| **PO-3.2** Desvio relativo de sucesso entre ambientes | 0,0% | ≤ 5% | ✓ Aprovado |
-| **PO-3.3** Variação de tempo de instalação entre ambientes | 0,0% | ≤ 15% | ✓ Aprovado |
-| **PO-3.3** Taxa de falhas específicas de ambiente (Linux) | 0,0% | ≤ 2% | ✓ Aprovado |
-| **PO-3.3** Taxa de falhas específicas de ambiente (Windows) | 0,0% | ≤ 2% | ✓ Aprovado |
+| **[PO-3.1](../04-fase3/portabilidade.md#ref-po31)** Taxa de sucesso por ambiente (Linux) | 100,0% | ≥ 95% | ✓ Aprovado |
+| **[PO-3.1](.../04-fase3/portabilidade.md#ref-po31)** Taxa de sucesso por ambiente (Windows) | 100,0% | ≥ 95% | ✓ Aprovado |
+| **[PO-3.2](../04-fase3/portabilidade.md#ref-po32)** Desvio relativo de sucesso entre ambientes | 0,0% | ≤ 5% | ✓ Aprovado |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** Variação de tempo de instalação entre ambientes | 0,0% | ≤ 15% | ✓ Aprovado |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** Taxa de falhas específicas de ambiente (Linux) | 0,0% | ≤ 2% | ✓ Aprovado |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** Taxa de falhas específicas de ambiente (Windows) | 0,0% | ≤ 2% | ✓ Aprovado |
 
 ## 5.2.4 Análise por Questão GQM
 
@@ -166,7 +166,7 @@ Este resultado sugere que, embora a paridade funcional seja plena, a eficiência
 
 **Análise dos resultados:**
 
-A taxa de sucesso na instalação (PO-1.1) foi de 100% em ambos os ambientes (5/5 tentativas), superando amplamente o critério de aceitação de 90%. O tempo médio de instalação (PO-1.2) foi de 29,79 s em ambos os sistemas, muito abaixo do limite de 5 minutos estabelecido na Fase 3. A variação observada entre tentativas foi decorrente exclusivamente do efeito de aquecimento de cache na primeira execução, estabilizando-se em torno de 27 s nas tentativas subsequentes.
+A taxa de sucesso na instalação (PO-1.1) foi de 100% em ambos os ambientes (5/5 tentativas), superando amplamente o critério de aceitação de 90%. O tempo médio de instalação (PO-1.2) no Zorin OS 18.1 Core foi de 29,79 s e no Windows foi de 100 s, muito abaixo do limite de 5 minutos estabelecido na Fase 3. A variação observada entre tentativas foi decorrente exclusivamente do efeito de aquecimento de cache na primeira execução, estabilizando-se em torno de 27 s nas tentativas subsequentes.
 
 A taxa de sucesso na desinstalação (PO-1.3) foi igualmente de 100% (5/5) em ambos os ambientes, com tempo médio de 2,03 s. Nenhum arquivo residual foi detectado em qualquer tentativa de desinstalação.
 
@@ -208,15 +208,15 @@ Tabela 8: Consolidação das métricas de portabilidade
 
 | ID | Métrica | Critério | Linux | Windows | Resultado |
 |---|---|---|---|---|---|
-| PO-1.1 | Taxa de sucesso na instalação | ≥ 90% | 100,0% | 100,0% | ✓ Aprovado |
-| PO-1.2 | Tempo médio de instalação | ≤ 300 s | 29,79 s | 29,79 s | ✓ Aprovado |
-| PO-1.3 | Taxa de sucesso na desinstalação | ≥ 90% | 100,0% | 100,0% | ✓ Aprovado |
-| PO-2.1 | Paridade funcional entre SOs | 100% | 100,0% | 100,0% | ✓ Aprovado |
-| PO-2.2 | Desvio de desempenho entre SOs | ≤ 20% | — | — | ✗ Reprovado (111,7%) |
-| PO-2.3 | Taxa de falhas por ambiente | ≤ 2% | 0,0% | 0,0% | ✓ Aprovado |
-| PO-3.1 | Taxa de sucesso por ambiente | ≥ 95% | 100,0% | 100,0% | ✓ Aprovado |
-| PO-3.2 | Desvio relativo de sucesso entre ambientes | ≤ 5% | — | 0,0% | ✓ Aprovado |
-| PO-3.3 | Variação de tempo de instalação / falhas específicas | ≤ 15% / ≤ 2% | 0,0% / 0,0% | 0,0% / 0,0% | ✓ Aprovado |
+| **[PO-1.1](../04-fase3/portabilidade.md#ref-po11)** | Taxa de sucesso na instalação | ≥ 90% | 100,0% | 100,0% | ✓ Aprovado |
+| **[PO-1.2](../04-fase3/portabilidade.md#ref-po12)** | Tempo médio de instalação | ≤ 300 s | 29,79 s | 29,79 s | ✓ Aprovado |
+| **[PO-1.3](../04-fase3/portabilidade.md#ref-po13)** | Taxa de sucesso na desinstalação | ≥ 90% | 100,0% | 100,0% | ✓ Aprovado |
+| **[PO-2.1](../04-fase3/portabilidade.md#ref-po21)** | Paridade funcional entre SOs | 100% | 100,0% | 100,0% | ✓ Aprovado |
+| **[PO-2.2](../04-fase3/portabilidade.md#ref-po22)** | Desvio de desempenho entre SOs | ≤ 20% | — | — | ✗ Reprovado (111,7%) |
+| **[PO-2.3](../04-fase3/portabilidade.md#ref-po23)** | Taxa de falhas por ambiente | ≤ 2% | 0,0% | 0,0% | ✓ Aprovado |
+| **[PO-3.1](../04-fase3/portabilidade.md#ref-po31)** | Taxa de sucesso por ambiente | ≥ 95% | 100,0% | 100,0% | ✓ Aprovado |
+| **[PO-3.2](../04-fase3/portabilidade.md#ref-po32)** | Desvio relativo de sucesso entre ambientes | ≤ 5% | — | 0,0% | ✓ Aprovado |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** | Variação de tempo de instalação / falhas específicas | ≤ 15% / ≤ 2% | 0,0% / 0,0% | 0,0% / 0,0% | ✓ Aprovado |
 
 De 9 métricas avaliadas, **8 foram aprovadas** e **1 foi reprovada** (PO-2.2 — desvio de desempenho de inferência). O resultado global indica que o Ollama com Qwen 2.5 3B apresenta **alta portabilidade em termos de instalabilidade e paridade funcional**, com a ressalva de que o desempenho de inferência varia significativamente entre plataformas em hardware sem aceleração por GPU.
 
@@ -232,7 +232,7 @@ Algumas limitações devem ser consideradas na interpretação destes resultados
 
 **Prompt único para adaptabilidade:** os testes de adaptabilidade utilizaram um único prompt para todas as 5 inferências. Uma bateria de prompts diversificados forneceria uma avaliação mais abrangente da paridade funcional.
 
-**Ambiente Linux não corresponde ao especificado:** a Fase 3 planejou Ubuntu 22.04 LTS; o ambiente efetivamente utilizado foi Zorin OS 18.1 Core (baseado em Ubuntu 24.04). Embora as diferenças sejam mínimas para este caso de uso, a divergência deve ser registrada para fins de rastreabilidade.
+**Ambiente Linux não corresponde ao especificado:** a Fase 1 tem o cenário definido o sistema operacional Ubuntu 22.04 LTS como o principal a ser analisado; o ambiente efetivamente utilizado foi Zorin OS 18.1 Core (baseado em Ubuntu 24.04). Embora as diferenças sejam mínimas para este caso de uso, a divergência deve ser registrada para fins de rastreabilidade.
 
 ## Sobre o Uso de IA
 
@@ -254,4 +254,6 @@ Para a elaboração deste documento, modelos de linguagem de grande porte foram 
 
 | Versão | Data       | Descrição                                         | Autor   | Revisor |
 |--------|------------|---------------------------------------------------|---------|---------|
-| 1.0    | 12/06/2026 | Criação do documento com resultados da execução   | Gabriel | —       |
+| 1.0    | 12/06/2026 | Criação do documento com resultados da execução   | Gabriel | [Giovana Barbosa](https://github.com/gio221)    |
+|1.1     | 23/06/2026| Alterações nos dados | [Giovana Barbosa](https://github.com/gio221) |
+
