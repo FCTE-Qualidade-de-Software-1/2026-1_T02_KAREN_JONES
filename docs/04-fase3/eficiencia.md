@@ -28,14 +28,14 @@ Para garantir a rastreabilidade e a consistência em relação ao modelo conceit
 
 | ID GQM (Fase 2) | ID Operacional (Fase 3/4) | Nome da Métrica | Motivo da Codificação |
 |:---:|:---:|---|---|
-| [M1.1](../03-fase2/eficiencia.md#m11) | [ED-1.1](#6-criterios-de-aceitacao) | Time to First Token (TTFT) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
-| [M1.2](../03-fase2/eficiencia.md#m12) | [ED-1.2](#6-criterios-de-aceitacao) | Tokens por Segundo (TPS) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
-| [M1.3](../03-fase2/eficiencia.md#m13) | [ED-1.3](#6-criterios-de-aceitacao) | Latência de Carregamento do Modelo (MLT) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
-| [M2.1](../03-fase2/eficiencia.md#metrica-21-consumo-de-memoria-ram-durante-inferencia) | [ED-2.1](#6-criterios-de-aceitacao) | Consumo de RAM | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
-| [M2.2](../03-fase2/eficiencia.md#metrica-22-utilizacao-de-cpu-durante-inferencia) | [ED-2.2](#6-criterios-de-aceitacao) | Uso Médio de CPU | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
-| [M2.3](../03-fase2/eficiencia.md#metrica-23-indice-de-eficiencia-de-recursos-rei) | [ED-2.3](#6-criterios-de-aceitacao) | Índice de Eficiência de Recursos (REI) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
-| [M3.1](../03-fase2/eficiencia.md#metrica-31-fator-de-escalonamento-de-contexto-csf) | [ED-3.1](#6-criterios-de-aceitacao) | Fator de Escalonamento de Contexto (CSF) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
-| [M3.2](../03-fase2/eficiencia.md#metrica-32-taxa-de-crescimento-do-kv-cache-kvcgr) | [ED-3.2](#6-criterios-de-aceitacao) | Taxa de Crescimento do KV Cache (KVCGR) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
+| [M1.1](../03-fase2/eficiencia.md#m11) | <a id="ref-ed11"></a> [ED-1.1](#6-criterios-de-aceitacao) | Time to First Token (TTFT) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
+| [M1.2](../03-fase2/eficiencia.md#m12) | <a id="ref-ed12"></a> [ED-1.2](#6-criterios-de-aceitacao) | Tokens por Segundo (TPS) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
+| [M1.3](../03-fase2/eficiencia.md#m13) |<a id="ref-ed13"></a>  [ED-1.3](#6-criterios-de-aceitacao) | Latência de Carregamento do Modelo (MLT) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
+| [M2.1](../03-fase2/eficiencia.md#metrica-21-consumo-de-memoria-ram-durante-inferencia) | <a id="ref-ed21"></a> [ED-2.1](#6-criterios-de-aceitacao) | Consumo de RAM | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
+| [M2.2](../03-fase2/eficiencia.md#metrica-22-utilizacao-de-cpu-durante-inferencia) | <a id="ref-ed22"></a> [ED-2.2](#6-criterios-de-aceitacao) | Uso Médio de CPU | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
+| [M2.3](../03-fase2/eficiencia.md#metrica-23-indice-de-eficiencia-de-recursos-rei) | <a id="ref-ed23"></a> [ED-2.3](#6-criterios-de-aceitacao) | Índice de Eficiência de Recursos (REI) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
+| [M3.1](../03-fase2/eficiencia.md#metrica-31-fator-de-escalonamento-de-contexto-csf) | <a id="ref-ed31"></a> [ED-3.1](#6-criterios-de-aceitacao) | Fator de Escalonamento de Contexto (CSF) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
+| [M3.2](../03-fase2/eficiencia.md#metrica-32-taxa-de-crescimento-do-kv-cache-kvcgr) | <a id="ref-ed32"></a> [ED-3.2](#6-criterios-de-aceitacao) | Taxa de Crescimento do KV Cache (KVCGR) | Prefixo **ED** mapeia a característica de **E**ficiência de **D**esempenho. |
 | — | — | Estabilidade do Sistema | Métrica complementar adicionada na Fase 3. |
 
 <p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
@@ -93,7 +93,7 @@ Para garantir a rastreabilidade e a consistência em relação ao modelo conceit
 
 | Ferramenta | Versão | Finalidade |
 |------------|--------|------------|
-| Ollama | v0.9.0 | Motor de inferência local |
+| Ollama | v0.30.10 | Motor de inferência local |
 | Qwen 2.5 3B | — | Modelo de linguagem avaliado |
 | Python | 3.10+ | Scripts de automação e medição |
 | psutil (Python) | 5.9+ | Monitoramento de recursos |
@@ -213,4 +213,3 @@ Após cada sessão de testes:
 | 1.0 | 04/06/2026 | Criação do documento |[Giovana Barbosa](https://github.com/gio221) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.1 | 12/06/2026 | Alinhamento de métricas da fase 2 | [Gabriel Alves](https://github.com/GDveAlves) | [Matheus Pinheiro](https://github.com/Matheus-06)|
 | 1.2 | 23/06/2026 | Alinhamento de fases, hiperlinks, padronização de títulos, legendas e autorias das tabelas | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
-| 1.3 | 23/06/2026 | Ajuste no número de repetições para 5 ciclos | [Johnnatan Salles](https://github.com/jsalless) | [Equipe](https://github.com/GDveAlves) |

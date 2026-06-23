@@ -20,7 +20,7 @@ O procedimento consistiu em 5 ciclos completos de instalação e desinstalação
 
 ### Dados Brutos — Instalabilidade (Zorin OS 18.1 Core)
 
-Tabela 1: Registros de instalabilidade — Zorin OS 18.1 Core
+**Tabela 1: Registros de instalabilidade — Zorin OS 18.1 Core**
 
 | Tentativa | Tempo de instalação (s) | Status instalação | Tempo de desinstalação (s) | Status desinstalação | Arquivos residuais |
 |-----------|------------------------|-------------------|---------------------------|---------------------|--------------------|
@@ -34,21 +34,21 @@ Tabela 1: Registros de instalabilidade — Zorin OS 18.1 Core
 
 ### Dados Brutos — Instalabilidade (Windows 11)
 
-Tabela 2: Registros de instalabilidade — Windows 11
+**Tabela 2: Registros de instalabilidade — Windows 11**
 <!--TODO: Adicionar dados que estão no csv atual estes estão errados -->
 | Tentativa | Tempo de instalação (s) | Status instalação | Tempo de desinstalação (s) | Status desinstalação | Arquivos residuais |
 |-----------|------------------------|-------------------|---------------------------|---------------------|--------------------|
-| 1         | 40,69                  | sucesso           | 2,02                      | sucesso             | nenhum             |
-| 2         | 26,58                  | sucesso           | 2,03                      | sucesso             | nenhum             |
-| 3         | 27,49                  | sucesso           | 2,04                      | sucesso             | nenhum             |
-| 4         | 26,71                  | sucesso           | 2,03                      | sucesso             | nenhum             |
-| 5         | 27,48                  | sucesso           | 2,04                      | sucesso             | nenhum             |
+| 1         | 107,86                 | sucesso           | 2,02                      | sucesso             | nenhum             |
+| 2         | 98,29                  | sucesso           | 2,03                      | sucesso             | nenhum             |
+| 3         | 115,45                  | sucesso           | 2,04                      | sucesso             | nenhum             |
+| 4         | 88,75                  | sucesso           | 2,03                      | sucesso             | nenhum             |
+| 5         | 90,01                 | sucesso           | 2,04                      | sucesso             | nenhum             |
 
 **Fonte:** arquivo `instalabilidade_windows.csv`, gerado automaticamente pelo script de portabilidade.
 
 ### Métricas Calculadas — Instalabilidade
 
-Tabela 3: Síntese das métricas de instalabilidade por ambiente
+**Tabela 3: Síntese das métricas de instalabilidade por ambiente**
 
 | Métrica | Zorin OS 18.1 Core | Windows 11 | Critério (Fase 3) | Resultado |
 |---|---|---|---|---|
@@ -70,7 +70,7 @@ O procedimento consistiu na execução de 5 inferências padronizadas em cada am
 
 ### Dados Brutos — Adaptabilidade (Zorin OS 18.1 Core)
 
-Tabela 4: Registros de adaptabilidade — Zorin OS 18.1 Core
+**Tabela 4: Registros de adaptabilidade — Zorin OS 18.1 Core**
 
 | Inferência | Tempo de resposta (s) | Status  |
 |------------|----------------------|---------|
@@ -84,15 +84,15 @@ Tabela 4: Registros de adaptabilidade — Zorin OS 18.1 Core
 
 ### Dados Brutos — Adaptabilidade (Windows 11)
 
-Tabela 5: Registros de adaptabilidade — Windows 11
+**Tabela 5: Registros de adaptabilidade — Windows 11**
 
 | Inferência | Tempo de resposta (s) | Status  |
 |------------|----------------------|---------|
-| 1          | 92,22                | sucesso |
-| 2          | 25,05                | sucesso |
-| 3          | 25,36                | sucesso |
-| 4          | 13,88                | sucesso |
-| 5          | 6,72                 | sucesso |
+| 1          | 9,12                 | sucesso |
+| 2          | 5,43                 | sucesso |
+| 3          | 6,70                 | sucesso |
+| 4          | 6,26                 | sucesso |
+| 5          | 4,69                 | sucesso |
 
 **Fonte:** arquivo `adaptabilidade_windows.csv`.
 
@@ -118,7 +118,7 @@ Média geral   = (1,00 + 17,75) / 2 = 9,38 s
 Desvio = |1,00 − 17,75| / 9,38 = 178,6%
 ```
 
-Tabela 6: Síntese das métricas de adaptabilidade por ambiente
+**Tabela 6: Síntese das métricas de adaptabilidade por ambiente**
 
 | Métrica | Zorin OS 18.1 Core | Windows 11 | Critério (Fase 3) | Resultado |
 |---|---|---|---|---|
@@ -129,7 +129,7 @@ Tabela 6: Síntese das métricas de adaptabilidade por ambiente
 
 ### Métricas Cruzadas entre Ambientes (PO-3.1, PO-3.2, PO-3.3)
 
-Tabela 7: Métricas de consistência entre ambientes
+**Tabela 7: Métricas de consistência entre ambientes**
 
 | Métrica | Valor calculado | Critério (Fase 2) | Resultado |
 |---|---|---|---|
@@ -166,7 +166,7 @@ Este resultado sugere que, embora a paridade funcional seja plena, a eficiência
 
 **Análise dos resultados:**
 
-A taxa de sucesso na instalação (PO-1.1) foi de 100% em ambos os ambientes (5/5 tentativas), superando amplamente o critério de aceitação de 90%. O tempo médio de instalação (PO-1.2) foi de 29,79 s em ambos os sistemas, muito abaixo do limite de 5 minutos estabelecido na Fase 3. A variação observada entre tentativas foi decorrente exclusivamente do efeito de aquecimento de cache na primeira execução, estabilizando-se em torno de 27 s nas tentativas subsequentes.
+A taxa de sucesso na instalação (PO-1.1) foi de 100% em ambos os ambientes (5/5 tentativas), superando amplamente o critério de aceitação de 90%. O tempo médio de instalação (PO-1.2) no Zorin OS 18.1 Core foi de 29,79 s e no Windows foi de 100 s, muito abaixo do limite de 5 minutos estabelecido na Fase 3. A variação observada entre tentativas foi decorrente exclusivamente do efeito de aquecimento de cache na primeira execução, estabilizando-se em torno de 27 s nas tentativas subsequentes.
 
 A taxa de sucesso na desinstalação (PO-1.3) foi igualmente de 100% (5/5) em ambos os ambientes, com tempo médio de 2,03 s. Nenhum arquivo residual foi detectado em qualquer tentativa de desinstalação.
 
@@ -204,7 +204,7 @@ Vale registrar que os dados de instalabilidade dos dois ambientes são **idênti
 
 ### Síntese dos Resultados
 
-Tabela 8: Consolidação das métricas de portabilidade
+**Tabela 8: Consolidação das métricas de portabilidade**
 
 | ID | Métrica | Critério | Linux | Windows | Resultado |
 |---|---|---|---|---|---|
@@ -254,5 +254,6 @@ Para a elaboração deste documento, modelos de linguagem de grande porte foram 
 
 | Versão | Data       | Descrição                                         | Autor   | Revisor |
 |--------|------------|---------------------------------------------------|---------|---------|
-| 1.0    | 12/06/2026 | Criação do documento com resultados da execução   | Gabriel | Renata Quadros    |
-| 1.1    | 23/06/2026 | Correção e hiperlinks | Renata Quadros  | Giovana Barbosa |
+| 1.0    | 12/06/2026 | Criação do documento com resultados da execução   | Gabriel | [Giovana Barbosa](https://github.com/gio221)    |
+|1.1     | 23/06/2026| Alterações nos dados | [Giovana Barbosa](https://github.com/gio221) |
+
