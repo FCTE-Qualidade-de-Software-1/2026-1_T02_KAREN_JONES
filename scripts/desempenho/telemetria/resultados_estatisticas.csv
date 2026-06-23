@@ -1,0 +1,8 @@
+metric,mean,median,desvio
+ttft_ms,220.03,216.28,10.49
+tps,51.09,50.52,1.32
+load_duration_ms,167.2,162.09,8.95
+peak_ollama_ram_used_mb,748.43,755.16,73.87
+avg_ollama_ram_used_mb,747.9,754.65,73.71
+avg_ollama_cpu_percent,3.47,3.46,0.05
+rei,20.41,19.02,2.54
