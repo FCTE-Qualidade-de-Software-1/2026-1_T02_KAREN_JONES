@@ -71,7 +71,7 @@ O Ollama foi projetado com suporte explícito a múltiplas plataformas (Linux, m
 
 > Desvio = |Tempo médio inferência em A - Tempo médio inferência em B| / Tempo médio geral
 
-> Medido para inferência com prompt padronizado (100 tokens de entrada).
+> Medido para inferência com prompt padronizado.
 
 ***Referência:***
 
