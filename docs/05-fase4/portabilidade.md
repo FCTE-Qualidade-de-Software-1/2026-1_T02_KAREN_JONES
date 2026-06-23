@@ -232,7 +232,7 @@ Algumas limitações devem ser consideradas na interpretação destes resultados
 
 **Prompt único para adaptabilidade:** os testes de adaptabilidade utilizaram um único prompt para todas as 5 inferências. Uma bateria de prompts diversificados forneceria uma avaliação mais abrangente da paridade funcional.
 
-**Ambiente Linux não corresponde ao especificado:** a Fase 3 planejou Ubuntu 22.04 LTS; o ambiente efetivamente utilizado foi Zorin OS 18.1 Core (baseado em Ubuntu 24.04). Embora as diferenças sejam mínimas para este caso de uso, a divergência deve ser registrada para fins de rastreabilidade.
+**Ambiente Linux não corresponde ao especificado:** a Fase 1 tem o cenário definido o sistema operacional Ubuntu 22.04 LTS como o principal a ser analisado; o ambiente efetivamente utilizado foi Zorin OS 18.1 Core (baseado em Ubuntu 24.04). Embora as diferenças sejam mínimas para este caso de uso, a divergência deve ser registrada para fins de rastreabilidade.
 
 ## Sobre o Uso de IA
 
