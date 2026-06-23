@@ -57,7 +57,8 @@ Para garantir a rastreabilidade e a consistência em relação ao modelo conceit
 
 <p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
 
-> **Nota de Escopo:** A métrica de **Estabilidade do Sistema** (avaliada nos Critérios de Aceitação) foi adicionada nesta etapa com o objetivo de verificar a responsividade do Sistema Operacional sob estresse de inferência longa, complementando as métricas originalmente derivadas do método GQM na Fase 2.
+**Nota de Escopo:** A métrica de **Estabilidade do Sistema** (avaliada nos Critérios de Aceitação) foi adicionada nesta etapa com o objetivo de verificar a responsividade do Sistema Operacional sob estresse de inferência longa, complementando as métricas originalmente derivadas do método GQM na Fase 2.
+
 ---
 
 ## 3. Ambiente de Teste
@@ -152,7 +153,7 @@ Para cada ambiente (Windows e Linux):
 1. Reiniciar o sistema operacional
 2. Iniciar o Ollama: ollama serve
 3. Aguardar 60 segundos para estabilização
-4. Executar script de medição de TTFT com 10 repetições para cada tamanho de contexto
+4. Executar script de medição de TTFT com 5 repetições para cada tamanho de contexto (justifica-se que 5 ciclos são suficientes para a tendência observada)
 5. Registrar resultados em arquivo CSV
 
 
@@ -212,3 +213,4 @@ Após cada sessão de testes:
 | 1.0 | 04/06/2026 | Criação do documento |[Giovana Barbosa](https://github.com/gio221) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.1 | 12/06/2026 | Alinhamento de métricas da fase 2 | [Gabriel Alves](https://github.com/GDveAlves) | [Matheus Pinheiro](https://github.com/Matheus-06)|
 | 1.2 | 23/06/2026 | Alinhamento de fases, hiperlinks, padronização de títulos, legendas e autorias das tabelas | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
+| 1.3 | 23/06/2026 | Ajuste no número de repetições para 5 ciclos | [Johnnatan Salles](https://github.com/jsalless) | [Equipe](https://github.com/GDveAlves) |

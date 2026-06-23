@@ -52,13 +52,13 @@ Tabela 3: Síntese das métricas de instalabilidade por ambiente
 
 | Métrica | Zorin OS 18.1 Core | Windows 11 | Critério (Fase 3) | Resultado |
 |---|---|---|---|---|
-| **PO-1.1** Taxa de sucesso na instalação | 100,0% (5/5) | 100,0% (5/5) | ≥ 90% | ✓ Aprovado |
-| **PO-1.2** Tempo médio de instalação | 29,79 s | 29,79 s | ≤ 300 s (5 min) | ✓ Aprovado |
-| **PO-1.2** Tempo mínimo de instalação | 26,58 s | 26,58 s | — | — |
-| **PO-1.2** Tempo máximo de instalação | 40,69 s | 40,69 s | — | — |
-| **PO-1.3** Taxa de sucesso na desinstalação | 100,0% (5/5) | 100,0% (5/5) | ≥ 90% | ✓ Aprovado |
-| **PO-1.3** Tempo médio de desinstalação | 2,03 s | 2,03 s | — | — |
-| **PO-1.3** Arquivos residuais detectados | nenhum | nenhum | ausência | ✓ Aprovado |
+| **PO-2.1** Taxa de sucesso na instalação | 100,0% (5/5) | 100,0% (5/5) | ≥ 90% | ✓ Aprovado |
+| **PO-3.3** Tempo médio de instalação | 29,79 s | 29,79 s | ≤ 300 s (5 min) | ✓ Aprovado |
+| **PO-3.3** Tempo mínimo de instalação | 26,58 s | 26,58 s | — | — |
+| **PO-3.3** Tempo máximo de instalação | 40,69 s | 40,69 s | — | — |
+| **PO-2.2** Taxa de sucesso na desinstalação | 100,0% (5/5) | 100,0% (5/5) | ≥ 90% | ✓ Aprovado |
+| **PO-2.2** Tempo médio de desinstalação | 2,03 s | 2,03 s | — | — |
+| **PO-2.2** Arquivos residuais detectados | nenhum | nenhum | ausência | ✓ Aprovado |
 
 > **Nota sobre a tentativa 1:** Em ambos os ambientes, a primeira tentativa de instalação registrou 40,69 s, valor superior às demais. Este comportamento é esperado e decorrente do aquecimento de cache de rede e do processo de inicialização do runtime, que é mais custoso na primeira execução. As tentativas subsequentes estabilizaram entre 26,58 s e 27,49 s.
 
@@ -122,10 +122,10 @@ Tabela 6: Síntese das métricas de adaptabilidade por ambiente
 
 | Métrica | Zorin OS 18.1 Core | Windows 11 | Critério (Fase 3) | Resultado |
 |---|---|---|---|---|
-| **PO-2.1** Paridade funcional | 100,0% (5/5) | 100,0% (5/5) | 100% | ✓ Aprovado |
-| **PO-2.2** Desvio de desempenho (com warm-up) | — | — | ≤ 20% | ✗ Reprovado — 111,7% |
-| **PO-2.2** Desvio de desempenho (sem warm-up) | — | — | ≤ 20% | ✗ Reprovado — 178,6% |
-| **PO-2.3** Taxa de falhas por ambiente | 0,0% (0/5) | 0,0% (0/5) | ≤ 2% | ✓ Aprovado |
+| **PO-1.1** Paridade funcional | 100,0% (5/5) | 100,0% (5/5) | 100% | ✓ Aprovado |
+| **PO-1.2** Desvio de desempenho (com warm-up) | — | — | ≤ 20% | ✗ Reprovado — 111,7% |
+| **PO-1.2** Desvio de desempenho (sem warm-up) | — | — | ≤ 20% | ✗ Reprovado — 178,6% |
+| **PO-3.3** Taxa de falhas por ambiente | 0,0% (0/5) | 0,0% (0/5) | ≤ 2% | ✓ Aprovado |
 
 ### Métricas Cruzadas entre Ambientes (PO-3.1, PO-3.2, PO-3.3)
 
