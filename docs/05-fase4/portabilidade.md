@@ -29,13 +29,13 @@ Tabela 1: Registros de instalabilidade — Zorin OS 18.1 Core
 | 3         | 27,49                  | sucesso           | 2,04                      | sucesso             | nenhum             |
 | 4         | 26,71                  | sucesso           | 2,03                      | sucesso             | nenhum             |
 | 5         | 27,48                  | sucesso           | 2,04                      | sucesso             | nenhum             |
-
+<!--TODO: Adicionar links para os arquivos CSV que estão no github-->
 **Fonte:** arquivo `instalabilidade_20260612_194434.csv`, gerado automaticamente pelo script de portabilidade em 12/06/2026.
 
 ### Dados Brutos — Instalabilidade (Windows 11)
 
 Tabela 2: Registros de instalabilidade — Windows 11
-
+<!--TODO: Adicionar dados que estão no csv atual estes estão errados -->
 | Tentativa | Tempo de instalação (s) | Status instalação | Tempo de desinstalação (s) | Status desinstalação | Arquivos residuais |
 |-----------|------------------------|-------------------|---------------------------|---------------------|--------------------|
 | 1         | 40,69                  | sucesso           | 2,02                      | sucesso             | nenhum             |
