@@ -93,7 +93,7 @@ Para garantir a rastreabilidade e a consistência em relação ao modelo conceit
 
 | Ferramenta | Versão | Finalidade |
 |------------|--------|------------|
-| Ollama | v0.9.0 | Motor de inferência local |
+| Ollama | v0.30.10 | Motor de inferência local |
 | Qwen 2.5 3B | — | Modelo de linguagem avaliado |
 | Python | 3.10+ | Scripts de automação e medição |
 | psutil (Python) | 5.9+ | Monitoramento de recursos |
