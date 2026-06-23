@@ -18,7 +18,7 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-1.1 | TTFT (512 tok) | ≤ 5 s | 2,78 s | Aprovado |
+| Eficiência | ED-1.1 | TTFT (512 tok) | ≤ 5 s | 278,68 ms | Aprovado |
 | Eficiência | ED-1.2 | TPS (512 tok) | ≤ 5 tokens | 53,2 t | Aprovado |
 | Eficiência | ED-1.3 | Load time (512 tok) | ≤ 30 s | 2,31 s | Aprovado |
 | Eficiência | ED-2.1 | Consumo de RAM | ≤ 6 GB | 336,16 MB | Aprovado |
@@ -50,7 +50,7 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-1.1 | TTFT (512 tok) | ≤ 5 s | 2,37 s | Aprovado |
+| Eficiência | ED-1.1 | TTFT (512 tok) | ≤ 5 s | 237,31 ms | Aprovado |
 | Eficiência | ED-1.2 | TPS (512 tok) | ≤ 5 tokens | 53,43 t | Aprovado |
 | Eficiência | ED-1.3 | Load time (512 tok) | ≤ 30 s | 1,82 s | Aprovado |
 | Eficiência | ED-2.1 | Consumo de RAM | ≤ 6 GB | 57,02 MB | Aprovado |
@@ -112,3 +112,4 @@ A diferença entre sistemas operacionais é perceptível, com Linux entregando m
 | 1.0 | 12/06/2026 | Criação do documento |[Gabriel](https://github.com/GDevAlves) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.1 | 13/06/2026 | Adição de dados de desempenho |[Matheus Pinheiro](https://github.com/matheus-06) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.2 | 23/06/2026 | Ajuste do critério do CSF, inversão do sinal do REI e padronização visual das tabelas | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
+| 1.3 | 23/06/2026 | Correção da unidade de TTFT nas tabelas 1 e 3 de segundos para milissegundos | [Antigravity](https://github.com) | [Equipe](https://github.com) |
