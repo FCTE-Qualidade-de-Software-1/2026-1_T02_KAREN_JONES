@@ -74,7 +74,7 @@ Os dados coletados e as conclusões da avaliação servirão para fundamentar as
 | **Característica** | **Análise a ser feita** | **Decisão Apoiada** | **Quem Decide?** |
 | :--- | :--- | :--- | :--- |
 | **Eficiência de Desempenho** | Medição do **Time to First Token (TTFT)** e monitoramento do uso de RAM (16GB) em hardware sem GPU dedicada durante o processamento de prompts. | Definir se o modelo Qwen 2.5 3B é viável para o uso acadêmico diário em máquinas modestas ou se apresenta latência excessiva. | Equipe de Avaliação |
-| **Portabilidade** | Validar a instalabilidade via script e a adaptabilidade funcional do Ollama comparando os sistemas Windows 11 e Linux (Ubuntu). | Confirmar se a ferramenta mantém a paridade de recursos em diferentes SOs para garantir uma recomendação universal aos estudantes. | Equipe de Avaliação |
+| **Portabilidade** | Validar a instalabilidade via script e a adaptabilidade funcional do Ollama comparando os sistemas Windows 11 e Linux (Zorin OS 18.1 Core). | Confirmar se a ferramenta mantém a paridade de recursos em diferentes SOs para garantir uma recomendação universal aos estudantes. | Equipe de Avaliação |
 
 <p align="center"><b>Autor:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a>, 2026.</p>
 
