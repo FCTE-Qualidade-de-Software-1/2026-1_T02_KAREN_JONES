@@ -30,10 +30,14 @@ As métricas e os resultados levantados nesta avaliação atuarão como *baselin
 
 Para atender às diretrizes da avaliação, estabelecemos abaixo o vínculo direto entre as características de qualidade priorizadas e o propósito do projeto (detalhado em [Propósito da Avaliação](./proposito.md)):
 
+**Tabela 1: Vínculo entre caracteríscticas**
+
 | Característica Priorizada | Vínculo Explícito com o Propósito Declarado |
 | :--- | :--- |
 | **Eficiência de Desempenho** | Responde diretamente à necessidade de validar se o Ollama possui "**tempo de resposta aceitável em hardware básico**". Garante que estudantes sem acesso à nuvem possam processar IA localmente sem inviabilizar o uso do computador (Utilização de Recursos e Comportamento Temporal). |
 | **Portabilidade** | Responde diretamente à exigência de que "**a experiência de instalação e adaptação seja equivalente entre sistemas operacionais**". Garante que a ferramenta seja universalmente acessível tanto para usuários de Windows quanto de Linux (Instalabilidade e Adaptabilidade). |
+
+<p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
 ## 2.5.3 Eficiência de Desempenho
 
@@ -42,11 +46,15 @@ Para atender às diretrizes da avaliação, estabelecemos abaixo o vínculo dire
 
 tabela com as subcaracterísticas relevantes para eficiência de desempenho:
 
+**Tabela 2: Subcaracterísticas**
+
 | Subcaracterística | Descrição (SQuaRE) | Relevância para o projeto (1-5) | Justificativa para a relevância |
 |-------------------|--------------------|---------------------------------| --------------------------------|
 | Comportamento temporal | grau em que os tempos de resposta e processamento e as taxas de transferência de um produto ou sistema, ao executar suas funções, atendem aos requisitos. | 5 | Tem influência direta na experiência dos stakeholders na execução. |
 | Utilização de recursos | grau em que as quantidades e tipos de recursos usados por um produto ou sistema, ao executar suas funções, atendem aos requisitos. | 5 | Os recursos utilizados devem ser otimizados para garantir o desempenho adequado, segundo o cenário de uso. |
 | Capacidade | grau em que os limites máximos de um parâmetro de produto ou sistema atendem aos requisitos. | 5 | Impacta diretamente na capacidade do sistema de atender às necessidades dos stakeholders. |
+
+<p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
 ## 2.5.4 Portabilidade
 
@@ -57,11 +65,15 @@ tabela com as subcaracterísticas relevantes para eficiência de desempenho:
 
 tabela com as subcaracterísticas relevantes para portabilidade:
 
+**Tabela 3: portabilidade**
+
 | Subcaracterística | Descrição (SQuaRE) | Relevância para o projeto (1-5) | Justificativa para a relevância |
 |-------------------|--------------------|---------------------------------| --------------------------------|
 | Adaptabilidade | grau em que um produto ou sistema pode ser adaptado de forma eficaz e eficiente para diferentes ou evoluindo hardware, software ou outros ambientes operacionais ou de uso. | 5 | De grande relevância para o projeto, pois permite a adaptação do sistema a diferentes ambientes. |
 | Instalabilidade | grau de eficácia e eficiência com que um produto ou sistema pode ser instalado e ou desinstalado com sucesso em um ambiente especificado. | 5 | Relevante para a análise do projeto, pois impacta na facilidade de implantação. |
 | Substituibilidade | grau em que um produto pode substituir outro produto de software especificado para o mesmo propósito no mesmo ambiente. | 2 | Para a análise do projeto, a substituibilidade é de menor relevância, pois os stakeholders não têm pretenção de substituir o produto por outro. |
+
+<p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
 ---
 

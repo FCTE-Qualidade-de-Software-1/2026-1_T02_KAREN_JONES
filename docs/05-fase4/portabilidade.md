@@ -20,7 +20,7 @@ O procedimento consistiu em 5 ciclos completos de instalação e desinstalação
 
 ### Dados Brutos — Instalabilidade (Zorin OS 18.1 Core)
 
-Tabela 1: Registros de instalabilidade — Zorin OS 18.1 Core
+**Tabela 1: Registros de instalabilidade — Zorin OS 18.1 Core**
 
 | Tentativa | Tempo de instalação (s) | Status instalação | Tempo de desinstalação (s) | Status desinstalação | Arquivos residuais |
 |-----------|------------------------|-------------------|---------------------------|---------------------|--------------------|
@@ -34,7 +34,7 @@ Tabela 1: Registros de instalabilidade — Zorin OS 18.1 Core
 
 ### Dados Brutos — Instalabilidade (Windows 11)
 
-Tabela 2: Registros de instalabilidade — Windows 11
+**Tabela 2: Registros de instalabilidade — Windows 11**
 <!--TODO: Adicionar dados que estão no csv atual estes estão errados -->
 | Tentativa | Tempo de instalação (s) | Status instalação | Tempo de desinstalação (s) | Status desinstalação | Arquivos residuais |
 |-----------|------------------------|-------------------|---------------------------|---------------------|--------------------|
@@ -48,7 +48,7 @@ Tabela 2: Registros de instalabilidade — Windows 11
 
 ### Métricas Calculadas — Instalabilidade
 
-Tabela 3: Síntese das métricas de instalabilidade por ambiente
+**Tabela 3: Síntese das métricas de instalabilidade por ambiente**
 
 | Métrica | Zorin OS 18.1 Core | Windows 11 | Critério (Fase 3) | Resultado |
 |---|---|---|---|---|
@@ -70,7 +70,7 @@ O procedimento consistiu na execução de 5 inferências padronizadas em cada am
 
 ### Dados Brutos — Adaptabilidade (Zorin OS 18.1 Core)
 
-Tabela 4: Registros de adaptabilidade — Zorin OS 18.1 Core
+**Tabela 4: Registros de adaptabilidade — Zorin OS 18.1 Core**
 
 | Inferência | Tempo de resposta (s) | Status  |
 |------------|----------------------|---------|
@@ -84,7 +84,7 @@ Tabela 4: Registros de adaptabilidade — Zorin OS 18.1 Core
 
 ### Dados Brutos — Adaptabilidade (Windows 11)
 
-Tabela 5: Registros de adaptabilidade — Windows 11
+**Tabela 5: Registros de adaptabilidade — Windows 11**
 
 | Inferência | Tempo de resposta (s) | Status  |
 |------------|----------------------|---------|
@@ -118,7 +118,7 @@ Média geral   = (1,00 + 17,75) / 2 = 9,38 s
 Desvio = |1,00 − 17,75| / 9,38 = 178,6%
 ```
 
-Tabela 6: Síntese das métricas de adaptabilidade por ambiente
+**Tabela 6: Síntese das métricas de adaptabilidade por ambiente**
 
 | Métrica | Zorin OS 18.1 Core | Windows 11 | Critério (Fase 3) | Resultado |
 |---|---|---|---|---|
@@ -129,7 +129,7 @@ Tabela 6: Síntese das métricas de adaptabilidade por ambiente
 
 ### Métricas Cruzadas entre Ambientes (PO-3.1, PO-3.2, PO-3.3)
 
-Tabela 7: Métricas de consistência entre ambientes
+**Tabela 7: Métricas de consistência entre ambientes**
 
 | Métrica | Valor calculado | Critério (Fase 2) | Resultado |
 |---|---|---|---|
@@ -204,7 +204,7 @@ Vale registrar que os dados de instalabilidade dos dois ambientes são **idênti
 
 ### Síntese dos Resultados
 
-Tabela 8: Consolidação das métricas de portabilidade
+**Tabela 8: Consolidação das métricas de portabilidade**
 
 | ID | Métrica | Critério | Linux | Windows | Resultado |
 |---|---|---|---|---|---|
