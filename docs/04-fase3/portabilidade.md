@@ -234,13 +234,13 @@ Conforme as hipóteses definidas na Fase 2:
 
 | Métrica | Critério de Aceitação | Referência Fase 2 |
 | --- | --- | --- |
-| PO-1.1 Taxa de Execuções Sem Falha | ≥ 99,0% de execuções bem-sucedidas em todas as plataformas | [Métrica 1.1](../03-fase2/portabilidade.md#metrica-11-taxa-de-execucoes-sem-falha-entre-plataformas) |
-| PO-1.2 Desvio de Desempenho de Inferência | ≤ 20% de variação entre plataformas | [Métrica 1.2](../03-fase2/portabilidade.md#metrica-12-desvio-de-desempenho-de-inferencia-entre-plataformas) |
-| PO-2.1 Taxa de Sucesso na Instalação | ≥ 95% das tentativas bem-sucedidas por plataforma | [Métrica 2.1](../03-fase2/portabilidade.md#metrica-21-taxa-de-sucesso-na-instalacao-installation-success-rate) |
-| PO-2.2 Taxa de Sucesso na Desinstalação | ≥ 90% das tentativas resultam em serviço de remoção completa | [Métrica 2.2](../03-fase2/portabilidade.md#metrica-22-taxa-de-sucesso-na-desinstalacao-uninstallation-success-rate) |
-| PO-3.1 Taxa de Sucesso de Instalação por Ambiente | ≥ 95% de sucesso em cada ambiente testado | [Métrica 3.1](../03-fase2/portabilidade.md#metrica-31-taxa-de-sucesso-de-instalacao-por-ambiente) |
-| PO-3.2 Desvio Relativo de Sucesso entre Ambientes | ≤ 5% de variação entre quaisquer dois ambientes | [Métrica 3.2](../03-fase2/portabilidade.md#metrica-32-desvio-relativo-de-sucesso-entre-ambientes) |
-| PO-3.3 Tempo de Instalação e Tipos de Falha | Variação de tempo ≤ 15% e nenhuma falha com taxa > 2% | [Métrica 3.3](../03-fase2/portabilidade.md#metrica-33-tempo-de-instalacao-e-tipos-de-falha-por-ambiente) |
+| <a id="ref-po11"></a> PO-1.1 Taxa de Execuções Sem Falha | ≥ 99,0% de execuções bem-sucedidas em todas as plataformas | [Métrica 1.1](../03-fase2/portabilidade.md#metrica-11-taxa-de-execucoes-sem-falha-entre-plataformas) |
+| <a id="ref-po12"></a> PO-1.2 Desvio de Desempenho de Inferência | ≤ 20% de variação entre plataformas | [Métrica 1.2](../03-fase2/portabilidade.md#metrica-12-desvio-de-desempenho-de-inferencia-entre-plataformas) |
+| <a id="ref-po21"></a> PO-2.1 Taxa de Sucesso na Instalação | ≥ 95% das tentativas bem-sucedidas por plataforma | [Métrica 2.1](../03-fase2/portabilidade.md#metrica-21-taxa-de-sucesso-na-instalacao-installation-success-rate) |
+| <a id="ref-po22"></a> PO-2.2 Taxa de Sucesso na Desinstalação | ≥ 90% das tentativas resultam em serviço de remoção completa | [Métrica 2.2](../03-fase2/portabilidade.md#metrica-22-taxa-de-sucesso-na-desinstalacao-uninstallation-success-rate) |
+| <a id="ref-po31"></a> PO-3.1 Taxa de Sucesso de Instalação por Ambiente | ≥ 95% de sucesso em cada ambiente testado | [Métrica 3.1](../03-fase2/portabilidade.md#metrica-31-taxa-de-sucesso-de-instalacao-por-ambiente) |
+| <a id="ref-po32"></a> PO-3.2 Desvio Relativo de Sucesso entre Ambientes | ≤ 5% de variação entre quaisquer dois ambientes | [Métrica 3.2](../03-fase2/portabilidade.md#metrica-32-desvio-relativo-de-sucesso-entre-ambientes) |
+| <a id="ref-po33"></a> PO-3.3 Tempo de Instalação e Tipos de Falha | Variação de tempo ≤ 15% e nenhuma falha com taxa > 2% | [Métrica 3.3](../03-fase2/portabilidade.md#metrica-33-tempo-de-instalacao-e-tipos-de-falha-por-ambiente) |
 
 <p align="center"><b>Autoras:</b> <a href="https://github.com/RenataKurzawa">Renata Quadros</a> e <a href="https://github.com/gio221">Giovana Barbosa</a>, 2026.</p>
 
