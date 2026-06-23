@@ -7,7 +7,7 @@ import statistics
 from datetime import datetime  # Pra juntar com os dados de monitor.py
 
 URL = "http://127.0.0.1:11434/api/generate"  # se trocar pra localhost tava aumentando 2000ms no TTFT
-N_RUNS = 5
+N_RUNS = 7
 KEEP_ALIVE = "5m"  # já é o padrão mas so pra garantir
 
 TELEMETRIA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "telemetria")
@@ -128,12 +128,12 @@ for i in range(N_RUNS):
         "avg_ollama_ram_used_mb": avg_ram_used_mb,
         "avg_ollama_cpu_percent": avg_cpu_percent,
         "rei": rei,
-        "load_duration:": ns_to_ms(final_data["load_duration"]),
-        "prompt_eval_count:": final_data["prompt_eval_count"],
-        "prompt_eval_duration:": ns_to_ms(final_data["prompt_eval_duration"]),
-        "eval_count:": final_data["eval_count"],
-        "eval_duration:": ns_to_ms(final_data["eval_duration"]),
-        "total_duration:": ns_to_ms(final_data["total_duration"]),
+        "load_duration": ns_to_ms(final_data["load_duration"]),
+        "prompt_eval_count": final_data["prompt_eval_count"],
+        "prompt_eval_duration": ns_to_ms(final_data["prompt_eval_duration"]),
+        "eval_count": final_data["eval_count"],
+        "eval_duration": ns_to_ms(final_data["eval_duration"]),
+        "total_duration": ns_to_ms(final_data["total_duration"]),
     }
 
     results.append(row)
@@ -141,7 +141,7 @@ for i in range(N_RUNS):
         {
             "ttft_ms": row["ttft_ms"],
             "tps": row["tps"],
-            "load_duration_ms": row["load_duration:"],
+            "load_duration_ms": row["load_duration"],
             "peak_ollama_ram_used_mb": peak_ram_used_mb,
             "avg_ollama_ram_used_mb": avg_ram_used_mb,
             "avg_ollama_cpu_percent": avg_cpu_percent,
