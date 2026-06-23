@@ -37,10 +37,6 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 | Eficiência | ED-3.1 | Escalonamento de contexto 1024 t | ≤ 4,0 | 1,01 | Aprovado |
 | Eficiência | ED-3.1 | Escalonamento de contexto 2048 t | ≤ 4,0 | 1,051 | Aprovado |
 | Eficiência | ED-3.1 | Escalonamento de contexto 4096 t | ≤ 4,0 | 1,058 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 512 t | ≤ 1 MB/t | -0,0172 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 1024 t | ≤ 1 MB/t | -0,0062 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 2048 t | ≤ 1 MB/t | -0,0031 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 4096 t | ≤ 1 MB/t | -0,0021 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -69,10 +65,6 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 | Eficiência | ED-3.1 | Escalonamento de contexto 1024 t | ≤ 4,0 | 1,029 | Aprovado |
 | Eficiência | ED-3.1 | Escalonamento de contexto 2048 t | ≤ 4,0 | 1,089 | Aprovado |
 | Eficiência | ED-3.1 | Escalonamento de contexto 4096 t | ≤ 4,0 | 1,118 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 512 t | ≤ 1 MB/t | 0,0002 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 1024 t | ≤ 1 MB/t | 0,0001 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 2048 t | ≤ 1 MB/t | 0,0004 | Aprovado |
-| Eficiência | ED-3.2 | Crescimento KV Cache 4096 t | ≤ 1 MB/t | 0,0003 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -80,7 +72,9 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 Os resultados de TTFT, TPS e Load Time mostram que o modelo atende aos critérios de tempo definidos na Fase 3 em ambos os ambientes. O consumo de recursos também se manteve bem abaixo dos limites previstos para RAM e CPU, especialmente em Linux.
 
-Os testes de capacidade ED-3.1 foram aprovados em todos os tamanhos de contexto analisados, indicando escalonamento aceitável para os limites definidos. Assim como os dados de ED-3.2 que mostraram que o crescimento do contexto (de 256 a 4096) não interfere significativamente no consumo de memória RAM por token.
+Os testes de capacidade ED-3.1 foram aprovados em todos os tamanhos de contexto analisados, indicando escalonamento aceitável para os limites definidos. 
+
+No entanto, a métrica **ED-3.2 (Taxa de Crescimento do KV Cache - KVCGR)** foi considerada **Inconclusiva / Inválida** e removida das tabelas de conformidade. A medição retornou valores negativos sob Windows 11 (ex: `-0,0172` MB/t, indicando redução de consumo com o aumento do contexto), o que é tecnicamente incompatível com o funcionamento do KV Cache. Isso ocorreu porque o baixíssimo consumo de memória RAM do modelo Qwen 2.5 3B gerou variações tão ínfimas que foram ofuscadas por ruído estatístico do sistema operacional, inviabilizando uma medição precisa da taxa de crescimento por token.
 
 ## 5.1.4 Análise Comparativa entre Ambientes
 
@@ -112,4 +106,4 @@ A diferença entre sistemas operacionais é perceptível, com Linux entregando m
 | 1.0 | 12/06/2026 | Criação do documento |[Gabriel](https://github.com/GDevAlves) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.1 | 13/06/2026 | Adição de dados de desempenho |[Matheus Pinheiro](https://github.com/matheus-06) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.2 | 23/06/2026 | Ajuste do critério do CSF, inversão do sinal do REI e padronização visual das tabelas | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
-| 1.3 | 23/06/2026 | Correção da unidade de TTFT nas tabelas 1 e 3 de segundos para milissegundos | [Antigravity](https://github.com) | [Equipe](https://github.com) |
+| 1.3 | 23/06/2026 | Correção do TTFT (s para ms) e classificação da métrica ED-3.2 (KVCGR) como Inconclusiva/Inválida | [Antigravity](https://github.com) | [Equipe](https://github.com) |
