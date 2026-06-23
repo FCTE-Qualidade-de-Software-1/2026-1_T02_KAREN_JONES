@@ -18,12 +18,12 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-1.1 | TTFT (512 tok) | ≤ 5 s | 278,68 ms | Aprovado |
-| Eficiência | ED-1.2 | TPS (512 tok) | ≤ 5 tokens | 53,2 t | Aprovado |
-| Eficiência | ED-1.3 | Load time (512 tok) | ≤ 30 s | 2,31 s | Aprovado |
-| Eficiência | ED-2.1 | Consumo de RAM | ≤ 6 GB | 336,16 MB | Aprovado |
-| Eficiência | ED-2.2 | Uso de CPU | ≤ 90 % | 0,23 % | Aprovado |
-| Eficiência | ED-2.3 | Eficiência de recurso | ≥ 0,5 | 704,54 | Aprovado |
+| Eficiência | **[ED-1.1](../04-fase3/eficiencia.md#ref-ed11)**| TTFT (512 tok) | ≤ 5 s | 278,68 ms | Aprovado |
+| Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)** | TPS (512 tok) | ≤ 5 tokens | 53,2 t | Aprovado |
+| Eficiência | **[ED-1.3](../04-fase3/eficiencia.md#ref-ed13)**| Load time (512 tok) | ≤ 30 s | 2,31 s | Aprovado |
+| Eficiência | **[ED-2.1](../04-fase3/eficiencia.md#ref-ed21)** | Consumo de RAM | ≤ 6 GB | 336,16 MB | Aprovado |
+| Eficiência | **[ED-2.2](../04-fase3/eficiencia.md#ref-ed22)**| Uso de CPU | ≤ 90 % | 0,23 % | Aprovado |
+| Eficiência | **[ED-2.3](../04-fase3/eficiencia.md#ref-ed23)** | Eficiência de recurso | ≥ 0,5 | 704,54 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -33,10 +33,10 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-3.1 | Escalonamento de contexto 512 t | ≤ 4,0 | 1,015 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 1024 t | ≤ 4,0 | 1,01 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 2048 t | ≤ 4,0 | 1,051 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 4096 t | ≤ 4,0 | 1,058 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 512 t | ≤ 4,0 | 1,015 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 1024 t | ≤ 4,0 | 1,01 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 2048 t | ≤ 4,0 | 1,051 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 4096 t | ≤ 4,0 | 1,058 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -46,12 +46,12 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-1.1 | TTFT (512 tok) | ≤ 5 s | 237,31 ms | Aprovado |
-| Eficiência | ED-1.2 | TPS (512 tok) | ≤ 5 tokens | 53,43 t | Aprovado |
-| Eficiência | ED-1.3 | Load time (512 tok) | ≤ 30 s | 1,82 s | Aprovado |
-| Eficiência | ED-2.1 | Consumo de RAM | ≤ 6 GB | 57,02 MB | Aprovado |
-| Eficiência | ED-2.2 | Uso de CPU | ≤ 90 % | 0,18 % | Aprovado |
-| Eficiência | ED-2.3 | Eficiência de recurso | ≥ 0,5 | 5421,42 | Aprovado |
+| Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)** | TTFT (512 tok) | ≤ 5 s | 237,31 ms | Aprovado |
+| Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)**| TPS (512 tok) | ≤ 5 tokens | 53,43 t | Aprovado |
+| Eficiência | **[ED-1.3](../04-fase3/eficiencia.md#ref-ed13)** | Load time (512 tok) | ≤ 30 s | 1,82 s | Aprovado |
+| Eficiência | **[ED-2.1](../04-fase3/eficiencia.md#ref-ed21)** | Consumo de RAM | ≤ 6 GB | 57,02 MB | Aprovado |
+| Eficiência | **[ED-2.2](../04-fase3/eficiencia.md#ref-ed22)**| Uso de CPU | ≤ 90 % | 0,18 % | Aprovado |
+| Eficiência | **[ED-2.3](../04-fase3/eficiencia.md#ref-ed23)**| Eficiência de recurso | ≥ 0,5 | 5421,42 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -61,10 +61,10 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | ED-3.1 | Escalonamento de contexto 512 t | ≤ 4,0 | 0,993 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 1024 t | ≤ 4,0 | 1,029 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 2048 t | ≤ 4,0 | 1,089 | Aprovado |
-| Eficiência | ED-3.1 | Escalonamento de contexto 4096 t | ≤ 4,0 | 1,118 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 512 t | ≤ 4,0 | 0,993 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 1024 t | ≤ 4,0 | 1,029 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 2048 t | ≤ 4,0 | 1,089 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 4096 t | ≤ 4,0 | 1,118 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -106,4 +106,4 @@ A diferença entre sistemas operacionais é perceptível, com Linux entregando m
 | 1.0 | 12/06/2026 | Criação do documento |[Gabriel](https://github.com/GDevAlves) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.1 | 13/06/2026 | Adição de dados de desempenho |[Matheus Pinheiro](https://github.com/matheus-06) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.2 | 23/06/2026 | Ajuste do critério do CSF, inversão do sinal do REI e padronização visual das tabelas | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
-| 1.3 | 23/06/2026 | Correção do TTFT (s para ms) e classificação da métrica ED-3.2 (KVCGR) como Inconclusiva/Inválida | [Antigravity](https://github.com) | [Equipe](https://github.com) |
+| 1.3 | 23/06/2026 | Correção do TTFT (s para ms) e classificação da métrica ED-3.2 (KVCGR) como Inconclusiva/Inválida | [Johnnatan Salles](https://github.com/jsalless) | [Renata Quadros](https://github.com/RenataKurzawa) |
