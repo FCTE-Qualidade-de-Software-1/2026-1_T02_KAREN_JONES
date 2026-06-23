@@ -44,7 +44,7 @@ Tabela 1: Objetivo de Medição de Qualidade – Eficiência de Desempenho
 
 O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apresentar latência de inferência compatível com uso interativo em hardware de consumo comum (CPU moderna ou GPU de entrada), com tempo de resposta percebível como aceitável pelo usuário. A hipótese é que o sistema consiga gerar os primeiros tokens em menos de 5 segundos e manter uma taxa de geração suficiente para leitura em tempo real em hardware convencional.
 
-#### Métrica 1.1: Média do tempo de resposta - Tempo até o Primeiro Token (Time to First Token – TTFT)
+#### <span id="m11"></span>Métrica 1.1: Média do tempo de resposta - Tempo até o Primeiro Token (Time to First Token – TTFT)
 
 > Fórmula:
 >
@@ -62,7 +62,7 @@ O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apre
 >
 > Latência elevada (Hipótese Refutada): TTFT mediana > 5 segundos em CPU ou > 2 segundos com GPU.
 
-#### Métrica 1.2: Média da Taxa de evasão - Taxa de Geração de Tokens (Tokens Per Second – TPS)
+#### <span id="m12"></span>Métrica 1.2: Média da Taxa de evasão - Taxa de Geração de Tokens (Tokens Per Second – TPS)
 
 > Fórmula:
 >
@@ -80,7 +80,7 @@ O Qwen 2.5 3B, por ser um modelo compacto (3 bilhões de parâmetros), deve apre
 >
 > Abaixo do limiar aceitável (Hipótese Refutada): < 5 tokens/s.
 
-#### Métrica 1.3: Latência de Carregamento do Modelo (Model Load Time – MLT)
+#### <span id="m13"></span>Métrica 1.3: Latência de Carregamento do Modelo (Model Load Time – MLT)
 
 > Fórmula:
 >
@@ -191,7 +191,7 @@ A complexidade quadrática do mecanismo de atenção dos Transformers deve causa
 
 ## Conclusões
 
-Com a aplicação do método GQM, foi possível estruturar de forma mensurável e reproduzível a análise de eficiência de desempenho do Ollama em conjunto com a LLM Qwen 2.5 3B. As quatro questões formuladas cobrem as três subcaracterísticas de eficiência de desempenho previstas na ISO/IEC 25010: Comportamento em Relação ao Tempo (Q1 e Q3), Utilização de Recursos (Q2 e Q3).
+Com a aplicação do método GQM, foi possível estruturar de forma mensurável e reproduzível a análise de eficiência de desempenho do Ollama em conjunto com a LLM Qwen 2.5 3B. As três questões formuladas cobrem as três subcaracterísticas de eficiência de desempenho previstas na ISO/IEC 25010: Comportamento em Relação ao Tempo (Q1 e Q3), Utilização de Recursos (Q2 e Q3).
 
 As métricas definidas permitem avaliar objetivamente a latência de inferência, a taxa de geração de tokens, o consumo de recursos computacionais, o impacto do aumento do contexto e o comportamento do sistema sob carga concorrente.
 
@@ -232,3 +232,4 @@ Acesso em: 03 jun. 2026.
 |---------|---------|---------|---------|---------|
 | 1.0 | 03/06/2026 | Adição de conteúdo | [Luiza](https://github.com/Luizaxx) | [Gabriel Alves](https://github.com/GdevAlves) |
 | 1.1 | 12/06/2026 | Revisão de métricas | [Luiza](https://github.com/Luizaxx) | [Gabriel Alves](https://github.com/GdevAlves) |
+| 1.2 | 23/06/2026 | Alinhamento de fases | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
