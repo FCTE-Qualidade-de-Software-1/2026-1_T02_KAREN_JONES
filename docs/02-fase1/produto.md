@@ -372,4 +372,4 @@ O modelo é compatível com diversos frameworks de treinamento e otimização.
 | 2.0 | 13/05/2026 | Inserção de informações sobre o Qwen2.5-3B | [Luiza](https://github.com/Luizaxx) | [Johnnatan Salles](https://github.com/jsalless) |
 | 2.1 | 13/05/2026 | Inserção de diagrama de arquitetura Ollamac| [Luiza](https://github.com/Luizaxx) | [Johnnatan Salles](https://github.com/jsalless) |
 | 1.2 | 12/06/2026 | Legenda na logo do ollama | [Johnnatan Salles](https://github.com/jsalless) | [](https://github.com/) |
-
+| 2.0 | 23/06/2026 | Correção de versionamento e erros gramaticais | [Luiza](https://github.com/Luizaxx) | [Renata Quadros](https://github.com/RenataKurzawa)| [](https://github.com/) |
