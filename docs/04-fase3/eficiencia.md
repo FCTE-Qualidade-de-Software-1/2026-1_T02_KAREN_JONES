@@ -212,3 +212,4 @@ Após cada sessão de testes:
 | 1.0 | 04/06/2026 | Criação do documento |[Giovana Barbosa](https://github.com/gio221) | [Renata Quadros](https://github.com/RenataKurzawa) | 
 | 1.1 | 12/06/2026 | Alinhamento de métricas da fase 2 | [Gabriel Alves](https://github.com/GDveAlves) | [Matheus Pinheiro](https://github.com/Matheus-06)|
 | 1.2 | 23/06/2026 | Alinhamento de fases, hiperlinks, padronização de títulos, legendas e autorias das tabelas | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
+| 2.0 | 23/06/2026 | Correção de versionamento e erros gramaticais | [Luiza](https://github.com/Luizaxx) | [Renata Quadros](https://github.com/RenataKurzawa)| [](https://github.com/) |

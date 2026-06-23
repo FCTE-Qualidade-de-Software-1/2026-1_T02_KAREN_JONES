@@ -33,4 +33,5 @@ O objetivo é garantir que o **Ollama** possa ser instalado, desinstalado e exec
 | Versão | Data | Descrição | Autor | Revisor |
 |---|---|---|---|---|
 | 1.0 | 13/05/2026 | Criação dos Requisitantes e Partes Interessadas | [Giovana Barbosa](https://github.com/gio221) | [Renata Quadros](https://github.com/RenataKurzawa) |
-| 1.1 | 13/05/2026 | Correção no histórico de versões, substituição da introdução e metodologia do Llama pelas do Ollama e adição do ollama na bibliografia | [Matheus Pinheiro](https://github.com/matheus-06) | [](https://github.com/) |
+| 1.1 | 13/05/2026 | Correção no histórico de versões, substituição da introdução e metodologia do Llama pelas do Ollama e adição do ollama na bibliografia | [Matheus Pinheiro](https://github.com/matheus-06) |  [Luiza](https://github.com/Luizaxx) |
+| 2.0 | 23/06/2026 | Correção de versionamento e erros gramaticais | [Luiza](https://github.com/Luizaxx) | [Renata Quadros](https://github.com/RenataKurzawa)| [](https://github.com/) |
