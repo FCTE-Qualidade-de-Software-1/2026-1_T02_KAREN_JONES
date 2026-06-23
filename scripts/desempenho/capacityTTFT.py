@@ -8,8 +8,8 @@ import os as os
 
 URL = "http://127.0.0.1:11434/api/generate"
 MODEL = "qwen2.5:3b"
-N_RUNS = 7  # 7 execuções por tamanho de contexto, remove menor/maior TTFT -> 5 usados
-KEEP_ALIVE = "5m"
+N_RUNS = 5  # 5 execuções por tamanho de contexto, remove menor/maior TTFT -> 3 usados
+KEEP_ALIVE = "15m"
 NUM_CTX = 8192  # janela de contexto grande o suficiente pra caber o prompt de ~4096 tokens + resposta
 NUM_PREDICT = 100  # limita a geração pra manter a fase de "eval" comparável entre tamanhos
 

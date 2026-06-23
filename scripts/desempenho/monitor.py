@@ -26,17 +26,48 @@ fieldnames = [
 
 
 def get_ollama_processes():
-    """Retorna os processos do Ollama (server + runner do modelo)."""
-    procs = []
-    for p in psutil.process_iter(["pid", "name"]):
+    """Retorna ollama server + todos os filhos, independente do nome."""
+    procs = {}
+    
+    # primeiro passo: encontra qualquer processo com "ollama" no nome OU cmdline
+    roots = []
+    for p in psutil.process_iter(["pid", "name", "cmdline"]):
         try:
             name = (p.info["name"] or "").lower()
-            if "ollama" in name:
-                procs.append(psutil.Process(p.info["pid"]))
+            cmdline = " ".join(p.info.get("cmdline") or []).lower()
+            if "ollama" in name or "ollama" in cmdline:
+                roots.append(psutil.Process(p.info["pid"]))
         except (psutil.NoSuchProcess, psutil.AccessDenied):
             continue
-    return procs
 
+    # segundo passo: inclui todos os filhos recursivamente
+    for root in roots:
+        if root.pid not in procs:
+            procs[root.pid] = root
+        try:
+            for child in root.children(recursive=True):
+                if child.pid not in procs:
+                    procs[child.pid] = child
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
+
+    return list(procs.values())
+
+def get_ollama_ram_mb(proc):
+    """RSS + tamanho dos arquivos .gguf mapeados em memória (mmap)."""
+    try:
+        rss = proc.memory_info().rss
+        mmap_size = 0
+        try:
+            for m in proc.memory_maps():
+                path = (m.path or "").lower()
+                if path.endswith(".gguf") or "ollama/models" in path:
+                    mmap_size += m.size  # tamanho da região mapeada
+        except (psutil.AccessDenied, AttributeError):
+            pass
+        return (rss + mmap_size) / (1024 * 1024)
+    except (psutil.NoSuchProcess, psutil.AccessDenied):
+        return 0.0
 
 print(f"Monitorando recursos a cada {SAMPLE_INTERVAL*1000:.0f}ms... (Ctrl+C para parar)")
 print(f"Salvando em {OUTPUT_FILE}")
@@ -62,6 +93,12 @@ with open(OUTPUT_FILE, "w", newline="") as f:
     writer.writeheader()
 
     try:
+        print("\n[monitor] Processos Ollama detectados na inicialização:")
+        for p in get_ollama_processes():
+            try:
+                print(f"  PID {p.pid} | {p.name()} | {' '.join(p.cmdline()[:3])}")
+            except Exception:
+                pass
         while True:
             # atualiza lista de processos do ollama (podem subir/morrer durante o teste)
             current_procs = get_ollama_processes()
@@ -79,7 +116,7 @@ with open(OUTPUT_FILE, "w", newline="") as f:
             for pid, p in ollama_procs.items():
                 try:
                     ollama_cpu_percent += p.cpu_percent(interval=None)
-                    ollama_ram_mb += p.memory_info().rss / (1024 * 1024)
+                    ollama_ram_mb += get_ollama_ram_mb(p)
                 except (psutil.NoSuchProcess, psutil.AccessDenied):
                     dead_pids.append(pid)
 
