@@ -122,10 +122,10 @@ Tabela 6: Síntese das métricas de adaptabilidade por ambiente
 
 | Métrica | Zorin OS 18.1 Core | Windows 11 | Critério (Fase 3) | Resultado |
 |---|---|---|---|---|
-| **PO-1.1** Paridade funcional | 100,0% (5/5) | 100,0% (5/5) | 100% | ✓ Aprovado |
-| **PO-1.2** Desvio de desempenho (com warm-up) | — | — | ≤ 20% | ✗ Reprovado — 111,7% |
-| **PO-1.2** Desvio de desempenho (sem warm-up) | — | — | ≤ 20% | ✗ Reprovado — 178,6% |
-| **PO-3.3** Taxa de falhas por ambiente | 0,0% (0/5) | 0,0% (0/5) | ≤ 2% | ✓ Aprovado |
+| **[PO-1.1](../04-fase3/portabilidade.md#ref-po11)**| 100,0% (5/5) Taxa de Execuções Sem Falha | 100,0% (5/5) | 100% | ✓ Aprovado |
+| **[PO-1.2](../04-fase3/portabilidade.md#ref-po12)** Desvio de desempenho (com warm-up) | — | — | ≤ 20% | ✗ Reprovado — 111,7% |
+| **[PO-1.2](../04-fase3/portabilidade.md#ref-po12)** Desvio de desempenho (sem warm-up) | — | — | ≤ 20% | ✗ Reprovado — 178,6% |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** Taxa de falhas por ambiente | 0,0% (0/5) | 0,0% (0/5) | ≤ 2% | ✓ Aprovado |
 
 ### Métricas Cruzadas entre Ambientes (PO-3.1, PO-3.2, PO-3.3)
 
@@ -133,12 +133,12 @@ Tabela 7: Métricas de consistência entre ambientes
 
 | Métrica | Valor calculado | Critério (Fase 2) | Resultado |
 |---|---|---|---|
-| **PO-3.1** Taxa de sucesso por ambiente (Linux) | 100,0% | ≥ 95% | ✓ Aprovado |
-| **PO-3.1** Taxa de sucesso por ambiente (Windows) | 100,0% | ≥ 95% | ✓ Aprovado |
-| **PO-3.2** Desvio relativo de sucesso entre ambientes | 0,0% | ≤ 5% | ✓ Aprovado |
-| **PO-3.3** Variação de tempo de instalação entre ambientes | 0,0% | ≤ 15% | ✓ Aprovado |
-| **PO-3.3** Taxa de falhas específicas de ambiente (Linux) | 0,0% | ≤ 2% | ✓ Aprovado |
-| **PO-3.3** Taxa de falhas específicas de ambiente (Windows) | 0,0% | ≤ 2% | ✓ Aprovado |
+| **[PO-3.1](../04-fase3/portabilidade.md#ref-po31)** Taxa de sucesso por ambiente (Linux) | 100,0% | ≥ 95% | ✓ Aprovado |
+| **[PO-3.1](.../04-fase3/portabilidade.md#ref-po31)** Taxa de sucesso por ambiente (Windows) | 100,0% | ≥ 95% | ✓ Aprovado |
+| **[PO-3.2](../04-fase3/portabilidade.md#ref-po32)** Desvio relativo de sucesso entre ambientes | 0,0% | ≤ 5% | ✓ Aprovado |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** Variação de tempo de instalação entre ambientes | 0,0% | ≤ 15% | ✓ Aprovado |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** Taxa de falhas específicas de ambiente (Linux) | 0,0% | ≤ 2% | ✓ Aprovado |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** Taxa de falhas específicas de ambiente (Windows) | 0,0% | ≤ 2% | ✓ Aprovado |
 
 ## 5.2.4 Análise por Questão GQM
 
@@ -208,15 +208,15 @@ Tabela 8: Consolidação das métricas de portabilidade
 
 | ID | Métrica | Critério | Linux | Windows | Resultado |
 |---|---|---|---|---|---|
-| PO-1.1 | Taxa de sucesso na instalação | ≥ 90% | 100,0% | 100,0% | ✓ Aprovado |
-| PO-1.2 | Tempo médio de instalação | ≤ 300 s | 29,79 s | 29,79 s | ✓ Aprovado |
-| PO-1.3 | Taxa de sucesso na desinstalação | ≥ 90% | 100,0% | 100,0% | ✓ Aprovado |
-| PO-2.1 | Paridade funcional entre SOs | 100% | 100,0% | 100,0% | ✓ Aprovado |
-| PO-2.2 | Desvio de desempenho entre SOs | ≤ 20% | — | — | ✗ Reprovado (111,7%) |
-| PO-2.3 | Taxa de falhas por ambiente | ≤ 2% | 0,0% | 0,0% | ✓ Aprovado |
-| PO-3.1 | Taxa de sucesso por ambiente | ≥ 95% | 100,0% | 100,0% | ✓ Aprovado |
-| PO-3.2 | Desvio relativo de sucesso entre ambientes | ≤ 5% | — | 0,0% | ✓ Aprovado |
-| PO-3.3 | Variação de tempo de instalação / falhas específicas | ≤ 15% / ≤ 2% | 0,0% / 0,0% | 0,0% / 0,0% | ✓ Aprovado |
+| **[PO-1.1](../04-fase3/portabilidade.md#ref-po11)** | Taxa de sucesso na instalação | ≥ 90% | 100,0% | 100,0% | ✓ Aprovado |
+| **[PO-1.2](../04-fase3/portabilidade.md#ref-po12)** | Tempo médio de instalação | ≤ 300 s | 29,79 s | 29,79 s | ✓ Aprovado |
+| **[PO-1.3](../04-fase3/portabilidade.md#ref-po13)** | Taxa de sucesso na desinstalação | ≥ 90% | 100,0% | 100,0% | ✓ Aprovado |
+| **[PO-2.1](../04-fase3/portabilidade.md#ref-po21)** | Paridade funcional entre SOs | 100% | 100,0% | 100,0% | ✓ Aprovado |
+| **[PO-2.2](../04-fase3/portabilidade.md#ref-po22)** | Desvio de desempenho entre SOs | ≤ 20% | — | — | ✗ Reprovado (111,7%) |
+| **[PO-2.3](../04-fase3/portabilidade.md#ref-po23)** | Taxa de falhas por ambiente | ≤ 2% | 0,0% | 0,0% | ✓ Aprovado |
+| **[PO-3.1](../04-fase3/portabilidade.md#ref-po31)** | Taxa de sucesso por ambiente | ≥ 95% | 100,0% | 100,0% | ✓ Aprovado |
+| **[PO-3.2](../04-fase3/portabilidade.md#ref-po32)** | Desvio relativo de sucesso entre ambientes | ≤ 5% | — | 0,0% | ✓ Aprovado |
+| **[PO-3.3](../04-fase3/portabilidade.md#ref-po33)** | Variação de tempo de instalação / falhas específicas | ≤ 15% / ≤ 2% | 0,0% / 0,0% | 0,0% / 0,0% | ✓ Aprovado |
 
 De 9 métricas avaliadas, **8 foram aprovadas** e **1 foi reprovada** (PO-2.2 — desvio de desempenho de inferência). O resultado global indica que o Ollama com Qwen 2.5 3B apresenta **alta portabilidade em termos de instalabilidade e paridade funcional**, com a ressalva de que o desempenho de inferência varia significativamente entre plataformas em hardware sem aceleração por GPU.
 
@@ -256,3 +256,4 @@ Para a elaboração deste documento, modelos de linguagem de grande porte foram 
 |--------|------------|---------------------------------------------------|---------|---------|
 | 1.0    | 12/06/2026 | Criação do documento com resultados da execução   | Gabriel | [Giovana Barbosa](https://github.com/gio221)    |
 |1.1     | 23/06/2026| Alterações nos dados | [Giovana Barbosa](https://github.com/gio221) |
+
