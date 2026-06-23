@@ -76,20 +76,34 @@ Os testes de capacidade ED-3.1 foram aprovados em todos os tamanhos de contexto 
 
 No entanto, a métrica **ED-3.2 (Taxa de Crescimento do KV Cache - KVCGR)** foi considerada **Inconclusiva / Inválida** e removida das tabelas de conformidade. A medição retornou valores negativos sob Windows 11 (ex: `-0,0172` MB/t, indicando redução de consumo com o aumento do contexto), o que é tecnicamente incompatível com o funcionamento do KV Cache. Isso ocorreu porque o baixíssimo consumo de memória RAM do modelo Qwen 2.5 3B gerou variações tão ínfimas que foram ofuscadas por ruído estatístico do sistema operacional, inviabilizando uma medição precisa da taxa de crescimento por token.
 
+**Tabela 4.5: Análise por Questão GQM (Q1–Q4)**
+
+| Questão | Métrica Principal | Critério | Status |
+| :--- | :--- | :--- | :--- |
+| Q1 — Latência interativa | TTFT mediana | ≤ 3s (CPU) | Aprovada |
+| Q1 — Geração em tempo real | TPS | ≥ 10 tok/s | Aprovada |
+| Q2 — Consumo de RAM | RAM_inferência | ≤ 4 GB | Aprovada |
+| Q2 — Consumo de CPU | CPU_uso | ≤ 90% | Aprovada |
+| Q3 — Escalonamento de contexto | CSF | ≤ 4,0 para 4096 tok | Aprovado |
+
+<p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
+
 ## 5.1.4 Análise Comparativa entre Ambientes
 
-Comparando os sistemas operacionais observa-se que o Zorin teve:
+Comparação direta por métrica, calculando o desvio relativo de desempenho entre os dois ambientes. Responde à questão central: há diferença significativa entre os sistemas operacionais?
 
-- Redução de 14,84% no TTFT
-- Aumento de 0,43% no TPS
-- Redução de 20,97% na latência de carregamento do modelo
-- Redução de 83,04% no consumo de RAM
-- Redução de 21,74% no consumo de CPU
-- Aumento de 669,50% no REI
-- Redução de 24,65%
+**Tabela 5: Análise Comparativa Windows × Linux**
 
+| Métrica | Windows 11 | Linux (Zorin OS) | Desvio (%) | Critério |
+| :--- | :---: | :---: | :---: | :---: |
+| TTFT (512 tok) | 278,68 ms | 237,32 ms | 29,25% | ≤ 20% |
+| TPS | 53,2 t | 53,43 t | 0,163% | Desvio ≤ 20% |
+| RAM pico | 336,16 MB | 57,02 MB | 197,38% | ≤ 6 GB |
+| CPU médio (%) | 0,23% | 0,18% | 0,0354% | ≤ 90% |
 
-- Apesar do desempenho do Zorin apresentar melhora considerável quando comparado ao Windows11, ambos ainda passam em todas as métricas de desempenho.
+<p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
+
+- Apesar do desempenho do Zorin apresentar melhora considerável quando comparado ao Windows 11, ambos ainda passam em todas as métricas de desempenho.
 
 ## 5.1.5 Interpretação e Discussão
 
