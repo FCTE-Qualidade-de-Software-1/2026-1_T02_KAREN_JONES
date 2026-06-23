@@ -1,0 +1,6 @@
+context_label,prompt_eval_count_mean,ttft_ms_mean,ttft_ms_median,ttft_ms_desvio,prompt_eval_duration_ms_mean,prompt_eval_duration_ms_median,prompt_eval_duration_ms_desvio,peak_ollama_ram_used_mb_mean,peak_ollama_ram_used_mb_median,peak_ollama_ram_used_mb_desvio,avg_ollama_ram_used_mb_mean,avg_ollama_cpu_percent_mean,csf,kvcgr_mb_per_token
+~256,253,203.46,203.23,3.18,20.21,20.42,0.43,551.8,551.79,0.29,551.6,4.07,1.0,
+~512,477,203.38,208.86,8.26,19.25,19.27,0.07,553.24,553.55,0.67,553.23,3.96,0.9996,0.0064
+~1024,925,200.51,200.54,0.63,19.1,18.64,0.67,621.09,621.41,0.75,620.38,3.87,0.9855,0.1031
+~2048,1821,202.83,205.14,7.91,19.08,19.02,0.1,621.74,621.84,0.18,621.65,3.84,0.9969,0.0446
+~4096,3613,204.7,205.14,0.95,19.98,20.01,0.16,624.28,624.39,0.51,624.18,3.78,1.0061,0.0216

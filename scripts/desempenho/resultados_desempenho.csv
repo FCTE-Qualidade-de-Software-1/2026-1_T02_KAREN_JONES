@@ -1,0 +1,17 @@
+ed_id,nome,dimensao,descricao,contexto,mean,median,desvio,unidade,observacao
+ED-1.1,Time to First Token (TTFT),Comportamento Temporal,Tempo entre o envio do prompt e a chegada do primeiro token de resposta,prompt fixo ~256 tokens,220.03,216.28,10.49,ms,
+ED-1.2,Tokens por Segundo (TPS),Comportamento Temporal,Taxa de geração de tokens após o primeiro token,prompt fixo ~256 tokens,51.09,50.52,1.32,tokens/s,
+ED-1.3,Latência de Carregamento do Modelo (MLT),Comportamento Temporal,Diferença entre tempo de carregamento do modelo e tempo de início da inferência,prompt fixo ~256 tokens,167.2,162.09,8.95,ms,Proxy: load_duration reportado pelo Ollama
+ED-2.1,Consumo de RAM,Utilização de Recursos,Máximo de memória RAM consumida durante a execução,prompt fixo ~256 tokens,748.43,755.16,73.87,MB,Pico de RAM do processo Ollama
+ED-2.2,Uso Médio de CPU,Utilização de Recursos,Percentual de utilização da CPU durante a execução,prompt fixo ~256 tokens,3.47,3.46,0.05,%,CPU normalizada pelo número de núcleos
+ED-2.3,Índice de Eficiência de Recursos (REI),Utilização de Recursos,Relação entre a taxa de geração de tokens e o consumo de recursos (CPU * RAM),prompt fixo ~256 tokens,20.41,19.02,2.54,tokens/s por (GB * %CPU),REI = TPS / (RAM_GB * CPU%)
+ED-3.1,Fator de Escalonamento de Contexto (CSF),Capacidade,TTFT com diferentes tamanhos de contexto comparado com baseline ~256 tokens,~256 (~253 tokens),203.46,203.23,3.18,ms,CSF=1.0
+ED-3.1,Fator de Escalonamento de Contexto (CSF),Capacidade,TTFT com diferentes tamanhos de contexto comparado com baseline ~256 tokens,~512 (~477 tokens),203.38,208.86,8.26,ms,CSF=0.9996
+ED-3.1,Fator de Escalonamento de Contexto (CSF),Capacidade,TTFT com diferentes tamanhos de contexto comparado com baseline ~256 tokens,~1024 (~925 tokens),200.51,200.54,0.63,ms,CSF=0.9855
+ED-3.1,Fator de Escalonamento de Contexto (CSF),Capacidade,TTFT com diferentes tamanhos de contexto comparado com baseline ~256 tokens,~2048 (~1821 tokens),202.83,205.14,7.91,ms,CSF=0.9969
+ED-3.1,Fator de Escalonamento de Contexto (CSF),Capacidade,TTFT com diferentes tamanhos de contexto comparado com baseline ~256 tokens,~4096 (~3613 tokens),204.7,205.14,0.95,ms,CSF=1.0061
+ED-3.2,Taxa de Crescimento do KV Cache (KVCGR),Capacidade,"Crescimento de RAM de pico em relação ao baseline ~256 tokens, por token adicionado",~256 (~253 tokens),,,,MB/token,baseline (sem delta)
+ED-3.2,Taxa de Crescimento do KV Cache (KVCGR),Capacidade,"Crescimento de RAM de pico em relação ao baseline ~256 tokens, por token adicionado",~512 (~477 tokens),0.0064,,,MB/token,RAM pico=553.24 MB
+ED-3.2,Taxa de Crescimento do KV Cache (KVCGR),Capacidade,"Crescimento de RAM de pico em relação ao baseline ~256 tokens, por token adicionado",~1024 (~925 tokens),0.1031,,,MB/token,RAM pico=621.09 MB
+ED-3.2,Taxa de Crescimento do KV Cache (KVCGR),Capacidade,"Crescimento de RAM de pico em relação ao baseline ~256 tokens, por token adicionado",~2048 (~1821 tokens),0.0446,,,MB/token,RAM pico=621.74 MB
+ED-3.2,Taxa de Crescimento do KV Cache (KVCGR),Capacidade,"Crescimento de RAM de pico em relação ao baseline ~256 tokens, por token adicionado",~4096 (~3613 tokens),0.0216,,,MB/token,RAM pico=624.28 MB
