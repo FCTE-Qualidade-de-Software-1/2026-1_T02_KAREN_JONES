@@ -184,7 +184,7 @@ Qualquer membro da equipe pode executar o procedimento, independentemente de exp
 
 ## Passo 2: Testes de Instalabilidade
 
-Para cada ambiente, repetir o procedimento **5 vezes**:
+Para cada ambiente, repetir o procedimento **5 vezes** (justifica-se que 5 ciclos são suficientes para a tendência observada):
 
 1. Garantir que o Ollama não está instalado;
 2. Iniciar o cronômetro;
@@ -284,3 +284,4 @@ Para a elaboração deste documento, a Inteligência Artificial foi utilizada co
 | 1.1 | 12/06/2026 | Alinhamento de métricas da fase 2 | [Gabriel Alves](https://github.com/GDveAlves) | [Matheus Pinheiro](https://github.com/Matheus-06)|
 | 1.2 | 12/06/2026 | Atualização | [Renata Quadros](https://github.com/RenataKurzawa) |[Giovana Barbosa](https://github.com/gio221) |
 | 1.3 | 23/06/2026 | Padronização de títulos, inclusão de autoria nas tabelas e mapeamento por hiperlinks (F3-C8) | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
+| 1.4 | 23/06/2026 | Ajuste no número de repetições para 5 ciclos | [Johnnatan Salles](https://github.com/jsalless) | [Equipe](https://github.com/GDveAlves) |
