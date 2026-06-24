@@ -10,12 +10,6 @@ O foco está em três subcaracterísticas conforme ISO/IEC 25010:
 - **Utilização de Recursos** (Resource Utilization)
 - **Capacidade** (Capacity)
 
-### 1.1 Nota de Escopo: Sobre Métricas de Carga Concorrente (Q4 / M4)
-
-Embora a subcaracterística de "Capacidade" (ISO/IEC 25010) tenha sido [citada textualmente na Fase 2](../03-fase2/eficiencia.md#conclusoes), esclarece-se que a **Q4 (Capacidade sob carga concorrente)** e as métricas de estresse multiusuário frequentemente associadas (como *M4.1 (Throughput Concorrente)*, *M4.2 (Degradação de Latência)* e *M4.3 (Taxa de Erros)* ) **não foram integradas à metodologia GQM deste trabalho**.
-
-**Justificativa:** O mapeamento da Persona deste projeto estabeleceu um cenário de uso estritamente focado em um **usuário único operando em ambiente local e offline**. Como o ecossistema do Ollama é executado localmente para responder a demandas individuais, testes de acessos simultâneos ou taxas de erro por concorrência de rede divergiriam do contexto prático da aplicação. Portanto, a avaliação de Capacidade concentrou-se exclusivamente no comportamento do sistema sob o escalonamento do tamanho do contexto de prompts ([ED-3.1 e ED-3.2](../04-fase3/eficiencia.md#2-metricas-a-serem-implementadas)).
-
 ---
 
 ## 2. Métricas a Serem Implementadas

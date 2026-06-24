@@ -193,7 +193,7 @@ A complexidade quadrática do mecanismo de atenção dos Transformers deve causa
 
 Com a aplicação do método GQM, foi possível estruturar de forma mensurável e reproduzível a análise de eficiência de desempenho do Ollama em conjunto com a LLM Qwen 2.5 3B. As três questões formuladas cobrem as três subcaracterísticas de eficiência de desempenho previstas na ISO/IEC 25010: Comportamento em Relação ao Tempo (Q1 e Q3), Utilização de Recursos (Q2 e Q3).
 
-As métricas definidas permitem avaliar objetivamente a latência de inferência, a taxa de geração de tokens, o consumo de recursos computacionais, o impacto do aumento do contexto e o comportamento do sistema sob carga concorrente.
+As métricas definidas permitem avaliar objetivamente a latência de inferência, a taxa de geração de tokens, o consumo de recursos computacionais, o impacto do aumento do contexto.
 
 Esta análise fornece a base metodológica necessária para a Fase 3 (coleta de dados) e para a Fase 4 (análise dos resultados e conclusões finais) do projeto de avaliação de qualidade de software.
 

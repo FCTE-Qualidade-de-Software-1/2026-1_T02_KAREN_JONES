@@ -5,9 +5,6 @@ Resultados do objetivo GQM e das métricas definidas na Fase 2, contextualizando
 
 Este capítulo apresenta os resultados coletados para a característica de **Eficiência de Desempenho** do modelo Qwen 2.5 3B executado localmente via Ollama. Os dados estão organizados por ambiente operacional e avaliam as métricas de tempo de resposta, throughput e consumo de recursos.
 
-### 5.1.1.1 Alinhamento de Escopo (Carga Concorrente)
-
-Conforme estabelecido e justificado no Plano de Avaliação [(Fase 3, Item 1.1)](../04-fase3/eficiencia.md#11-nota-de-escopo-sobre-metricas-de-carga-concorrente-q4--m4), as métricas de carga concorrente multiusuário, comumente referidas como Q4/M4 (Throughput Concorrente, Degradação de Latência e Taxa de Erros), não fazem parte do escopo de coleta deste relatório. 
 
 ## 5.1.2 Resultados Coletados
 A seguir estão os resultados coletados através dos scripts da pasta `/scripts/desempenho` para Windows 11 e Zorin OS 18.1 Core.
@@ -69,6 +66,9 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 | Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 1024 t | ≤ 4,0 | 0.9855 | Aprovado |
 | Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 2048 t | ≤ 4,0 | 0.9969 | Aprovado |
 | Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 4096 t | ≤ 4,0 | 1.0061 | Aprovado |
+| Eficiência | **[ED-3.2](../04-fase3/eficiencia.md#ref-ed32)** | Crescimento KV Cache 1024 t (~925 tok) | ≤ 0,5 MB/token | 0,0064 MB/token | Aprovado |
+| Eficiência | **[ED-3.2](../04-fase3/eficiencia.md#ref-ed32)** | Crescimento KV Cache 2048 t (~1821 tok) | ≤ 0,5 MB/token | 0,1031 MB/token | Aprovado |
+| Eficiência | **[ED-3.2](../04-fase3/eficiencia.md#ref-ed32)** | Crescimento KV Cache 4096 t (~3613 tok) | ≤ 0,5 MB/token | 0,0216 MB/token | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -78,7 +78,7 @@ Os resultados de TTFT, TPS e Load Time mostram que o modelo atende aos critério
 
 Os testes de capacidade ED-3.1 foram aprovados em todos os tamanhos de contexto analisados em ambos os ambientes, indicando escalonamento aceitável para os limites definidos.
 
-A métrica **ED-3.2 (Taxa de Crescimento do KV Cache - KVCGR)** foi válida e aprovada sob **Windows 11**, com valores positivos e crescimento muito abaixo do limiar de referência (≤ 0,5 MB/token), evidenciando que o gerenciamento de memória do KV Cache é estável mesmo com aumento de contexto. Sob **Zorin OS**, a métrica permanece **Inconclusiva / Inválida**: as variações de RAM de pico entre tamanhos de contexto foram ínfimas, ofuscadas por ruído estatístico do sistema operacional, inviabilizando uma medição precisa da taxa de crescimento por token.
+A métrica **ED-3.2 (Taxa de Crescimento do KV Cache - KVCGR)** foi válida e aprovada sob **ambos os sistemas**, com valores positivos e crescimento muito abaixo do limiar de referência (≤ 0,5 MB/token), evidenciando que o gerenciamento de memória do KV Cache é estável mesmo com aumento de contexto.
 
 **Tabela 4.5: Análise por Questão GQM (Q1–Q4)**
 
