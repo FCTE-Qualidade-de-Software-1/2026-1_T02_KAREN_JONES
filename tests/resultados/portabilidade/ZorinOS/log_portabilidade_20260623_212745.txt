@@ -1,0 +1,7 @@
+======================================================================
+  AVALIAÇÃO DE PORTABILIDADE — FASE 3
+  Projeto  : KAREN JONES — Qualidade de Software / UnB FCTE
+  Ambiente : Zorin OS 18.1 Core (Linux)
+  Início   : 2026-06-23T21:27:45.822134
+======================================================================
+

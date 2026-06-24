@@ -46,12 +46,12 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)** | TTFT (512 tok) | ≤ 5 s | 237,31 ms | Aprovado |
-| Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)**| TPS (512 tok) | ≤ 5 tokens | 53,43 t | Aprovado |
-| Eficiência | **[ED-1.3](../04-fase3/eficiencia.md#ref-ed13)** | Load time (512 tok) | ≤ 30 s | 1,82 s | Aprovado |
-| Eficiência | **[ED-2.1](../04-fase3/eficiencia.md#ref-ed21)** | Consumo de RAM | ≤ 6 GB | 57,02 MB | Aprovado |
-| Eficiência | **[ED-2.2](../04-fase3/eficiencia.md#ref-ed22)**| Uso de CPU | ≤ 90 % | 0,18 % | Aprovado |
-| Eficiência | **[ED-2.3](../04-fase3/eficiencia.md#ref-ed23)**| Eficiência de recurso | ≥ 0,5 | 5421,42 | Aprovado |
+| Eficiência | **[ED-1.1](../04-fase3/eficiencia.md#ref-ed11)** | TTFT (512 tok) | ≤ 5 s | 216,28 ms | Aprovado |
+| Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)**| TPS (512 tok) | ≤ 5 tokens | 50,52 t | Aprovado |
+| Eficiência | **[ED-1.3](../04-fase3/eficiencia.md#ref-ed13)** | Load time (512 tok) | ≤ 30 s | 1,62 s | Aprovado |
+| Eficiência | **[ED-2.1](../04-fase3/eficiencia.md#ref-ed21)** | Consumo de RAM | ≤ 6 GB | 755,16 MB | Aprovado |
+| Eficiência | **[ED-2.2](../04-fase3/eficiencia.md#ref-ed22)**| Uso de CPU | ≤ 90 % | 3,46 % | Aprovado |
+| Eficiência | **[ED-2.3](../04-fase3/eficiencia.md#ref-ed23)**| Eficiência de recurso | ≥ 0,5 | 19,02 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
@@ -61,10 +61,10 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 
 | Característica | ID | Métrica | Critério | Resultado | Veredicto |
 |---|---|---|---|---|---|
-| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 512 t | ≤ 4,0 | 0,993 | Aprovado |
-| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 1024 t | ≤ 4,0 | 1,029 | Aprovado |
-| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 2048 t | ≤ 4,0 | 1,089 | Aprovado |
-| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 4096 t | ≤ 4,0 | 1,118 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 512 t | ≤ 4,0 | 0.9996 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 1024 t | ≤ 4,0 | 0.9855 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 2048 t | ≤ 4,0 | 0.9969 | Aprovado |
+| Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 4096 t | ≤ 4,0 | 1.0061 | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
 
