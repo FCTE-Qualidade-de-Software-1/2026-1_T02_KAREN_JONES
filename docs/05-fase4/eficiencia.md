@@ -49,7 +49,7 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 |---|---|---|---|---|---|
 | Eficiência | **[ED-1.1](../04-fase3/eficiencia.md#ref-ed11)** | TTFT (~256 tok) | ≤ 5 s | 216,28 ms | Aprovado |
 | Eficiência | **[ED-1.2](../04-fase3/eficiencia.md#ref-ed12)**| TPS (~256 tok) | ≥ 5 tokens/s | 50,52 t/s | Aprovado |
-| Eficiência | **[ED-1.3](../04-fase3/eficiencia.md#ref-ed13)** | Load time (~256 tok) | ≤ 30 s | 1,62 s | Aprovado |
+| Eficiência | **[ED-1.3](../04-fase3/eficiencia.md#ref-ed13)** | Load time (~256 tok) | ≤ 30 s | 162,09 ms | Aprovado |
 | Eficiência | **[ED-2.1](../04-fase3/eficiencia.md#ref-ed21)** | Consumo de RAM | ≤ 6 GB | 755,16 MB | Aprovado |
 | Eficiência | **[ED-2.2](../04-fase3/eficiencia.md#ref-ed22)**| Uso de CPU | ≤ 90 % | 3,46 % | Aprovado |
 | Eficiência | **[ED-2.3](../04-fase3/eficiencia.md#ref-ed23)**| Eficiência de recurso | ≥ 0,5 | 19,02 | Aprovado |
@@ -66,8 +66,9 @@ A seguir estão os resultados coletados através dos scripts da pasta `/scripts/
 | Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 1024 t | ≤ 4,0 | 0.9855 | Aprovado |
 | Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)**| Escalonamento de contexto 2048 t | ≤ 4,0 | 0.9969 | Aprovado |
 | Eficiência | **[ED-3.1](../04-fase3/eficiencia.md#ref-ed31)** | Escalonamento de contexto 4096 t | ≤ 4,0 | 1.0061 | Aprovado |
-| Eficiência | **[ED-3.2](../04-fase3/eficiencia.md#ref-ed32)** | Crescimento KV Cache 1024 t (~925 tok) | ≤ 0,5 MB/token | 0,0064 MB/token | Aprovado |
-| Eficiência | **[ED-3.2](../04-fase3/eficiencia.md#ref-ed32)** | Crescimento KV Cache 2048 t (~1821 tok) | ≤ 0,5 MB/token | 0,1031 MB/token | Aprovado |
+| Eficiência | **[ED-3.2](../04-fase3/eficiencia.md#ref-ed32)** | Crescimento KV Cache 1024 t (~477 tok) | ≤ 0,5 MB/token | 0,0064 MB/token | Aprovado |
+| Eficiência | **[ED-3.2](../04-fase3/eficiencia.md#ref-ed32)** | Crescimento KV Cache 2048 t (~925 tok) | ≤ 0,5 MB/token | 0,1031 MB/token | Aprovado |
+| Eficiência | **[ED-3.2](../04-fase3/eficiencia.md#ref-ed32)** | Crescimento KV Cache 4096 t (~1821 tok) | ≤ 0,5 MB/token | 0,0446 MB/token | Aprovado |
 | Eficiência | **[ED-3.2](../04-fase3/eficiencia.md#ref-ed32)** | Crescimento KV Cache 4096 t (~3613 tok) | ≤ 0,5 MB/token | 0,0216 MB/token | Aprovado |
 
 <p align="center"><b>Autores:</b> <a href="https://github.com/GDveAlves">Gabriel Alves</a> e <a href="https://github.com/Matheus-06">Matheus Pinheiro</a>, 2026.</p>
@@ -128,3 +129,4 @@ As diferenças entre os ambientes são perceptíveis mas não determinantes: Win
 | 1.2 | 23/06/2026 | Ajuste do critério do CSF, inversão do sinal do REI e padronização visual das tabelas | [Renata Quadros](https://github.com/RenataKurzawa) | [Giovana Barbosa](https://github.com/gio221) |
 | 1.3 | 23/06/2026 | Correção do TTFT (s para ms) e classificação da métrica ED-3.2 (KVCGR) como Inconclusiva/Inválida | [Johnnatan Salles](https://github.com/jsalless) | [Renata Quadros](https://github.com/RenataKurzawa) |
 | 1.4 | 23/06/2026 | Atualização dos dados Windows; correção de labels de contexto e Tabela 5 | [Matheus Pinheiro](https://github.com/matheus-06) | ()[] |
+| 1.5 | 24/06/2026 | Padronização e ortografia | [Matheus Pinheiro](https://github.com/matheus-06) | ()[] |
