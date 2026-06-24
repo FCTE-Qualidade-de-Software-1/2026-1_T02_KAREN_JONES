@@ -1,0 +1,2059 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Visão de Produto e Projeto">
+      
+      
+        <meta name="author" content="Equipe Karen Jones">
+      
+      
+      
+        <link rel="prev" href="../requisitantes/">
+      
+      
+        <link rel="next" href="../justificativas/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/iconNav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Descrição do Produto - Avaliação de Qualidade do Ollama - Karen Jones</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#23-descricao-do-produto" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-header__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Avaliação de Qualidade do Ollama - Karen Jones
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Descrição do Produto
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01-karenJones/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Quem é Karen Jones?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  2. Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03-fase2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3. Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-fase3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  4. Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05-fase4/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-nav__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    Avaliação de Qualidade do Ollama - Karen Jones
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-karenJones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quem é Karen Jones?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../proposito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitantes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitantes e Partes Interessadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informações Básicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Ollama
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sobre o Ollama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitetura-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitetura técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-uso-do-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o uso do Ollama
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sobre o uso do Ollama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelos-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos disponíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracoes-e-ecossistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrações e ecossistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planos-e-precos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planos e preços
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-as-ods-se-relacionam-com-o-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como as ODS se relacionam com o Ollama
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../justificativas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justificativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade e Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uso-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Declaração de Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../03-fase2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-fase2/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-fase2/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-fase2/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../04-fase3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Fase 3
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. Fase 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-fase4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/sintese-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Síntese Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-basicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informações Básicas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Ollama
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sobre o Ollama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que é?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitetura-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitetura técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-uso-do-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o uso do Ollama
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sobre o uso do Ollama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelos-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modelos disponíveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integracoes-e-ecossistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integrações e ecossistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planos-e-precos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planos e preços
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-as-ods-se-relacionam-com-o-ollama" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como as ODS se relacionam com o Ollama
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="23-descricao-do-produto">2.3 Descrição do Produto<a class="headerlink" href="#23-descricao-do-produto" title="Permanent link">&para;</a></h1>
+<p>O objetivo desta página é fornecer uma visão geral do software em avaliação e apresentar suas principais características técnicas e funcionais.</p>
+<hr />
+<p><img alt="" src="../../img/ollamaImage.png" /></p>
+<p align="center"><em>Logo do Ollama</em></p>
+
+<h2 id="informacoes-basicas">Informações Básicas<a class="headerlink" href="#informacoes-basicas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Nome do produto</strong>: Ollama</li>
+<li><strong>Versão do produto</strong>: v0.23.4 (versão mais recente estável, maio de 2026)</li>
+<li><strong>Aplicação do produto</strong>: Servidor de inferência local para Modelos de Linguagem de Grande Escala (LLMs)</li>
+<li><strong>Classificação do Produto</strong>: Software de Sistema / Middleware (atua como infraestrutura e camada de abstração para execução de IA) e Ferramenta de Desenvolvimento.</li>
+<li><strong>Repositório do Código Principal</strong>: <a href="https://github.com/ollama/ollama">GitHub — ollama/ollama</a></li>
+<li><strong>Licença do Produto</strong>: MIT License</li>
+<li><strong>Linguagem de implementação</strong>: Go (Golang)</li>
+<li><strong>Site oficial</strong>: <a href="https://ollama.com">https://ollama.com</a></li>
+<li><strong>Documentação oficial</strong>: <a href="https://docs.ollama.com">https://docs.ollama.com</a></li>
+</ul>
+<hr />
+<h2 id="sobre-o-ollama">Sobre o Ollama<a class="headerlink" href="#sobre-o-ollama" title="Permanent link">&para;</a></h2>
+<h3 id="o-que-e">O que é?<a class="headerlink" href="#o-que-e" title="Permanent link">&para;</a></h3>
+<p>O <strong>Ollama</strong> é uma ferramenta de código aberto que permite executar Modelos de Linguagem de Grande Escala (LLMs) diretamente na máquina local do usuário, sem depender de serviços em nuvem ou chaves de API externas. Com um único comando no terminal, é possível baixar e executar modelos como Llama 3, Mistral, Gemma, DeepSeek, Qwen, entre mais de 100 outros disponíveis na biblioteca oficial.</p>
+<p>O projeto foi criado para <strong>remover as barreiras técnicas</strong> que historicamente tornavam o uso de LLMs complexo: configuração de ambientes, gerenciamento de pesos de modelos, aceleração por GPU e compatibilidade de hardware. O Ollama abstrai toda essa complexidade, oferecendo uma interface simples tanto para uso via linha de comando quanto para integração via API REST.</p>
+<h3 id="arquitetura-tecnica">Arquitetura técnica<a class="headerlink" href="#arquitetura-tecnica" title="Permanent link">&para;</a></h3>
+<p><img alt="Arquitetura do Ollama" src="../../img/diagrama_arquitetura_ollama.png" /></p>
+<p align="center"><b>Fonte:</b> <a href="https://codewiki.google/github.com/ollama/ollama">Imagem gerada com Code Wiki</a>, 2026.</p>
+
+<p>O Ollama utiliza uma arquitetura <strong>cliente-servidor</strong>:</p>
+<ul>
+<li>O <strong>cliente</strong> é a interface de linha de comando (CLI) pela qual o usuário digita comandos.</li>
+<li>O <strong>servidor</strong> roda em segundo plano, sendo responsável por gerenciar modelos e processar requisições de inferência.
+Como motor de inferência, o Ollama utiliza internamente o <strong>llama.cpp</strong>, otimizado para rodar modelos em hardware convencional, mesmo sem GPU dedicada. Quando uma GPU está disponível, o Ollama a detecta automaticamente e a utiliza para acelerar as respostas — com suporte a <strong>NVIDIA (CUDA)</strong>, <strong>AMD (ROCm)</strong> e <strong>Apple Silicon (Metal)</strong>. Na ausência de GPU, o processamento recai sobre a CPU.</li>
+</ul>
+<p>A API REST embutida escuta por padrão na porta <strong>11434</strong> e é compatível com o formato da API da OpenAI, permitindo que aplicações já integradas com serviços em nuvem sejam redirecionadas para uma instância local com mínimas alterações de código.</p>
+<p>Os modelos são armazenados localmente em <code>$HOME/.ollama/models</code> e gerenciados por um sistema de conteúdo endereçável, similar ao funcionamento de contêineres Docker.</p>
+<hr />
+<h2 id="sobre-o-uso-do-ollama">Sobre o uso do Ollama<a class="headerlink" href="#sobre-o-uso-do-ollama" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Funções do produto</strong>: execução local de LLMs, gerenciamento de modelos, inferência de texto, geração de embeddings, suporte a modelos multimodais (texto + imagem), integração via API REST</li>
+<li><strong>Classificação do produto</strong>: AI Inference Server, Open-Source, Local-First</li>
+<li><strong>Público-alvo</strong>: desenvolvedores de software, pesquisadores, cientistas de dados, profissionais de TI, entusiastas de IA</li>
+<li><strong>Ambientes de uso</strong>: desenvolvimento local, pipelines de automação, aplicações empresariais com requisitos de privacidade, ambientes educacionais, pesquisa acadêmica</li>
+<li><strong>Dispositivos</strong>: Desktop, Notebook (com suporte a macOS, Windows e Linux)</li>
+<li><strong>Conectividade</strong>: funciona <strong>completamente offline</strong> para execução e inferência; utiliza internet apenas para baixar modelos do repositório oficial (<code>registry.ollama.ai</code>)</li>
+<li><strong>Suporte técnico</strong>: comunidade ativa via GitHub Issues, Discord oficial, e documentação em <a href="https://docs.ollama.com">docs.ollama.com</a>; sem suporte comercial oficial para a versão local</li>
+</ul>
+<h3 id="modelos-disponiveis">Modelos disponíveis<a class="headerlink" href="#modelos-disponiveis" title="Permanent link">&para;</a></h3>
+<p>A biblioteca oficial do Ollama conta com mais de <strong>100 modelos prontos para uso</strong>, organizados nas seguintes categorias:</p>
+<p><strong>Tabela 1: Modelos</strong></p>
+<table>
+<thead>
+<tr>
+<th>Categoria</th>
+<th>Exemplos de modelos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uso geral / chat</td>
+<td>Llama 3.3, Mistral, Gemma 3, Qwen 3</td>
+</tr>
+<tr>
+<td>Geração de código</td>
+<td>Code Llama, DeepSeek Coder, Phi-4</td>
+</tr>
+<tr>
+<td>Raciocínio</td>
+<td>DeepSeek-R1, QwQ</td>
+</tr>
+<tr>
+<td>Multimodal (texto + imagem)</td>
+<td>LLaVA, Llama 3.2 Vision, Qwen-VL</td>
+</tr>
+<tr>
+<td>Embeddings</td>
+<td>nomic-embed-text, mxbai-embed-large</td>
+</tr>
+</tbody>
+</table>
+<p align="center"><b>Autor:</b> <a href="https://github.com/jsalless">Johnnatan Salles</a>, 2026.</p>
+
+<h3 id="integracoes-e-ecossistema">Integrações e ecossistema<a class="headerlink" href="#integracoes-e-ecossistema" title="Permanent link">&para;</a></h3>
+<p>O Ollama possui um ecossistema amplo de integrações com ferramentas populares do mercado:</p>
+<ul>
+<li><strong>Interfaces gráficas</strong>: Open WebUI, Enchanted, Ollama App</li>
+<li><strong>IDEs e editores de código</strong>: Continue (VS Code), Cline, Void</li>
+<li><strong>Frameworks de IA</strong>: LangChain, LlamaIndex</li>
+<li><strong>Agentes de codificação</strong>: Claude Code, GitHub Copilot CLI, OpenCode</li>
+<li><strong>SDKs oficiais</strong>: Python (<code>ollama-python</code>) e JavaScript/TypeScript (<code>ollama-js</code>)</li>
+</ul>
+<h3 id="planos-e-precos">Planos e preços<a class="headerlink" href="#planos-e-precos" title="Permanent link">&para;</a></h3>
+<p><strong>Tabela 2: Planos e custos</strong></p>
+<table>
+<thead>
+<tr>
+<th>Modalidade</th>
+<th>Custo</th>
+<th>Características</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Local (padrão)</strong></td>
+<td>Gratuito, sem limite</td>
+<td>Execução offline, sem conta necessária, privacidade total</td>
+</tr>
+<tr>
+<td><strong>Cloud Free</strong></td>
+<td>Gratuito com conta</td>
+<td>Acesso a modelos maiores em infraestrutura remota</td>
+</tr>
+<tr>
+<td><strong>Cloud Pro</strong></td>
+<td>US$ 20/mês</td>
+<td>3 modelos simultâneos em nuvem, maior volume de uso</td>
+</tr>
+<tr>
+<td><strong>Cloud Max</strong></td>
+<td>US$ 100/mês</td>
+<td>10 modelos simultâneos, uso intensivo</td>
+</tr>
+</tbody>
+</table>
+<p align="center"><b>Autor:</b> <a href="https://github.com/jsalless">Johnnatan Salles</a>, 2026.</p>
+
+<blockquote>
+<p><strong>Importante</strong>: a funcionalidade local é <strong>completamente gratuita e sem restrições</strong>. A camada de nuvem é opcional e foi introduzida em setembro de 2025.</p>
+</blockquote>
+<hr />
+<h2 id="como-as-ods-se-relacionam-com-o-ollama">Como as ODS se relacionam com o Ollama<a class="headerlink" href="#como-as-ods-se-relacionam-com-o-ollama" title="Permanent link">&para;</a></h2>
+<p><strong>ODS 4 – Educação de Qualidade</strong></p>
+<p>O Ollama é uma ferramenta gratuita e de código aberto que democratiza o acesso a tecnologias de inteligência artificial avançadas, viabilizando que estudantes, professores e pesquisadores possam estudar e desenvolver com LLMs de ponta sem custos.
+*   <strong>Meta 4.4:</strong> Até 2030, aumentar substancialmente o número de jovens e adultos que tenham habilidades relevantes, inclusive competências técnicas e profissionais, para emprego, trabalho decente e empreendedorismo.
+*   <strong>Indicador 4.4.1:</strong> Proporção de jovens e adultos com competências em tecnologias de informação e comunicação (TIC).
+*   <strong>Justificativa:</strong> O Ollama reduz significativamente as barreiras de acesso à educação tecnológica e experimentação. Ao facilitar o desenvolvimento de competências em Inteligência Artificial (uma habilidade TIC altamente valorizada), ele contribui para a formação de profissionais qualificados e preparados para as demandas atuais do mercado de trabalho.</p>
+<p><strong>ODS 9 – Indústria, Inovação e Infraestrutura</strong></p>
+<p>O Ollama representa um avanço na democratização da infraestrutura de IA, permitindo a execução de modelos sofisticados em hardware comum, livre da dependência de grandes provedores de nuvem.
+*   <strong>Meta 9.5:</strong> Fortalecer a pesquisa científica, melhorar as capacidades tecnológicas de setores industriais em todos os países, particularmente nos países em desenvolvimento, inclusive, até 2030, incentivando a inovação.
+*   <strong>Indicador 9.5.2:</strong> Número de pesquisadores (em equivalente em tempo integral) por milhão de habitantes.
+*   <strong>Justificativa:</strong> Pequenas empresas, startups e pesquisadores independentes ganham acesso a ferramentas de ponta que antes exigiam hardware proibitivo ou altos custos de API. O Ollama atua como uma infraestrutura facilitadora, alavancando a pesquisa e desenvolvimento (P&amp;D) descentralizados e o fomento da inovação tecnológica inclusiva.</p>
+<p><strong>ODS 10 – Redução das Desigualdades</strong></p>
+<p>A filosofia <em>local-first</em> do Ollama contribui para mitigar a disparidade global no acesso a tecnologias disruptivas.
+*   <strong>Meta 10.3:</strong> Garantir a igualdade de oportunidades e reduzir as desigualdades de resultados, inclusive por meio da promoção de políticas e ações adequadas a esse respeito.
+*   <strong>Indicador 10.3.1:</strong> Proporção da população que relata ter se sentido discriminada ou assediada por motivos proibidos pelas leis internacionais de direitos humanos (indicador oficial adaptado aqui para o contexto de exclusão socioeconômica).
+*   <strong>Justificativa:</strong> Modelos de linguagem, antes acessíveis apenas mediante pagamento por uso, tornam-se disponíveis gratuitamente a qualquer pessoa com um computador convencional. Essa descentralização garante igualdade de oportunidades no campo tecnológico, sendo especialmente relevante para indivíduos e organizações em países em desenvolvimento, onde o poder de compra e o custo em dólar das APIs representam uma grande desigualdade de oportunidades.</p>
+<hr />
+<h1 id="qwen-25-3b">Qwen 2.5 3B<a class="headerlink" href="#qwen-25-3b" title="Permanent link">&para;</a></h1>
+<div align="center">
+<p><img alt="" src="../../img/qwen2.5-logo.png" /></p>
+<p><em>Logo do Qwen 2.5</em></p>
+</div>
+<h1 id="informacoes-gerais-do-produto">Informações Gerais do Produto<a class="headerlink" href="#informacoes-gerais-do-produto" title="Permanent link">&para;</a></h1>
+<p><strong>Nome do produto:</strong> Qwen2.5-3B</p>
+<p><strong>Versão do produto:</strong> Qwen2.5-3B (lançado em setembro de 2024, integrante da família Qwen2.5)</p>
+<p><strong>Aplicação do produto:</strong> Modelo de Linguagem de Pequeno Porte (SLM - Small Language Model) para geração de texto, chatbots, agentes inteligentes, programação, raciocínio matemático, processamento de dados estruturados e automação baseada em IA.</p>
+<p><strong>Organização responsável:</strong> Qwen Team (Alibaba Cloud)</p>
+<p><strong>Repositório do Código Principal:</strong> https://github.com/QwenLM/Qwen2.5</p>
+<p><strong>Licença do Produto:</strong> Qwen Research License (licença específica para a variante 3B). Diferentemente da maioria dos modelos da família Qwen2.5, que utilizam Apache 2.0, o Qwen2.5-3B é distribuído sob esta licença própria.</p>
+<p><strong>Linguagem de implementação:</strong> Python (ecossistema de treinamento e inferência), com arquitetura baseada em Transformers. Compatível com frameworks como Hugging Face Transformers, vLLM, SGLang, Ollama e llama.cpp.</p>
+<p><strong>Site oficial:</strong> https://qwenlm.github.io/</p>
+<p><strong>Página oficial do modelo:</strong> https://huggingface.co/Qwen/Qwen2.5-3B</p>
+<p><strong>Documentação oficial:</strong> https://qwen.readthedocs.io/</p>
+<h2 id="o-que-e-o-qwen-25-3b">O que é o Qwen 2.5 3B<a class="headerlink" href="#o-que-e-o-qwen-25-3b" title="Permanent link">&para;</a></h2>
+<p>O <strong>Qwen 2.5 3B</strong> é um modelo de linguagem focado em eficiência (conhecido como <strong>SLM - Small Language Model</strong>) desenvolvido pela <strong>Alibaba Cloud</strong>. Ele faz parte da linha <strong>Qwen2.5</strong> e foi treinado em uma base de dados de <strong>18 trilhões de tokens</strong>.</p>
+<p>O grande destaque desse modelo é a sua relação entre tamanho e desempenho. Com cerca de <strong>3 bilhões de parâmetros</strong>, ele consegue resultados muito próximos aos de modelos bem maiores, superando os <strong>65 pontos no benchmark MMLU</strong>. Na prática, isso significa que ele é capaz de rodar bem em computadores mais simples sem perder muita qualidade na geração de texto.</p>
+<blockquote>
+<p><strong>Observação sobre licenciamento:</strong> A maioria dos modelos da família Qwen2.5 é distribuída com licença <strong>Apache 2.0</strong>. No entanto, as versões <strong>3B</strong> e <strong>72B</strong> utilizam uma licença própria, a <strong>Qwen Research License</strong>.</p>
+</blockquote>
+<hr />
+<h1 id="arquitetura-tecnica_1">Arquitetura Técnica<a class="headerlink" href="#arquitetura-tecnica_1" title="Permanent link">&para;</a></h1>
+<p><img alt="Arquitetura do Qwen" src="../../img/diagrama_arquitetura_qwen.png" /></p>
+<p align="center"><b>Fonte:</b> <a href="https://codewiki.google/github.com/qwenlm/qwen2.5-vl#qwen25-vl-model-core-functionality">Imagem gerada com Code Wiki</a>, 2026.</p>
+
+<p>O Qwen2.5-3B é construído sobre uma arquitetura Transformer otimizada, incorporando avanços tecnológicos como <strong>RoPE (Rotary Position Embeddings)</strong>, <strong>SwiGLU</strong>, <strong>RMSNorm</strong>, <strong>QKV Attention Bias</strong> e <strong>Tied Word Embeddings</strong>. Ele utiliza uma configuração de atenção do tipo <strong>Grouped-Query Attention (GQA)</strong>, com 16 cabeças para Queries (Q) e 2 cabeças para Key-Values (KV), o que contribui para sua eficiência computacional e capacidade de lidar com contextos longos.</p>
+<h2 id="especificacoes-tecnicas">Especificações Técnicas<a class="headerlink" href="#especificacoes-tecnicas" title="Permanent link">&para;</a></h2>
+<h3 id="parametros">Parâmetros<a class="headerlink" href="#parametros" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Total de parâmetros:</strong> 3,09 bilhões</li>
+<li><strong>Parâmetros não embutidos (non-embedding):</strong> 2,77 bilhões</li>
+</ul>
+<h3 id="camadas-e-atencao">Camadas e Atenção<a class="headerlink" href="#camadas-e-atencao" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>36 camadas</strong></li>
+<li>Utiliza <strong>Grouped-Query Attention (GQA)</strong></li>
+<li><strong>16 cabeças de atenção para Queries (Q)</strong></li>
+<li><strong>2 cabeças para Key-Values (KV)</strong></li>
+</ul>
+<h3 id="janela-de-contexto">Janela de Contexto<a class="headerlink" href="#janela-de-contexto" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Suporta até <strong>128.000 tokens de contexto</strong></li>
+<li>Capacidade de gerar até <strong>8.192 tokens</strong> por resposta</li>
+</ul>
+<h3 id="componentes-arquiteturais">Componentes Arquiteturais<a class="headerlink" href="#componentes-arquiteturais" title="Permanent link">&para;</a></h3>
+<p>A arquitetura Transformer incorpora tecnologias modernas como:</p>
+<ul>
+<li><strong>RoPE (Rotary Position Embeddings)</strong></li>
+<li><strong>SwiGLU</strong></li>
+<li><strong>RMSNorm</strong></li>
+<li><strong>QKV Attention Bias</strong></li>
+<li><strong>Tied Word Embeddings</strong></li>
+</ul>
+<hr />
+<h1 id="uso-e-capacidades">Uso e Capacidades<a class="headerlink" href="#uso-e-capacidades" title="Permanent link">&para;</a></h1>
+<p>A versão <strong>Qwen2.5-3B-Instruct</strong> apresenta avanços significativos em relação à geração anterior.</p>
+<h2 id="suporte-multilingue">Suporte Multilíngue<a class="headerlink" href="#suporte-multilingue" title="Permanent link">&para;</a></h2>
+<p>Oferece suporte para mais de <strong>29 idiomas</strong>, incluindo:</p>
+<ul>
+<li>Português</li>
+<li>Inglês</li>
+<li>Chinês</li>
+<li>Espanhol</li>
+<li>Francês</li>
+<li>Japonês</li>
+</ul>
+<h2 id="programacao-e-matematica">Programação e Matemática<a class="headerlink" href="#programacao-e-matematica" title="Permanent link">&para;</a></h2>
+<p>O modelo possui melhorias expressivas em:</p>
+<ul>
+<li>Resolução de problemas matemáticos</li>
+<li>Geração de código</li>
+<li>Depuração de código</li>
+<li>Compreensão de lógica computacional</li>
+</ul>
+<p>Essas capacidades foram aprimoradas através da incorporação de conhecimentos oriundos de modelos especialistas nesses domínios.</p>
+<h2 id="dados-estruturados-e-json">Dados Estruturados e JSON<a class="headerlink" href="#dados-estruturados-e-json" title="Permanent link">&para;</a></h2>
+<p>O modelo demonstra excelente desempenho em:</p>
+<ul>
+<li>Interpretação de tabelas</li>
+<li>Processamento de dados estruturados</li>
+<li>Geração de saídas JSON</li>
+<li>Extração e organização de informações</li>
+</ul>
+<h2 id="chatbots-e-role-play">Chatbots e Role-Play<a class="headerlink" href="#chatbots-e-role-play" title="Permanent link">&para;</a></h2>
+<p>O Qwen2.5-3B apresenta:</p>
+<ul>
+<li>Alta resiliência a diferentes prompts de sistema</li>
+<li>Melhor aderência a instruções</li>
+<li>Maior estabilidade em cenários de chatbot</li>
+<li>Excelente capacidade de interpretação de papéis (<em>role-play</em>)</li>
+</ul>
+<hr />
+<h1 id="integracao-e-ecossistemas">Integração e Ecossistemas<a class="headerlink" href="#integracao-e-ecossistemas" title="Permanent link">&para;</a></h1>
+<p>O modelo foi desenvolvido para funcionar de forma integrada com as principais ferramentas da comunidade de IA.</p>
+<h2 id="hugging-face">Hugging Face<a class="headerlink" href="#hugging-face" title="Permanent link">&para;</a></h2>
+<p>A forma mais simples de utilização ocorre através da biblioteca <strong>Transformers</strong> da Hugging Face.</p>
+<h3 id="requisito-importante">Requisito Importante<a class="headerlink" href="#requisito-importante" title="Permanent link">&para;</a></h3>
+<p>Utilize versões:</p>
+<div class="highlight"><pre><span></span><code>transformers<span class="w"> </span>&gt;<span class="o">=</span><span class="w"> </span><span class="m">4</span>.37.0
+</code></pre></div>
+<p>Versões anteriores podem causar incompatibilidades e erros de carregamento.</p>
+<hr />
+<h2 id="implantacao-e-execucao-local">Implantação e Execução Local<a class="headerlink" href="#implantacao-e-execucao-local" title="Permanent link">&para;</a></h2>
+<p>O modelo pode ser servido ou executado utilizando:</p>
+<h3 id="servidores-de-inferencia">Servidores de Inferência<a class="headerlink" href="#servidores-de-inferencia" title="Permanent link">&para;</a></h3>
+<ul>
+<li>vLLM</li>
+<li>SGLang</li>
+</ul>
+<h3 id="execucao-local">Execução Local<a class="headerlink" href="#execucao-local" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ollama</li>
+<li>llama.cpp</li>
+<li>LM Studio</li>
+</ul>
+<p>Ferramentas como <strong>vLLM</strong> e <strong>Ollama</strong> permitem expor uma API compatível com o padrão da OpenAI.</p>
+<hr />
+<h2 id="tool-calling">Tool Calling<a class="headerlink" href="#tool-calling" title="Permanent link">&para;</a></h2>
+<p>O Qwen2.5-3B possui suporte nativo para <strong>Tool Calling</strong> (chamadas de ferramentas).</p>
+<h3 id="plataformas-compativeis">Plataformas Compatíveis<a class="headerlink" href="#plataformas-compativeis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>vLLM (&gt;= 0.6)</li>
+<li>Ollama</li>
+<li>Hugging Face Transformers</li>
+</ul>
+<h3 id="compatibilidade">Compatibilidade<a class="headerlink" href="#compatibilidade" title="Permanent link">&para;</a></h3>
+<p>O template utilizado foi inspirado no modelo <strong>Hermes (Nous Research)</strong>, mantendo compatibilidade com:</p>
+<ul>
+<li>Template antigo do Qwen2</li>
+<li>Qwen-Agent</li>
+<li>Ecossistema legado da família Qwen</li>
+</ul>
+<hr />
+<h2 id="fine-tuning-e-quantizacao">Fine-Tuning e Quantização<a class="headerlink" href="#fine-tuning-e-quantizacao" title="Permanent link">&para;</a></h2>
+<p>O modelo é compatível com diversos frameworks de treinamento e otimização.</p>
+<h3 id="fine-tuning">Fine-Tuning<a class="headerlink" href="#fine-tuning" title="Permanent link">&para;</a></h3>
+<ul>
+<li>PEFT</li>
+<li>Llama-Factory</li>
+<li>Unsloth</li>
+<li>Swift</li>
+</ul>
+<h3 id="quantizacao">Quantização<a class="headerlink" href="#quantizacao" title="Permanent link">&para;</a></h3>
+<ul>
+<li>AutoGPTQ</li>
+<li>AutoAWQ</li>
+</ul>
+<hr />
+<h1 id="principais-vantagens">Principais Vantagens<a class="headerlink" href="#principais-vantagens" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Modelo compacto com apenas 3 bilhões de parâmetros</li>
+<li>Contexto extremamente longo (128k tokens)</li>
+<li>Excelente desempenho em programação e matemática</li>
+<li>Forte suporte multilíngue</li>
+<li>Ótima geração de JSON e dados estruturados</li>
+<li>Compatível com Ollama, vLLM e Hugging Face</li>
+<li>Suporte nativo para Tool Calling</li>
+<li>Amplo suporte para fine-tuning e quantização</li>
+</ul>
+<hr />
+<h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<blockquote>
+<ol>
+<li>
+<p>OLLAMA. <em>Ollama — The easiest way to build with open models</em>. Disponível em: <a href="https://ollama.com">https://ollama.com</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>OLLAMA. <em>Ollama — Repositório oficial</em>. GitHub, 2026. Disponível em: <a href="https://github.com/ollama/ollama">https://github.com/ollama/ollama</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>OLLAMA. <em>Documentação oficial do Ollama</em>. Disponível em: <a href="https://docs.ollama.com">https://docs.ollama.com</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>OLLAMA. <em>Biblioteca de modelos do Ollama</em>. Disponível em: <a href="https://ollama.com/library">https://ollama.com/library</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>TOOLCHASE. Ollama Review 2026 — Pricing, Features &amp; Alternatives. <strong>ToolChase</strong>, 2026. Disponível em: <a href="https://toolchase.com/tool/ollama/">https://toolchase.com/tool/ollama/</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>INFRALOVERS. Ollama in 2025: Major Updates Transform Local AI Experience. <strong>Infralovers</strong>, ago. 2025. Disponível em: <a href="https://www.infralovers.com/blog/2025-08-13-ollama-2025-updates/">https://www.infralovers.com/blog/2025-08-13-ollama-2025-updates/</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>SKYWORK AI. What is Ollama? Complete Guide to Local AI Models 2025. <strong>Skywork</strong>, out. 2025. Disponível em: <a href="https://skywork.ai/blog/agent/what-is-ollama-complete-guide-to-local-ai-models-2025/">https://skywork.ai/blog/agent/what-is-ollama-complete-guide-to-local-ai-models-2025/</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>DEEPWIKI. System Requirements — ollama/ollama. <strong>DeepWiki</strong>, 2025. Disponível em: <a href="https://deepwiki.com/ollama/ollama/1.2-system-requirements">https://deepwiki.com/ollama/ollama/1.2-system-requirements</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>OHIO SUPERCOMPUTER CENTER. Ollama. <strong>OSC</strong>, 2025. Disponível em: <a href="https://www.osc.edu/resources/available_software/software_list/ollama">https://www.osc.edu/resources/available_software/software_list/ollama</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>BYTESIZEGO. Exploring Ollama: Running LLMs Locally with Go. <strong>ByteSizeGo</strong>, dez. 2025. Disponível em: <a href="https://www.bytesizego.com/blog/exploring-ollama-running-llms-locally-with-go">https://www.bytesizego.com/blog/exploring-ollama-running-llms-locally-with-go</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 4: Educação de qualidade. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs/4">https://brasil.un.org/pt-br/sdgs/4</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 9: Indústria, inovação e infraestrutura. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs/9">https://brasil.un.org/pt-br/sdgs/9</a>. Acesso em: 11 maio 2026.</p>
+</li>
+<li>
+<p>ORGANIZAÇÃO DAS NAÇÕES UNIDAS. Objetivo de Desenvolvimento Sustentável 10: Redução das desigualdades. Disponível em: <a href="https://brasil.un.org/pt-br/sdgs/10">https://brasil.un.org/pt-br/sdgs/10</a>. Acesso em: 11 maio 2026.</p>
+</li>
+</ol>
+</blockquote>
+<hr />
+<h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>11/05/2026</td>
+<td>Criação da descrição do produto Ollama</td>
+<td><a href="https://github.com/jsalless">Johnnatan Salles</a></td>
+<td><a href="https://github.com/RenataKurzawa">Renata Quadros</a></td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>13/05/2026</td>
+<td>Correção na versão atual do Ollama</td>
+<td><a href="https://github.com/matheus-06">Matheus Pinheiro</a></td>
+<td><a href="https://github.com/"></a></td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>13/05/2026</td>
+<td>Inserção de informações sobre o Qwen2.5-3B</td>
+<td><a href="https://github.com/Luizaxx">Luiza</a></td>
+<td><a href="https://github.com/jsalless">Johnnatan Salles</a></td>
+</tr>
+<tr>
+<td>2.1</td>
+<td>13/05/2026</td>
+<td>Inserção de diagrama de arquitetura Ollamac</td>
+<td><a href="https://github.com/Luizaxx">Luiza</a></td>
+<td><a href="https://github.com/jsalless">Johnnatan Salles</a></td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>12/06/2026</td>
+<td>Legenda na logo do ollama</td>
+<td><a href="https://github.com/jsalless">Johnnatan Salles</a></td>
+<td><a href="https://github.com/"></a></td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>23/06/2026</td>
+<td>Correção de versionamento e erros gramaticais</td>
+<td><a href="https://github.com/Luizaxx">Luiza</a></td>
+<td><a href="https://github.com/RenataKurzawa">Renata Quadros</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "toc.follow", "navigation.logo"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
