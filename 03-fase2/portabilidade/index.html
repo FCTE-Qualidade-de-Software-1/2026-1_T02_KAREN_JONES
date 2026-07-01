@@ -1,0 +1,2149 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Visão de Produto e Projeto">
+      
+      
+        <meta name="author" content="Equipe Karen Jones">
+      
+      
+      
+        <link rel="prev" href="../eficiencia/">
+      
+      
+        <link rel="next" href="../contribuicao/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/iconNav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Portabilidade - Avaliação de Qualidade do Ollama - Karen Jones</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#32-portabilidade" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-header__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Avaliação de Qualidade do Ollama - Karen Jones
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Portabilidade
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01-karenJones/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Quem é Karen Jones?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02-fase1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  2. Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3. Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-fase3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  4. Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../05-fase4/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-nav__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    Avaliação de Qualidade do Ollama - Karen Jones
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-karenJones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quem é Karen Jones?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../02-fase1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/proposito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/requisitantes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitantes e Partes Interessadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/justificativas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justificativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade e Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/uso-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Declaração de Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodologia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-do-objetivo-de-medicao-de-portabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrição do Objetivo de Medição de Portabilidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoes-e-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questões e Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Questões e Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-quanto-a-adaptabilidade-o-ollama-com-qwen-25-3b-se-comporta-de-formas-diferentes-em-diferentes-sistemas-operacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. Quanto à Adaptabilidade, o Ollama com Qwen 2.5 3B se comporta de formas diferentes em diferentes sistemas operacionais?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1. Quanto à Adaptabilidade, o Ollama com Qwen 2.5 3B se comporta de formas diferentes em diferentes sistemas operacionais?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-11-taxa-de-execucoes-sem-falha-entre-plataformas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.1: Taxa de Execuções Sem Falha entre Plataformas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-12-desvio-de-desempenho-de-inferencia-entre-plataformas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.2: Desvio de Desempenho de Inferência entre Plataformas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-quanto-a-instalabilidade-e-possivel-instalar-e-desinstalar-o-ollama-com-o-modelo-qwen-25-3b-de-forma-independente-e-sem-residuos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. Quanto à Instalabilidade, é possível instalar e desinstalar o Ollama com o modelo Qwen 2.5 3B de forma independente e sem resíduos?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2. Quanto à Instalabilidade, é possível instalar e desinstalar o Ollama com o modelo Qwen 2.5 3B de forma independente e sem resíduos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-21-taxa-de-sucesso-na-instalacao-installation-success-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.1: Taxa de Sucesso na Instalação (Installation Success Rate)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-22-taxa-de-sucesso-na-desinstalacao-uninstallation-success-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.2: Taxa de Sucesso na Desinstalação (Uninstallation Success Rate)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-quanto-a-instalabilidade-o-processo-de-instalacao-do-ollama-com-qwen-25-3b-apresenta-erros-ou-inconsistencias-em-diferentes-ambientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. Quanto à Instalabilidade, o processo de instalação do Ollama com Qwen 2.5 3B apresenta erros ou inconsistências em diferentes ambientes?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3. Quanto à Instalabilidade, o processo de instalação do Ollama com Qwen 2.5 3B apresenta erros ou inconsistências em diferentes ambientes?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-31-taxa-de-sucesso-de-instalacao-por-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.1: Taxa de Sucesso de Instalação por Ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-32-desvio-relativo-de-sucesso-entre-ambientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.2: Desvio Relativo de Sucesso entre Ambientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-33-tempo-de-instalacao-e-tipos-de-falha-por-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.3: Tempo de Instalação e Tipos de Falha por Ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusões
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências Bibliográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../04-fase3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Fase 3
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. Fase 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../05-fase4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/sintese-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Síntese Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05-fase4/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Metodologia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descricao-do-objetivo-de-medicao-de-portabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Descrição do Objetivo de Medição de Portabilidade
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questoes-e-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Questões e Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Questões e Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-quanto-a-adaptabilidade-o-ollama-com-qwen-25-3b-se-comporta-de-formas-diferentes-em-diferentes-sistemas-operacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1. Quanto à Adaptabilidade, o Ollama com Qwen 2.5 3B se comporta de formas diferentes em diferentes sistemas operacionais?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q1. Quanto à Adaptabilidade, o Ollama com Qwen 2.5 3B se comporta de formas diferentes em diferentes sistemas operacionais?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-11-taxa-de-execucoes-sem-falha-entre-plataformas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.1: Taxa de Execuções Sem Falha entre Plataformas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-12-desvio-de-desempenho-de-inferencia-entre-plataformas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 1.2: Desvio de Desempenho de Inferência entre Plataformas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-quanto-a-instalabilidade-e-possivel-instalar-e-desinstalar-o-ollama-com-o-modelo-qwen-25-3b-de-forma-independente-e-sem-residuos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2. Quanto à Instalabilidade, é possível instalar e desinstalar o Ollama com o modelo Qwen 2.5 3B de forma independente e sem resíduos?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q2. Quanto à Instalabilidade, é possível instalar e desinstalar o Ollama com o modelo Qwen 2.5 3B de forma independente e sem resíduos?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-21-taxa-de-sucesso-na-instalacao-installation-success-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.1: Taxa de Sucesso na Instalação (Installation Success Rate)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-22-taxa-de-sucesso-na-desinstalacao-uninstallation-success-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 2.2: Taxa de Sucesso na Desinstalação (Uninstallation Success Rate)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-quanto-a-instalabilidade-o-processo-de-instalacao-do-ollama-com-qwen-25-3b-apresenta-erros-ou-inconsistencias-em-diferentes-ambientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3. Quanto à Instalabilidade, o processo de instalação do Ollama com Qwen 2.5 3B apresenta erros ou inconsistências em diferentes ambientes?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Q3. Quanto à Instalabilidade, o processo de instalação do Ollama com Qwen 2.5 3B apresenta erros ou inconsistências em diferentes ambientes?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hipotese_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hipótese
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-31-taxa-de-sucesso-de-instalacao-por-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.1: Taxa de Sucesso de Instalação por Ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-32-desvio-relativo-de-sucesso-entre-ambientes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.2: Desvio Relativo de Sucesso entre Ambientes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metrica-33-tempo-de-instalacao-e-tipos-de-falha-por-ambiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métrica 3.3: Tempo de Instalação e Tipos de Falha por Ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusões
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências Bibliográficas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="32-portabilidade">3.2 Portabilidade<a class="headerlink" href="#32-portabilidade" title="Permanent link">&para;</a></h1>
+<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">&para;</a></h2>
+<p>Este artefato aplica o método GQM (Goal-Question-Metric) para analisar o Ollama em conjunto com a LLM Qwen 2.5 3B sob o critério de Portabilidade, conforme definido na norma ISO/IEC 25010. A proposta é definir metas, perguntas e métricas que permitam examinar a capacidade do sistema de ser instalado, executado e adaptado em diferentes ambientes operacionais, identificando limitações e oportunidades de melhoria.</p>
+<p>O Ollama é uma ferramenta de código aberto projetada para facilitar a execução local de modelos de linguagem de grande porte (LLMs). Quando combinado com o Qwen 2.5 3B — modelo compacto da família Qwen 2.5, com 3 bilhões de parâmetros — o sistema representa um caso de uso relevante para avaliação de portabilidade em ambientes de recursos limitados.</p>
+<p>Este documento integra a Fase 2 do projeto de avaliação de qualidade, fornecendo a base para coleta e análise de dados que apoiarão a tomada de decisões voltadas à qualidade e à manutenção do sistema.</p>
+<h2 id="metodologia">Metodologia<a class="headerlink" href="#metodologia" title="Permanent link">&para;</a></h2>
+<p>A metodologia adotada neste artefato baseia-se no método GQM (Goal-Question-Metric), que orienta a avaliação da qualidade de software de forma estruturada e orientada a objetivos. O processo segue três etapas:</p>
+<ol>
+<li>
+<p>Definição do objetivo de análise: neste caso, avaliar a portabilidade do Ollama executando o modelo Qwen 2.5 3B.</p>
+</li>
+<li>
+<p>Formulação de questões: que permitem investigar aspectos específicos do critério, como comportamento em diferentes sistemas operacionais, facilidade de instalação.</p>
+</li>
+<li>
+<p>Estabelecimento de métricas: que quantifiquem os resultados observados, possibilitando avaliação objetiva e comparável.</p>
+</li>
+</ol>
+<p>A portabilidade, segundo a ISO/IEC 25010, é composta pelas subcaracterísticas <strong>Adaptabilidade</strong>, <strong>Instalabilidade</strong> e <strong>Substituibilidade</strong> e suas respectivas métricas.</p>
+<h2 id="descricao-do-objetivo-de-medicao-de-portabilidade">Descrição do Objetivo de Medição de Portabilidade<a class="headerlink" href="#descricao-do-objetivo-de-medicao-de-portabilidade" title="Permanent link">&para;</a></h2>
+<p>A tabela a seguir apresenta o objetivo de medição estruturado segundo o paradigma GQM:</p>
+<p>Tabela 1: Objetivo de Medição de Qualidade – Portabilidade</p>
+<table>
+<thead>
+<tr>
+<th>Dimensão</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analisar</td>
+<td>Ollama com LLM Qwen 2.5 3B</td>
+</tr>
+<tr>
+<td>Para o propósito de</td>
+<td>Entender</td>
+</tr>
+<tr>
+<td>Com respeito a</td>
+<td>Portabilidade</td>
+</tr>
+<tr>
+<td>Da perspectiva do</td>
+<td>Pesquisador / Desenvolvedor de Software</td>
+</tr>
+<tr>
+<td>No contexto de</td>
+<td>Disciplina de Qualidade de Software – UnB/FCTE</td>
+</tr>
+</tbody>
+</table>
+<p align="center"><b>Autor:</b> <a href="https://github.com/Luizaxx"> Luiza Pugas </a>, 2026.</p>
+
+<h2 id="questoes-e-metricas">Questões e Métricas<a class="headerlink" href="#questoes-e-metricas" title="Permanent link">&para;</a></h2>
+<h3 id="q1-quanto-a-adaptabilidade-o-ollama-com-qwen-25-3b-se-comporta-de-formas-diferentes-em-diferentes-sistemas-operacionais">Q1. Quanto à Adaptabilidade, o Ollama com Qwen 2.5 3B se comporta de formas diferentes em diferentes sistemas operacionais?<a class="headerlink" href="#q1-quanto-a-adaptabilidade-o-ollama-com-qwen-25-3b-se-comporta-de-formas-diferentes-em-diferentes-sistemas-operacionais" title="Permanent link">&para;</a></h3>
+<h4 id="hipotese">Hipótese<a class="headerlink" href="#hipotese" title="Permanent link">&para;</a></h4>
+<p>O Ollama foi projetado com suporte explícito a múltiplas plataformas (Linux, macOS e Windows). A hipótese é que o sistema se comporte de forma funcionalmente equivalente em qualquer sistema operacional, com diferenças limitadas a variações de desempenho decorrentes das arquiteturas de hardware subjacentes.</p>
+<h4 id="metrica-11-taxa-de-execucoes-sem-falha-entre-plataformas">Métrica 1.1: Taxa de Execuções Sem Falha entre Plataformas<a class="headerlink" href="#metrica-11-taxa-de-execucoes-sem-falha-entre-plataformas" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>Taxa = 1 - (Execuções com falha / Total de execuções)</p>
+<p>Calculada individualmente para cada sistema &gt; &gt;  operacional testado (Linux, macOS, Windows).</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-2">[2]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Alta adaptabilidade (Hipótese Confirmada): ≥ 99,0% de execuções bem-sucedidas em todas as plataformas.</p>
+<p>Baixa adaptabilidade (Hipótese Refutada): &lt; 99,0% de execuções bem-sucedidas em alguma plataforma.</p>
+<p>Esta métrica avalia a estabilidade funcional do sistema entre plataformas. Falhas funcionais indicam lacunas na portabilidade de execução.</p>
+</blockquote>
+<h4 id="metrica-12-desvio-de-desempenho-de-inferencia-entre-plataformas">Métrica 1.2: Desvio de Desempenho de Inferência entre Plataformas<a class="headerlink" href="#metrica-12-desvio-de-desempenho-de-inferencia-entre-plataformas" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>Desvio = |Tempo médio inferência em A - Tempo médio inferência em B| / Tempo médio geral</p>
+<p>Medido para inferência com prompt padronizado.</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-3">[3]</a>, <a href="#ref-4">[4]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Desvio aceitável (Hipótese Confirmada): ≤ 20% de variação entre plataformas de mesma arquitetura.</p>
+<p>Desvio elevado (Hipótese Refutada): &gt; 20% de variação, sugerindo dependências de otimização específicas da plataforma.</p>
+</blockquote>
+<h3 id="q2-quanto-a-instalabilidade-e-possivel-instalar-e-desinstalar-o-ollama-com-o-modelo-qwen-25-3b-de-forma-independente-e-sem-residuos">Q2. Quanto à Instalabilidade, é possível instalar e desinstalar o Ollama com o modelo Qwen 2.5 3B de forma independente e sem resíduos?<a class="headerlink" href="#q2-quanto-a-instalabilidade-e-possivel-instalar-e-desinstalar-o-ollama-com-o-modelo-qwen-25-3b-de-forma-independente-e-sem-residuos" title="Permanent link">&para;</a></h3>
+<h4 id="hipotese_1">Hipótese<a class="headerlink" href="#hipotese_1" title="Permanent link">&para;</a></h4>
+<p>O Ollama oferece instaladores nativos para cada plataforma suportada. A hipótese é que a instalação e desinstalação completas (incluindo o modelo Qwen 2.5 3B) sejam possíveis sem necessidade de intervenção manual avançada, e que a desinstalação não deixe resíduos no sistema.</p>
+<h4 id="metrica-21-taxa-de-sucesso-na-instalacao-installation-success-rate">Métrica 2.1: Taxa de Sucesso na Instalação (Installation Success Rate)<a class="headerlink" href="#metrica-21-taxa-de-sucesso-na-instalacao-installation-success-rate" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>Taxa = Instalações bem-sucedidas / Total de tentativas de instalação</p>
+<p>Considerando instalação do Ollama + download e vinculação do modelo Qwen 2.5 3B via <code>ollama pull qwen2.5:3b</code>.</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-6">[6]</a>, <a href="#ref-7">[7]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Alta taxa de sucesso (Hipótese Confirmada): ≥ 95% das tentativas bem-sucedidas por plataforma.</p>
+<p>Baixa taxa de sucesso (Hipótese Refutada): &lt; 95% em alguma plataforma testada.</p>
+<p>Erros de instalação mais comuns esperados: bloqueios de antivírus no Windows e problemas de permissão.</p>
+</blockquote>
+<h4 id="metrica-22-taxa-de-sucesso-na-desinstalacao-uninstallation-success-rate">Métrica 2.2: Taxa de Sucesso na Desinstalação (Uninstallation Success Rate)<a class="headerlink" href="#metrica-22-taxa-de-sucesso-na-desinstalacao-uninstallation-success-rate" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>Taxa = Desinstalações bem-sucedidas / Total de tentativas de desinstalação</p>
+<p>Verificação: ausência de processos residuais, arquivos em diretórios de dados e chaves de registro (Windows) após desinstalação.</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-6">[6]</a>, <a href="#ref-7">[7]</a>, <a href="#ref-8">[8]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Alta taxa de sucesso (Hipótese Confirmada): ≥ 90% das tentativas resultam em remoção completa do sistema.</p>
+<p>Baixa taxa de sucesso (Hipótese Refutada): &lt; 90% ou presença de resíduos detectados após desinstalação.</p>
+<p>A remoção do modelo (ollama rm qwen2.5:3b) deve ser verificada separadamente da remoção do runtime.</p>
+</blockquote>
+<h3 id="q3-quanto-a-instalabilidade-o-processo-de-instalacao-do-ollama-com-qwen-25-3b-apresenta-erros-ou-inconsistencias-em-diferentes-ambientes">Q3. Quanto à Instalabilidade, o processo de instalação do Ollama com Qwen 2.5 3B apresenta erros ou inconsistências em diferentes ambientes?<a class="headerlink" href="#q3-quanto-a-instalabilidade-o-processo-de-instalacao-do-ollama-com-qwen-25-3b-apresenta-erros-ou-inconsistencias-em-diferentes-ambientes" title="Permanent link">&para;</a></h3>
+<h4 id="hipotese_2">Hipótese<a class="headerlink" href="#hipotese_2" title="Permanent link">&para;</a></h4>
+<p>A hipótese é que o processo de instalação seja consistente entre ambientes distintos (distribuições Linux, versões de macOS, versões de Windows, arquiteturas x86_64 e arm64), apresentando apenas variações de tempo de download sem falhas específicas por ambiente.</p>
+<h4 id="metrica-31-taxa-de-sucesso-de-instalacao-por-ambiente">Métrica 3.1: Taxa de Sucesso de Instalação por Ambiente<a class="headerlink" href="#metrica-31-taxa-de-sucesso-de-instalacao-por-ambiente" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>Taxa(ambiente X) = Instalações bem-sucedidas em X / Total de tentativas em X</p>
+<p>Ambientes: Zorin OS 18.1 Core, Windows 11.</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong>
+<a href="#ref-6">[6]</a>, <a href="#ref-7">[7]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Hipótese Confirmada: ≥ 95% de sucesso em cada ambiente testado individualmente.</p>
+<p>Hipótese Refutada: &lt; 95% em algum ambiente específico.</p>
+</blockquote>
+<h4 id="metrica-32-desvio-relativo-de-sucesso-entre-ambientes">Métrica 3.2: Desvio Relativo de Sucesso entre Ambientes<a class="headerlink" href="#metrica-32-desvio-relativo-de-sucesso-entre-ambientes" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>Desvio = |Taxa(X) - Taxa(Y)| / Taxa_média_entre_ambientes</p>
+<p>Alternativamente: desvio padrão relativo calculado sobre todas as taxas por ambiente.</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-3">[3]</a>, <a href="#ref-4">[4]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Consistência alta (Hipótese Confirmada): Desvio Relativo ≤ 5% entre quaisquer dois ambientes.</p>
+<p>Inconsistência significativa (Hipótese Refutada): Desvio &gt; 5% indicando dependência de ambiente específico.
+</p>
+</blockquote>
+<h4 id="metrica-33-tempo-de-instalacao-e-tipos-de-falha-por-ambiente">Métrica 3.3: Tempo de Instalação e Tipos de Falha por Ambiente<a class="headerlink" href="#metrica-33-tempo-de-instalacao-e-tipos-de-falha-por-ambiente" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Fórmula:</p>
+<p>Variação de tempo = |Tempo médio em A - Tempo médio em B| / Tempo médio geral
+Taxa de falhas específicas = Ocorrências de erro tipo T em ambiente X / Total de tentativas em X</p>
+</blockquote>
+<p><strong><em>Referência:</em></strong></p>
+<p><a href="#ref-3">[3]</a>, <a href="#ref-8">[8]</a></p>
+<blockquote>
+<p>Interpretação:</p>
+<p>Hipótese Confirmada: variação de tempo ≤ 15% (excluindo diferença de velocidade de internet para download do modelo) e nenhuma falha específica por ambiente com taxa &gt; 2%.</p>
+<p>Hipótese Refutada: variação de tempo &gt; 15% ou presença de erros específicos de ambiente com taxa &gt; 2%.</p>
+<p>Categorias de erro a monitorar: dependência ausente, permissão negada, incompatibilidade de arquitetura, timeout de download.</p>
+</blockquote>
+<h2 id="conclusoes">Conclusões<a class="headerlink" href="#conclusoes" title="Permanent link">&para;</a></h2>
+<p>Com a aplicação do método GQM, foi possível estruturar de forma clara e mensurável a análise de portabilidade do Ollama em conjunto com a LLM Qwen 2.5 3B. As questões formuladas cobrem as subcaracterísticas de portabilidade previstas na ISO/IEC 25010: Adaptabilidade (Q1), Instalabilidade (Q2 e Q3).</p>
+<p>As métricas definidas permitem avaliar objetivamente: como o sistema se comporta funcionalmente e em termos de desempenho em diferentes sistemas operacionais; a confiabilidade e consistência do processo de instalação e desinstalação.</p>
+<p>Esta análise fornece a base metodológica necessária para a Fase 3 (coleta de dados) e a Fase 4 (análise e conclusões finais) do projeto de avaliação de qualidade de software.</p>
+<p>OBS: Substituibilidade, não foi avaliada pois o projeto não tem necessidade, essa necessidade foi descartada na <a href="../../02-fase1/modelo/#253-portabilidade">fase 1 do projeto</a>.</p>
+<h2 id="sobre-o-uso-de-ia">Sobre o Uso de IA<a class="headerlink" href="#sobre-o-uso-de-ia" title="Permanent link">&para;</a></h2>
+<p>Para a elaboração deste documento, a Inteligência Artificial foi utilizada como ferramenta de apoio. O uso concentrou-se principalmente em auxiliar a compreensão e o esclarecimento de termos técnicos presentes na norma ISO/IEC 25010 e em fontes corporativas e acadêmicas consultadas. Adicionalmente, a IA foi empregada para estruturar e organizar as ideias na aplicação da metodologia GQM, garantindo coerência entre as questões, métricas e o objetivo de análise.</p>
+<p><a href="https://notebooklm.google.com/notebook/e9f64a2d-93cc-4f05-9c28-4d5f14c3af3e">Notebook LM</a></p>
+<h2 id="referencias-bibliograficas">Referências Bibliográficas<a class="headerlink" href="#referencias-bibliograficas" title="Permanent link">&para;</a></h2>
+<p><a id="ref-1"></a>[1] FENTON, Norman; BIEMAN, James. Software Metrics: A Rigorous and Practical Approach. 3. ed. Boca Raton: CRC Press, 2015.</p>
+<p><a id="ref-2"></a>[2]  GOOGLE. Firebase Crashlytics: Métricas de crash-free. Disponível em: https://firebase.google.com/docs/crashlytics/crash-free-metrics?hl=pt-br
+. Acesso em: 03 jun. 2026.</p>
+<p><a id="ref-3"></a>[3] HEADSPIN. Gain Insight Into Cross-Platform Performance Metrics. HeadSpin Blog, 2023. Disponível em: https://www.headspin.io/blog/gain-insight-into-cross-platform-performance-metrics
+. Acesso em:  03 jun. 2026</p>
+<p><a id="ref-4"></a>[4] B. BUMGARDNER. Benchmarking: When can I stop making measurements? Stack Overflow, 2009. Disponível em: https://stackoverflow.com/questions/1390047/benchmarking-when-can-i-stop-making-measurements
+. Acesso em:  03 jun. 2026</p>
+<p><a id="ref-5"></a>[5] LINKEDIN ENGINEERING. How We Identify and Stop Slow Latency Leaks at LinkedIn. 2017. Disponível em: https://www.linkedin.com/blog/engineering/optimization/fixing-the-plumbing-how-we-identify-and-stop-slow-latency-leaks
+. Acesso em:  03 jun. 2026</p>
+<p><a id="ref-6"></a>[6] ADJUST. How to track app uninstalls: Everything you need to know. Disponível em: https://www.adjust.com/blog/how-to-track-app-installs-and-uninstalls/
+. Acesso em:  03 jun. 2026</p>
+<p><a id="ref-7"></a>[7] INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. ISO/IEC 25036:2011 – Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — Quality in use measures. Geneva: ISO, 2011.</p>
+<p><a id="ref-8"></a>[8] REPLICATED. Instance Insights: Install Success Rate. 2023. Disponível em: https://replicated.com/blog/instance-insights-install-success-rate
+. Acesso em:  03 jun. 2026.</p>
+<h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>03/06/2026</td>
+<td>Adição de conteúdo</td>
+<td><a href="https://github.com/Luizaxx">Luiza</a></td>
+<td><a href="https://github.com/GdevAlves">Gabriel Alves</a></td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>12/06/2026</td>
+<td>Ajuste ao escopo do trabalho</td>
+<td><a href="https://https://github.com/GdevAlves">Gabriel Alves</a></td>
+<td><a href="https://github.com/Luizaxx">Luiza</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "toc.follow", "navigation.logo"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

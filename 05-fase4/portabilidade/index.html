@@ -1,0 +1,2607 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentação de Visão de Produto e Projeto">
+      
+      
+        <meta name="author" content="Equipe Karen Jones">
+      
+      
+      
+        <link rel="prev" href="../eficiencia/">
+      
+      
+        <link rel="next" href="../sintese-geral/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../img/iconNav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Portabilidade - Avaliação de Qualidade do Ollama - Karen Jones</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#52-portabilidade" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-header__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Avaliação de Qualidade do Ollama - Karen Jones
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Portabilidade
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../01-karenJones/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  1. Quem é Karen Jones?
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../02-fase1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  2. Fase 1
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../03-fase2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3. Fase 2
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../04-fase3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  4. Fase 3
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5. Fase 4
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Avaliação de Qualidade do Ollama - Karen Jones" class="md-nav__button md-logo" aria-label="Avaliação de Qualidade do Ollama - Karen Jones" data-md-component="logo">
+      
+  <img src="../../img/ollamaIcon2White.png" alt="logo">
+
+    </a>
+    Avaliação de Qualidade do Ollama - Karen Jones
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2026-1_T02_KAREN_JONES" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-karenJones/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Quem é Karen Jones?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../02-fase1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Fase 1
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Fase 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/proposito/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/requisitantes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requisitantes e Partes Interessadas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/produto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Descrição do Produto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/justificativas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Justificativas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/modelo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade e Escopo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-fase1/uso-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Declaração de Uso de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../03-fase2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Fase 2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. Fase 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-fase2/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-fase2/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-fase2/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../04-fase3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Fase 3
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4. Fase 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/portabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-fase3/contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Fase 4
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5. Fase 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eficiencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Eficiência de Desempenho
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#521-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#522-resultados-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 Resultados — Instalabilidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.2 Resultados — Instalabilidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dados-brutos-instalabilidade-zorin-os-181-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados Brutos — Instalabilidade (Zorin OS 18.1 Core)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dados-brutos-instalabilidade-windows-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados Brutos — Instalabilidade (Windows 11)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-calculadas-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Calculadas — Instalabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#523-resultados-adaptabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3 Resultados — Adaptabilidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.3 Resultados — Adaptabilidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dados-brutos-adaptabilidade-zorin-os-181-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados Brutos — Adaptabilidade (Zorin OS 18.1 Core)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dados-brutos-adaptabilidade-windows-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados Brutos — Adaptabilidade (Windows 11)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-calculadas-adaptabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Calculadas — Adaptabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-cruzadas-entre-ambientes-po-31-po-32-po-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Cruzadas entre Ambientes (PO-3.1, PO-3.2, PO-3.3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#524-analise-por-questao-gqm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.4 Análise por Questão GQM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.4 Análise por Questão GQM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-o-ollama-com-qwen-25-3b-se-comporta-de-formas-diferentes-em-diferentes-sistemas-operacionais-adaptabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1 — O Ollama com Qwen 2.5 3B se comporta de formas diferentes em diferentes sistemas operacionais? (Adaptabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-e-possivel-instalar-e-desinstalar-o-ollama-de-forma-independente-e-sem-residuos-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2 — É possível instalar e desinstalar o Ollama de forma independente e sem resíduos? (Instalabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-o-processo-de-instalacao-apresenta-erros-ou-inconsistencias-em-diferentes-ambientes-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3 — O processo de instalação apresenta erros ou inconsistências em diferentes ambientes? (Instalabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#525-interpretacao-e-discussao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.5 Interpretação e Discussão
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.5 Interpretação e Discussão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-instalacao-e-realmente-simples-para-um-usuario-leigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A instalação é realmente simples para um usuário leigo?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-comportamento-e-equivalente-entre-os-dois-sistemas-operacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O comportamento é equivalente entre os dois sistemas operacionais?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintese-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Síntese dos Resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ameacas-a-validade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ameaças à Validade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variabilidade-de-rede-no-zorin-os-a-alta-variacao-de-tempo-de-instalacao-no-linux-cv-343-esta-associada-a-flutuacoes-de-largura-de-banda-durante-o-download-do-instalador-em-rede-domestica-em-um-ambiente-com-rede-controlada-os-resultados-seriam-mais-estaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variabilidade de rede no Zorin OS: a alta variação de tempo de instalação no Linux (CV = 34,3%) está associada a flutuações de largura de banda durante o download do instalador em rede doméstica. Em um ambiente com rede controlada, os resultados seriam mais estáveis.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliografia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sintese-geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Síntese Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribuicao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabela de Contribuição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#521-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#522-resultados-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 Resultados — Instalabilidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.2 Resultados — Instalabilidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dados-brutos-instalabilidade-zorin-os-181-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados Brutos — Instalabilidade (Zorin OS 18.1 Core)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dados-brutos-instalabilidade-windows-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados Brutos — Instalabilidade (Windows 11)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-calculadas-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Calculadas — Instalabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#523-resultados-adaptabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3 Resultados — Adaptabilidade
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.3 Resultados — Adaptabilidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dados-brutos-adaptabilidade-zorin-os-181-core" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados Brutos — Adaptabilidade (Zorin OS 18.1 Core)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dados-brutos-adaptabilidade-windows-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dados Brutos — Adaptabilidade (Windows 11)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-calculadas-adaptabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Calculadas — Adaptabilidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metricas-cruzadas-entre-ambientes-po-31-po-32-po-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Métricas Cruzadas entre Ambientes (PO-3.1, PO-3.2, PO-3.3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#524-analise-por-questao-gqm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.4 Análise por Questão GQM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.4 Análise por Questão GQM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#q1-o-ollama-com-qwen-25-3b-se-comporta-de-formas-diferentes-em-diferentes-sistemas-operacionais-adaptabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q1 — O Ollama com Qwen 2.5 3B se comporta de formas diferentes em diferentes sistemas operacionais? (Adaptabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q2-e-possivel-instalar-e-desinstalar-o-ollama-de-forma-independente-e-sem-residuos-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q2 — É possível instalar e desinstalar o Ollama de forma independente e sem resíduos? (Instalabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#q3-o-processo-de-instalacao-apresenta-erros-ou-inconsistencias-em-diferentes-ambientes-instalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Q3 — O processo de instalação apresenta erros ou inconsistências em diferentes ambientes? (Instalabilidade)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#525-interpretacao-e-discussao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.5 Interpretação e Discussão
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2.5 Interpretação e Discussão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-instalacao-e-realmente-simples-para-um-usuario-leigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A instalação é realmente simples para um usuário leigo?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-comportamento-e-equivalente-entre-os-dois-sistemas-operacionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O comportamento é equivalente entre os dois sistemas operacionais?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintese-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Síntese dos Resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ameacas-a-validade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ameaças à Validade
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variabilidade-de-rede-no-zorin-os-a-alta-variacao-de-tempo-de-instalacao-no-linux-cv-343-esta-associada-a-flutuacoes-de-largura-de-banda-durante-o-download-do-instalador-em-rede-domestica-em-um-ambiente-com-rede-controlada-os-resultados-seriam-mais-estaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variabilidade de rede no Zorin OS: a alta variação de tempo de instalação no Linux (CV = 34,3%) está associada a flutuações de largura de banda durante o download do instalador em rede doméstica. Em um ambiente com rede controlada, os resultados seriam mais estáveis.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre-o-uso-de-ia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre o Uso de IA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bibliografia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bibliografia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Histórico de Versão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="52-portabilidade">5.2 Portabilidade<a class="headerlink" href="#52-portabilidade" title="Permanent link">&para;</a></h1>
+<h2 id="521-introducao">5.2.1 Introdução<a class="headerlink" href="#521-introducao" title="Permanent link">&para;</a></h2>
+<p>Este documento apresenta os resultados da Fase 4 do processo de avaliação de qualidade do Ollama em conjunto com o modelo de linguagem Qwen 2.5 3B, no que diz respeito à característica de <strong>Portabilidade</strong>, conforme definida pela norma ISO/IEC 25010. A avaliação segue o método GQM (<em>Goal-Question-Metric</em>) estabelecido na Fase 2 e o plano de coleta especificado na Fase 3.</p>
+<p>O objetivo de medição estruturado na Fase 2 pode ser retomado da seguinte forma:</p>
+<blockquote>
+<p><strong>Analisar</strong> o Ollama com LLM Qwen 2.5 3B, <strong>com o propósito de</strong> entender sua <strong>portabilidade</strong>, <strong>da perspectiva do</strong> pesquisador e desenvolvedor de software, <strong>no contexto da</strong> disciplina de Qualidade de Software da UnB/FCTE.</p>
+</blockquote>
+<p>As subcaracterísticas avaliadas nesta fase são <strong>Instalabilidade</strong> e <strong>Adaptabilidade</strong>, correspondentes às questões Q2, Q3 e Q1 da Fase 2, respectivamente. A subcaracterística Substituibilidade (Q4) foi excluída do escopo de execução por não se alinhar ao perfil de uso definido na Fase 1 — uma estudante com hardware básico em uso offline —, uma vez que as métricas associadas (linhas de código modificadas, compatibilidade de API entre modelos) pressupõem um perfil de desenvolvedora que não representa o cenário investigado.</p>
+<p>A coleta foi realizada em dois ambientes distintos: <strong>Zorin OS 18.1 Core</strong> (Linux, baseado em Ubuntu 24.04) e <strong>Windows 11</strong>, conforme especificado no Plano de Avaliação. A execução foi automatizada por meio de script Python disponível no repositório do projeto, garantindo reprodutibilidade e rastreabilidade dos dados brutos.</p>
+<blockquote>
+<p><strong>Nota sobre versões do Ollama:</strong> O script instalou e verificou automaticamente a versão disponível em cada ambiente no momento da execução. No Zorin OS 18.1 Core a versão instalada foi <strong>0.30.10</strong>, coletada em 23/06/2026. No Windows 11 a versão instalada foi <strong>0.30.8</strong>, coletada em 13/06/2026. Essa diferença de versão (patch) deve ser considerada como variável não controlada ao interpretar os resultados comparativos.</p>
+</blockquote>
+<hr />
+<h2 id="522-resultados-instalabilidade">5.2.2 Resultados — Instalabilidade<a class="headerlink" href="#522-resultados-instalabilidade" title="Permanent link">&para;</a></h2>
+<p>Esta seção apresenta os dados coletados durante os testes de instalabilidade, contemplando as métricas PO-1.1 (Taxa de Sucesso na Instalação), PO-1.2 (Tempo Médio de Instalação) e PO-1.3 (Taxa de Sucesso na Desinstalação), conforme definidas na Fase 2 e no Plano de Avaliação da Fase 3.</p>
+<p>O procedimento consistiu em 5 ciclos completos de instalação e desinstalação em cada ambiente, com o estado inicial do sistema verificado e limpo antes de cada tentativa. No Zorin OS, o script limpou caches do sistema entre cada ciclo; no Windows 11, o script verificou e removeu instalações anteriores antes de iniciar. O instalador oficial foi utilizado em ambos os casos (<code>curl -fsSL https://ollama.com/install.sh | sh</code> no Linux; instalador <code>.exe</code> no Windows).</p>
+<h3 id="dados-brutos-instalabilidade-zorin-os-181-core">Dados Brutos — Instalabilidade (Zorin OS 18.1 Core)<a class="headerlink" href="#dados-brutos-instalabilidade-zorin-os-181-core" title="Permanent link">&para;</a></h3>
+<p><strong>Tabela 1: Registros de instalabilidade — Zorin OS 18.1 Core</strong>
+<em>(Fonte: <code>instalabilidade_20260623_212835.csv</code>, coletado em 23/06/2026, Ollama v0.30.10)</em></p>
+<table>
+<thead>
+<tr>
+<th>Tentativa</th>
+<th>Download (s)</th>
+<th>Instalação (s)</th>
+<th>Status instalação</th>
+<th>Desinstalação (s)</th>
+<th>Status desinstalação</th>
+<th>Arquivos residuais</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0,75</td>
+<td>118,17</td>
+<td>sucesso</td>
+<td>2,06</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0,40</td>
+<td>248,01</td>
+<td>sucesso</td>
+<td>2,07</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0,86</td>
+<td>332,70</td>
+<td>sucesso</td>
+<td>2,11</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0,42</td>
+<td>221,91</td>
+<td>sucesso</td>
+<td>2,06</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0,42</td>
+<td>206,23</td>
+<td>sucesso</td>
+<td>2,07</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota:</strong> O tempo de instalação no Linux inclui o download do binário e a configuração do serviço systemd. A alta variação entre tentativas (118 s a 332 s) reflete flutuações de largura de banda na rede doméstica durante a coleta e é capturada pela métrica de variação interna (PO-3.3). O tempo de download é registrado separadamente e representa fração pequena do total.</p>
+</blockquote>
+<h3 id="dados-brutos-instalabilidade-windows-11">Dados Brutos — Instalabilidade (Windows 11)<a class="headerlink" href="#dados-brutos-instalabilidade-windows-11" title="Permanent link">&para;</a></h3>
+<p><strong>Tabela 2: Registros de instalabilidade — Windows 11</strong>
+<em>(Fonte: <code>instalabilidade_windows.csv</code>, coletado em 13/06/2026, Ollama v0.30.8)</em></p>
+<table>
+<thead>
+<tr>
+<th>Tentativa</th>
+<th>Instalação (s)</th>
+<th>Status instalação</th>
+<th>Desinstalação (s)</th>
+<th>Status desinstalação</th>
+<th>Arquivos residuais</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>107,86</td>
+<td>sucesso</td>
+<td>13,84</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+<tr>
+<td>2</td>
+<td>98,29</td>
+<td>sucesso</td>
+<td>13,82</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+<tr>
+<td>3</td>
+<td>115,45</td>
+<td>sucesso</td>
+<td>13,40</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+<tr>
+<td>4</td>
+<td>88,75</td>
+<td>sucesso</td>
+<td>12,90</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+<tr>
+<td>5</td>
+<td>90,01</td>
+<td>sucesso</td>
+<td>12,94</td>
+<td>sucesso</td>
+<td>nenhum</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota:</strong> O log de Windows registrou <code>WARN: Residuais encontrados</code> na preparação inicial (pasta <code>C:\Users\galve\AppData\Local\Ollama</code>), referente a uma instalação preexistente removida pelo script antes da primeira tentativa. Todos os 5 ciclos partiram de ambiente limpo e nenhum resíduo foi detectado ao fim de cada desinstalação.</p>
+</blockquote>
+<h3 id="metricas-calculadas-instalabilidade">Métricas Calculadas — Instalabilidade<a class="headerlink" href="#metricas-calculadas-instalabilidade" title="Permanent link">&para;</a></h3>
+<p><strong>Tabela 3: Síntese das métricas de instalabilidade por ambiente</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Zorin OS 18.1 Core</th>
+<th>Windows 11</th>
+<th>Critério (Fase 3)</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PO-1.1</strong> Taxa de sucesso na instalação</td>
+<td>100,0% (5/5)</td>
+<td>100,0% (5/5)</td>
+<td>≥ 90%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-1.2</strong> Tempo médio de instalação</td>
+<td><strong>225,40 s</strong></td>
+<td><strong>100,07 s</strong></td>
+<td>≤ 300 s</td>
+<td>✓ Aprovado (ambos)</td>
+</tr>
+<tr>
+<td><strong>PO-1.2</strong> Tempo mínimo de instalação</td>
+<td>118,17 s</td>
+<td>88,75 s</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>PO-1.2</strong> Tempo máximo de instalação</td>
+<td>332,70 s</td>
+<td>115,45 s</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>PO-1.3</strong> Taxa de sucesso na desinstalação</td>
+<td>100,0% (5/5)</td>
+<td>100,0% (5/5)</td>
+<td>≥ 90%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-1.3</strong> Tempo médio de desinstalação</td>
+<td>2,07 s</td>
+<td>13,38 s</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>PO-1.3</strong> Arquivos residuais detectados</td>
+<td>nenhum</td>
+<td>nenhum</td>
+<td>ausência</td>
+<td>✓ Aprovado</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota sobre a variação de tempo de instalação no Zorin OS:</strong> o coeficiente de variação interno foi de 34,3% (σ = 77,30 s sobre média = 225,40 s), ultrapassando o critério de ≤ 15% definido na métrica PO-3.3 para variação interna por ambiente. Essa variabilidade é atribuída a flutuações de rede durante o download do instalador. O Windows 11 apresentou variação interna de 11,5% (σ = 11,51 s), dentro do critério.</p>
+</blockquote>
+<hr />
+<h2 id="523-resultados-adaptabilidade">5.2.3 Resultados — Adaptabilidade<a class="headerlink" href="#523-resultados-adaptabilidade" title="Permanent link">&para;</a></h2>
+<p>Esta seção apresenta os dados coletados durante os testes de adaptabilidade, contemplando as métricas PO-2.1 (Paridade Funcional entre SOs), PO-1.2/PO-2.2 (Desvio de Desempenho de Inferência entre SOs) e PO-3.3 (Taxa de Falhas por Ambiente).</p>
+<p>O procedimento consistiu na execução de 5 inferências padronizadas em cada ambiente com o mesmo prompt: <em>"Explique o que é inteligência artificial em uma frase."</em> O tempo registrado corresponde ao tempo total de resposta (<em>time-to-response</em>), medido pelo script automatizado.</p>
+<p><strong>Diferença metodológica relevante entre ambientes:</strong> no Zorin OS 18.1 Core, o script executou uma inferência de aquecimento (<em>warm-up</em>) prévia e descartada das métricas — as 5 inferências registradas já refletem o modelo aquecido em memória (RAM cache quente). No Windows 11, não houve inferência de warm-up prévia; a inferência 1 inclui o custo de carregamento inicial do modelo (<em>cold start</em>).</p>
+<h3 id="dados-brutos-adaptabilidade-zorin-os-181-core">Dados Brutos — Adaptabilidade (Zorin OS 18.1 Core)<a class="headerlink" href="#dados-brutos-adaptabilidade-zorin-os-181-core" title="Permanent link">&para;</a></h3>
+<p><strong>Tabela 4: Registros de adaptabilidade — Zorin OS 18.1 Core</strong>
+<em>(Fonte: <code>adaptabilidade_20260623_212835.csv</code>, coletado em 23/06/2026. Warm-up de 6,16 s executado e descartado antes das 5 inferências.)</em></p>
+<table>
+<thead>
+<tr>
+<th>Inferência</th>
+<th>Tempo de resposta (s)</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1,32</td>
+<td>sucesso</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1,44</td>
+<td>sucesso</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1,34</td>
+<td>sucesso</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1,43</td>
+<td>sucesso</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1,03</td>
+<td>sucesso</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Média: 1,31 s | Mín: 1,03 s | Máx: 1,44 s</strong></p>
+<h3 id="dados-brutos-adaptabilidade-windows-11">Dados Brutos — Adaptabilidade (Windows 11)<a class="headerlink" href="#dados-brutos-adaptabilidade-windows-11" title="Permanent link">&para;</a></h3>
+<p><strong>Tabela 5: Registros de adaptabilidade — Windows 11</strong>
+<em>(Fonte: <code>adaptabilidade_windows.csv</code> / log <code>log_portabilidade_windows.txt</code>, coletado em 13/06/2026. Sem warm-up prévio; a inferência 1 inclui cold start.)</em></p>
+<table>
+<thead>
+<tr>
+<th>Inferência</th>
+<th>Tempo de resposta (s)</th>
+<th>Status</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>9,12</td>
+<td>sucesso</td>
+<td>Cold start (modelo sendo carregado)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>5,43</td>
+<td>sucesso</td>
+<td>Regime estacionário</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6,70</td>
+<td>sucesso</td>
+<td>Regime estacionário</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6,26</td>
+<td>sucesso</td>
+<td>Regime estacionário</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4,69</td>
+<td>sucesso</td>
+<td>Regime estacionário</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Média total (inf. 1–5): 6,44 s | Média sem inf. 1 (inf. 2–5): 5,77 s</strong></p>
+<h3 id="metricas-calculadas-adaptabilidade">Métricas Calculadas — Adaptabilidade<a class="headerlink" href="#metricas-calculadas-adaptabilidade" title="Permanent link">&para;</a></h3>
+<p>Para o cálculo do desvio de desempenho (PO-1.2 / PO-2.2), são apresentadas duas abordagens, dada a diferença metodológica de warm-up entre os ambientes:</p>
+<p><strong>Abordagem A — Comparação direta (Zorin pós warm-up vs. Windows completo):</strong></p>
+<div class="highlight"><pre><span></span><code>Média Zorin   = 1,31 s  (5 inferências, pós warm-up)
+Média Windows = 6,44 s  (5 inferências, inclui cold start na inf. 1)
+Média geral   = (1,31 + 6,44) / 2 = 3,88 s
+Desvio PO-1.2 = |1,31 − 6,44| / 3,88 = 132,4%
+</code></pre></div>
+<p><strong>Abordagem B — Comparação sem cold start em ambos (mais justa):</strong></p>
+<div class="highlight"><pre><span></span><code>Média Zorin   = 1,31 s  (5 inferências pós warm-up)
+Média Windows = (5,43 + 6,70 + 6,26 + 4,69) / 4 = 5,77 s  (inf. 2–5)
+Média geral   = (1,31 + 5,77) / 2 = 3,54 s
+Desvio PO-1.2 = |1,31 − 5,77| / 3,54 = 126,0%
+</code></pre></div>
+<p>Em ambas as abordagens, o desvio supera amplamente o critério de ≤ 20%.</p>
+<p><strong>Tabela 6: Síntese das métricas de adaptabilidade por ambiente</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Zorin OS 18.1 Core</th>
+<th>Windows 11</th>
+<th>Critério (Fase 3)</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PO-2.1</strong> Paridade funcional (taxa exec. sem falha)</td>
+<td>100,0% (5/5)</td>
+<td>100,0% (5/5)</td>
+<td>100%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-1.2 / PO-2.2</strong> Desvio de desempenho (Abord. A)</td>
+<td>—</td>
+<td>—</td>
+<td>≤ 20%</td>
+<td>✗ Reprovado — 132,4%</td>
+</tr>
+<tr>
+<td><strong>PO-1.2 / PO-2.2</strong> Desvio de desempenho (Abord. B)</td>
+<td>—</td>
+<td>—</td>
+<td>≤ 20%</td>
+<td>✗ Reprovado — 126,0%</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong> Taxa de falhas por ambiente</td>
+<td>0,0% (0/5)</td>
+<td>0,0% (0/5)</td>
+<td>≤ 2%</td>
+<td>✓ Aprovado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metricas-cruzadas-entre-ambientes-po-31-po-32-po-33">Métricas Cruzadas entre Ambientes (PO-3.1, PO-3.2, PO-3.3)<a class="headerlink" href="#metricas-cruzadas-entre-ambientes-po-31-po-32-po-33" title="Permanent link">&para;</a></h3>
+<p><strong>Tabela 7: Métricas de consistência entre ambientes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Valor calculado</th>
+<th>Critério (Fase 2/3)</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PO-3.1</strong> Taxa de sucesso por ambiente — Zorin OS</td>
+<td>100,0%</td>
+<td>≥ 95%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.1</strong> Taxa de sucesso por ambiente — Windows 11</td>
+<td>100,0%</td>
+<td>≥ 95%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.2</strong> Desvio relativo de taxa de sucesso entre ambientes</td>
+<td>0,0%</td>
+<td>≤ 5%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong> Variação interna de tempo de instalação — Zorin OS (CV)</td>
+<td><strong>34,3%</strong></td>
+<td>≤ 15%</td>
+<td>✗ Reprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong> Variação interna de tempo de instalação — Windows 11 (CV)</td>
+<td>11,5%</td>
+<td>≤ 15%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong> Variação cruzada de tempo médio de instalação entre ambientes</td>
+<td><strong>77,0%</strong></td>
+<td>≤ 15%</td>
+<td>✗ Reprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong> Taxa de falhas específicas de ambiente — Zorin OS</td>
+<td>0,0%</td>
+<td>≤ 2%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong> Taxa de falhas específicas de ambiente — Windows 11</td>
+<td>0,0%</td>
+<td>≤ 2%</td>
+<td>✓ Aprovado</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Cálculo da variação cruzada (PO-3.3):</strong> <code>|225,40 − 100,07| / ((225,40 + 100,07) / 2) = 125,33 / 162,74 = 77,0%</code>. A diferença expressiva entre os tempos médios de instalação (225 s no Linux vs. 100 s no Windows) deve-se principalmente à alta variabilidade de rede no ambiente Linux durante a coleta em 23/06/2026.</p>
+</blockquote>
+<hr />
+<h2 id="524-analise-por-questao-gqm">5.2.4 Análise por Questão GQM<a class="headerlink" href="#524-analise-por-questao-gqm" title="Permanent link">&para;</a></h2>
+<h3 id="q1-o-ollama-com-qwen-25-3b-se-comporta-de-formas-diferentes-em-diferentes-sistemas-operacionais-adaptabilidade">Q1 — O Ollama com Qwen 2.5 3B se comporta de formas diferentes em diferentes sistemas operacionais? (Adaptabilidade)<a class="headerlink" href="#q1-o-ollama-com-qwen-25-3b-se-comporta-de-formas-diferentes-em-diferentes-sistemas-operacionais-adaptabilidade" title="Permanent link">&para;</a></h3>
+<p><strong>Hipótese formulada na Fase 2:</strong> o sistema se comporta de forma funcionalmente equivalente em qualquer sistema operacional, com diferenças limitadas a variações de desempenho decorrentes das arquiteturas de hardware subjacentes.</p>
+<p><strong>Análise dos resultados:</strong></p>
+<p>Quanto à <strong>paridade funcional</strong> (PO-2.1), o resultado é inequívoco: em ambos os ambientes, todas as 5 inferências executadas com o prompt padronizado foram concluídas com sucesso, sem nenhuma falha registrada. A taxa de falhas (PO-3.3) foi de 0,0% nos dois sistemas operacionais. Neste aspecto, a hipótese é integralmente confirmada.</p>
+<p>No entanto, o <strong>desvio de desempenho de inferência</strong> (PO-1.2 / PO-2.2) revela comportamento assimétrico entre as plataformas. O Zorin OS 18.1 Core apresentou tempo médio de resposta de 1,31 s (pós warm-up). O Windows 11 registrou 6,44 s no total e 5,77 s em regime estacionário (excluindo cold start). O desvio relativo calculado supera 125% em ambas as abordagens — muito além do limiar de 20% estabelecido na Fase 2.</p>
+<p>Este resultado indica que, embora a paridade funcional seja plena, a eficiência de execução varia expressivamente entre as plataformas para o hardware testado (CPU Intel Core i5, AMD64, sem GPU dedicada). O ambiente Linux demonstrou desempenho de inferência entre 4 e 5 vezes superior ao Windows 11 nas condições avaliadas. A diferença de versão do Ollama entre os ambientes (0.30.10 no Linux vs. 0.30.8 no Windows) pode contribuir marginalmente para essa diferença, mas dificilmente explica uma magnitude desta ordem.</p>
+<p><strong>Veredicto Q1:</strong>
+- Métrica PO-2.1 (Paridade funcional) — <strong>Hipótese confirmada</strong>: 100% de execuções bem-sucedidas em ambas as plataformas.
+- Métrica PO-1.2 / PO-2.2 (Desvio de desempenho) — <strong>Hipótese refutada</strong>: desvio superior a 126%, excedendo o limite de 20% em ambas as abordagens de cálculo.</p>
+<hr />
+<h3 id="q2-e-possivel-instalar-e-desinstalar-o-ollama-de-forma-independente-e-sem-residuos-instalabilidade">Q2 — É possível instalar e desinstalar o Ollama de forma independente e sem resíduos? (Instalabilidade)<a class="headerlink" href="#q2-e-possivel-instalar-e-desinstalar-o-ollama-de-forma-independente-e-sem-residuos-instalabilidade" title="Permanent link">&para;</a></h3>
+<p><strong>Hipótese formulada na Fase 2:</strong> a instalação e desinstalação completas são possíveis sem intervenção manual avançada, e a desinstalação não deixa resíduos no sistema.</p>
+<p><strong>Análise dos resultados:</strong></p>
+<p>A taxa de sucesso na instalação (PO-1.1) foi de 100% em ambos os ambientes (5/5 tentativas), superando o critério de 90%. O tempo médio de instalação foi de 225,40 s no Zorin OS e 100,07 s no Windows 11 — ambos abaixo do limite de 300 s (5 min) definido na Fase 3.</p>
+<p>A taxa de sucesso na desinstalação (PO-1.3) foi igualmente de 100% (5/5) nos dois ambientes. O tempo médio de desinstalação foi de 2,07 s no Linux e 13,38 s no Windows. Nenhum arquivo residual foi detectado em qualquer tentativa de desinstalação em nenhum dos dois sistemas.</p>
+<p><strong>Veredicto Q2:</strong> Hipótese <strong>confirmada</strong> em todos os aspectos. O processo de instalação e desinstalação do Ollama demonstrou-se robusto e limpo nos dois ambientes avaliados, dentro dos critérios de aceitação definidos.</p>
+<hr />
+<h3 id="q3-o-processo-de-instalacao-apresenta-erros-ou-inconsistencias-em-diferentes-ambientes-instalabilidade">Q3 — O processo de instalação apresenta erros ou inconsistências em diferentes ambientes? (Instalabilidade)<a class="headerlink" href="#q3-o-processo-de-instalacao-apresenta-erros-ou-inconsistencias-em-diferentes-ambientes-instalabilidade" title="Permanent link">&para;</a></h3>
+<p><strong>Hipótese formulada na Fase 2:</strong> o processo de instalação é consistente entre ambientes distintos, apresentando apenas variações de tempo sem falhas específicas por ambiente.</p>
+<p><strong>Análise dos resultados:</strong></p>
+<p>As taxas de sucesso por ambiente (PO-3.1) foram de 100% tanto no Zorin OS 18.1 Core quanto no Windows 11, dentro do critério de 95%. O desvio relativo de taxa de sucesso entre os dois ambientes foi de 0,0% (PO-3.2), bem abaixo do limite de 5%. Nenhuma falha específica de ambiente foi observada em qualquer das 10 tentativas realizadas (5 por sistema operacional).</p>
+<p>Entretanto, <strong>a hipótese é parcialmente refutada no que diz respeito à variação temporal</strong>: a variação interna do Zorin OS atingiu 34,3% (coeficiente de variação), ultrapassando o critério de ≤ 15% da métrica PO-3.3. A variação cruzada entre os tempos médios dos dois ambientes foi de 77,0%, igualmente fora do critério. Esses resultados indicam que, embora não haja falhas de instalação, o processo apresenta inconsistências temporais significativas — especialmente no Linux, onde a dependência de download de rede introduz variabilidade considerável.</p>
+<p><strong>Veredicto Q3:</strong> Hipótese <strong>parcialmente confirmada</strong>. Não há falhas funcionais de instalação em nenhum ambiente, mas a variação temporal interna do Linux e a diferença cruzada entre ambientes excedem os critérios estabelecidos.</p>
+<hr />
+<h2 id="525-interpretacao-e-discussao">5.2.5 Interpretação e Discussão<a class="headerlink" href="#525-interpretacao-e-discussao" title="Permanent link">&para;</a></h2>
+<h3 id="a-instalacao-e-realmente-simples-para-um-usuario-leigo">A instalação é realmente simples para um usuário leigo?<a class="headerlink" href="#a-instalacao-e-realmente-simples-para-um-usuario-leigo" title="Permanent link">&para;</a></h3>
+<p>Os resultados indicam que <strong>sim, do ponto de vista funcional</strong>. A taxa de sucesso de 100% em ambas as plataformas e a ausência completa de resíduos após a desinstalação evidenciam que o processo de instalação do Ollama é suficientemente robusto para o perfil de usuário definido na Fase 1. O instalador oficial não exigiu nenhuma intervenção manual além da execução do comando inicial, não apresentou dependências ausentes e não deixou rastros no sistema após a remoção.</p>
+<p>Do ponto de vista do <strong>tempo</strong>, a experiência difere entre os sistemas. No Windows 11, a instalação concluiu em média em 100 s com baixa variação. No Linux, o tempo médio foi de 225 s com alta variabilidade (entre 118 s e 332 s), o que pode surpreender o usuário leigo que espera uma experiência homogênea.</p>
+<h3 id="o-comportamento-e-equivalente-entre-os-dois-sistemas-operacionais">O comportamento é equivalente entre os dois sistemas operacionais?<a class="headerlink" href="#o-comportamento-e-equivalente-entre-os-dois-sistemas-operacionais" title="Permanent link">&para;</a></h3>
+<p>A resposta exige distinção entre os dois eixos avaliados.</p>
+<p>Do ponto de vista <strong>funcional</strong>, o comportamento é completamente equivalente: todas as inferências foram bem-sucedidas em ambas as plataformas, sem nenhuma falha ou divergência de execução.</p>
+<p>Do ponto de vista de <strong>desempenho de inferência</strong>, o comportamento difere de forma expressiva. O Zorin OS 18.1 Core apresentou tempo médio de inferência de 1,31 s (regime estacionário), enquanto o Windows 11 registrou 5,77 s nas mesmas condições. Esta diferença de aproximadamente 4,4× não era esperada pela hipótese formulada na Fase 2, que previa desvio máximo de 20%.</p>
+<p>Hipóteses explicativas para essa divergência incluem: diferenças na gestão de memória e no escalonador de processos entre os dois sistemas operacionais; maior sobrecarga de subsistemas no Windows para operações de inferência com CPU; possível interferência de processos de sistema (antivírus, indexação, Windows Defender) não controlados durante a coleta; e diferença de versão do Ollama entre os ambientes (0.30.10 vs. 0.30.8). Testes adicionais com controle mais rigoroso do ambiente Windows — incluindo isolamento de processos em segundo plano — seriam necessários para isolar a causa.</p>
+<h3 id="sintese-dos-resultados">Síntese dos Resultados<a class="headerlink" href="#sintese-dos-resultados" title="Permanent link">&para;</a></h3>
+<p><strong>Tabela 8: Consolidação das métricas de portabilidade</strong></p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Métrica</th>
+<th>Critério</th>
+<th>Zorin OS</th>
+<th>Windows 11</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PO-1.1</strong></td>
+<td>Taxa de sucesso na instalação</td>
+<td>≥ 90%</td>
+<td>100,0%</td>
+<td>100,0%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-1.2</strong></td>
+<td>Tempo médio de instalação</td>
+<td>≤ 300 s</td>
+<td>225,40 s</td>
+<td>100,07 s</td>
+<td>✓ Aprovado (ambos)</td>
+</tr>
+<tr>
+<td><strong>PO-1.3</strong></td>
+<td>Taxa de sucesso na desinstalação</td>
+<td>≥ 90%</td>
+<td>100,0%</td>
+<td>100,0%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-2.1</strong></td>
+<td>Paridade funcional entre SOs</td>
+<td>100%</td>
+<td>100,0%</td>
+<td>100,0%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-2.2</strong></td>
+<td>Desvio de desempenho entre SOs</td>
+<td>≤ 20%</td>
+<td>—</td>
+<td>—</td>
+<td>✗ Reprovado (126,0%–132,4%)</td>
+</tr>
+<tr>
+<td><strong>PO-2.3</strong></td>
+<td>Taxa de falhas por ambiente</td>
+<td>≤ 2%</td>
+<td>0,0%</td>
+<td>0,0%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.1</strong></td>
+<td>Taxa de sucesso por ambiente</td>
+<td>≥ 95%</td>
+<td>100,0%</td>
+<td>100,0%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.2</strong></td>
+<td>Desvio relativo de sucesso entre ambientes</td>
+<td>≤ 5%</td>
+<td>—</td>
+<td>0,0%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong></td>
+<td>Variação interna de tempo de instalação (Zorin)</td>
+<td>≤ 15%</td>
+<td>34,3%</td>
+<td>—</td>
+<td>✗ Reprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong></td>
+<td>Variação interna de tempo de instalação (Windows)</td>
+<td>≤ 15%</td>
+<td>—</td>
+<td>11,5%</td>
+<td>✓ Aprovado</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong></td>
+<td>Variação cruzada de tempo médio entre ambientes</td>
+<td>≤ 15%</td>
+<td>—</td>
+<td>—</td>
+<td>✗ Reprovado (77,0%)</td>
+</tr>
+<tr>
+<td><strong>PO-3.3</strong></td>
+<td>Taxa de falhas específicas de ambiente</td>
+<td>≤ 2%</td>
+<td>0,0%</td>
+<td>0,0%</td>
+<td>✓ Aprovado</td>
+</tr>
+</tbody>
+</table>
+<p>De 12 verificações de métricas, <strong>9 foram aprovadas</strong> e <strong>3 foram reprovadas</strong> (PO-2.2 — desvio de desempenho de inferência; PO-3.3 — variação interna do Zorin OS; PO-3.3 — variação cruzada entre ambientes). O resultado global indica que o Ollama com Qwen 2.5 3B apresenta <strong>alta portabilidade em termos de instalabilidade e paridade funcional</strong>, com ressalvas relevantes: o desempenho de inferência varia significativamente entre plataformas em hardware sem aceleração por GPU, e o tempo de instalação no Linux apresenta variabilidade considerável dependente de condições de rede.</p>
+<h3 id="ameacas-a-validade">Ameaças à Validade<a class="headerlink" href="#ameacas-a-validade" title="Permanent link">&para;</a></h3>
+<p><strong>Diferença de versão do Ollama entre ambientes:</strong> o Zorin OS executou a versão 0.30.10 e o Windows 11 a versão 0.30.8. Embora a diferença seja de patch, não se pode excluir completamente que otimizações de desempenho entre as versões contribuam para a diferença observada nas inferências.</p>
+<p><strong>Metodologia de warm-up assimétrica:</strong> o script do Zorin OS executou uma inferência de aquecimento prévia e descartada antes de medir as 5 inferências. O script do Windows não realizou esse procedimento. Isso cria uma comparação ligeiramente desfavorável ao Windows na Abordagem A. A Abordagem B tenta mitigar esse viés excluindo a inferência 1 do Windows, resultando ainda em desvio de 126%.</p>
+<p><strong>Controle do ambiente Windows:</strong> os logs de Windows não documentam a versão do antivírus ativo, processos em segundo plano ou configurações de energia — variáveis que podem influenciar os tempos de inferência.</p>
+<h2 id="variabilidade-de-rede-no-zorin-os-a-alta-variacao-de-tempo-de-instalacao-no-linux-cv-343-esta-associada-a-flutuacoes-de-largura-de-banda-durante-o-download-do-instalador-em-rede-domestica-em-um-ambiente-com-rede-controlada-os-resultados-seriam-mais-estaveis"><strong>Variabilidade de rede no Zorin OS:</strong> a alta variação de tempo de instalação no Linux (CV = 34,3%) está associada a flutuações de largura de banda durante o download do instalador em rede doméstica. Em um ambiente com rede controlada, os resultados seriam mais estáveis.<a class="headerlink" href="#variabilidade-de-rede-no-zorin-os-a-alta-variacao-de-tempo-de-instalacao-no-linux-cv-343-esta-associada-a-flutuacoes-de-largura-de-banda-durante-o-download-do-instalador-em-rede-domestica-em-um-ambiente-com-rede-controlada-os-resultados-seriam-mais-estaveis" title="Permanent link">&para;</a></h2>
+<h2 id="sobre-o-uso-de-ia">Sobre o Uso de IA<a class="headerlink" href="#sobre-o-uso-de-ia" title="Permanent link">&para;</a></h2>
+<p>Para a elaboração deste documento, modelos de linguagem de grande porte foram utilizados como apoio à estruturação do texto, revisão da linguagem acadêmica e organização das tabelas. Todo o conteúdo analítico cálculo das métricas, interpretação dos dados, formulação dos veredictos e identificação das ameaças à validade foi produzido e conferido pela equipe com base nos dados brutos coletados pelos scripts automatizados e disponíveis no repositório do projeto.</p>
+<hr />
+<h2 id="bibliografia">Bibliografia<a class="headerlink" href="#bibliografia" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. <strong>ISO/IEC 25010:2011</strong> — Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models. Genebra: ISO, 2011.</p>
+</li>
+<li>
+<p>FENTON, Norman; BIEMAN, James. <strong>Software Metrics: A Rigorous and Practical Approach</strong>. 3. ed. Boca Raton: CRC Press, 2015.</p>
+</li>
+<li>
+<p>RAMOS, Cristiane Soares. <strong>Medição baseada em objetivos: "Determinando o que medir"</strong>. Material da disciplina FGA0315 — Qualidade de Software 1. Faculdade do Gama (FGA), Universidade de Brasília (UnB), 2026.</p>
+</li>
+<li>
+<p>OLLAMA INC. <strong>Ollama: The easiest way to build with open models</strong>. Portal oficial de documentação, 2026. Disponível em: <a href="https://ollama.com">https://ollama.com</a>. Acesso em: 23 jun. 2026.</p>
+</li>
+<li>
+<p>QWEN TEAM. <strong>Qwen2 Technical Report</strong>. 2024. Disponível em: <a href="https://arxiv.org/abs/2407.10671">https://arxiv.org/abs/2407.10671</a>. Acesso em: 23 jun. 2026.</p>
+</li>
+</ol>
+<hr />
+<h2 id="historico-de-versao">Histórico de Versão<a class="headerlink" href="#historico-de-versao" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Descrição</th>
+<th>Autor</th>
+<th>Revisor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>12/06/2026</td>
+<td>Criação do documento com resultados da execução</td>
+<td>Gabriel</td>
+<td>Giovana Barbosa</td>
+</tr>
+<tr>
+<td>1.1</td>
+<td>23/06/2026</td>
+<td>Correção dos dados de instalabilidade do Windows (bug de duplicação); atualização com dados reais do ZorinOS (coleta 23/06/2026); recálculo de todas as métricas cruzadas; correção da Tabela 3 (tempos de instalação distintos por ambiente); adição de nota sobre versões do Ollama e assimetria de warm-up</td>
+<td>Gabriel / Giovana Barbosa</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.top", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "toc.follow", "navigation.logo"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
